@@ -1,0 +1,13 @@
+# RegisterTestkitRequest
+
+
+## Fields
+
+| Field                                                                           | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `consents`                                                                      | [Consent](../../models/shared/consent.md)[]                                     | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `patientAddress`                                                                | [PatientAddressCompatible](../../models/shared/patientaddresscompatible.md)     | :heavy_check_mark:                                                              | N/A                                                                             |
+| `patientDetails`                                                                | [PatientDetails](../../models/shared/patientdetails.md)                         | :heavy_check_mark:                                                              | N/A                                                                             |
+| `physician`                                                                     | [PhysicianCreateRequestBase](../../models/shared/physiciancreaterequestbase.md) | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `sampleId`                                                                      | *string*                                                                        | :heavy_check_mark:                                                              | N/A                                                                             |
+| `userId`                                                                        | *string*                                                                        | :heavy_check_mark:                                                              | N/A                                                                             |

@@ -1,4 +1,9 @@
 configVersion: 1.0.0
+management:
+  docChecksum: 509bcd91b41d4dc936dfcea383742b0b
+  docVersion: 0.0.0-dev.f0ab7c6
+  speakeasyVersion: 1.100.0
+  generationVersion: 2.159.0
 generation:
   comments:
     disableComments: false
@@ -7,9 +12,16 @@ generation:
   sdkClassName: vital
   singleTagPerOp: false
   tagNamespacingDisabled: false
+features:
+  typescript:
+    core: 2.90.4
+    deprecations: 2.81.1
+    globalServerURLs: 2.82.0
+    nameOverrides: 2.81.1
 typescript:
-  version: 0.0.1
+  version: 0.1.0
   author: vital
   clientServerStatusCodesAsErrors: true
+  flattenGlobalSecurity: true
   maxMethodParams: 0
   packageName: Vital

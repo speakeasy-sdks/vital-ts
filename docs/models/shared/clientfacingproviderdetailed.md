@@ -1,0 +1,13 @@
+# ClientFacingProviderDetailed
+
+
+## Fields
+
+| Field                                                                 | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `authType`                                                            | [SourceAuthType](../../models/shared/sourceauthtype.md)               | :heavy_minus_sign:                                                    | An enumeration.                                                       |
+| `description`                                                         | *string*                                                              | :heavy_check_mark:                                                    | Description of source of information                                  |
+| `logo`                                                                | *string*                                                              | :heavy_minus_sign:                                                    | URL for source logo                                                   |
+| `name`                                                                | *string*                                                              | :heavy_check_mark:                                                    | Name of source of information                                         |
+| `slug`                                                                | *string*                                                              | :heavy_check_mark:                                                    | Slug for designated source                                            |
+| `supportedResources`                                                  | [ClientFacingResource](../../models/shared/clientfacingresource.md)[] | :heavy_minus_sign:                                                    | N/A                                                                   |
