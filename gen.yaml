@@ -26,5 +26,5 @@ typescript:
   author: vital
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
-  maxMethodParams: 0
+  maxMethodParams: 4
   packageName: Vital
