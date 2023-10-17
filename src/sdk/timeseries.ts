@@ -23,16 +23,21 @@ export class Timeseries {
      * Get timeseries data for user
      */
     async getBloodOxygen(
-        req: operations.GetTimeseriesResourceDataV2TimeseriesUserIdBloodOxygenGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTimeseriesResourceDataV2TimeseriesUserIdBloodOxygenGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdBloodOxygenGetRequest(
-                req
-            );
-        }
-
+        const req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdBloodOxygenGetRequest(
+            {
+                startDate: startDate,
+                userId: userId,
+                endDate: endDate,
+                provider: provider,
+            }
+        );
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -150,16 +155,20 @@ export class Timeseries {
      * Get timeseries data for user
      */
     async getBloodPressure(
-        req: operations.GetTimeseriesResourceDataV2TimeseriesUserIdBloodPressureGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTimeseriesResourceDataV2TimeseriesUserIdBloodPressureGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdBloodPressureGetRequest(
-                req
-            );
-        }
-
+        const req =
+            new operations.GetTimeseriesResourceDataV2TimeseriesUserIdBloodPressureGetRequest({
+                startDate: startDate,
+                userId: userId,
+                endDate: endDate,
+                provider: provider,
+            });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -277,14 +286,19 @@ export class Timeseries {
      * Get timeseries data for user
      */
     async getCaffeine(
-        req: operations.GetTimeseriesResourceDataV2TimeseriesUserIdCaffeineGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTimeseriesResourceDataV2TimeseriesUserIdCaffeineGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdCaffeineGetRequest(req);
-        }
-
+        const req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdCaffeineGetRequest({
+            startDate: startDate,
+            userId: userId,
+            endDate: endDate,
+            provider: provider,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -398,17 +412,20 @@ export class Timeseries {
      * Get timeseries data for user
      */
     async getCaloriesActive(
-        req: operations.GetTimeseriesResourceDataV2TimeseriesUserIdCaloriesActiveGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTimeseriesResourceDataV2TimeseriesUserIdCaloriesActiveGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req =
-                new operations.GetTimeseriesResourceDataV2TimeseriesUserIdCaloriesActiveGetRequest(
-                    req
-                );
-        }
-
+        const req =
+            new operations.GetTimeseriesResourceDataV2TimeseriesUserIdCaloriesActiveGetRequest({
+                startDate: startDate,
+                userId: userId,
+                endDate: endDate,
+                provider: provider,
+            });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -526,16 +543,20 @@ export class Timeseries {
      * Get timeseries data for user
      */
     async getCaloriesBasal(
-        req: operations.GetTimeseriesResourceDataV2TimeseriesUserIdCaloriesBasalGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTimeseriesResourceDataV2TimeseriesUserIdCaloriesBasalGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdCaloriesBasalGetRequest(
-                req
-            );
-        }
-
+        const req =
+            new operations.GetTimeseriesResourceDataV2TimeseriesUserIdCaloriesBasalGetRequest({
+                startDate: startDate,
+                userId: userId,
+                endDate: endDate,
+                provider: provider,
+            });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -653,16 +674,21 @@ export class Timeseries {
      * Get timeseries data for user
      */
     async getCholesterolAll(
-        req: operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolGetRequest(
-                req
-            );
-        }
-
+        const req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolGetRequest(
+            {
+                startDate: startDate,
+                userId: userId,
+                endDate: endDate,
+                provider: provider,
+            }
+        );
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -776,17 +802,20 @@ export class Timeseries {
      * Get timeseries data for user
      */
     async getCholesterolHdl(
-        req: operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolHdlGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolHdlGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req =
-                new operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolHdlGetRequest(
-                    req
-                );
-        }
-
+        const req =
+            new operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolHdlGetRequest({
+                startDate: startDate,
+                userId: userId,
+                endDate: endDate,
+                provider: provider,
+            });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -904,17 +933,20 @@ export class Timeseries {
      * Get timeseries data for user
      */
     async getCholesterolLdl(
-        req: operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolLdlGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolLdlGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req =
-                new operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolLdlGetRequest(
-                    req
-                );
-        }
-
+        const req =
+            new operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolLdlGetRequest({
+                startDate: startDate,
+                userId: userId,
+                endDate: endDate,
+                provider: provider,
+            });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1032,14 +1064,19 @@ export class Timeseries {
      * Get timeseries data for user
      */
     async getDistance(
-        req: operations.GetTimeseriesResourceDataV2TimeseriesUserIdDistanceGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTimeseriesResourceDataV2TimeseriesUserIdDistanceGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdDistanceGetRequest(req);
-        }
-
+        const req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdDistanceGetRequest({
+            startDate: startDate,
+            userId: userId,
+            endDate: endDate,
+            provider: provider,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1153,16 +1190,20 @@ export class Timeseries {
      * Get timeseries data for user
      */
     async getFloorsClimbed(
-        req: operations.GetTimeseriesResourceDataV2TimeseriesUserIdFloorsClimbedGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTimeseriesResourceDataV2TimeseriesUserIdFloorsClimbedGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdFloorsClimbedGetRequest(
-                req
-            );
-        }
-
+        const req =
+            new operations.GetTimeseriesResourceDataV2TimeseriesUserIdFloorsClimbedGetRequest({
+                startDate: startDate,
+                userId: userId,
+                endDate: endDate,
+                provider: provider,
+            });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1280,14 +1321,19 @@ export class Timeseries {
      * Get timeseries data for user
      */
     async getGlucose(
-        req: operations.GetTimeseriesResourceDataV2TimeseriesUserIdGlucoseGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTimeseriesResourceDataV2TimeseriesUserIdGlucoseGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdGlucoseGetRequest(req);
-        }
-
+        const req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdGlucoseGetRequest({
+            startDate: startDate,
+            userId: userId,
+            endDate: endDate,
+            provider: provider,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1401,16 +1447,19 @@ export class Timeseries {
      * Get timeseries data for user
      */
     async getHeartrate(
-        req: operations.GetTimeseriesResourceDataV2TimeseriesUserIdHeartrateGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTimeseriesResourceDataV2TimeseriesUserIdHeartrateGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdHeartrateGetRequest(
-                req
-            );
-        }
-
+        const req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdHeartrateGetRequest({
+            startDate: startDate,
+            userId: userId,
+            endDate: endDate,
+            provider: provider,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1524,14 +1573,19 @@ export class Timeseries {
      * Get timeseries data for user
      */
     async getHrv(
-        req: operations.GetTimeseriesResourceDataV2TimeseriesUserIdHrvGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTimeseriesResourceDataV2TimeseriesUserIdHrvGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdHrvGetRequest(req);
-        }
-
+        const req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdHrvGetRequest({
+            startDate: startDate,
+            userId: userId,
+            endDate: endDate,
+            provider: provider,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1645,16 +1699,19 @@ export class Timeseries {
      * Get timeseries data for user
      */
     async getHypnogram(
-        req: operations.GetTimeseriesResourceDataV2TimeseriesUserIdHypnogramGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTimeseriesResourceDataV2TimeseriesUserIdHypnogramGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdHypnogramGetRequest(
-                req
-            );
-        }
-
+        const req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdHypnogramGetRequest({
+            startDate: startDate,
+            userId: userId,
+            endDate: endDate,
+            provider: provider,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1768,14 +1825,19 @@ export class Timeseries {
      * Get timeseries data for user
      */
     async getIge(
-        req: operations.GetTimeseriesResourceDataV2TimeseriesUserIdIgeGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTimeseriesResourceDataV2TimeseriesUserIdIgeGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdIgeGetRequest(req);
-        }
-
+        const req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdIgeGetRequest({
+            startDate: startDate,
+            userId: userId,
+            endDate: endDate,
+            provider: provider,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1889,14 +1951,19 @@ export class Timeseries {
      * Get timeseries data for user
      */
     async getIgg(
-        req: operations.GetTimeseriesResourceDataV2TimeseriesUserIdIggGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTimeseriesResourceDataV2TimeseriesUserIdIggGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdIggGetRequest(req);
-        }
-
+        const req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdIggGetRequest({
+            startDate: startDate,
+            userId: userId,
+            endDate: endDate,
+            provider: provider,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -2010,17 +2077,20 @@ export class Timeseries {
      * Get timeseries data for user
      */
     async getMindfulnessMinutes(
-        req: operations.GetTimeseriesResourceDataV2TimeseriesUserIdMindfulnessMinutesGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTimeseriesResourceDataV2TimeseriesUserIdMindfulnessMinutesGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req =
-                new operations.GetTimeseriesResourceDataV2TimeseriesUserIdMindfulnessMinutesGetRequest(
-                    req
-                );
-        }
-
+        const req =
+            new operations.GetTimeseriesResourceDataV2TimeseriesUserIdMindfulnessMinutesGetRequest({
+                startDate: startDate,
+                userId: userId,
+                endDate: endDate,
+                provider: provider,
+            });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -2140,17 +2210,20 @@ export class Timeseries {
      * Get timeseries data for user
      */
     async getRespiratoryRate(
-        req: operations.GetTimeseriesResourceDataV2TimeseriesUserIdRespiratoryRateGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTimeseriesResourceDataV2TimeseriesUserIdRespiratoryRateGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req =
-                new operations.GetTimeseriesResourceDataV2TimeseriesUserIdRespiratoryRateGetRequest(
-                    req
-                );
-        }
-
+        const req =
+            new operations.GetTimeseriesResourceDataV2TimeseriesUserIdRespiratoryRateGetRequest({
+                startDate: startDate,
+                userId: userId,
+                endDate: endDate,
+                provider: provider,
+            });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -2268,14 +2341,19 @@ export class Timeseries {
      * Get timeseries data for user
      */
     async getSteps(
-        req: operations.GetTimeseriesResourceDataV2TimeseriesUserIdStepsGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTimeseriesResourceDataV2TimeseriesUserIdStepsGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdStepsGetRequest(req);
-        }
-
+        const req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdStepsGetRequest({
+            startDate: startDate,
+            userId: userId,
+            endDate: endDate,
+            provider: provider,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -2389,17 +2467,20 @@ export class Timeseries {
      * Get timeseries data for user
      */
     async getTotalCholesterol(
-        req: operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolTotalGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolTotalGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req =
-                new operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolTotalGetRequest(
-                    req
-                );
-        }
-
+        const req =
+            new operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolTotalGetRequest({
+                startDate: startDate,
+                userId: userId,
+                endDate: endDate,
+                provider: provider,
+            });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -2517,17 +2598,22 @@ export class Timeseries {
      * Get timeseries data for user
      */
     async getTriglycerides(
-        req: operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolTriglyceridesGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolTriglyceridesGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req =
-                new operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolTriglyceridesGetRequest(
-                    req
-                );
-        }
-
+        const req =
+            new operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolTriglyceridesGetRequest(
+                {
+                    startDate: startDate,
+                    userId: userId,
+                    endDate: endDate,
+                    provider: provider,
+                }
+            );
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -2647,14 +2733,13 @@ export class Timeseries {
      * Get Sleep stream for a user_id
      */
     async getUserSleepStream(
-        req: operations.GetUserSleepStreamV2TimeseriesSleepSleepIdStreamGetRequest,
+        sleepId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetUserSleepStreamV2TimeseriesSleepSleepIdStreamGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUserSleepStreamV2TimeseriesSleepSleepIdStreamGetRequest(req);
-        }
-
+        const req = new operations.GetUserSleepStreamV2TimeseriesSleepSleepIdStreamGetRequest({
+            sleepId: sleepId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -2765,14 +2850,13 @@ export class Timeseries {
      * Get User Workouts
      */
     async getUserWorkouts(
-        req: operations.GetUserWorkoutsV2TimeseriesWorkoutsWorkoutIdStreamGetRequest,
+        workoutId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetUserWorkoutsV2TimeseriesWorkoutsWorkoutIdStreamGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUserWorkoutsV2TimeseriesWorkoutsWorkoutIdStreamGetRequest(req);
-        }
-
+        const req = new operations.GetUserWorkoutsV2TimeseriesWorkoutsWorkoutIdStreamGetRequest({
+            workoutId: workoutId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -2886,14 +2970,19 @@ export class Timeseries {
      * Get timeseries data for user
      */
     async getWater(
-        req: operations.GetTimeseriesResourceDataV2TimeseriesUserIdWaterGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTimeseriesResourceDataV2TimeseriesUserIdWaterGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdWaterGetRequest(req);
-        }
-
+        const req = new operations.GetTimeseriesResourceDataV2TimeseriesUserIdWaterGetRequest({
+            startDate: startDate,
+            userId: userId,
+            endDate: endDate,
+            provider: provider,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -3004,16 +3093,17 @@ export class Timeseries {
      * Post User Blood Pressure
      */
     async postBloodPressure(
-        req: operations.PostUserBloodPressureV2TimeseriesUserIdBloodPressurePostRequest,
+        userId: string,
+        xVitalAndroidSDKVersion?: string,
+        xVitalIosSDKVersion?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.PostUserBloodPressureV2TimeseriesUserIdBloodPressurePostResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.PostUserBloodPressureV2TimeseriesUserIdBloodPressurePostRequest(
-                req
-            );
-        }
-
+        const req = new operations.PostUserBloodPressureV2TimeseriesUserIdBloodPressurePostRequest({
+            userId: userId,
+            xVitalAndroidSDKVersion: xVitalAndroidSDKVersion,
+            xVitalIosSDKVersion: xVitalIosSDKVersion,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -3126,14 +3216,19 @@ export class Timeseries {
      * Post User Vitals
      */
     async postVitals(
-        req: operations.PostUserVitalsV2TimeseriesUserIdResourcePostRequest,
+        resource: shared.IngestibleTimeseriesResource,
+        userId: string,
+        xVitalAndroidSDKVersion?: string,
+        xVitalIosSDKVersion?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.PostUserVitalsV2TimeseriesUserIdResourcePostResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.PostUserVitalsV2TimeseriesUserIdResourcePostRequest(req);
-        }
-
+        const req = new operations.PostUserVitalsV2TimeseriesUserIdResourcePostRequest({
+            resource: resource,
+            userId: userId,
+            xVitalAndroidSDKVersion: xVitalAndroidSDKVersion,
+            xVitalIosSDKVersion: xVitalIosSDKVersion,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults

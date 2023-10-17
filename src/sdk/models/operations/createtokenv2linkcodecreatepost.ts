@@ -7,11 +7,11 @@ import * as shared from "../shared";
 import { AxiosResponse } from "axios";
 
 export class CreateTokenV2LinkCodeCreatePostRequest extends SpeakeasyBase {
-    @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=expires_at" })
-    expiresAt?: Date;
-
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=user_id" })
     userId: string;
+
+    @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=expires_at" })
+    expiresAt?: Date;
 }
 
 export class CreateTokenV2LinkCodeCreatePostResponse extends SpeakeasyBase {

@@ -153,14 +153,15 @@ export class Team {
      * Create api key.
      */
     async createApiKey(
-        req: operations.CreateApiKeyV2TeamTeamIdApikeyPostRequest,
+        createApiKeyBody: shared.CreateApiKeyBody,
+        teamId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.CreateApiKeyV2TeamTeamIdApikeyPostResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.CreateApiKeyV2TeamTeamIdApikeyPostRequest(req);
-        }
-
+        const req = new operations.CreateApiKeyV2TeamTeamIdApikeyPostRequest({
+            createApiKeyBody: createApiKeyBody,
+            teamId: teamId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -283,14 +284,15 @@ export class Team {
      * Add Team priority row for source
      */
     async createPriority(
-        req: operations.CreatePriorityV2TeamTeamIdPriorityPostRequest,
+        priorityCreate: shared.PriorityCreate,
+        teamId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.CreatePriorityV2TeamTeamIdPriorityPostResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.CreatePriorityV2TeamTeamIdPriorityPostRequest(req);
-        }
-
+        const req = new operations.CreatePriorityV2TeamTeamIdPriorityPostRequest({
+            priorityCreate: priorityCreate,
+            teamId: teamId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -413,14 +415,15 @@ export class Team {
      * Invalidate api key by key value.
      */
     async deleteApiKey(
-        req: operations.DeleteApiKeyV2TeamTeamIdApikeyApiKeyIdDeleteRequest,
+        apiKeyId: string,
+        teamId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.DeleteApiKeyV2TeamTeamIdApikeyApiKeyIdDeleteResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.DeleteApiKeyV2TeamTeamIdApikeyApiKeyIdDeleteRequest(req);
-        }
-
+        const req = new operations.DeleteApiKeyV2TeamTeamIdApikeyApiKeyIdDeleteRequest({
+            apiKeyId: apiKeyId,
+            teamId: teamId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -531,14 +534,13 @@ export class Team {
      * Get team.
      */
     async get(
-        req: operations.GetTeamV2TeamTeamIdGetRequest,
+        teamId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTeamV2TeamTeamIdGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetTeamV2TeamTeamIdGetRequest(req);
-        }
-
+        const req = new operations.GetTeamV2TeamTeamIdGetRequest({
+            teamId: teamId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -648,14 +650,13 @@ export class Team {
      * Invalidate api key by key value.
      */
     async getApiKeys(
-        req: operations.GetApiKeysForTeamV2TeamTeamIdApikeysGetRequest,
+        teamId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetApiKeysForTeamV2TeamTeamIdApikeysGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetApiKeysForTeamV2TeamTeamIdApikeysGetRequest(req);
-        }
-
+        const req = new operations.GetApiKeysForTeamV2TeamTeamIdApikeysGetRequest({
+            teamId: teamId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -863,14 +864,13 @@ export class Team {
      * GET source priorities.
      */
     async getSourcePriorities(
-        req: operations.GetSourcePrioritiesV2TeamSourcePrioritiesGetRequest,
+        dataType?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetSourcePrioritiesV2TeamSourcePrioritiesGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetSourcePrioritiesV2TeamSourcePrioritiesGetRequest(req);
-        }
-
+        const req = new operations.GetSourcePrioritiesV2TeamSourcePrioritiesGetRequest({
+            dataType: dataType,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -985,14 +985,13 @@ export class Team {
      * Get the current user count for a team.
      */
     async getUserCount(
-        req: operations.GetTeamUserCountV2TeamTeamIdUsersCountGetRequest,
+        teamId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTeamUserCountV2TeamTeamIdUsersCountGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetTeamUserCountV2TeamTeamIdUsersCountGetRequest(req);
-        }
-
+        const req = new operations.GetTeamUserCountV2TeamTeamIdUsersCountGetRequest({
+            teamId: teamId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1194,14 +1193,15 @@ export class Team {
      * Deprecated. Rotate api key.
      */
     async rotateApiKeyV2TeamTeamIdApikeyApiKeyIdRotatePatch(
-        req: operations.RotateApiKeyV2TeamTeamIdApikeyApiKeyIdRotatePatchRequest,
+        apiKeyId: string,
+        teamId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.RotateApiKeyV2TeamTeamIdApikeyApiKeyIdRotatePatchResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.RotateApiKeyV2TeamTeamIdApikeyApiKeyIdRotatePatchRequest(req);
-        }
-
+        const req = new operations.RotateApiKeyV2TeamTeamIdApikeyApiKeyIdRotatePatchRequest({
+            apiKeyId: apiKeyId,
+            teamId: teamId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1312,16 +1312,13 @@ export class Team {
      * Search team users by user_id
      */
     async searchUsersByUuid(
-        req: operations.SearchTeamUsersByUuidOrClientUserIdV2TeamUsersSearchGetRequest,
+        queryId?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.SearchTeamUsersByUuidOrClientUserIdV2TeamUsersSearchGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.SearchTeamUsersByUuidOrClientUserIdV2TeamUsersSearchGetRequest(
-                req
-            );
-        }
-
+        const req = new operations.SearchTeamUsersByUuidOrClientUserIdV2TeamUsersSearchGetRequest({
+            queryId: queryId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1435,14 +1432,17 @@ export class Team {
      * Update API key label.
      */
     async updateApiKeyLabelV2TeamTeamIdApikeyApiKeyIdPatch(
-        req: operations.UpdateApiKeyLabelV2TeamTeamIdApikeyApiKeyIdPatchRequest,
+        updateApiKeyBody: shared.UpdateApiKeyBody,
+        apiKeyId: string,
+        teamId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.UpdateApiKeyLabelV2TeamTeamIdApikeyApiKeyIdPatchResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.UpdateApiKeyLabelV2TeamTeamIdApikeyApiKeyIdPatchRequest(req);
-        }
-
+        const req = new operations.UpdateApiKeyLabelV2TeamTeamIdApikeyApiKeyIdPatchRequest({
+            updateApiKeyBody: updateApiKeyBody,
+            apiKeyId: apiKeyId,
+            teamId: teamId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1569,14 +1569,13 @@ export class Team {
      * Patch source priorities.
      */
     async updateSourcePrioritiesV2TeamSourcePrioritiesPatch(
-        req: operations.UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchRequest,
+        teamId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchRequest(req);
-        }
-
+        const req = new operations.UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchRequest({
+            teamId: teamId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1692,14 +1691,15 @@ export class Team {
      * Update team.
      */
     async updateTeamV2TeamTeamIdPatch(
-        req: operations.UpdateTeamV2TeamTeamIdPatchRequest,
+        teamUpdate: shared.TeamUpdate,
+        teamId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.UpdateTeamV2TeamTeamIdPatchResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.UpdateTeamV2TeamTeamIdPatchRequest(req);
-        }
-
+        const req = new operations.UpdateTeamV2TeamTeamIdPatchRequest({
+            teamUpdate: teamUpdate,
+            teamId: teamId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults

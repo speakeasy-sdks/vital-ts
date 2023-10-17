@@ -23,17 +23,18 @@ export class Order {
      * Book an at-home phlebotomy appointment.
      */
     async bookPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentBookPost(
-        req: operations.BookPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentBookPostRequest,
+        appointmentBookingRequest: shared.AppointmentBookingRequest,
+        orderId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.BookPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentBookPostResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req =
-                new operations.BookPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentBookPostRequest(
-                    req
-                );
-        }
-
+        const req =
+            new operations.BookPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentBookPostRequest(
+                {
+                    appointmentBookingRequest: appointmentBookingRequest,
+                    orderId: orderId,
+                }
+            );
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -169,14 +170,13 @@ export class Order {
      * POST cancel order
      */
     async cancelOrderV3OrderOrderIdCancelPost(
-        req: operations.CancelOrderV3OrderOrderIdCancelPostRequest,
+        orderId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.CancelOrderV3OrderOrderIdCancelPostResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.CancelOrderV3OrderOrderIdCancelPostRequest(req);
-        }
-
+        const req = new operations.CancelOrderV3OrderOrderIdCancelPostRequest({
+            orderId: orderId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -286,17 +286,18 @@ export class Order {
      * Cancel a previously booked at-home phlebotomy appointment.
      */
     async cancelPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentCancelPatch(
-        req: operations.CancelPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentCancelPatchRequest,
+        appointmentCancelRequest: shared.AppointmentCancelRequest,
+        orderId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.CancelPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentCancelPatchResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req =
-                new operations.CancelPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentCancelPatchRequest(
-                    req
-                );
-        }
-
+        const req =
+            new operations.CancelPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentCancelPatchRequest(
+                {
+                    appointmentCancelRequest: appointmentCancelRequest,
+                    orderId: orderId,
+                }
+            );
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -787,14 +788,13 @@ export class Order {
      * GET individual order by ID.
      */
     async get(
-        req: operations.GetOrderV3OrderOrderIdGetRequest,
+        orderId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetOrderV3OrderOrderIdGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetOrderV3OrderOrderIdGetRequest(req);
-        }
-
+        const req = new operations.GetOrderV3OrderOrderIdGetRequest({
+            orderId: orderId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -905,17 +905,18 @@ export class Order {
      * for the given address and order.
      */
     async getAppointmentAvailability(
-        req: operations.GetOrderAppointmentAvailabilityV3OrderOrderIdPhlebotomyAppointmentAvailabilityPostRequest,
+        orderId: string,
+        requestBody?: operations.GetOrderAppointmentAvailabilityV3OrderOrderIdPhlebotomyAppointmentAvailabilityPostUSAddress,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetOrderAppointmentAvailabilityV3OrderOrderIdPhlebotomyAppointmentAvailabilityPostResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req =
-                new operations.GetOrderAppointmentAvailabilityV3OrderOrderIdPhlebotomyAppointmentAvailabilityPostRequest(
-                    req
-                );
-        }
-
+        const req =
+            new operations.GetOrderAppointmentAvailabilityV3OrderOrderIdPhlebotomyAppointmentAvailabilityPostRequest(
+                {
+                    orderId: orderId,
+                    requestBody: requestBody,
+                }
+            );
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1049,14 +1050,13 @@ export class Order {
      * * Whether a given zip code is served by our Phlebotomy network.
      */
     async getAreaInfo(
-        req: operations.GetAreaInfoV3OrderAreaInfoGetRequest,
+        zipCode: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetAreaInfoV3OrderAreaInfoGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetAreaInfoV3OrderAreaInfoGetRequest(req);
-        }
-
+        const req = new operations.GetAreaInfoV3OrderAreaInfoGetRequest({
+            zipCode: zipCode,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1164,14 +1164,13 @@ export class Order {
      * This endpoint returns the lab results for the order.
      */
     async getLabTestResult(
-        req: operations.GetLabTestResultV3OrderOrderIdResultPdfGetRequest,
+        orderId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetLabTestResultV3OrderOrderIdResultPdfGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetLabTestResultV3OrderOrderIdResultPdfGetRequest(req);
-        }
-
+        const req = new operations.GetLabTestResultV3OrderOrderIdResultPdfGetRequest({
+            orderId: orderId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1279,16 +1278,13 @@ export class Order {
      * provider and sample dates.
      */
     async getLabTestResultMetadata(
-        req: operations.GetLabTestResultMetadataV3OrderOrderIdResultMetadataGetRequest,
+        orderId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetLabTestResultMetadataV3OrderOrderIdResultMetadataGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetLabTestResultMetadataV3OrderOrderIdResultMetadataGetRequest(
-                req
-            );
-        }
-
+        const req = new operations.GetLabTestResultMetadataV3OrderOrderIdResultMetadataGetRequest({
+            orderId: orderId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1398,14 +1394,13 @@ export class Order {
      * Return both metadata and raw json test data
      */
     async getLabTestResultRaw(
-        req: operations.GetLabTestResultRawV3OrderOrderIdResultGetRequest,
+        orderId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetLabTestResultRawV3OrderOrderIdResultGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetLabTestResultRawV3OrderOrderIdResultGetRequest(req);
-        }
-
+        const req = new operations.GetLabTestResultRawV3OrderOrderIdResultGetRequest({
+            orderId: orderId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1515,17 +1510,14 @@ export class Order {
      * Get the appointment associated with an order.
      */
     async getPhlebotomyAppointment(
-        req: operations.GetPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentGetRequest,
+        orderId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req =
-                new operations.GetPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentGetRequest(
-                    req
-                );
-        }
-
+        const req =
+            new operations.GetPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentGetRequest({
+                orderId: orderId,
+            });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1740,14 +1732,13 @@ export class Order {
      * GET requisition pdf for an order
      */
     async getRequisitionUrl(
-        req: operations.GetOrderRequisitionUrlV3OrderOrderIdRequisitionPdfGetRequest,
+        orderId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetOrderRequisitionUrlV3OrderOrderIdRequisitionPdfGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetOrderRequisitionUrlV3OrderOrderIdRequisitionPdfGetRequest(req);
-        }
-
+        const req = new operations.GetOrderRequisitionUrlV3OrderOrderIdRequisitionPdfGetRequest({
+            orderId: orderId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1855,14 +1846,17 @@ export class Order {
      * Get available test kits.
      */
     async orderProcessSimulateV3OrderOrderIdTestPost(
-        req: operations.OrderProcessSimulateV3OrderOrderIdTestPostRequest,
+        orderId: string,
+        delay?: number,
+        finalStatus?: shared.OrderStatus,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.OrderProcessSimulateV3OrderOrderIdTestPostResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.OrderProcessSimulateV3OrderOrderIdTestPostRequest(req);
-        }
-
+        const req = new operations.OrderProcessSimulateV3OrderOrderIdTestPostRequest({
+            orderId: orderId,
+            delay: delay,
+            finalStatus: finalStatus,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1970,16 +1964,17 @@ export class Order {
      * POST Create shipment for order
      */
     async processTestkitOrderV3OrderTestkitProcessTeamIdOrderIdPost(
-        req: operations.ProcessTestkitOrderV3OrderTestkitProcessTeamIdOrderIdPostRequest,
+        orderId: string,
+        teamId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.ProcessTestkitOrderV3OrderTestkitProcessTeamIdOrderIdPostResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.ProcessTestkitOrderV3OrderTestkitProcessTeamIdOrderIdPostRequest(
-                req
-            );
-        }
-
+        const req = new operations.ProcessTestkitOrderV3OrderTestkitProcessTeamIdOrderIdPostRequest(
+            {
+                orderId: orderId,
+                teamId: teamId,
+            }
+        );
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -2352,17 +2347,18 @@ export class Order {
      * Reschedule a previously booked at-home phlebotomy appointment.
      */
     async reschedulePhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentReschedulePatch(
-        req: operations.ReschedulePhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentReschedulePatchRequest,
+        appointmentRescheduleRequest: shared.AppointmentRescheduleRequest,
+        orderId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.ReschedulePhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentReschedulePatchResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req =
-                new operations.ReschedulePhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentReschedulePatchRequest(
-                    req
-                );
-        }
-
+        const req =
+            new operations.ReschedulePhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentReschedulePatchRequest(
+                {
+                    appointmentRescheduleRequest: appointmentRescheduleRequest,
+                    orderId: orderId,
+                }
+            );
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults

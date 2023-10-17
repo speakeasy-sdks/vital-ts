@@ -20,14 +20,13 @@ export class Insurance {
      * Search Diagnosis
      */
     async searchDiagnosis(
-        req: operations.SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest,
+        diagnosisQuery: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.SearchDiagnosisV3InsuranceSearchDiagnosisGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest(req);
-        }
-
+        const req = new operations.SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest({
+            diagnosisQuery: diagnosisQuery,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults

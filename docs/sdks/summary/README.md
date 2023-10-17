@@ -30,16 +30,18 @@ Get user's meals
 
 ```typescript
 import { Vital } from "Vital";
+import { GetMealsV2SummaryMealUserIdGetRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const startDate: string = "Money";
+const userId: string = "fb67cc4d-e4d2-44b5-a3e0-73000b0a593d";
+const endDate: string = "whenever";
+const provider: string = "black";
 
-  const res = await sdk.summary.getMeals({
-    startDate: "Steel relative",
-    userId: "67cc4de4-d24b-45e3-a073-000b0a593dec",
-  });
+  const res = await sdk.summary.getMeals(startDate, userId, endDate, provider);
 
   if (res.statusCode == 200) {
     // handle response
@@ -49,11 +51,14 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [operations.GetMealsV2SummaryMealUserIdGetRequest](../../models/operations/getmealsv2summarymealuseridgetrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `retries`                                                                                                            | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                               | :heavy_minus_sign:                                                                                                   | Configuration to override the default retry behavior of the client.                                                  |
-| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `startDate`                                                                                                                | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `userId`                                                                                                                   | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `endDate`                                                                                                                  | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
+| `retries`                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                     | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
@@ -69,16 +74,18 @@ Get Daily Activity for user_id
 
 ```typescript
 import { Vital } from "Vital";
+import { GetUserActivityV2SummaryActivityUserIdGetRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const startDate: string = "salmon";
+const userId: string = "994eda1c-812f-4363-bbdc-b5592eeffbfe";
+const endDate: string = "sonata";
+const provider: string = "Fantastic";
 
-  const res = await sdk.summary.getUserActivity({
-    startDate: "unde",
-    userId: "94eda1c8-12f3-4633-bdcb-5592eeffbfef",
-  });
+  const res = await sdk.summary.getUserActivity(startDate, userId, endDate, provider);
 
   if (res.statusCode == 200) {
     // handle response
@@ -88,11 +95,14 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [operations.GetUserActivityV2SummaryActivityUserIdGetRequest](../../models/operations/getuseractivityv2summaryactivityuseridgetrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-| `retries`                                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                     | :heavy_minus_sign:                                                                                                                         | Configuration to override the default retry behavior of the client.                                                                        |
-| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `startDate`                                                                                                                | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `userId`                                                                                                                   | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `endDate`                                                                                                                  | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
+| `retries`                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                     | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
@@ -108,16 +118,18 @@ Get Daily Activity for user_id
 
 ```typescript
 import { Vital } from "Vital";
+import { GetUserActivityRawV2SummaryActivityUserIdRawGetRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const startDate: string = "turquoise";
+const userId: string = "52487b77-c7c6-41ed-9ee8-85ef0bdc3cda";
+const endDate: string = "blah";
+const provider: string = "enforcement";
 
-  const res = await sdk.summary.getUserActivityRaw({
-    startDate: "HEX black indexing",
-    userId: "b77c7c61-ed1e-4e88-9ef0-bdc3cdae1f4a",
-  });
+  const res = await sdk.summary.getUserActivityRaw(startDate, userId, endDate, provider);
 
   if (res.statusCode == 200) {
     // handle response
@@ -127,11 +139,14 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                              | [operations.GetUserActivityRawV2SummaryActivityUserIdRawGetRequest](../../models/operations/getuseractivityrawv2summaryactivityuseridrawgetrequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
-| `retries`                                                                                                                                              | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                 | :heavy_minus_sign:                                                                                                                                     | Configuration to override the default retry behavior of the client.                                                                                    |
-| `config`                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                           | :heavy_minus_sign:                                                                                                                                     | Available config options for making requests.                                                                                                          |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `startDate`                                                                                                                | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `userId`                                                                                                                   | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `endDate`                                                                                                                  | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
+| `retries`                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                     | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
@@ -147,16 +162,18 @@ Get Daily Body data for user_id
 
 ```typescript
 import { Vital } from "Vital";
+import { GetUserBodyV2SummaryBodyUserIdGetRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const startDate: string = "hack";
+const userId: string = "70daa1c7-02d4-4a96-939a-8a9e6e4eae9b";
+const endDate: string = "magnetic";
+const provider: string = "local";
 
-  const res = await sdk.summary.getUserBody({
-    startDate: "Northwest West",
-    userId: "aa1c702d-4a96-4539-a8a9-e6e4eae9b476",
-  });
+  const res = await sdk.summary.getUserBody(startDate, userId, endDate, provider);
 
   if (res.statusCode == 200) {
     // handle response
@@ -168,7 +185,10 @@ import { Vital } from "Vital";
 
 | Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
 | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [operations.GetUserBodyV2SummaryBodyUserIdGetRequest](../../models/operations/getuserbodyv2summarybodyuseridgetrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| `startDate`                                                                                                                | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `userId`                                                                                                                   | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `endDate`                                                                                                                  | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 | `retries`                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                     | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
 | `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
@@ -186,16 +206,18 @@ Get Daily Body data for user_id
 
 ```typescript
 import { Vital } from "Vital";
+import { GetUserBodyRawV2SummaryBodyUserIdRawGetRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const startDate: string = "Computer";
+const userId: string = "8730e01d-99c9-4457-968e-72c19854893e";
+const endDate: string = "Credit";
+const provider: string = "South";
 
-  const res = await sdk.summary.getUserBodyRaw({
-    startDate: "Southeast",
-    userId: "730e01d9-9c94-457d-a8e7-2c19854893e6",
-  });
+  const res = await sdk.summary.getUserBodyRaw(startDate, userId, endDate, provider);
 
   if (res.statusCode == 200) {
     // handle response
@@ -205,11 +227,14 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [operations.GetUserBodyRawV2SummaryBodyUserIdRawGetRequest](../../models/operations/getuserbodyrawv2summarybodyuseridrawgetrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `retries`                                                                                                                              | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                 | :heavy_minus_sign:                                                                                                                     | Configuration to override the default retry behavior of the client.                                                                    |
-| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `startDate`                                                                                                                | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `userId`                                                                                                                   | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `endDate`                                                                                                                  | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
+| `retries`                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                     | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
@@ -225,15 +250,16 @@ Get Devices for user_id
 
 ```typescript
 import { Vital } from "Vital";
+import { GetUserDevicesRawV2SummaryDevicesUserIdRawGetRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const userId: string = "d3afcead-cf24-4987-97fa-74fe26009852";
+const provider: string = "Kwacha";
 
-  const res = await sdk.summary.getUserDevicesRaw({
-    userId: "d3afcead-cf24-4987-97fa-74fe26009852",
-  });
+  const res = await sdk.summary.getUserDevicesRaw(userId, provider);
 
   if (res.statusCode == 200) {
     // handle response
@@ -243,11 +269,12 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [operations.GetUserDevicesRawV2SummaryDevicesUserIdRawGetRequest](../../models/operations/getuserdevicesrawv2summarydevicesuseridrawgetrequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
-| `retries`                                                                                                                                          | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                             | :heavy_minus_sign:                                                                                                                                 | Configuration to override the default retry behavior of the client.                                                                                |
-| `config`                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                       | :heavy_minus_sign:                                                                                                                                 | Available config options for making requests.                                                                                                      |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `userId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
+| `provider`                                                          | *string*                                                            | :heavy_minus_sign:                                                  | Provider oura/strava etc                                            |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
@@ -263,15 +290,16 @@ Get Daily profile for user_id
 
 ```typescript
 import { Vital } from "Vital";
+import { GetUserProfileV2SummaryProfileUserIdGetRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const userId: string = "1e03319e-ca0e-4660-8784-a0581ebdd19f";
+const provider: string = "Unbranded";
 
-  const res = await sdk.summary.getUserProfile({
-    userId: "1e03319e-ca0e-4660-8784-a0581ebdd19f",
-  });
+  const res = await sdk.summary.getUserProfile(userId, provider);
 
   if (res.statusCode == 200) {
     // handle response
@@ -281,11 +309,12 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [operations.GetUserProfileV2SummaryProfileUserIdGetRequest](../../models/operations/getuserprofilev2summaryprofileuseridgetrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `retries`                                                                                                                              | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                 | :heavy_minus_sign:                                                                                                                     | Configuration to override the default retry behavior of the client.                                                                    |
-| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `userId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
+| `provider`                                                          | *string*                                                            | :heavy_minus_sign:                                                  | Provider oura/strava etc                                            |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
@@ -301,15 +330,16 @@ Get Daily profile for user_id
 
 ```typescript
 import { Vital } from "Vital";
+import { GetUserProfileRawV2SummaryProfileUserIdRawGetRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const userId: string = "ae101aa4-8797-4dc6-bac7-aa9d64e72a37";
+const provider: string = "Liberia";
 
-  const res = await sdk.summary.getUserProfileRaw({
-    userId: "ae101aa4-8797-4dc6-bac7-aa9d64e72a37",
-  });
+  const res = await sdk.summary.getUserProfileRaw(userId, provider);
 
   if (res.statusCode == 200) {
     // handle response
@@ -319,11 +349,12 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [operations.GetUserProfileRawV2SummaryProfileUserIdRawGetRequest](../../models/operations/getuserprofilerawv2summaryprofileuseridrawgetrequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
-| `retries`                                                                                                                                          | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                             | :heavy_minus_sign:                                                                                                                                 | Configuration to override the default retry behavior of the client.                                                                                |
-| `config`                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                       | :heavy_minus_sign:                                                                                                                                 | Available config options for making requests.                                                                                                      |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `userId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
+| `provider`                                                          | *string*                                                            | :heavy_minus_sign:                                                  | Provider oura/strava etc                                            |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
@@ -339,16 +370,18 @@ Get Daily sleep for user_id
 
 ```typescript
 import { Vital } from "Vital";
+import { GetUserSleepV2SummarySleepUserIdGetRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const startDate: string = "Pakistan";
+const userId: string = "ea429e1c-88ab-4243-bc6a-94c896bba7aa";
+const endDate: string = "Southeast";
+const provider: string = "wireless";
 
-  const res = await sdk.summary.getUserSleep({
-    startDate: "Corporate quirkily",
-    userId: "429e1c88-ab24-43bc-aa94-c896bba7aa1a",
-  });
+  const res = await sdk.summary.getUserSleep(startDate, userId, endDate, provider);
 
   if (res.statusCode == 200) {
     // handle response
@@ -358,11 +391,14 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [operations.GetUserSleepV2SummarySleepUserIdGetRequest](../../models/operations/getusersleepv2summarysleepuseridgetrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `retries`                                                                                                                      | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                         | :heavy_minus_sign:                                                                                                             | Configuration to override the default retry behavior of the client.                                                            |
-| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `startDate`                                                                                                                | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `userId`                                                                                                                   | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `endDate`                                                                                                                  | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
+| `retries`                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                     | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
@@ -378,16 +414,18 @@ Get Daily sleep for user_id
 
 ```typescript
 import { Vital } from "Vital";
+import { GetUserSleepRawV2SummarySleepUserIdRawGetRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const startDate: string = "Titanium";
+const userId: string = "ba77ed68-ff41-4f3f-8077-eae7285ab9bb";
+const endDate: string = "generate";
+const provider: string = "Point";
 
-  const res = await sdk.summary.getUserSleepRaw({
-    startDate: "Clothing Agent Account",
-    userId: "f41f3fc0-77ea-4e72-85ab-9bb882f3ab0f",
-  });
+  const res = await sdk.summary.getUserSleepRaw(startDate, userId, endDate, provider);
 
   if (res.statusCode == 200) {
     // handle response
@@ -397,11 +435,14 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [operations.GetUserSleepRawV2SummarySleepUserIdRawGetRequest](../../models/operations/getusersleeprawv2summarysleepuseridrawgetrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-| `retries`                                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                     | :heavy_minus_sign:                                                                                                                         | Configuration to override the default retry behavior of the client.                                                                        |
-| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `startDate`                                                                                                                | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `userId`                                                                                                                   | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `endDate`                                                                                                                  | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
+| `retries`                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                     | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
@@ -417,16 +458,18 @@ Get Daily sleep stream for user_id
 
 ```typescript
 import { Vital } from "Vital";
+import { GetUserSleepStreamV2SummarySleepUserIdStreamGetRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const startDate: string = "quantify";
+const userId: string = "05f1c352-9503-47bc-8ab0-890f30d313cc";
+const endDate: string = "Account";
+const provider: string = "Dakota";
 
-  const res = await sdk.summary.getUserSleepStream({
-    startDate: "Rock Southwest",
-    userId: "35295037-bc4a-4b08-90f3-0d313cc6ef2c",
-  });
+  const res = await sdk.summary.getUserSleepStream(startDate, userId, endDate, provider);
 
   if (res.statusCode == 200) {
     // handle response
@@ -436,11 +479,14 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                              | [operations.GetUserSleepStreamV2SummarySleepUserIdStreamGetRequest](../../models/operations/getusersleepstreamv2summarysleepuseridstreamgetrequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
-| `retries`                                                                                                                                              | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                 | :heavy_minus_sign:                                                                                                                                     | Configuration to override the default retry behavior of the client.                                                                                    |
-| `config`                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                           | :heavy_minus_sign:                                                                                                                                     | Available config options for making requests.                                                                                                          |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `startDate`                                                                                                                | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `userId`                                                                                                                   | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `endDate`                                                                                                                  | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
+| `retries`                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                     | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
@@ -456,16 +502,18 @@ Get Daily workout for user_id
 
 ```typescript
 import { Vital } from "Vital";
+import { GetUserWorkoutsV2SummaryWorkoutsUserIdGetRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const startDate: string = "Plutonium";
+const userId: string = "0edaf060-981f-44a6-ab52-5d09cc6d2663";
+const endDate: string = "Recumbent";
+const provider: string = "next";
 
-  const res = await sdk.summary.getUserWorkouts({
-    startDate: "green whereas Principal",
-    userId: "060981f4-a6eb-4525-909c-c6d2663c92f9",
-  });
+  const res = await sdk.summary.getUserWorkouts(startDate, userId, endDate, provider);
 
   if (res.statusCode == 200) {
     // handle response
@@ -475,11 +523,14 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [operations.GetUserWorkoutsV2SummaryWorkoutsUserIdGetRequest](../../models/operations/getuserworkoutsv2summaryworkoutsuseridgetrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-| `retries`                                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                     | :heavy_minus_sign:                                                                                                                         | Configuration to override the default retry behavior of the client.                                                                        |
-| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `startDate`                                                                                                                | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `userId`                                                                                                                   | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `endDate`                                                                                                                  | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
+| `retries`                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                     | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
@@ -495,16 +546,18 @@ Get Daily workout for user_id
 
 ```typescript
 import { Vital } from "Vital";
+import { GetUserWorkoutsRawV2SummaryWorkoutsUserIdRawGetRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const startDate: string = "Bike";
+const userId: string = "65358ad8-c074-4b1c-a19b-ac589e4fc044";
+const endDate: string = "Auto";
+const provider: string = "Legacy";
 
-  const res = await sdk.summary.getUserWorkoutsRaw({
-    startDate: "card",
-    userId: "3d65358a-d8c0-474b-9c21-9bac589e4fc0",
-  });
+  const res = await sdk.summary.getUserWorkoutsRaw(startDate, userId, endDate, provider);
 
   if (res.statusCode == 200) {
     // handle response
@@ -514,11 +567,14 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                              | [operations.GetUserWorkoutsRawV2SummaryWorkoutsUserIdRawGetRequest](../../models/operations/getuserworkoutsrawv2summaryworkoutsuseridrawgetrequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
-| `retries`                                                                                                                                              | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                 | :heavy_minus_sign:                                                                                                                                     | Configuration to override the default retry behavior of the client.                                                                                    |
-| `config`                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                           | :heavy_minus_sign:                                                                                                                                     | Available config options for making requests.                                                                                                          |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `startDate`                                                                                                                | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `userId`                                                                                                                   | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `endDate`                                                                                                                  | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
+| `retries`                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                     | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
@@ -534,15 +590,17 @@ Post User Activity
 
 ```typescript
 import { Vital } from "Vital";
+import { PostUserActivityV2SummaryActivityUserIdPostRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const userId: string = "0e4724f5-d113-41c1-bf58-cd7168d06d0c";
+const xVitalAndroidSDKVersion: string = "primary";
+const xVitalIosSDKVersion: string = "tesla";
 
-  const res = await sdk.summary.postUserActivity({
-    userId: "0e4724f5-d113-41c1-bf58-cd7168d06d0c",
-  });
+  const res = await sdk.summary.postUserActivity(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 
   if (res.statusCode == 200) {
     // handle response
@@ -552,11 +610,13 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                      | [operations.PostUserActivityV2SummaryActivityUserIdPostRequest](../../models/operations/postuseractivityv2summaryactivityuseridpostrequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
-| `retries`                                                                                                                                      | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                         | :heavy_minus_sign:                                                                                                                             | Configuration to override the default retry behavior of the client.                                                                            |
-| `config`                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                   | :heavy_minus_sign:                                                                                                                             | Available config options for making requests.                                                                                                  |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `userId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
+| `xVitalAndroidSDKVersion`                                           | *string*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `xVitalIosSDKVersion`                                               | *string*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
@@ -572,15 +632,17 @@ Post User Body
 
 ```typescript
 import { Vital } from "Vital";
+import { PostUserBodyV2SummaryBodyUserIdPostRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const userId: string = "2aac64a8-1a4b-47b9-b083-c6d33a9beb02";
+const xVitalAndroidSDKVersion: string = "dicta";
+const xVitalIosSDKVersion: string = "Cambridgeshire";
 
-  const res = await sdk.summary.postUserBody({
-    userId: "2aac64a8-1a4b-47b9-b083-c6d33a9beb02",
-  });
+  const res = await sdk.summary.postUserBody(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 
   if (res.statusCode == 200) {
     // handle response
@@ -590,11 +652,13 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [operations.PostUserBodyV2SummaryBodyUserIdPostRequest](../../models/operations/postuserbodyv2summarybodyuseridpostrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `retries`                                                                                                                      | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                         | :heavy_minus_sign:                                                                                                             | Configuration to override the default retry behavior of the client.                                                            |
-| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `userId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
+| `xVitalAndroidSDKVersion`                                           | *string*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `xVitalIosSDKVersion`                                               | *string*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
@@ -610,15 +674,17 @@ Post User Profile
 
 ```typescript
 import { Vital } from "Vital";
+import { PostUserProfileV2SummaryProfileUserIdPostRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const userId: string = "343ee935-de73-408c-a15e-4782d3b864c4";
+const xVitalAndroidSDKVersion: string = "purple";
+const xVitalIosSDKVersion: string = "foreground";
 
-  const res = await sdk.summary.postUserProfile({
-    userId: "343ee935-de73-408c-a15e-4782d3b864c4",
-  });
+  const res = await sdk.summary.postUserProfile(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 
   if (res.statusCode == 200) {
     // handle response
@@ -628,11 +694,13 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [operations.PostUserProfileV2SummaryProfileUserIdPostRequest](../../models/operations/postuserprofilev2summaryprofileuseridpostrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-| `retries`                                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                     | :heavy_minus_sign:                                                                                                                         | Configuration to override the default retry behavior of the client.                                                                        |
-| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `userId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
+| `xVitalAndroidSDKVersion`                                           | *string*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `xVitalIosSDKVersion`                                               | *string*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
@@ -648,15 +716,17 @@ Post User Sleep
 
 ```typescript
 import { Vital } from "Vital";
+import { PostUserSleepV2SummarySleepUserIdPostRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const userId: string = "4332e922-db99-44ec-bd9d-77a063c520e5";
+const xVitalAndroidSDKVersion: string = "Tasty";
+const xVitalIosSDKVersion: string = "South";
 
-  const res = await sdk.summary.postUserSleep({
-    userId: "4332e922-db99-44ec-bd9d-77a063c520e5",
-  });
+  const res = await sdk.summary.postUserSleep(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 
   if (res.statusCode == 200) {
     // handle response
@@ -666,11 +736,13 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [operations.PostUserSleepV2SummarySleepUserIdPostRequest](../../models/operations/postusersleepv2summarysleepuseridpostrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
-| `retries`                                                                                                                          | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                             | :heavy_minus_sign:                                                                                                                 | Configuration to override the default retry behavior of the client.                                                                |
-| `config`                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                       | :heavy_minus_sign:                                                                                                                 | Available config options for making requests.                                                                                      |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `userId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
+| `xVitalAndroidSDKVersion`                                           | *string*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `xVitalIosSDKVersion`                                               | *string*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
@@ -686,15 +758,17 @@ Post User Workout
 
 ```typescript
 import { Vital } from "Vital";
+import { PostUserWorkoutV2SummaryWorkoutsUserIdPostRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const userId: string = "63a9d635-f084-45f5-a781-131420d3a83b";
+const xVitalAndroidSDKVersion: string = "compress";
+const xVitalIosSDKVersion: string = "Unbranded";
 
-  const res = await sdk.summary.postUserWorkout({
-    userId: "63a9d635-f084-45f5-a781-131420d3a83b",
-  });
+  const res = await sdk.summary.postUserWorkout(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 
   if (res.statusCode == 200) {
     // handle response
@@ -704,11 +778,13 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [operations.PostUserWorkoutV2SummaryWorkoutsUserIdPostRequest](../../models/operations/postuserworkoutv2summaryworkoutsuseridpostrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
-| `retries`                                                                                                                                    | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                       | :heavy_minus_sign:                                                                                                                           | Configuration to override the default retry behavior of the client.                                                                          |
-| `config`                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                 | :heavy_minus_sign:                                                                                                                           | Available config options for making requests.                                                                                                |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `userId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
+| `xVitalAndroidSDKVersion`                                           | *string*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `xVitalIosSDKVersion`                                               | *string*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response

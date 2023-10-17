@@ -251,14 +251,15 @@ export class Link {
      * This connects auth providers that are password based.
      */
     async connectBleProvider(
-        req: operations.ConnectBleProviderV2LinkProviderManualProviderPostRequest,
+        manualConnectionData: shared.ManualConnectionData,
+        provider: operations.ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.ConnectBleProviderV2LinkProviderManualProviderPostResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.ConnectBleProviderV2LinkProviderManualProviderPostRequest(req);
-        }
-
+        const req = new operations.ConnectBleProviderV2LinkProviderManualProviderPostRequest({
+            manualConnectionData: manualConnectionData,
+            provider: provider,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -521,16 +522,15 @@ export class Link {
      * This connects auth providers that are email based.
      */
     async connectEmailProvider(
-        req: operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostRequest,
+        emailProviderAuthLink: shared.EmailProviderAuthLink,
+        provider: operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostProviderEmailProviders,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostRequest(
-                req
-            );
-        }
-
+        const req = new operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostRequest({
+            emailProviderAuthLink: emailProviderAuthLink,
+            provider: provider,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -660,16 +660,18 @@ export class Link {
      * This connects auth providers that are password based.
      */
     async connectIndividualProvider(
-        req: operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostRequest,
+        individualProviderData: shared.IndividualProviderData,
+        provider: operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostProviderPasswordProviders,
+        xVitalLinkClientRegion?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostRequest(
-                req
-            );
-        }
-
+        const req =
+            new operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostRequest({
+                individualProviderData: individualProviderData,
+                provider: provider,
+                xVitalLinkClientRegion: xVitalLinkClientRegion,
+            });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -806,14 +808,15 @@ export class Link {
      * This function is hit by vital-link to authenticate a password provider.
      */
     async connectPasswordAuth(
-        req: operations.ConnectPasswordAuthV2LinkAuthPostRequest,
+        passwordAuthLink: shared.PasswordAuthLink,
+        xVitalLinkClientRegion?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.ConnectPasswordAuthV2LinkAuthPostResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.ConnectPasswordAuthV2LinkAuthPostRequest(req);
-        }
-
+        const req = new operations.ConnectPasswordAuthV2LinkAuthPostRequest({
+            passwordAuthLink: passwordAuthLink,
+            xVitalLinkClientRegion: xVitalLinkClientRegion,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -942,14 +945,15 @@ export class Link {
      * Connect oauth providers
      */
     async connectProvider(
-        req: operations.ConnectProviderV2LinkConnectProviderGetRequest,
+        provider: string,
+        xVitalSDKNoRedirect?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.ConnectProviderV2LinkConnectProviderGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.ConnectProviderV2LinkConnectProviderGetRequest(req);
-        }
-
+        const req = new operations.ConnectProviderV2LinkConnectProviderGetRequest({
+            provider: provider,
+            xVitalSDKNoRedirect: xVitalSDKNoRedirect,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1196,14 +1200,15 @@ export class Link {
      * Generate a token to invite a user of Vital mobile app to your team
      */
     async createToken(
-        req: operations.CreateTokenV2LinkCodeCreatePostRequest,
+        userId: string,
+        expiresAt?: Date,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.CreateTokenV2LinkCodeCreatePostResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.CreateTokenV2LinkCodeCreatePostRequest(req);
-        }
-
+        const req = new operations.CreateTokenV2LinkCodeCreatePostRequest({
+            userId: userId,
+            expiresAt: expiresAt,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1314,14 +1319,13 @@ export class Link {
      * Redeem an invite token for an api key
      */
     async exchangeToken(
-        req: operations.ExchangeTokenV2LinkCodeExchangePostRequest,
+        code: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.ExchangeTokenV2LinkCodeExchangePostResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.ExchangeTokenV2LinkCodeExchangePostRequest(req);
-        }
-
+        const req = new operations.ExchangeTokenV2LinkCodeExchangePostRequest({
+            code: code,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1570,14 +1574,13 @@ export class Link {
      * This endpoint generates an OAuth link for oauth provider
      */
     async getOauthProvider(
-        req: operations.GetOauthProviderV2LinkProviderOauthOauthProviderGetRequest,
+        oauthProvider: shared.OAuthProviders,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetOauthProviderV2LinkProviderOauthOauthProviderGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetOauthProviderV2LinkProviderOauthOauthProviderGetRequest(req);
-        }
-
+        const req = new operations.GetOauthProviderV2LinkProviderOauthOauthProviderGetRequest({
+            oauthProvider: oauthProvider,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults

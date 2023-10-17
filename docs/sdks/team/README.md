@@ -73,18 +73,19 @@ Create api key.
 
 ```typescript
 import { Vital } from "Vital";
+import { CreateApiKeyV2TeamTeamIdApikeyPostRequest } from "Vital/dist/sdk/models/operations";
+import { CreateApiKeyBody } from "Vital/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const createApiKeyBody: CreateApiKeyBody = {
+  label: "deposit API",
+};
+const teamId: string = "Avon";
 
-  const res = await sdk.team.createApiKey({
-    createApiKeyBody: {
-      label: "deposit API",
-    },
-    teamId: "Sudan",
-  });
+  const res = await sdk.team.createApiKey(createApiKeyBody, teamId);
 
   if (res.statusCode == 200) {
     // handle response
@@ -94,11 +95,12 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [operations.CreateApiKeyV2TeamTeamIdApikeyPostRequest](../../models/operations/createapikeyv2teamteamidapikeypostrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `retries`                                                                                                                    | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                       | :heavy_minus_sign:                                                                                                           | Configuration to override the default retry behavior of the client.                                                          |
-| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `createApiKeyBody`                                                  | [shared.CreateApiKeyBody](../../models/shared/createapikeybody.md)  | :heavy_check_mark:                                                  | N/A                                                                 |
+| `teamId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
@@ -114,20 +116,21 @@ Add Team priority row for source
 
 ```typescript
 import { Vital } from "Vital";
+import { CreatePriorityV2TeamTeamIdPriorityPostRequest } from "Vital/dist/sdk/models/operations";
+import { PriorityCreate } from "Vital/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const priorityCreate: PriorityCreate = {
+  priority: 548209,
+  sourceId: 168326,
+  teamId: "0d4e3a38-5a06-40f0-b144-d921de79168b",
+};
+const teamId: string = "compressing";
 
-  const res = await sdk.team.createPriority({
-    priorityCreate: {
-      priority: 548209,
-      sourceId: 168326,
-      teamId: "0d4e3a38-5a06-40f0-b144-d921de79168b",
-    },
-    teamId: "Pants Summerville",
-  });
+  const res = await sdk.team.createPriority(priorityCreate, teamId);
 
   if (res.statusCode == 200) {
     // handle response
@@ -137,11 +140,12 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [operations.CreatePriorityV2TeamTeamIdPriorityPostRequest](../../models/operations/createpriorityv2teamteamidprioritypostrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `retries`                                                                                                                            | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                               | :heavy_minus_sign:                                                                                                                   | Configuration to override the default retry behavior of the client.                                                                  |
-| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `priorityCreate`                                                    | [shared.PriorityCreate](../../models/shared/prioritycreate.md)      | :heavy_check_mark:                                                  | N/A                                                                 |
+| `teamId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
@@ -157,16 +161,16 @@ Invalidate api key by key value.
 
 ```typescript
 import { Vital } from "Vital";
+import { DeleteApiKeyV2TeamTeamIdApikeyApiKeyIdDeleteRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const apiKeyId: string = "Weston";
+const teamId: string = "Bicycle";
 
-  const res = await sdk.team.deleteApiKey({
-    apiKeyId: "sans",
-    teamId: "Minivan orchid knee",
-  });
+  const res = await sdk.team.deleteApiKey(apiKeyId, teamId);
 
   if (res.statusCode == 200) {
     // handle response
@@ -176,11 +180,12 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [operations.DeleteApiKeyV2TeamTeamIdApikeyApiKeyIdDeleteRequest](../../models/operations/deleteapikeyv2teamteamidapikeyapikeyiddeleterequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
-| `retries`                                                                                                                                        | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                           | :heavy_minus_sign:                                                                                                                               | Configuration to override the default retry behavior of the client.                                                                              |
-| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `apiKeyId`                                                          | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
+| `teamId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
@@ -196,15 +201,15 @@ Get team.
 
 ```typescript
 import { Vital } from "Vital";
+import { GetTeamV2TeamTeamIdGetRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const teamId: string = "b18d8d81-fd7b-4764-a31e-475cb1f36591";
 
-  const res = await sdk.team.get({
-    teamId: "b18d8d81-fd7b-4764-a31e-475cb1f36591",
-  });
+  const res = await sdk.team.get(teamId);
 
   if (res.statusCode == 200) {
     // handle response
@@ -214,11 +219,11 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.GetTeamV2TeamTeamIdGetRequest](../../models/operations/getteamv2teamteamidgetrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `retries`                                                                                            | [utils.RetryConfig](../../models/utils/retryconfig.md)                                               | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
-| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `teamId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
@@ -234,15 +239,15 @@ Invalidate api key by key value.
 
 ```typescript
 import { Vital } from "Vital";
+import { GetApiKeysForTeamV2TeamTeamIdApikeysGetRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const teamId: string = "Computer";
 
-  const res = await sdk.team.getApiKeys({
-    teamId: "South",
-  });
+  const res = await sdk.team.getApiKeys(teamId);
 
   if (res.statusCode == 200) {
     // handle response
@@ -252,11 +257,11 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [operations.GetApiKeysForTeamV2TeamTeamIdApikeysGetRequest](../../models/operations/getapikeysforteamv2teamteamidapikeysgetrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `retries`                                                                                                                              | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                 | :heavy_minus_sign:                                                                                                                     | Configuration to override the default retry behavior of the client.                                                                    |
-| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `teamId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
@@ -307,13 +312,15 @@ GET source priorities.
 
 ```typescript
 import { Vital } from "Vital";
+import { GetSourcePrioritiesV2TeamSourcePrioritiesGetRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const dataType: string = "deposit";
 
-  const res = await sdk.team.getSourcePriorities({});
+  const res = await sdk.team.getSourcePriorities(dataType);
 
   if (res.statusCode == 200) {
     // handle response
@@ -323,11 +330,11 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [operations.GetSourcePrioritiesV2TeamSourcePrioritiesGetRequest](../../models/operations/getsourceprioritiesv2teamsourceprioritiesgetrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
-| `retries`                                                                                                                                        | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                           | :heavy_minus_sign:                                                                                                                               | Configuration to override the default retry behavior of the client.                                                                              |
-| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `dataType`                                                          | *string*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
@@ -343,15 +350,15 @@ Get the current user count for a team.
 
 ```typescript
 import { Vital } from "Vital";
+import { GetTeamUserCountV2TeamTeamIdUsersCountGetRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const teamId: string = "3021769b-866d-4c37-8307-789796d71ace";
 
-  const res = await sdk.team.getUserCount({
-    teamId: "3021769b-866d-4c37-8307-789796d71ace",
-  });
+  const res = await sdk.team.getUserCount(teamId);
 
   if (res.statusCode == 200) {
     // handle response
@@ -361,11 +368,11 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [operations.GetTeamUserCountV2TeamTeamIdUsersCountGetRequest](../../models/operations/getteamusercountv2teamteamiduserscountgetrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-| `retries`                                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                     | :heavy_minus_sign:                                                                                                                         | Configuration to override the default retry behavior of the client.                                                                        |
-| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `teamId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
@@ -416,16 +423,16 @@ Deprecated. Rotate api key.
 
 ```typescript
 import { Vital } from "Vital";
+import { RotateApiKeyV2TeamTeamIdApikeyApiKeyIdRotatePatchRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const apiKeyId: string = "lux";
+const teamId: string = "optimize";
 
-  const res = await sdk.team.rotateApiKeyV2TeamTeamIdApikeyApiKeyIdRotatePatch({
-    apiKeyId: "ah Buckinghamshire Computer",
-    teamId: "Associate Developer Director",
-  });
+  const res = await sdk.team.rotateApiKeyV2TeamTeamIdApikeyApiKeyIdRotatePatch(apiKeyId, teamId);
 
   if (res.statusCode == 200) {
     // handle response
@@ -435,11 +442,12 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                  | [operations.RotateApiKeyV2TeamTeamIdApikeyApiKeyIdRotatePatchRequest](../../models/operations/rotateapikeyv2teamteamidapikeyapikeyidrotatepatchrequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
-| `retries`                                                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                     | :heavy_minus_sign:                                                                                                                                         | Configuration to override the default retry behavior of the client.                                                                                        |
-| `config`                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                               | :heavy_minus_sign:                                                                                                                                         | Available config options for making requests.                                                                                                              |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `apiKeyId`                                                          | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
+| `teamId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
@@ -455,13 +463,15 @@ Search team users by user_id
 
 ```typescript
 import { Vital } from "Vital";
+import { SearchTeamUsersByUuidOrClientUserIdV2TeamUsersSearchGetRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const queryId: string = "North";
 
-  const res = await sdk.team.searchUsersByUuid({});
+  const res = await sdk.team.searchUsersByUuid(queryId);
 
   if (res.statusCode == 200) {
     // handle response
@@ -471,11 +481,11 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                                                              | Type                                                                                                                                                                   | Required                                                                                                                                                               | Description                                                                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                              | [operations.SearchTeamUsersByUuidOrClientUserIdV2TeamUsersSearchGetRequest](../../models/operations/searchteamusersbyuuidorclientuseridv2teamuserssearchgetrequest.md) | :heavy_check_mark:                                                                                                                                                     | The request object to use for the request.                                                                                                                             |
-| `retries`                                                                                                                                                              | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                 | :heavy_minus_sign:                                                                                                                                                     | Configuration to override the default retry behavior of the client.                                                                                                    |
-| `config`                                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                           | :heavy_minus_sign:                                                                                                                                                     | Available config options for making requests.                                                                                                                          |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `queryId`                                                           | *string*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
@@ -491,19 +501,20 @@ Update API key label.
 
 ```typescript
 import { Vital } from "Vital";
+import { UpdateApiKeyLabelV2TeamTeamIdApikeyApiKeyIdPatchRequest } from "Vital/dist/sdk/models/operations";
+import { UpdateApiKeyBody } from "Vital/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const updateApiKeyBody: UpdateApiKeyBody = {
+  label: "architectures District",
+};
+const apiKeyId: string = "South";
+const teamId: string = "South";
 
-  const res = await sdk.team.updateApiKeyLabelV2TeamTeamIdApikeyApiKeyIdPatch({
-    updateApiKeyBody: {
-      label: "architectures District",
-    },
-    apiKeyId: "Security",
-    teamId: "dolor",
-  });
+  const res = await sdk.team.updateApiKeyLabelV2TeamTeamIdApikeyApiKeyIdPatch(updateApiKeyBody, apiKeyId, teamId);
 
   if (res.statusCode == 200) {
     // handle response
@@ -513,11 +524,13 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                                                | Type                                                                                                                                                     | Required                                                                                                                                                 | Description                                                                                                                                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                | [operations.UpdateApiKeyLabelV2TeamTeamIdApikeyApiKeyIdPatchRequest](../../models/operations/updateapikeylabelv2teamteamidapikeyapikeyidpatchrequest.md) | :heavy_check_mark:                                                                                                                                       | The request object to use for the request.                                                                                                               |
-| `retries`                                                                                                                                                | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                   | :heavy_minus_sign:                                                                                                                                       | Configuration to override the default retry behavior of the client.                                                                                      |
-| `config`                                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                             | :heavy_minus_sign:                                                                                                                                       | Available config options for making requests.                                                                                                            |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `updateApiKeyBody`                                                  | [shared.UpdateApiKeyBody](../../models/shared/updateapikeybody.md)  | :heavy_check_mark:                                                  | N/A                                                                 |
+| `apiKeyId`                                                          | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
+| `teamId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
@@ -533,15 +546,15 @@ Patch source priorities.
 
 ```typescript
 import { Vital } from "Vital";
+import { UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const teamId: string = "phew";
 
-  const res = await sdk.team.updateSourcePrioritiesV2TeamSourcePrioritiesPatch({
-    teamId: "purple male incidentally",
-  });
+  const res = await sdk.team.updateSourcePrioritiesV2TeamSourcePrioritiesPatch(teamId);
 
   if (res.statusCode == 200) {
     // handle response
@@ -551,11 +564,11 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                  | [operations.UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchRequest](../../models/operations/updatesourceprioritiesv2teamsourceprioritiespatchrequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
-| `retries`                                                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                     | :heavy_minus_sign:                                                                                                                                         | Configuration to override the default retry behavior of the client.                                                                                        |
-| `config`                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                               | :heavy_minus_sign:                                                                                                                                         | Available config options for making requests.                                                                                                              |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `teamId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
@@ -571,16 +584,17 @@ Update team.
 
 ```typescript
 import { Vital } from "Vital";
+import { UpdateTeamV2TeamTeamIdPatchRequest } from "Vital/dist/sdk/models/operations";
+import { TeamUpdate } from "Vital/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const teamUpdate: TeamUpdate = {};
+const teamId: string = "Supervisor";
 
-  const res = await sdk.team.updateTeamV2TeamTeamIdPatch({
-    teamUpdate: {},
-    teamId: "Virginia Decentralized Diesel",
-  });
+  const res = await sdk.team.updateTeamV2TeamTeamIdPatch(teamUpdate, teamId);
 
   if (res.statusCode == 200) {
     // handle response
@@ -590,11 +604,12 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.UpdateTeamV2TeamTeamIdPatchRequest](../../models/operations/updateteamv2teamteamidpatchrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `retries`                                                                                                      | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                         | :heavy_minus_sign:                                                                                             | Configuration to override the default retry behavior of the client.                                            |
-| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `teamUpdate`                                                        | [shared.TeamUpdate](../../models/shared/teamupdate.md)              | :heavy_check_mark:                                                  | N/A                                                                 |
+| `teamId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response

@@ -7,14 +7,14 @@ import * as shared from "../shared";
 import { AxiosResponse } from "axios";
 
 export class GetUserProfileV2SummaryProfileUserIdGetRequest extends SpeakeasyBase {
+    @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=user_id" })
+    userId: string;
+
     /**
      * Provider oura/strava etc
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=provider" })
     provider?: string;
-
-    @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=user_id" })
-    userId: string;
 }
 
 export class GetUserProfileV2SummaryProfileUserIdGetResponse extends SpeakeasyBase {

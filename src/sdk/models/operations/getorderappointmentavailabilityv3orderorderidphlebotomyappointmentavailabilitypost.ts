@@ -37,14 +37,14 @@ export class GetOrderAppointmentAvailabilityV3OrderOrderIdPhlebotomyAppointmentA
 }
 
 export class GetOrderAppointmentAvailabilityV3OrderOrderIdPhlebotomyAppointmentAvailabilityPostRequest extends SpeakeasyBase {
-    @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-    requestBody?: GetOrderAppointmentAvailabilityV3OrderOrderIdPhlebotomyAppointmentAvailabilityPostUSAddress;
-
     /**
      * Your Order ID.
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=order_id" })
     orderId: string;
+
+    @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+    requestBody?: GetOrderAppointmentAvailabilityV3OrderOrderIdPhlebotomyAppointmentAvailabilityPostUSAddress;
 }
 
 export class GetOrderAppointmentAvailabilityV3OrderOrderIdPhlebotomyAppointmentAvailabilityPostResponse extends SpeakeasyBase {

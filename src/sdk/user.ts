@@ -153,14 +153,13 @@ export class User {
      * Delete User
      */
     async delete(
-        req: operations.DeleteUserV2UserUserIdDeleteRequest,
+        userId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.DeleteUserV2UserUserIdDeleteResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.DeleteUserV2UserUserIdDeleteRequest(req);
-        }
-
+        const req = new operations.DeleteUserV2UserUserIdDeleteRequest({
+            userId: userId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -267,14 +266,15 @@ export class User {
      * Deregister Provider
      */
     async deregisterProviderV2UserUserIdProviderDelete(
-        req: operations.DeregisterProviderV2UserUserIdProviderDeleteRequest,
+        provider: shared.Providers,
+        userId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.DeregisterProviderV2UserUserIdProviderDeleteResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.DeregisterProviderV2UserUserIdProviderDeleteRequest(req);
-        }
-
+        const req = new operations.DeregisterProviderV2UserUserIdProviderDeleteRequest({
+            provider: provider,
+            userId: userId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -384,14 +384,13 @@ export class User {
      * GET User details given the user_id.
      */
     async get(
-        req: operations.GetUserV2UserUserIdGetRequest,
+        userId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetUserV2UserUserIdGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUserV2UserUserIdGetRequest(req);
-        }
-
+        const req = new operations.GetUserV2UserUserIdGetRequest({
+            userId: userId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -501,14 +500,15 @@ export class User {
      * GET All users for team.
      */
     async getAll(
-        req: operations.GetTeamsUsersV2UserGetRequest,
+        limit?: number,
+        offset?: number,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTeamsUsersV2UserGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetTeamsUsersV2UserGetRequest(req);
-        }
-
+        const req = new operations.GetTeamsUsersV2UserGetRequest({
+            limit: limit,
+            offset: offset,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -619,14 +619,13 @@ export class User {
      * GET Users connected providers
      */
     async getConnectedProviders(
-        req: operations.GetConnectedProvidersV2UserProvidersUserIdGetRequest,
+        userId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetConnectedProvidersV2UserProvidersUserIdGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetConnectedProvidersV2UserProvidersUserIdGetRequest(req);
-        }
-
+        const req = new operations.GetConnectedProvidersV2UserProvidersUserIdGetRequest({
+            userId: userId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -831,14 +830,13 @@ export class User {
      * Get User Sign In Token
      */
     async getSignInToken(
-        req: operations.GetUserSignInTokenV2UserUserIdSignInTokenPostRequest,
+        userId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetUserSignInTokenV2UserUserIdSignInTokenPostResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUserSignInTokenV2UserUserIdSignInTokenPostRequest(req);
-        }
-
+        const req = new operations.GetUserSignInTokenV2UserUserIdSignInTokenPostRequest({
+            userId: userId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -945,14 +943,15 @@ export class User {
      * Patch User
      */
     async patchUserV2UserUserIdPatch(
-        req: operations.PatchUserV2UserUserIdPatchRequest,
+        userPatchBody: shared.UserPatchBody,
+        userId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.PatchUserV2UserUserIdPatchResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.PatchUserV2UserUserIdPatchRequest(req);
-        }
-
+        const req = new operations.PatchUserV2UserUserIdPatchRequest({
+            userPatchBody: userPatchBody,
+            userId: userId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1065,14 +1064,13 @@ export class User {
      * Trigger a manual refresh for a specific user
      */
     async refreshUserIdV2UserRefreshUserIdPost(
-        req: operations.RefreshUserIdV2UserRefreshUserIdPostRequest,
+        userId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.RefreshUserIdV2UserRefreshUserIdPostResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.RefreshUserIdV2UserRefreshUserIdPostRequest(req);
-        }
-
+        const req = new operations.RefreshUserIdV2UserRefreshUserIdPostRequest({
+            userId: userId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1199,14 +1197,13 @@ export class User {
      * GET user_id from client_user_id.
      */
     async resolveByUserId(
-        req: operations.GetUserByClientUserIdV2UserResolveClientUserIdGetRequest,
+        clientUserId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetUserByClientUserIdV2UserResolveClientUserIdGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUserByClientUserIdV2UserResolveClientUserIdGetRequest(req);
-        }
-
+        const req = new operations.GetUserByClientUserIdV2UserResolveClientUserIdGetRequest({
+            clientUserId: clientUserId,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults

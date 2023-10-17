@@ -251,16 +251,17 @@ export class LabTests {
      * GET a specific marker for the given lab and provider_id
      */
     async getMarkerByProvider(
-        req: operations.GetMarkersByProviderIdV3LabTestsLabIdMarkersProviderIdGetRequest,
+        labId: number,
+        providerId: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetMarkersByProviderIdV3LabTestsLabIdMarkersProviderIdGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetMarkersByProviderIdV3LabTestsLabIdMarkersProviderIdGetRequest(
-                req
-            );
-        }
-
+        const req = new operations.GetMarkersByProviderIdV3LabTestsLabIdMarkersProviderIdGetRequest(
+            {
+                labId: labId,
+                providerId: providerId,
+            }
+        );
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -374,14 +375,19 @@ export class LabTests {
      * GET all the markers for the given lab.
      */
     async getMarkers(
-        req: operations.GetMarkersV3LabTestsMarkersGetRequest,
+        labId?: number,
+        name?: string,
+        page?: number,
+        size?: number,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetMarkersV3LabTestsMarkersGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetMarkersV3LabTestsMarkersGetRequest(req);
-        }
-
+        const req = new operations.GetMarkersV3LabTestsMarkersGetRequest({
+            labId: labId,
+            name: name,
+            page: page,
+            size: size,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults

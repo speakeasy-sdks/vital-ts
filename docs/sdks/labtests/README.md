@@ -98,16 +98,16 @@ GET a specific marker for the given lab and provider_id
 
 ```typescript
 import { Vital } from "Vital";
+import { GetMarkersByProviderIdV3LabTestsLabIdMarkersProviderIdGetRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const labId: number = 263548;
+const providerId: string = "East";
 
-  const res = await sdk.labTests.getMarkerByProvider({
-    labId: 263548,
-    providerId: "Bronze",
-  });
+  const res = await sdk.labTests.getMarkerByProvider(labId, providerId);
 
   if (res.statusCode == 200) {
     // handle response
@@ -117,11 +117,12 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                                                                                  | Type                                                                                                                                                                       | Required                                                                                                                                                                   | Description                                                                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                                  | [operations.GetMarkersByProviderIdV3LabTestsLabIdMarkersProviderIdGetRequest](../../models/operations/getmarkersbyprovideridv3labtestslabidmarkersprovideridgetrequest.md) | :heavy_check_mark:                                                                                                                                                         | The request object to use for the request.                                                                                                                                 |
-| `retries`                                                                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                     | :heavy_minus_sign:                                                                                                                                                         | Configuration to override the default retry behavior of the client.                                                                                                        |
-| `config`                                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                               | :heavy_minus_sign:                                                                                                                                                         | Available config options for making requests.                                                                                                                              |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `labId`                                                             | *number*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
+| `providerId`                                                        | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
@@ -137,13 +138,18 @@ GET all the markers for the given lab.
 
 ```typescript
 import { Vital } from "Vital";
+import { GetMarkersV3LabTestsMarkersGetRequest } from "Vital/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
+const labId: number = 614936;
+const name: string = "parse";
+const page: number = 301534;
+const size: number = 44930;
 
-  const res = await sdk.labTests.getMarkers({});
+  const res = await sdk.labTests.getMarkers(labId, name, page, size);
 
   if (res.statusCode == 200) {
     // handle response
@@ -153,11 +159,14 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [operations.GetMarkersV3LabTestsMarkersGetRequest](../../models/operations/getmarkersv3labtestsmarkersgetrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `retries`                                                                                                            | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                               | :heavy_minus_sign:                                                                                                   | Configuration to override the default retry behavior of the client.                                                  |
-| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `labId`                                                                                        | *number*                                                                                       | :heavy_minus_sign:                                                                             | The identifier Vital assigned to a lab partner.                                                |
+| `name`                                                                                         | *string*                                                                                       | :heavy_minus_sign:                                                                             | The name of an individual biomarker or a panel. Used as a fuzzy filter when searching markers. |
+| `page`                                                                                         | *number*                                                                                       | :heavy_minus_sign:                                                                             | N/A                                                                                            |
+| `size`                                                                                         | *number*                                                                                       | :heavy_minus_sign:                                                                             | N/A                                                                                            |
+| `retries`                                                                                      | [utils.RetryConfig](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+| `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
 
 
 ### Response

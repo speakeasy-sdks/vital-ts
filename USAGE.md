@@ -3,15 +3,15 @@
 
 ```typescript
 import { Vital } from "Vital";
+import { SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest } from "Vital/dist/sdk/models/operations";
 
 (async () => {
     const sdk = new Vital({
         apiKey: "<YOUR-API-KEY>",
     });
+    const diagnosisQuery: string = "JBOD";
 
-    const res = await sdk.insurance.searchDiagnosis({
-        diagnosisQuery: "deposit Car",
-    });
+    const res = await sdk.insurance.searchDiagnosis(diagnosisQuery);
 
     if (res.statusCode == 200) {
         // handle response

@@ -8,6 +8,15 @@ import { AxiosResponse } from "axios";
 
 export class GetUserSleepStreamV2SummarySleepUserIdStreamGetRequest extends SpeakeasyBase {
     /**
+     * Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00
+     */
+    @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=start_date" })
+    startDate: string;
+
+    @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=user_id" })
+    userId: string;
+
+    /**
      * Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=end_date" })
@@ -18,15 +27,6 @@ export class GetUserSleepStreamV2SummarySleepUserIdStreamGetRequest extends Spea
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=provider" })
     provider?: string;
-
-    /**
-     * Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00
-     */
-    @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=start_date" })
-    startDate: string;
-
-    @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=user_id" })
-    userId: string;
 }
 
 export class GetUserSleepStreamV2SummarySleepUserIdStreamGetResponse extends SpeakeasyBase {

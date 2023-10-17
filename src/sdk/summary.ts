@@ -23,14 +23,19 @@ export class Summary {
      * Get user's meals
      */
     async getMeals(
-        req: operations.GetMealsV2SummaryMealUserIdGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetMealsV2SummaryMealUserIdGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetMealsV2SummaryMealUserIdGetRequest(req);
-        }
-
+        const req = new operations.GetMealsV2SummaryMealUserIdGetRequest({
+            startDate: startDate,
+            userId: userId,
+            endDate: endDate,
+            provider: provider,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -141,14 +146,19 @@ export class Summary {
      * Get Daily Activity for user_id
      */
     async getUserActivity(
-        req: operations.GetUserActivityV2SummaryActivityUserIdGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetUserActivityV2SummaryActivityUserIdGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUserActivityV2SummaryActivityUserIdGetRequest(req);
-        }
-
+        const req = new operations.GetUserActivityV2SummaryActivityUserIdGetRequest({
+            startDate: startDate,
+            userId: userId,
+            endDate: endDate,
+            provider: provider,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -259,14 +269,19 @@ export class Summary {
      * Get Daily Activity for user_id
      */
     async getUserActivityRaw(
-        req: operations.GetUserActivityRawV2SummaryActivityUserIdRawGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetUserActivityRawV2SummaryActivityUserIdRawGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUserActivityRawV2SummaryActivityUserIdRawGetRequest(req);
-        }
-
+        const req = new operations.GetUserActivityRawV2SummaryActivityUserIdRawGetRequest({
+            startDate: startDate,
+            userId: userId,
+            endDate: endDate,
+            provider: provider,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -377,14 +392,19 @@ export class Summary {
      * Get Daily Body data for user_id
      */
     async getUserBody(
-        req: operations.GetUserBodyV2SummaryBodyUserIdGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetUserBodyV2SummaryBodyUserIdGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUserBodyV2SummaryBodyUserIdGetRequest(req);
-        }
-
+        const req = new operations.GetUserBodyV2SummaryBodyUserIdGetRequest({
+            startDate: startDate,
+            userId: userId,
+            endDate: endDate,
+            provider: provider,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -495,14 +515,19 @@ export class Summary {
      * Get Daily Body data for user_id
      */
     async getUserBodyRaw(
-        req: operations.GetUserBodyRawV2SummaryBodyUserIdRawGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetUserBodyRawV2SummaryBodyUserIdRawGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUserBodyRawV2SummaryBodyUserIdRawGetRequest(req);
-        }
-
+        const req = new operations.GetUserBodyRawV2SummaryBodyUserIdRawGetRequest({
+            startDate: startDate,
+            userId: userId,
+            endDate: endDate,
+            provider: provider,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -610,14 +635,15 @@ export class Summary {
      * Get Devices for user_id
      */
     async getUserDevicesRaw(
-        req: operations.GetUserDevicesRawV2SummaryDevicesUserIdRawGetRequest,
+        userId: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetUserDevicesRawV2SummaryDevicesUserIdRawGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUserDevicesRawV2SummaryDevicesUserIdRawGetRequest(req);
-        }
-
+        const req = new operations.GetUserDevicesRawV2SummaryDevicesUserIdRawGetRequest({
+            userId: userId,
+            provider: provider,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -725,14 +751,15 @@ export class Summary {
      * Get Daily profile for user_id
      */
     async getUserProfile(
-        req: operations.GetUserProfileV2SummaryProfileUserIdGetRequest,
+        userId: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetUserProfileV2SummaryProfileUserIdGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUserProfileV2SummaryProfileUserIdGetRequest(req);
-        }
-
+        const req = new operations.GetUserProfileV2SummaryProfileUserIdGetRequest({
+            userId: userId,
+            provider: provider,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -843,14 +870,15 @@ export class Summary {
      * Get Daily profile for user_id
      */
     async getUserProfileRaw(
-        req: operations.GetUserProfileRawV2SummaryProfileUserIdRawGetRequest,
+        userId: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetUserProfileRawV2SummaryProfileUserIdRawGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUserProfileRawV2SummaryProfileUserIdRawGetRequest(req);
-        }
-
+        const req = new operations.GetUserProfileRawV2SummaryProfileUserIdRawGetRequest({
+            userId: userId,
+            provider: provider,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -958,14 +986,19 @@ export class Summary {
      * Get Daily sleep for user_id
      */
     async getUserSleep(
-        req: operations.GetUserSleepV2SummarySleepUserIdGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetUserSleepV2SummarySleepUserIdGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUserSleepV2SummarySleepUserIdGetRequest(req);
-        }
-
+        const req = new operations.GetUserSleepV2SummarySleepUserIdGetRequest({
+            startDate: startDate,
+            userId: userId,
+            endDate: endDate,
+            provider: provider,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1076,14 +1109,19 @@ export class Summary {
      * Get Daily sleep for user_id
      */
     async getUserSleepRaw(
-        req: operations.GetUserSleepRawV2SummarySleepUserIdRawGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetUserSleepRawV2SummarySleepUserIdRawGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUserSleepRawV2SummarySleepUserIdRawGetRequest(req);
-        }
-
+        const req = new operations.GetUserSleepRawV2SummarySleepUserIdRawGetRequest({
+            startDate: startDate,
+            userId: userId,
+            endDate: endDate,
+            provider: provider,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1191,14 +1229,19 @@ export class Summary {
      * Get Daily sleep stream for user_id
      */
     async getUserSleepStream(
-        req: operations.GetUserSleepStreamV2SummarySleepUserIdStreamGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetUserSleepStreamV2SummarySleepUserIdStreamGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUserSleepStreamV2SummarySleepUserIdStreamGetRequest(req);
-        }
-
+        const req = new operations.GetUserSleepStreamV2SummarySleepUserIdStreamGetRequest({
+            startDate: startDate,
+            userId: userId,
+            endDate: endDate,
+            provider: provider,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1309,14 +1352,19 @@ export class Summary {
      * Get Daily workout for user_id
      */
     async getUserWorkouts(
-        req: operations.GetUserWorkoutsV2SummaryWorkoutsUserIdGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetUserWorkoutsV2SummaryWorkoutsUserIdGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUserWorkoutsV2SummaryWorkoutsUserIdGetRequest(req);
-        }
-
+        const req = new operations.GetUserWorkoutsV2SummaryWorkoutsUserIdGetRequest({
+            startDate: startDate,
+            userId: userId,
+            endDate: endDate,
+            provider: provider,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1427,14 +1475,19 @@ export class Summary {
      * Get Daily workout for user_id
      */
     async getUserWorkoutsRaw(
-        req: operations.GetUserWorkoutsRawV2SummaryWorkoutsUserIdRawGetRequest,
+        startDate: string,
+        userId: string,
+        endDate?: string,
+        provider?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.GetUserWorkoutsRawV2SummaryWorkoutsUserIdRawGetResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUserWorkoutsRawV2SummaryWorkoutsUserIdRawGetRequest(req);
-        }
-
+        const req = new operations.GetUserWorkoutsRawV2SummaryWorkoutsUserIdRawGetRequest({
+            startDate: startDate,
+            userId: userId,
+            endDate: endDate,
+            provider: provider,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1539,14 +1592,17 @@ export class Summary {
      * Post User Activity
      */
     async postUserActivity(
-        req: operations.PostUserActivityV2SummaryActivityUserIdPostRequest,
+        userId: string,
+        xVitalAndroidSDKVersion?: string,
+        xVitalIosSDKVersion?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.PostUserActivityV2SummaryActivityUserIdPostResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.PostUserActivityV2SummaryActivityUserIdPostRequest(req);
-        }
-
+        const req = new operations.PostUserActivityV2SummaryActivityUserIdPostRequest({
+            userId: userId,
+            xVitalAndroidSDKVersion: xVitalAndroidSDKVersion,
+            xVitalIosSDKVersion: xVitalIosSDKVersion,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1654,14 +1710,17 @@ export class Summary {
      * Post User Body
      */
     async postUserBody(
-        req: operations.PostUserBodyV2SummaryBodyUserIdPostRequest,
+        userId: string,
+        xVitalAndroidSDKVersion?: string,
+        xVitalIosSDKVersion?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.PostUserBodyV2SummaryBodyUserIdPostResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.PostUserBodyV2SummaryBodyUserIdPostRequest(req);
-        }
-
+        const req = new operations.PostUserBodyV2SummaryBodyUserIdPostRequest({
+            userId: userId,
+            xVitalAndroidSDKVersion: xVitalAndroidSDKVersion,
+            xVitalIosSDKVersion: xVitalIosSDKVersion,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1769,14 +1828,17 @@ export class Summary {
      * Post User Profile
      */
     async postUserProfile(
-        req: operations.PostUserProfileV2SummaryProfileUserIdPostRequest,
+        userId: string,
+        xVitalAndroidSDKVersion?: string,
+        xVitalIosSDKVersion?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.PostUserProfileV2SummaryProfileUserIdPostResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.PostUserProfileV2SummaryProfileUserIdPostRequest(req);
-        }
-
+        const req = new operations.PostUserProfileV2SummaryProfileUserIdPostRequest({
+            userId: userId,
+            xVitalAndroidSDKVersion: xVitalAndroidSDKVersion,
+            xVitalIosSDKVersion: xVitalIosSDKVersion,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1884,14 +1946,17 @@ export class Summary {
      * Post User Sleep
      */
     async postUserSleep(
-        req: operations.PostUserSleepV2SummarySleepUserIdPostRequest,
+        userId: string,
+        xVitalAndroidSDKVersion?: string,
+        xVitalIosSDKVersion?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.PostUserSleepV2SummarySleepUserIdPostResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.PostUserSleepV2SummarySleepUserIdPostRequest(req);
-        }
-
+        const req = new operations.PostUserSleepV2SummarySleepUserIdPostRequest({
+            userId: userId,
+            xVitalAndroidSDKVersion: xVitalAndroidSDKVersion,
+            xVitalIosSDKVersion: xVitalIosSDKVersion,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -1999,14 +2064,17 @@ export class Summary {
      * Post User Workout
      */
     async postUserWorkout(
-        req: operations.PostUserWorkoutV2SummaryWorkoutsUserIdPostRequest,
+        userId: string,
+        xVitalAndroidSDKVersion?: string,
+        xVitalIosSDKVersion?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.PostUserWorkoutV2SummaryWorkoutsUserIdPostResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.PostUserWorkoutV2SummaryWorkoutsUserIdPostRequest(req);
-        }
-
+        const req = new operations.PostUserWorkoutV2SummaryWorkoutsUserIdPostRequest({
+            userId: userId,
+            xVitalAndroidSDKVersion: xVitalAndroidSDKVersion,
+            xVitalIosSDKVersion: xVitalIosSDKVersion,
+        });
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
