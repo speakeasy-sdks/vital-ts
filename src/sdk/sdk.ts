@@ -8,6 +8,7 @@ import { LabTests } from "./labtests";
 import { Link } from "./link";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { Order } from "./order";
 import { Orders } from "./orders";
 import { Physician } from "./physician";
@@ -33,6 +34,8 @@ export const ServerList = [
  * The available configuration options for the SDK
  */
 export type SDKProps = {
+    apiKey?: string;
+
     /**
      * Allows overriding the default axios client used by the SDK
      */
@@ -55,13 +58,14 @@ export type SDKProps = {
 
 export class SDKConfiguration {
     defaultClient: AxiosInstance;
+    security?: shared.Security | (() => Promise<shared.Security>);
     serverURL: string;
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "0.0.0-dev.f0ab7c6";
-    sdkVersion = "0.1.0";
+    sdkVersion = "0.2.0";
     genVersion = "2.159.0";
-    userAgent = "speakeasy-sdk/typescript 0.1.0 2.159.0 0.0.0-dev.f0ab7c6 Vital";
+    userAgent = "speakeasy-sdk/typescript 0.2.0 2.159.0 0.0.0-dev.f0ab7c6 Vital";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -97,6 +101,8 @@ export class Vital {
         const defaultClient = props?.defaultClient ?? axios.create({ baseURL: serverURL });
         this.sdkConfiguration = new SDKConfiguration({
             defaultClient: defaultClient,
+            security: new shared.Security({ apiKey: props?.apiKey }),
+
             serverURL: serverURL,
             retryConfig: props?.retryConfig,
         });
@@ -118,6 +124,7 @@ export class Vital {
      * Robots
      */
     async robotsRobotsTxtGet(
+        retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.RobotsRobotsTxtGetResponse> {
         const baseURL: string = utils.templateUrl(
@@ -126,19 +133,42 @@ export class Vital {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/robots.txt";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers: RawAxiosRequestHeaders = { ...config?.headers };
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
+        }
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "text/plain";
 
         headers["user-agent"] = this.sdkConfiguration.userAgent;
 
-        const httpRes: AxiosResponse = await client.request({
-            validateStatus: () => true,
-            url: url,
-            method: "get",
-            headers: headers,
-            responseType: "arraybuffer",
-            ...config,
-        });
+        const globalRetryConfig = this.sdkConfiguration.retryConfig;
+        let retryConfig: utils.RetryConfig | undefined = retries;
+        if (!retryConfig) {
+            if (globalRetryConfig) {
+                retryConfig = globalRetryConfig;
+            } else {
+                retryConfig = new utils.RetryConfig(
+                    "backoff",
+                    new utils.BackoffStrategy(500, 60000, 1.5, 3600000),
+                    true
+                );
+            }
+        }
+        const httpRes: AxiosResponse = await utils.Retry(() => {
+            return client.request({
+                validateStatus: () => true,
+                url: url,
+                method: "get",
+                headers: headers,
+                responseType: "arraybuffer",
+                ...config,
+            });
+        }, new utils.Retries(retryConfig, ["5XX"]));
 
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 

@@ -40,7 +40,9 @@ Get timeseries data for user
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.timeseries.getBloodOxygen({
     startDate: "blue",
@@ -58,6 +60,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                                  | Type                                                                                                                                                                       | Required                                                                                                                                                                   | Description                                                                                                                                                                |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                                                  | [operations.GetTimeseriesResourceDataV2TimeseriesUserIdBloodOxygenGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridbloodoxygengetrequest.md) | :heavy_check_mark:                                                                                                                                                         | The request object to use for the request.                                                                                                                                 |
+| `retries`                                                                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                     | :heavy_minus_sign:                                                                                                                                                         | Configuration to override the default retry behavior of the client.                                                                                                        |
 | `config`                                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                               | :heavy_minus_sign:                                                                                                                                                         | Available config options for making requests.                                                                                                                              |
 
 
@@ -76,7 +79,9 @@ Get timeseries data for user
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.timeseries.getBloodPressure({
     startDate: "man Puerto Shoes",
@@ -94,6 +99,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.GetTimeseriesResourceDataV2TimeseriesUserIdBloodPressureGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridbloodpressuregetrequest.md) | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `retries`                                                                                                                                                                      | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                         | :heavy_minus_sign:                                                                                                                                                             | Configuration to override the default retry behavior of the client.                                                                                                            |
 | `config`                                                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                   | :heavy_minus_sign:                                                                                                                                                             | Available config options for making requests.                                                                                                                                  |
 
 
@@ -112,7 +118,9 @@ Get timeseries data for user
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.timeseries.getCaffeine({
     startDate: "Electronic",
@@ -130,6 +138,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                            | Type                                                                                                                                                                 | Required                                                                                                                                                             | Description                                                                                                                                                          |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                                            | [operations.GetTimeseriesResourceDataV2TimeseriesUserIdCaffeineGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridcaffeinegetrequest.md) | :heavy_check_mark:                                                                                                                                                   | The request object to use for the request.                                                                                                                           |
+| `retries`                                                                                                                                                            | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                               | :heavy_minus_sign:                                                                                                                                                   | Configuration to override the default retry behavior of the client.                                                                                                  |
 | `config`                                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                         | :heavy_minus_sign:                                                                                                                                                   | Available config options for making requests.                                                                                                                        |
 
 
@@ -148,7 +157,9 @@ Get timeseries data for user
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.timeseries.getCaloriesActive({
     startDate: "Uranium",
@@ -166,6 +177,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                                        | Type                                                                                                                                                                             | Required                                                                                                                                                                         | Description                                                                                                                                                                      |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                                                        | [operations.GetTimeseriesResourceDataV2TimeseriesUserIdCaloriesActiveGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridcaloriesactivegetrequest.md) | :heavy_check_mark:                                                                                                                                                               | The request object to use for the request.                                                                                                                                       |
+| `retries`                                                                                                                                                                        | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                           | :heavy_minus_sign:                                                                                                                                                               | Configuration to override the default retry behavior of the client.                                                                                                              |
 | `config`                                                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                     | :heavy_minus_sign:                                                                                                                                                               | Available config options for making requests.                                                                                                                                    |
 
 
@@ -184,7 +196,9 @@ Get timeseries data for user
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.timeseries.getCaloriesBasal({
     startDate: "Promethium South",
@@ -202,6 +216,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.GetTimeseriesResourceDataV2TimeseriesUserIdCaloriesBasalGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridcaloriesbasalgetrequest.md) | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `retries`                                                                                                                                                                      | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                         | :heavy_minus_sign:                                                                                                                                                             | Configuration to override the default retry behavior of the client.                                                                                                            |
 | `config`                                                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                   | :heavy_minus_sign:                                                                                                                                                             | Available config options for making requests.                                                                                                                                  |
 
 
@@ -220,7 +235,9 @@ Get timeseries data for user
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.timeseries.getCholesterolAll({
     startDate: "joule",
@@ -238,6 +255,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                                  | Type                                                                                                                                                                       | Required                                                                                                                                                                   | Description                                                                                                                                                                |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                                                  | [operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridcholesterolgetrequest.md) | :heavy_check_mark:                                                                                                                                                         | The request object to use for the request.                                                                                                                                 |
+| `retries`                                                                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                     | :heavy_minus_sign:                                                                                                                                                         | Configuration to override the default retry behavior of the client.                                                                                                        |
 | `config`                                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                               | :heavy_minus_sign:                                                                                                                                                         | Available config options for making requests.                                                                                                                              |
 
 
@@ -256,7 +274,9 @@ Get timeseries data for user
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.timeseries.getCholesterolHdl({
     startDate: "in Van West",
@@ -274,6 +294,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                                        | Type                                                                                                                                                                             | Required                                                                                                                                                                         | Description                                                                                                                                                                      |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                                                        | [operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolHdlGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridcholesterolhdlgetrequest.md) | :heavy_check_mark:                                                                                                                                                               | The request object to use for the request.                                                                                                                                       |
+| `retries`                                                                                                                                                                        | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                           | :heavy_minus_sign:                                                                                                                                                               | Configuration to override the default retry behavior of the client.                                                                                                              |
 | `config`                                                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                     | :heavy_minus_sign:                                                                                                                                                               | Available config options for making requests.                                                                                                                                    |
 
 
@@ -292,7 +313,9 @@ Get timeseries data for user
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.timeseries.getCholesterolLdl({
     startDate: "construe",
@@ -310,6 +333,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                                        | Type                                                                                                                                                                             | Required                                                                                                                                                                         | Description                                                                                                                                                                      |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                                                        | [operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolLdlGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridcholesterolldlgetrequest.md) | :heavy_check_mark:                                                                                                                                                               | The request object to use for the request.                                                                                                                                       |
+| `retries`                                                                                                                                                                        | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                           | :heavy_minus_sign:                                                                                                                                                               | Configuration to override the default retry behavior of the client.                                                                                                              |
 | `config`                                                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                     | :heavy_minus_sign:                                                                                                                                                               | Available config options for making requests.                                                                                                                                    |
 
 
@@ -328,7 +352,9 @@ Get timeseries data for user
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.timeseries.getDistance({
     startDate: "Classical",
@@ -346,6 +372,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                            | Type                                                                                                                                                                 | Required                                                                                                                                                             | Description                                                                                                                                                          |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                                            | [operations.GetTimeseriesResourceDataV2TimeseriesUserIdDistanceGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseriddistancegetrequest.md) | :heavy_check_mark:                                                                                                                                                   | The request object to use for the request.                                                                                                                           |
+| `retries`                                                                                                                                                            | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                               | :heavy_minus_sign:                                                                                                                                                   | Configuration to override the default retry behavior of the client.                                                                                                  |
 | `config`                                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                         | :heavy_minus_sign:                                                                                                                                                   | Available config options for making requests.                                                                                                                        |
 
 
@@ -364,7 +391,9 @@ Get timeseries data for user
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.timeseries.getFloorsClimbed({
     startDate: "models",
@@ -382,6 +411,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.GetTimeseriesResourceDataV2TimeseriesUserIdFloorsClimbedGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridfloorsclimbedgetrequest.md) | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `retries`                                                                                                                                                                      | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                         | :heavy_minus_sign:                                                                                                                                                             | Configuration to override the default retry behavior of the client.                                                                                                            |
 | `config`                                                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                   | :heavy_minus_sign:                                                                                                                                                             | Available config options for making requests.                                                                                                                                  |
 
 
@@ -400,7 +430,9 @@ Get timeseries data for user
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.timeseries.getGlucose({
     startDate: "Syrian explicit",
@@ -418,6 +450,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                          | Type                                                                                                                                                               | Required                                                                                                                                                           | Description                                                                                                                                                        |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                          | [operations.GetTimeseriesResourceDataV2TimeseriesUserIdGlucoseGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridglucosegetrequest.md) | :heavy_check_mark:                                                                                                                                                 | The request object to use for the request.                                                                                                                         |
+| `retries`                                                                                                                                                          | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                             | :heavy_minus_sign:                                                                                                                                                 | Configuration to override the default retry behavior of the client.                                                                                                |
 | `config`                                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                       | :heavy_minus_sign:                                                                                                                                                 | Available config options for making requests.                                                                                                                      |
 
 
@@ -436,7 +469,9 @@ Get timeseries data for user
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.timeseries.getHeartrate({
     startDate: "Corporate",
@@ -454,6 +489,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                              | Type                                                                                                                                                                   | Required                                                                                                                                                               | Description                                                                                                                                                            |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                                              | [operations.GetTimeseriesResourceDataV2TimeseriesUserIdHeartrateGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridheartrategetrequest.md) | :heavy_check_mark:                                                                                                                                                     | The request object to use for the request.                                                                                                                             |
+| `retries`                                                                                                                                                              | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                 | :heavy_minus_sign:                                                                                                                                                     | Configuration to override the default retry behavior of the client.                                                                                                    |
 | `config`                                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                           | :heavy_minus_sign:                                                                                                                                                     | Available config options for making requests.                                                                                                                          |
 
 
@@ -472,7 +508,9 @@ Get timeseries data for user
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.timeseries.getHrv({
     startDate: "Global violet male",
@@ -490,6 +528,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                                  | [operations.GetTimeseriesResourceDataV2TimeseriesUserIdHrvGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridhrvgetrequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
+| `retries`                                                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                     | :heavy_minus_sign:                                                                                                                                         | Configuration to override the default retry behavior of the client.                                                                                        |
 | `config`                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                               | :heavy_minus_sign:                                                                                                                                         | Available config options for making requests.                                                                                                              |
 
 
@@ -508,7 +547,9 @@ Get timeseries data for user
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.timeseries.getHypnogram({
     startDate: "North Kroon",
@@ -526,6 +567,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                              | Type                                                                                                                                                                   | Required                                                                                                                                                               | Description                                                                                                                                                            |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                                              | [operations.GetTimeseriesResourceDataV2TimeseriesUserIdHypnogramGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridhypnogramgetrequest.md) | :heavy_check_mark:                                                                                                                                                     | The request object to use for the request.                                                                                                                             |
+| `retries`                                                                                                                                                              | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                 | :heavy_minus_sign:                                                                                                                                                     | Configuration to override the default retry behavior of the client.                                                                                                    |
 | `config`                                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                           | :heavy_minus_sign:                                                                                                                                                     | Available config options for making requests.                                                                                                                          |
 
 
@@ -544,7 +586,9 @@ Get timeseries data for user
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.timeseries.getIge({
     startDate: "Minivan TCP male",
@@ -562,6 +606,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                                  | [operations.GetTimeseriesResourceDataV2TimeseriesUserIdIgeGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridigegetrequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
+| `retries`                                                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                     | :heavy_minus_sign:                                                                                                                                         | Configuration to override the default retry behavior of the client.                                                                                        |
 | `config`                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                               | :heavy_minus_sign:                                                                                                                                         | Available config options for making requests.                                                                                                              |
 
 
@@ -580,7 +625,9 @@ Get timeseries data for user
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.timeseries.getIgg({
     startDate: "compressing pink",
@@ -598,6 +645,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                                  | [operations.GetTimeseriesResourceDataV2TimeseriesUserIdIggGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridigggetrequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
+| `retries`                                                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                     | :heavy_minus_sign:                                                                                                                                         | Configuration to override the default retry behavior of the client.                                                                                        |
 | `config`                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                               | :heavy_minus_sign:                                                                                                                                         | Available config options for making requests.                                                                                                              |
 
 
@@ -616,7 +664,9 @@ Get timeseries data for user
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.timeseries.getMindfulnessMinutes({
     startDate: "emigrate Ohio fuchsia",
@@ -634,6 +684,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                                                | Type                                                                                                                                                                                     | Required                                                                                                                                                                                 | Description                                                                                                                                                                              |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                                                                | [operations.GetTimeseriesResourceDataV2TimeseriesUserIdMindfulnessMinutesGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridmindfulnessminutesgetrequest.md) | :heavy_check_mark:                                                                                                                                                                       | The request object to use for the request.                                                                                                                                               |
+| `retries`                                                                                                                                                                                | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                                   | :heavy_minus_sign:                                                                                                                                                                       | Configuration to override the default retry behavior of the client.                                                                                                                      |
 | `config`                                                                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                             | :heavy_minus_sign:                                                                                                                                                                       | Available config options for making requests.                                                                                                                                            |
 
 
@@ -652,7 +703,9 @@ Get timeseries data for user
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.timeseries.getRespiratoryRate({
     startDate: "systematic Division Intersex",
@@ -670,6 +723,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                                          | Type                                                                                                                                                                               | Required                                                                                                                                                                           | Description                                                                                                                                                                        |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                                                          | [operations.GetTimeseriesResourceDataV2TimeseriesUserIdRespiratoryRateGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridrespiratoryrategetrequest.md) | :heavy_check_mark:                                                                                                                                                                 | The request object to use for the request.                                                                                                                                         |
+| `retries`                                                                                                                                                                          | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                             | :heavy_minus_sign:                                                                                                                                                                 | Configuration to override the default retry behavior of the client.                                                                                                                |
 | `config`                                                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                       | :heavy_minus_sign:                                                                                                                                                                 | Available config options for making requests.                                                                                                                                      |
 
 
@@ -688,7 +742,9 @@ Get timeseries data for user
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.timeseries.getSteps({
     startDate: "Sausages Surinam tan",
@@ -706,6 +762,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                      | Type                                                                                                                                                           | Required                                                                                                                                                       | Description                                                                                                                                                    |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                                      | [operations.GetTimeseriesResourceDataV2TimeseriesUserIdStepsGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridstepsgetrequest.md) | :heavy_check_mark:                                                                                                                                             | The request object to use for the request.                                                                                                                     |
+| `retries`                                                                                                                                                      | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                         | :heavy_minus_sign:                                                                                                                                             | Configuration to override the default retry behavior of the client.                                                                                            |
 | `config`                                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                   | :heavy_minus_sign:                                                                                                                                             | Available config options for making requests.                                                                                                                  |
 
 
@@ -724,7 +781,9 @@ Get timeseries data for user
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.timeseries.getTotalCholesterol({
     startDate: "technologies Tricycle accusantium",
@@ -742,6 +801,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                                            | Type                                                                                                                                                                                 | Required                                                                                                                                                                             | Description                                                                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                            | [operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolTotalGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridcholesteroltotalgetrequest.md) | :heavy_check_mark:                                                                                                                                                                   | The request object to use for the request.                                                                                                                                           |
+| `retries`                                                                                                                                                                            | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                               | :heavy_minus_sign:                                                                                                                                                                   | Configuration to override the default retry behavior of the client.                                                                                                                  |
 | `config`                                                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                         | :heavy_minus_sign:                                                                                                                                                                   | Available config options for making requests.                                                                                                                                        |
 
 
@@ -760,7 +820,9 @@ Get timeseries data for user
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.timeseries.getTriglycerides({
     startDate: "transmit quam",
@@ -778,6 +840,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                                                            | Type                                                                                                                                                                                                 | Required                                                                                                                                                                                             | Description                                                                                                                                                                                          |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                                                                            | [operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolTriglyceridesGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridcholesteroltriglyceridesgetrequest.md) | :heavy_check_mark:                                                                                                                                                                                   | The request object to use for the request.                                                                                                                                                           |
+| `retries`                                                                                                                                                                                            | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                                               | :heavy_minus_sign:                                                                                                                                                                                   | Configuration to override the default retry behavior of the client.                                                                                                                                  |
 | `config`                                                                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                                         | :heavy_minus_sign:                                                                                                                                                                                   | Available config options for making requests.                                                                                                                                                        |
 
 
@@ -796,7 +859,9 @@ Get Sleep stream for a user_id
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.timeseries.getUserSleepStream({
     sleepId: "Rock Southwest",
@@ -813,6 +878,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                      | Type                                                                                                                                                           | Required                                                                                                                                                       | Description                                                                                                                                                    |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                                      | [operations.GetUserSleepStreamV2TimeseriesSleepSleepIdStreamGetRequest](../../models/operations/getusersleepstreamv2timeseriessleepsleepidstreamgetrequest.md) | :heavy_check_mark:                                                                                                                                             | The request object to use for the request.                                                                                                                     |
+| `retries`                                                                                                                                                      | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                         | :heavy_minus_sign:                                                                                                                                             | Configuration to override the default retry behavior of the client.                                                                                            |
 | `config`                                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                   | :heavy_minus_sign:                                                                                                                                             | Available config options for making requests.                                                                                                                  |
 
 
@@ -831,7 +897,9 @@ Get User Workouts
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.timeseries.getUserWorkouts({
     workoutId: "bc0edaf0-6098-41f4-a6eb-525d09cc6d26",
@@ -848,6 +916,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                          | Type                                                                                                                                                               | Required                                                                                                                                                           | Description                                                                                                                                                        |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                          | [operations.GetUserWorkoutsV2TimeseriesWorkoutsWorkoutIdStreamGetRequest](../../models/operations/getuserworkoutsv2timeseriesworkoutsworkoutidstreamgetrequest.md) | :heavy_check_mark:                                                                                                                                                 | The request object to use for the request.                                                                                                                         |
+| `retries`                                                                                                                                                          | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                             | :heavy_minus_sign:                                                                                                                                                 | Configuration to override the default retry behavior of the client.                                                                                                |
 | `config`                                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                       | :heavy_minus_sign:                                                                                                                                                 | Available config options for making requests.                                                                                                                      |
 
 
@@ -866,7 +935,9 @@ Get timeseries data for user
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.timeseries.getWater({
     startDate: "interactive",
@@ -884,6 +955,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                      | Type                                                                                                                                                           | Required                                                                                                                                                       | Description                                                                                                                                                    |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                                      | [operations.GetTimeseriesResourceDataV2TimeseriesUserIdWaterGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridwatergetrequest.md) | :heavy_check_mark:                                                                                                                                             | The request object to use for the request.                                                                                                                     |
+| `retries`                                                                                                                                                      | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                         | :heavy_minus_sign:                                                                                                                                             | Configuration to override the default retry behavior of the client.                                                                                            |
 | `config`                                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                   | :heavy_minus_sign:                                                                                                                                             | Available config options for making requests.                                                                                                                  |
 
 
@@ -902,7 +974,9 @@ Post User Blood Pressure
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.timeseries.postBloodPressure({
     userId: "5d55820e-8c39-4307-91e1-9cdd23720f04",
@@ -919,6 +993,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                                | Type                                                                                                                                                                     | Required                                                                                                                                                                 | Description                                                                                                                                                              |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                | [operations.PostUserBloodPressureV2TimeseriesUserIdBloodPressurePostRequest](../../models/operations/postuserbloodpressurev2timeseriesuseridbloodpressurepostrequest.md) | :heavy_check_mark:                                                                                                                                                       | The request object to use for the request.                                                                                                                               |
+| `retries`                                                                                                                                                                | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                   | :heavy_minus_sign:                                                                                                                                                       | Configuration to override the default retry behavior of the client.                                                                                                      |
 | `config`                                                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                             | :heavy_minus_sign:                                                                                                                                                       | Available config options for making requests.                                                                                                                            |
 
 
@@ -938,7 +1013,9 @@ import { Vital } from "Vital";
 import { IngestibleTimeseriesResource } from "Vital/dist/sdk/models/shared";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.timeseries.postVitals({
     resource: IngestibleTimeseriesResource.BloodOxygen,
@@ -956,6 +1033,7 @@ import { IngestibleTimeseriesResource } from "Vital/dist/sdk/models/shared";
 | Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                        | [operations.PostUserVitalsV2TimeseriesUserIdResourcePostRequest](../../models/operations/postuservitalsv2timeseriesuseridresourcepostrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| `retries`                                                                                                                                        | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                           | :heavy_minus_sign:                                                                                                                               | Configuration to override the default retry behavior of the client.                                                                              |
 | `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
 
 

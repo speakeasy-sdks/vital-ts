@@ -20,7 +20,9 @@ import { Vital } from "Vital";
 import { LabTestCollectionMethod, LabTestSampleType } from "Vital/dist/sdk/models/shared";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.labTests.create({
     description: "Multi-tiered human-resource model",
@@ -44,6 +46,7 @@ import { LabTestCollectionMethod, LabTestSampleType } from "Vital/dist/sdk/model
 | Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
 | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
 | `request`                                                                  | [shared.CreateLabTestRequest](../../models/shared/createlabtestrequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
+| `retries`                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                         | Configuration to override the default retry behavior of the client.        |
 | `config`                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)               | :heavy_minus_sign:                                                         | Available config options for making requests.                              |
 
 
@@ -62,7 +65,9 @@ GET all the labs.
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.labTests.getLabs();
 
@@ -74,9 +79,10 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
@@ -94,7 +100,9 @@ GET a specific marker for the given lab and provider_id
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.labTests.getMarkerByProvider({
     labId: 263548,
@@ -112,6 +120,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                                  | Type                                                                                                                                                                       | Required                                                                                                                                                                   | Description                                                                                                                                                                |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                                                  | [operations.GetMarkersByProviderIdV3LabTestsLabIdMarkersProviderIdGetRequest](../../models/operations/getmarkersbyprovideridv3labtestslabidmarkersprovideridgetrequest.md) | :heavy_check_mark:                                                                                                                                                         | The request object to use for the request.                                                                                                                                 |
+| `retries`                                                                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                     | :heavy_minus_sign:                                                                                                                                                         | Configuration to override the default retry behavior of the client.                                                                                                        |
 | `config`                                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                               | :heavy_minus_sign:                                                                                                                                                         | Available config options for making requests.                                                                                                                              |
 
 
@@ -130,7 +139,9 @@ GET all the markers for the given lab.
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.labTests.getMarkers({});
 
@@ -145,6 +156,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
 | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                            | [operations.GetMarkersV3LabTestsMarkersGetRequest](../../models/operations/getmarkersv3labtestsmarkersgetrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `retries`                                                                                                            | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                               | :heavy_minus_sign:                                                                                                   | Configuration to override the default retry behavior of the client.                                                  |
 | `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
 
 
@@ -163,7 +175,9 @@ GET all the lab tests the team has access to.
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.labTests.list();
 
@@ -175,9 +189,10 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response

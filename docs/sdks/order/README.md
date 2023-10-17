@@ -35,7 +35,9 @@ Book an at-home phlebotomy appointment.
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.order.bookPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentBookPost({
     appointmentBookingRequest: {
@@ -55,6 +57,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                                                        | Type                                                                                                                                                                                             | Required                                                                                                                                                                                         | Description                                                                                                                                                                                      |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                                        | [operations.BookPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentBookPostRequest](../../models/operations/bookphlebotomyappointmentv3orderorderidphlebotomyappointmentbookpostrequest.md) | :heavy_check_mark:                                                                                                                                                                               | The request object to use for the request.                                                                                                                                                       |
+| `retries`                                                                                                                                                                                        | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                                           | :heavy_minus_sign:                                                                                                                                                                               | Configuration to override the default retry behavior of the client.                                                                                                                              |
 | `config`                                                                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                                     | :heavy_minus_sign:                                                                                                                                                                               | Available config options for making requests.                                                                                                                                                    |
 
 
@@ -73,7 +76,9 @@ POST cancel order
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.order.cancelOrderV3OrderOrderIdCancelPost({
     orderId: "b9d919c2-b9aa-4759-bba5-fb974a744f9a",
@@ -90,6 +95,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                      | [operations.CancelOrderV3OrderOrderIdCancelPostRequest](../../models/operations/cancelorderv3orderorderidcancelpostrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `retries`                                                                                                                      | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                         | :heavy_minus_sign:                                                                                                             | Configuration to override the default retry behavior of the client.                                                            |
 | `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
 
 
@@ -108,7 +114,9 @@ Cancel a previously booked at-home phlebotomy appointment.
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.order.cancelPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentCancelPatch({
     appointmentCancelRequest: {
@@ -128,6 +136,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                                                                  | Type                                                                                                                                                                                                       | Required                                                                                                                                                                                                   | Description                                                                                                                                                                                                |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                                                                                  | [operations.CancelPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentCancelPatchRequest](../../models/operations/cancelphlebotomyappointmentv3orderorderidphlebotomyappointmentcancelpatchrequest.md) | :heavy_check_mark:                                                                                                                                                                                         | The request object to use for the request.                                                                                                                                                                 |
+| `retries`                                                                                                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                                                     | :heavy_minus_sign:                                                                                                                                                                                         | Configuration to override the default retry behavior of the client.                                                                                                                                        |
 | `config`                                                                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                                               | :heavy_minus_sign:                                                                                                                                                                                         | Available config options for making requests.                                                                                                                                                              |
 
 
@@ -147,7 +156,9 @@ import { Vital } from "Vital";
 import { ConsentType, Gender, ResponsibleRelationship } from "Vital/dist/sdk/models/shared";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.order.create({
     consents: [
@@ -214,6 +225,7 @@ import { ConsentType, Gender, ResponsibleRelationship } from "Vital/dist/sdk/mod
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
 | `request`                                                                                  | [shared.CreateOrderRequestCompatible](../../models/shared/createorderrequestcompatible.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 | `config`                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                               | :heavy_minus_sign:                                                                         | Available config options for making requests.                                              |
 
 
@@ -232,7 +244,9 @@ Creates an order for an unregistered testkit
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.order.createTestkit({
     labTestId: "eb480e87-d170-4ada-8df4-8f4bbca14aec",
@@ -259,6 +273,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                  | [shared.CreateRegistrableTestkitOrderRequest](../../models/shared/createregistrabletestkitorderrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `retries`                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                     | :heavy_minus_sign:                                                                                         | Configuration to override the default retry behavior of the client.                                        |
 | `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
 
 
@@ -277,7 +292,9 @@ Dispatch Order Status
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.order.dispatchStatus();
 
@@ -289,9 +306,10 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
@@ -309,7 +327,9 @@ GET individual order by ID.
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.order.get({
     orderId: "b18d8d81-fd7b-4764-a31e-475cb1f36591",
@@ -326,6 +346,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                  | [operations.GetOrderV3OrderOrderIdGetRequest](../../models/operations/getorderv3orderorderidgetrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `retries`                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                     | :heavy_minus_sign:                                                                                         | Configuration to override the default retry behavior of the client.                                        |
 | `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
 
 
@@ -345,7 +366,9 @@ for the given address and order.
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.order.getAppointmentAvailability({
     requestBody: {
@@ -368,6 +391,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                                                                                    | Type                                                                                                                                                                                                                         | Required                                                                                                                                                                                                                     | Description                                                                                                                                                                                                                  |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                                                                                                    | [operations.GetOrderAppointmentAvailabilityV3OrderOrderIdPhlebotomyAppointmentAvailabilityPostRequest](../../models/operations/getorderappointmentavailabilityv3orderorderidphlebotomyappointmentavailabilitypostrequest.md) | :heavy_check_mark:                                                                                                                                                                                                           | The request object to use for the request.                                                                                                                                                                                   |
+| `retries`                                                                                                                                                                                                                    | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                                                                       | :heavy_minus_sign:                                                                                                                                                                                                           | Configuration to override the default retry behavior of the client.                                                                                                                                                          |
 | `config`                                                                                                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                                                                           | Available config options for making requests.                                                                                                                                                                                |
 
 
@@ -389,7 +413,9 @@ Information returned:
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.order.getAreaInfo({
     zipCode: "94836",
@@ -406,6 +432,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
 | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                          | [operations.GetAreaInfoV3OrderAreaInfoGetRequest](../../models/operations/getareainfov3orderareainfogetrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `retries`                                                                                                          | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                             | :heavy_minus_sign:                                                                                                 | Configuration to override the default retry behavior of the client.                                                |
 | `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
 
 
@@ -424,7 +451,9 @@ This endpoint returns the lab results for the order.
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.order.getLabTestResult({
     orderId: "c9229487-8f86-47ef-848e-7eb7243713ad",
@@ -441,6 +470,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
 | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                    | [operations.GetLabTestResultV3OrderOrderIdResultPdfGetRequest](../../models/operations/getlabtestresultv3orderorderidresultpdfgetrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
+| `retries`                                                                                                                                    | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                       | :heavy_minus_sign:                                                                                                                           | Configuration to override the default retry behavior of the client.                                                                          |
 | `config`                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                 | :heavy_minus_sign:                                                                                                                           | Available config options for making requests.                                                                                                |
 
 
@@ -460,7 +490,9 @@ provider and sample dates.
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.order.getLabTestResultMetadata({
     orderId: "daf5fdc5-7c54-4772-826b-69600571af0f",
@@ -477,6 +509,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                              | Type                                                                                                                                                                   | Required                                                                                                                                                               | Description                                                                                                                                                            |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                                              | [operations.GetLabTestResultMetadataV3OrderOrderIdResultMetadataGetRequest](../../models/operations/getlabtestresultmetadatav3orderorderidresultmetadatagetrequest.md) | :heavy_check_mark:                                                                                                                                                     | The request object to use for the request.                                                                                                                             |
+| `retries`                                                                                                                                                              | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                 | :heavy_minus_sign:                                                                                                                                                     | Configuration to override the default retry behavior of the client.                                                                                                    |
 | `config`                                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                           | :heavy_minus_sign:                                                                                                                                                     | Available config options for making requests.                                                                                                                          |
 
 
@@ -495,7 +528,9 @@ Return both metadata and raw json test data
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.order.getLabTestResultRaw({
     orderId: "2cfa7265-4a8d-45d9-b8ea-42e844b02385",
@@ -512,6 +547,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
 | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                    | [operations.GetLabTestResultRawV3OrderOrderIdResultGetRequest](../../models/operations/getlabtestresultrawv3orderorderidresultgetrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
+| `retries`                                                                                                                                    | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                       | :heavy_minus_sign:                                                                                                                           | Configuration to override the default retry behavior of the client.                                                                          |
 | `config`                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                 | :heavy_minus_sign:                                                                                                                           | Available config options for making requests.                                                                                                |
 
 
@@ -530,7 +566,9 @@ Get the appointment associated with an order.
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.order.getPhlebotomyAppointment({
     orderId: "3e95493c-2969-4eab-9aaf-61adbf59533c",
@@ -547,6 +585,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                                            | Type                                                                                                                                                                                 | Required                                                                                                                                                                             | Description                                                                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                            | [operations.GetPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentGetRequest](../../models/operations/getphlebotomyappointmentv3orderorderidphlebotomyappointmentgetrequest.md) | :heavy_check_mark:                                                                                                                                                                   | The request object to use for the request.                                                                                                                                           |
+| `retries`                                                                                                                                                                            | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                               | :heavy_minus_sign:                                                                                                                                                                   | Configuration to override the default retry behavior of the client.                                                                                                                  |
 | `config`                                                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                         | :heavy_minus_sign:                                                                                                                                                                   | Available config options for making requests.                                                                                                                                        |
 
 
@@ -565,7 +604,9 @@ Get the list of reasons for cancelling an at-home phlebotomy appointment.
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.order.getPhlebotomyCancellationReasons();
 
@@ -577,9 +618,10 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
@@ -597,7 +639,9 @@ GET requisition pdf for an order
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.order.getRequisitionUrl({
     orderId: "bfbbc5db-bd5f-47b5-9a88-6ef4ccfaf335",
@@ -614,6 +658,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                          | Type                                                                                                                                                               | Required                                                                                                                                                           | Description                                                                                                                                                        |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                          | [operations.GetOrderRequisitionUrlV3OrderOrderIdRequisitionPdfGetRequest](../../models/operations/getorderrequisitionurlv3orderorderidrequisitionpdfgetrequest.md) | :heavy_check_mark:                                                                                                                                                 | The request object to use for the request.                                                                                                                         |
+| `retries`                                                                                                                                                          | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                             | :heavy_minus_sign:                                                                                                                                                 | Configuration to override the default retry behavior of the client.                                                                                                |
 | `config`                                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                       | :heavy_minus_sign:                                                                                                                                                 | Available config options for making requests.                                                                                                                      |
 
 
@@ -633,7 +678,9 @@ import { Vital } from "Vital";
 import { OrderStatus } from "Vital/dist/sdk/models/shared";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.order.orderProcessSimulateV3OrderOrderIdTestPost({
     orderId: "03c5e046-8598-4154-ab3e-444d34fe425a",
@@ -650,6 +697,7 @@ import { OrderStatus } from "Vital/dist/sdk/models/shared";
 | Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
 | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                    | [operations.OrderProcessSimulateV3OrderOrderIdTestPostRequest](../../models/operations/orderprocesssimulatev3orderorderidtestpostrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
+| `retries`                                                                                                                                    | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                       | :heavy_minus_sign:                                                                                                                           | Configuration to override the default retry behavior of the client.                                                                          |
 | `config`                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                 | :heavy_minus_sign:                                                                                                                           | Available config options for making requests.                                                                                                |
 
 
@@ -668,7 +716,9 @@ POST Create shipment for order
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.order.processTestkitOrderV3OrderTestkitProcessTeamIdOrderIdPost({
     orderId: "21061e75-f548-42fd-90f0-d372d63dff6e",
@@ -686,6 +736,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                                  | Type                                                                                                                                                                       | Required                                                                                                                                                                   | Description                                                                                                                                                                |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                                                  | [operations.ProcessTestkitOrderV3OrderTestkitProcessTeamIdOrderIdPostRequest](../../models/operations/processtestkitorderv3ordertestkitprocessteamidorderidpostrequest.md) | :heavy_check_mark:                                                                                                                                                         | The request object to use for the request.                                                                                                                                 |
+| `retries`                                                                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                     | :heavy_minus_sign:                                                                                                                                                         | Configuration to override the default retry behavior of the client.                                                                                                        |
 | `config`                                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                               | :heavy_minus_sign:                                                                                                                                                         | Available config options for making requests.                                                                                                                              |
 
 
@@ -705,7 +756,9 @@ import { Vital } from "Vital";
 import { ShipmentWebhookUpdateWebhookType } from "Vital/dist/sdk/models/shared";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.order.processTestkitShipHeroOrderShippedV3OrderTestkitWebhookShipheroShipmentUpdatePost({
     fulfillment: {
@@ -726,6 +779,7 @@ import { ShipmentWebhookUpdateWebhookType } from "Vital/dist/sdk/models/shared";
 | Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
 | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
 | `request`                                                                    | [shared.ShipmentWebhookUpdate](../../models/shared/shipmentwebhookupdate.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| `retries`                                                                    | [utils.RetryConfig](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                           | Configuration to override the default retry behavior of the client.          |
 | `config`                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                 | :heavy_minus_sign:                                                           | Available config options for making requests.                                |
 
 
@@ -745,7 +799,9 @@ import { Vital } from "Vital";
 import { ConsentType, Gender } from "Vital/dist/sdk/models/shared";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.order.registerTestkitV3OrderTestkitRegisterPost({
     consents: [
@@ -791,6 +847,7 @@ import { ConsentType, Gender } from "Vital/dist/sdk/models/shared";
 | Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
 | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
 | `request`                                                                      | [shared.RegisterTestkitRequest](../../models/shared/registertestkitrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| `retries`                                                                      | [utils.RetryConfig](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                             | Configuration to override the default retry behavior of the client.            |
 | `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
 
 
@@ -809,7 +866,9 @@ Reschedule a previously booked at-home phlebotomy appointment.
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.order.reschedulePhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentReschedulePatch({
     appointmentRescheduleRequest: {
@@ -829,6 +888,7 @@ import { Vital } from "Vital";
 | Parameter                                                                                                                                                                                                                  | Type                                                                                                                                                                                                                       | Required                                                                                                                                                                                                                   | Description                                                                                                                                                                                                                |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                                                                                                                                  | [operations.ReschedulePhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentReschedulePatchRequest](../../models/operations/reschedulephlebotomyappointmentv3orderorderidphlebotomyappointmentreschedulepatchrequest.md) | :heavy_check_mark:                                                                                                                                                                                                         | The request object to use for the request.                                                                                                                                                                                 |
+| `retries`                                                                                                                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                                                                     | :heavy_minus_sign:                                                                                                                                                                                                         | Configuration to override the default retry behavior of the client.                                                                                                                                                        |
 | `config`                                                                                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                                                               | :heavy_minus_sign:                                                                                                                                                                                                         | Available config options for making requests.                                                                                                                                                                              |
 
 
@@ -851,7 +911,9 @@ is sent to the respective team.
 import { Vital } from "Vital";
 
 (async() => {
-  const sdk = new Vital();
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
 
   const res = await sdk.order.syncTestkitOrderStatusV3OrderTestkitStatusPost();
 
@@ -863,9 +925,10 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response

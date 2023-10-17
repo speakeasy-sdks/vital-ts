@@ -138,6 +138,7 @@ export * from "./rawworkout";
 export * from "./region";
 export * from "./registertestkitrequest";
 export * from "./responsiblerelationship";
+export * from "./security";
 export * from "./shipmentwebhookupdate";
 export * from "./shippingaddress";
 export * from "./sleepv2indb";

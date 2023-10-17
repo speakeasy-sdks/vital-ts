@@ -306,6 +306,7 @@ src/sdk/models/shared/timeseriesmetricpoint.ts
 src/sdk/models/shared/usersignintokenresponse.ts
 src/sdk/models/shared/userpatchbody.ts
 src/sdk/models/shared/userrefreshsuccessresponse.ts
+src/sdk/models/shared/security.ts
 src/sdk/models/shared/index.ts
 src/sdk/models/errors/httpvalidationerror.ts
 src/sdk/models/errors/validationerror.ts
@@ -724,9 +725,11 @@ docs/models/shared/timeseriesmetricpoint.md
 docs/models/shared/usersignintokenresponse.md
 docs/models/shared/userpatchbody.md
 docs/models/shared/userrefreshsuccessresponse.md
+docs/models/shared/security.md
 docs/models/errors/httpvalidationerror.md
 docs/models/errors/validationerror.md
 docs/models/errors/userrefresherrorresponse.md
+docs/models/utils/retryconfig.md
 docs/sdks/vital/README.md
 docs/sdks/insurance/README.md
 docs/sdks/labtests/README.md

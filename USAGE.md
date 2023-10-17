@@ -5,9 +5,13 @@
 import { Vital } from "Vital";
 
 (async () => {
-    const sdk = new Vital();
+    const sdk = new Vital({
+        apiKey: "<YOUR-API-KEY>",
+    });
 
-    const res = await sdk.vital.robotsRobotsTxtGet();
+    const res = await sdk.insurance.searchDiagnosis({
+        diagnosisQuery: "deposit Car",
+    });
 
     if (res.statusCode == 200) {
         // handle response
