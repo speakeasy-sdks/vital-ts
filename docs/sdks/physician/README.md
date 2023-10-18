@@ -22,7 +22,7 @@ import { OpenLoopResourceIdType, OpenLoopWebhookType } from "Vital/dist/sdk/mode
 
   const res = await sdk.physician.reviewOpenloopV2PhysicianReviewOpenloopPost({
     eventType: OpenLoopWebhookType.PaymentDeleted,
-    resourceId: "soak",
+    resourceId: "West",
     resourceIdType: OpenLoopResourceIdType.Note,
   });
 

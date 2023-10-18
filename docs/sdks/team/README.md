@@ -36,13 +36,13 @@ import { TeamCreatePhysicianNetworkT } from "Vital/dist/sdk/models/shared";
 
   const res = await sdk.team.create({
     brandInformation: {
-      brandColor: "bluetooth Extended",
-      companyAddress: "blue",
-      companyName: "Schinner, Hodkiewicz and Wiegand",
-      companyWebsite: "East orange Northwest",
-      supportEmail: "Russel_Schumm@hotmail.com",
+      brandColor: "online",
+      companyAddress: "Configuration",
+      companyName: "Green - Collier",
+      companyWebsite: "blue",
+      supportEmail: "Peyton_Hodkiewicz0@hotmail.com",
     },
-    name: "volt physical Ameliorated",
+    name: "deposit",
   });
 
   if (res.statusCode == 200) {
@@ -81,9 +81,9 @@ import { CreateApiKeyBody } from "Vital/dist/sdk/models/shared";
     apiKey: "<YOUR-API-KEY>",
   });
 const createApiKeyBody: CreateApiKeyBody = {
-  label: "deposit API",
+  label: "West",
 };
-const teamId: string = "Avon";
+const teamId: string = "North";
 
   const res = await sdk.team.createApiKey(createApiKeyBody, teamId);
 
@@ -509,10 +509,10 @@ import { UpdateApiKeyBody } from "Vital/dist/sdk/models/shared";
     apiKey: "<YOUR-API-KEY>",
   });
 const updateApiKeyBody: UpdateApiKeyBody = {
-  label: "architectures District",
+  label: "HEX",
 };
-const apiKeyId: string = "South";
-const teamId: string = "South";
+const apiKeyId: string = "alarm";
+const teamId: string = "deposit";
 
   const res = await sdk.team.updateApiKeyLabelV2TeamTeamIdApikeyApiKeyIdPatch(updateApiKeyBody, apiKeyId, teamId);
 

@@ -59,7 +59,7 @@ import { Vital } from "Vital";
   });
 
   const res = await sdk.insurance.searchInsurancePayorInfo({
-    insuranceName: "South entry Bicycle",
+    insuranceName: "yuck",
   });
 
   if (res.statusCode == 200) {

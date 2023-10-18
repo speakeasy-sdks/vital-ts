@@ -31,7 +31,7 @@ import { LabTestCollectionMethod, LabTestSampleType } from "Vital/dist/sdk/model
       417458,
     ],
     method: LabTestCollectionMethod.Testkit,
-    name: "blue",
+    name: "South",
     sampleType: LabTestSampleType.Urine,
   });
 

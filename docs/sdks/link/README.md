@@ -71,7 +71,7 @@ import { Vital } from "Vital";
 
   const res = await sdk.link.checkTokenValidity({
     oauthInfo: {},
-    token: "Florida synthesize copying",
+    token: "chisel",
   });
 
   if (res.statusCode == 200) {
@@ -115,9 +115,9 @@ import { ManualConnectionData } from "Vital/dist/sdk/models/shared";
     apiKey: "<YOUR-API-KEY>",
   });
 const manualConnectionData: ManualConnectionData = {
-  userId: "especially",
+  userId: "Cambridgeshire",
 };
-const provider: ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders = ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders.AppleHealthKit;
+const provider: ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders = ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders.OmronBle;
 
   const res = await sdk.link.connectBleProvider(manualConnectionData, provider);
 
@@ -387,7 +387,7 @@ import { DemoProviders } from "Vital/dist/sdk/models/shared";
 
   const res = await sdk.link.createDemoConnection({
     provider: DemoProviders.AppleHealthKit,
-    userId: "save",
+    userId: "Southwest",
   });
 
   if (res.statusCode == 200) {
@@ -626,8 +626,8 @@ import { Providers } from "Vital/dist/sdk/models/shared";
   });
 
   const res = await sdk.link.startConnectProcess({
-    linkToken: "Electric",
-    provider: Providers.Zwift,
+    linkToken: "Bacon",
+    provider: Providers.FreestyleLibre,
   });
 
   if (res.statusCode == 200) {

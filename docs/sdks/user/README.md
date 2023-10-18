@@ -30,7 +30,7 @@ import { Vital } from "Vital";
   });
 
   const res = await sdk.user.createUser({
-    clientUserId: "dicta Forward",
+    clientUserId: "Metical",
   });
 
   if (res.statusCode == 200) {
