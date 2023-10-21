@@ -41,9 +41,9 @@ import { AppointmentBookingRequest } from "Vital/dist/sdk/models/shared";
     apiKey: "<YOUR-API-KEY>",
   });
 const appointmentBookingRequest: AppointmentBookingRequest = {
-  bookingKey: "henry",
+  bookingKey: "string",
 };
-const orderId: string = "486d40b1-d815-4182-a6c0-e7d72ca79bcf";
+const orderId: string = "ce486d40-b1d8-4151-82e6-c0e7d72ca79b";
 
   const res = await sdk.order.bookPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentBookPost(appointmentBookingRequest, orderId);
 
@@ -122,9 +122,9 @@ import { AppointmentCancelRequest } from "Vital/dist/sdk/models/shared";
     apiKey: "<YOUR-API-KEY>",
   });
 const appointmentCancelRequest: AppointmentCancelRequest = {
-  cancellationReasonId: "Program",
+  cancellationReasonId: "string",
 };
-const orderId: string = "cd9528dd-b0d2-47a7-a901-ccf3b9448c5e";
+const orderId: string = "a0cd9528-ddb0-4d27-a7e9-01ccf3b9448c";
 
   const res = await sdk.order.cancelPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentCancelPatch(appointmentCancelRequest, orderId);
 
@@ -171,51 +171,51 @@ import { ConsentType, Gender, ResponsibleRelationship } from "Vital/dist/sdk/mod
       },
     ],
     healthInsurance: {
-      backImage: "bluetooth",
+      backImage: "string",
       diagnosisCodes: [
-        "Extended",
+        "string",
       ],
-      frontImage: "South",
-      patientSignatureImage: "shred",
+      frontImage: "string",
+      patientSignatureImage: "string",
       responsibleDetails: {
         address: {
-          city: "Fort Silas",
-          country: "Afghanistan",
-          firstLine: "deposit",
-          state: "evolve",
-          zip: "male",
+          city: "Loyalhaven",
+          country: "Iraq",
+          firstLine: "string",
+          state: "string",
+          zip: "string",
         },
-        firstName: "Russel",
-        lastName: "Schumm",
-        phoneNumber: "quantify",
+        firstName: "Edwardo",
+        lastName: "Collier",
+        phoneNumber: "string",
       },
     },
-    labTestId: "dc7fa504-e083-433b-9d5e-261915a25d0d",
+    labTestId: "c1fc6fe0-7241-4bcd-989d-c7fa504e0833",
     patientAddress: {
-      city: "Volkmanfurt",
-      country: "Belarus",
-      state: "Mouse",
-      street: "Sydni Meadow",
-      zip: "Towels",
+      city: "Lake Aniya",
+      country: "South Georgia and the South Sandwich Islands",
+      state: "string",
+      street: "Soledad Divide",
+      zip: "string",
     },
     patientDetails: {
-      dob: new Date("2023-09-20T15:47:14.817Z"),
-      email: "Izabella_Ritchie@yahoo.com",
-      firstName: "Destiny",
-      gender: Gender.Other,
-      lastName: "Sawayn",
-      phoneNumber: "choke",
+      dob: new Date("2022-04-01T04:58:14.442Z"),
+      email: "Kyle_Bradtke@gmail.com",
+      firstName: "Brennan",
+      gender: Gender.Male,
+      lastName: "Stracke",
+      phoneNumber: "string",
     },
     physician: {
-      firstName: "Dorcas",
-      lastName: "Prosacco",
+      firstName: "Alfreda",
+      lastName: "Spinka",
       licensedStates: [
-        "Toyota",
+        "string",
       ],
-      npi: "Neptunium",
-      signatureImage: "round",
+      npi: "string",
+      signatureImage: "string",
     },
-    userId: "23e7d6f9-4157-4472-91ef-09254895835d",
+    userId: "9ea1320e-8504-4aa8-8e67-b7c49cf24bde",
   });
 
   if (res.statusCode == 200) {
@@ -257,13 +257,13 @@ import { Vital } from "Vital";
     shippingDetails: {
       city: "West Esmeraldaborough",
       country: "Antarctica (the territory South of 60 deg S)",
-      firstLine: "process",
-      phoneNumber: "Bedfordshire",
-      receiverName: "Research",
-      state: "granular",
-      zip: "Movies",
+      firstLine: "string",
+      phoneNumber: "string",
+      receiverName: "string",
+      state: "string",
+      zip: "string",
     },
-    userId: "d9798fbf-e68e-4fed-b371-3330afbf06a4",
+    userId: "6c614a14-431d-4979-8fbf-e68efedf3713",
   });
 
   if (res.statusCode == 200) {
@@ -380,9 +380,9 @@ import {
 const orderId: string = "c094c82e-a8e0-42d1-a065-be1f658ff11c";
 const requestBody: GetOrderAppointmentAvailabilityV3OrderOrderIdPhlebotomyAppointmentAvailabilityPostUSAddress = {
   city: "Shanahanboro",
-  firstLine: "Hat",
-  state: "Implementation",
-  zipCode: "62212-1095",
+  firstLine: "string",
+  state: "string",
+  zipCode: "56156",
 };
 
   const res = await sdk.order.getAppointmentAvailability(orderId, requestBody);
@@ -425,7 +425,7 @@ import { GetAreaInfoV3OrderAreaInfoGetRequest } from "Vital/dist/sdk/models/oper
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const zipCode: string = "Tuvalu";
+const zipCode: string = "string";
 
   const res = await sdk.order.getAreaInfo(zipCode);
 
@@ -775,8 +775,8 @@ import { ShipmentWebhookUpdateWebhookType } from "Vital/dist/sdk/models/shared";
 
   const res = await sdk.order.processTestkitShipHeroOrderShippedV3OrderTestkitWebhookShipheroShipmentUpdatePost({
     fulfillment: {
-      orderNumber: "platforms",
-      orderUuid: "hungry",
+      orderNumber: "string",
+      orderUuid: "string",
     },
     webhookType: ShipmentWebhookUpdateWebhookType.ShipmentUpdate,
   });
@@ -825,28 +825,28 @@ import { ConsentType, Gender } from "Vital/dist/sdk/models/shared";
     patientAddress: {
       city: "Phoenix",
       country: "Netherlands",
-      state: "Shirt",
-      street: "Medhurst Courts",
-      zip: "transmit",
+      state: "string",
+      street: "Gloria Stream",
+      zip: "string",
     },
     patientDetails: {
-      dob: new Date("2023-05-18T10:14:03.395Z"),
-      email: "Valentine69@yahoo.com",
-      firstName: "Arne",
+      dob: new Date("2022-10-13T05:29:20.564Z"),
+      email: "Keanu_Schoen95@gmail.com",
+      firstName: "Manley",
       gender: Gender.Male,
-      lastName: "Upton",
-      phoneNumber: "Compatible",
+      lastName: "Pouros",
+      phoneNumber: "string",
     },
     physician: {
-      firstName: "Santiago",
-      lastName: "Langosh",
+      firstName: "Arne",
+      lastName: "Keeling",
       licensedStates: [
-        "Avon",
+        "string",
       ],
-      npi: "Games",
+      npi: "string",
     },
-    sampleId: "aggregate",
-    userId: "6747b05c-ba39-4bba-bcb7-ed536a4e3800",
+    sampleId: "string",
+    userId: "e51d8103-2436-4747-b05c-ba39bbafcb7e",
   });
 
   if (res.statusCode == 200) {
@@ -887,9 +887,9 @@ import { AppointmentRescheduleRequest } from "Vital/dist/sdk/models/shared";
     apiKey: "<YOUR-API-KEY>",
   });
 const appointmentRescheduleRequest: AppointmentRescheduleRequest = {
-  bookingKey: "Electronics",
+  bookingKey: "string",
 };
-const orderId: string = "7372e4dd-db83-4234-a562-cb3ddc204a69";
+const orderId: string = "337372e4-dddb-4832-b4a5-62cb3ddc204a";
 
   const res = await sdk.order.reschedulePhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentReschedulePatch(appointmentRescheduleRequest, orderId);
 

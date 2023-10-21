@@ -36,10 +36,10 @@ import { GetMealsV2SummaryMealUserIdGetRequest } from "Vital/dist/sdk/models/ope
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "Money";
-const userId: string = "fb67cc4d-e4d2-44b5-a3e0-73000b0a593d";
-const endDate: string = "whenever";
-const provider: string = "black";
+const startDate: string = "string";
+const userId: string = "641fb67c-c4de-44d2-8b5e-3e073000b0a5";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.summary.getMeals(startDate, userId, endDate, provider);
 
@@ -80,10 +80,10 @@ import { GetUserActivityV2SummaryActivityUserIdGetRequest } from "Vital/dist/sdk
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "salmon";
-const userId: string = "994eda1c-812f-4363-bbdc-b5592eeffbfe";
-const endDate: string = "sonata";
-const provider: string = "Fantastic";
+const startDate: string = "string";
+const userId: string = "29994eda-1c81-42f3-a33b-dcb5592eeffb";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.summary.getUserActivity(startDate, userId, endDate, provider);
 
@@ -124,10 +124,10 @@ import { GetUserActivityRawV2SummaryActivityUserIdRawGetRequest } from "Vital/di
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "turquoise";
-const userId: string = "52487b77-c7c6-41ed-9ee8-85ef0bdc3cda";
-const endDate: string = "blah";
-const provider: string = "enforcement";
+const startDate: string = "string";
+const userId: string = "c752487b-77c7-4c61-ad1e-e885ef0bdc3c";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.summary.getUserActivityRaw(startDate, userId, endDate, provider);
 
@@ -168,10 +168,10 @@ import { GetUserBodyV2SummaryBodyUserIdGetRequest } from "Vital/dist/sdk/models/
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "hack";
-const userId: string = "70daa1c7-02d4-4a96-939a-8a9e6e4eae9b";
-const endDate: string = "magnetic";
-const provider: string = "local";
+const startDate: string = "string";
+const userId: string = "8170daa1-c702-4d4a-9653-9a8a9e6e4eae";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.summary.getUserBody(startDate, userId, endDate, provider);
 
@@ -212,10 +212,10 @@ import { GetUserBodyRawV2SummaryBodyUserIdRawGetRequest } from "Vital/dist/sdk/m
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "Computer";
-const userId: string = "8730e01d-99c9-4457-968e-72c19854893e";
-const endDate: string = "Credit";
-const provider: string = "South";
+const startDate: string = "string";
+const userId: string = "318730e0-1d99-4c94-97d6-8e72c1985489";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.summary.getUserBodyRaw(startDate, userId, endDate, provider);
 
@@ -257,7 +257,7 @@ import { GetUserDevicesRawV2SummaryDevicesUserIdRawGetRequest } from "Vital/dist
     apiKey: "<YOUR-API-KEY>",
   });
 const userId: string = "d3afcead-cf24-4987-97fa-74fe26009852";
-const provider: string = "Kwacha";
+const provider: string = "string";
 
   const res = await sdk.summary.getUserDevicesRaw(userId, provider);
 
@@ -297,7 +297,7 @@ import { GetUserProfileV2SummaryProfileUserIdGetRequest } from "Vital/dist/sdk/m
     apiKey: "<YOUR-API-KEY>",
   });
 const userId: string = "1e03319e-ca0e-4660-8784-a0581ebdd19f";
-const provider: string = "Unbranded";
+const provider: string = "string";
 
   const res = await sdk.summary.getUserProfile(userId, provider);
 
@@ -337,7 +337,7 @@ import { GetUserProfileRawV2SummaryProfileUserIdRawGetRequest } from "Vital/dist
     apiKey: "<YOUR-API-KEY>",
   });
 const userId: string = "ae101aa4-8797-4dc6-bac7-aa9d64e72a37";
-const provider: string = "Liberia";
+const provider: string = "string";
 
   const res = await sdk.summary.getUserProfileRaw(userId, provider);
 
@@ -376,10 +376,10 @@ import { GetUserSleepV2SummarySleepUserIdGetRequest } from "Vital/dist/sdk/model
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "Pakistan";
-const userId: string = "ea429e1c-88ab-4243-bc6a-94c896bba7aa";
-const endDate: string = "Southeast";
-const provider: string = "wireless";
+const startDate: string = "string";
+const userId: string = "6a2ea429-e1c8-48ab-a43b-c6a94c896bba";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.summary.getUserSleep(startDate, userId, endDate, provider);
 
@@ -420,10 +420,10 @@ import { GetUserSleepRawV2SummarySleepUserIdRawGetRequest } from "Vital/dist/sdk
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "Titanium";
-const userId: string = "ba77ed68-ff41-4f3f-8077-eae7285ab9bb";
-const endDate: string = "generate";
-const provider: string = "Point";
+const startDate: string = "string";
+const userId: string = "b2ba77ed-68ff-441f-bfc0-77eae7285ab9";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.summary.getUserSleepRaw(startDate, userId, endDate, provider);
 
@@ -464,10 +464,10 @@ import { GetUserSleepStreamV2SummarySleepUserIdStreamGetRequest } from "Vital/di
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "quantify";
-const userId: string = "05f1c352-9503-47bc-8ab0-890f30d313cc";
-const endDate: string = "Account";
-const provider: string = "Dakota";
+const startDate: string = "string";
+const userId: string = "8905f1c3-5295-4037-bc4a-b0890f30d313";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.summary.getUserSleepStream(startDate, userId, endDate, provider);
 
@@ -508,10 +508,10 @@ import { GetUserWorkoutsV2SummaryWorkoutsUserIdGetRequest } from "Vital/dist/sdk
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "Plutonium";
-const userId: string = "0edaf060-981f-44a6-ab52-5d09cc6d2663";
-const endDate: string = "Recumbent";
-const provider: string = "next";
+const startDate: string = "string";
+const userId: string = "bc0edaf0-6098-41f4-a6eb-525d09cc6d26";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.summary.getUserWorkouts(startDate, userId, endDate, provider);
 
@@ -552,10 +552,10 @@ import { GetUserWorkoutsRawV2SummaryWorkoutsUserIdRawGetRequest } from "Vital/di
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "Bike";
-const userId: string = "65358ad8-c074-4b1c-a19b-ac589e4fc044";
-const endDate: string = "Auto";
-const provider: string = "Legacy";
+const startDate: string = "string";
+const userId: string = "4853d653-58ad-48c0-b4b1-c219bac589e4";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.summary.getUserWorkoutsRaw(startDate, userId, endDate, provider);
 
@@ -597,8 +597,8 @@ import { PostUserActivityV2SummaryActivityUserIdPostRequest } from "Vital/dist/s
     apiKey: "<YOUR-API-KEY>",
   });
 const userId: string = "0e4724f5-d113-41c1-bf58-cd7168d06d0c";
-const xVitalAndroidSDKVersion: string = "primary";
-const xVitalIosSDKVersion: string = "tesla";
+const xVitalAndroidSDKVersion: string = "string";
+const xVitalIosSDKVersion: string = "string";
 
   const res = await sdk.summary.postUserActivity(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 
@@ -639,8 +639,8 @@ import { PostUserBodyV2SummaryBodyUserIdPostRequest } from "Vital/dist/sdk/model
     apiKey: "<YOUR-API-KEY>",
   });
 const userId: string = "2aac64a8-1a4b-47b9-b083-c6d33a9beb02";
-const xVitalAndroidSDKVersion: string = "dicta";
-const xVitalIosSDKVersion: string = "Cambridgeshire";
+const xVitalAndroidSDKVersion: string = "string";
+const xVitalIosSDKVersion: string = "string";
 
   const res = await sdk.summary.postUserBody(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 
@@ -681,8 +681,8 @@ import { PostUserProfileV2SummaryProfileUserIdPostRequest } from "Vital/dist/sdk
     apiKey: "<YOUR-API-KEY>",
   });
 const userId: string = "343ee935-de73-408c-a15e-4782d3b864c4";
-const xVitalAndroidSDKVersion: string = "purple";
-const xVitalIosSDKVersion: string = "foreground";
+const xVitalAndroidSDKVersion: string = "string";
+const xVitalIosSDKVersion: string = "string";
 
   const res = await sdk.summary.postUserProfile(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 
@@ -723,8 +723,8 @@ import { PostUserSleepV2SummarySleepUserIdPostRequest } from "Vital/dist/sdk/mod
     apiKey: "<YOUR-API-KEY>",
   });
 const userId: string = "4332e922-db99-44ec-bd9d-77a063c520e5";
-const xVitalAndroidSDKVersion: string = "Tasty";
-const xVitalIosSDKVersion: string = "South";
+const xVitalAndroidSDKVersion: string = "string";
+const xVitalIosSDKVersion: string = "string";
 
   const res = await sdk.summary.postUserSleep(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 
@@ -765,8 +765,8 @@ import { PostUserWorkoutV2SummaryWorkoutsUserIdPostRequest } from "Vital/dist/sd
     apiKey: "<YOUR-API-KEY>",
   });
 const userId: string = "63a9d635-f084-45f5-a781-131420d3a83b";
-const xVitalAndroidSDKVersion: string = "compress";
-const xVitalIosSDKVersion: string = "Unbranded";
+const xVitalAndroidSDKVersion: string = "string";
+const xVitalIosSDKVersion: string = "string";
 
   const res = await sdk.summary.postUserWorkout(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 

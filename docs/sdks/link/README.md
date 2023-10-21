@@ -71,7 +71,7 @@ import { Vital } from "Vital";
 
   const res = await sdk.link.checkTokenValidity({
     oauthInfo: {},
-    token: "chisel",
+    token: "string",
   });
 
   if (res.statusCode == 200) {
@@ -115,9 +115,9 @@ import { ManualConnectionData } from "Vital/dist/sdk/models/shared";
     apiKey: "<YOUR-API-KEY>",
   });
 const manualConnectionData: ManualConnectionData = {
-  userId: "Cambridgeshire",
+  userId: "string",
 };
-const provider: ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders = ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders.OmronBle;
+const provider: ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders = ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders.BeurerBle;
 
   const res = await sdk.link.connectBleProvider(manualConnectionData, provider);
 
@@ -254,7 +254,7 @@ const individualProviderData: IndividualProviderData = {
   username: "Chanel73",
 };
 const provider: ConnectIndividualProviderV2LinkProviderPasswordProviderPostProviderPasswordProviders = ConnectIndividualProviderV2LinkProviderPasswordProviderPostProviderPasswordProviders.Renpho;
-const xVitalLinkClientRegion: string = "pascal";
+const xVitalLinkClientRegion: string = "string";
 
   const res = await sdk.link.connectIndividualProvider(individualProviderData, provider, xVitalLinkClientRegion);
 
@@ -303,7 +303,7 @@ const passwordAuthLink: PasswordAuthLink = {
   provider: Providers.Wahoo,
   username: "Brett32",
 };
-const xVitalLinkClientRegion: string = "Loan";
+const xVitalLinkClientRegion: string = "string";
 
   const res = await sdk.link.connectPasswordAuth(passwordAuthLink, xVitalLinkClientRegion);
 
@@ -344,8 +344,8 @@ import { ConnectProviderV2LinkConnectProviderGetRequest } from "Vital/dist/sdk/m
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const provider: string = "smoothly";
-const xVitalSDKNoRedirect: string = "revolutionize";
+const provider: string = "string";
+const xVitalSDKNoRedirect: string = "string";
 
   const res = await sdk.link.connectProvider(provider, xVitalSDKNoRedirect);
 
@@ -387,7 +387,7 @@ import { DemoProviders } from "Vital/dist/sdk/models/shared";
 
   const res = await sdk.link.createDemoConnection({
     provider: DemoProviders.AppleHealthKit,
-    userId: "Southwest",
+    userId: "string",
   });
 
   if (res.statusCode == 200) {
@@ -464,7 +464,7 @@ import { ExchangeTokenV2LinkCodeExchangePostRequest } from "Vital/dist/sdk/model
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const code: string = "Sierra";
+const code: string = "string";
 
   const res = await sdk.link.exchangeToken(code);
 
@@ -626,8 +626,8 @@ import { Providers } from "Vital/dist/sdk/models/shared";
   });
 
   const res = await sdk.link.startConnectProcess({
-    linkToken: "Bacon",
-    provider: Providers.FreestyleLibre,
+    linkToken: "string",
+    provider: Providers.Peloton,
   });
 
   if (res.statusCode == 200) {

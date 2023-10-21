@@ -30,7 +30,7 @@ import { Vital } from "Vital";
   });
 
   const res = await sdk.user.createUser({
-    clientUserId: "Metical",
+    clientUserId: "string",
   });
 
   if (res.statusCode == 200) {
@@ -414,7 +414,7 @@ import { GetUserByClientUserIdV2UserResolveClientUserIdGetRequest } from "Vital/
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const clientUserId: string = "Bicycle";
+const clientUserId: string = "string";
 
   const res = await sdk.user.resolveByUserId(clientUserId);
 

@@ -31,8 +31,8 @@ import { LabTestCollectionMethod, LabTestSampleType } from "Vital/dist/sdk/model
       417458,
     ],
     method: LabTestCollectionMethod.Testkit,
-    name: "South",
-    sampleType: LabTestSampleType.Urine,
+    name: "string",
+    sampleType: LabTestSampleType.DriedBloodSpot,
   });
 
   if (res.statusCode == 200) {
@@ -105,7 +105,7 @@ import { GetMarkersByProviderIdV3LabTestsLabIdMarkersProviderIdGetRequest } from
     apiKey: "<YOUR-API-KEY>",
   });
 const labId: number = 263548;
-const providerId: string = "East";
+const providerId: string = "string";
 
   const res = await sdk.labTests.getMarkerByProvider(labId, providerId);
 
@@ -145,9 +145,9 @@ import { GetMarkersV3LabTestsMarkersGetRequest } from "Vital/dist/sdk/models/ope
     apiKey: "<YOUR-API-KEY>",
   });
 const labId: number = 614936;
-const name: string = "parse";
-const page: number = 301534;
-const size: number = 44930;
+const name: string = "string";
+const page: number = 549571;
+const size: number = 962743;
 
   const res = await sdk.labTests.getMarkers(labId, name, page, size);
 

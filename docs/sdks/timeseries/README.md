@@ -44,10 +44,10 @@ import { GetTimeseriesResourceDataV2TimeseriesUserIdBloodOxygenGetRequest } from
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "impactful";
-const userId: string = "167a20d0-010c-46df-9636-3b96cbd8acaa";
-const endDate: string = "Dollar";
-const provider: string = "California";
+const startDate: string = "string";
+const userId: string = "4c167a20-d001-40c6-9f96-363b96cbd8ac";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.timeseries.getBloodOxygen(startDate, userId, endDate, provider);
 
@@ -88,10 +88,10 @@ import { GetTimeseriesResourceDataV2TimeseriesUserIdBloodPressureGetRequest } fr
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "gee";
-const userId: string = "1b0b644f-7b3e-4a62-b593-87de819d0467";
-const endDate: string = "Silicon";
-const provider: string = "generating";
+const startDate: string = "string";
+const userId: string = "e91b0b64-4f7b-43ea-a2b5-9387de819d04";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.timeseries.getBloodPressure(startDate, userId, endDate, provider);
 
@@ -132,10 +132,10 @@ import { GetTimeseriesResourceDataV2TimeseriesUserIdCaffeineGetRequest } from "V
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "Bike";
-const userId: string = "0eb86098-dcc6-4f6c-b57c-f521cb838d86";
-const endDate: string = "Ward";
-const provider: string = "Account";
+const startDate: string = "string";
+const userId: string = "4313a0eb-8609-48dc-86f6-c357cf521cb8";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.timeseries.getCaffeine(startDate, userId, endDate, provider);
 
@@ -176,10 +176,10 @@ import { GetTimeseriesResourceDataV2TimeseriesUserIdCaloriesActiveGetRequest } f
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "Federation";
-const userId: string = "1117e3cf-3f90-4377-abb8-9ae3afbb8a22";
-const endDate: string = "minor";
-const provider: string = "Officer";
+const startDate: string = "string";
+const userId: string = "0bc1117e-3cf3-4f90-b776-bb89ae3afbb8";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.timeseries.getCaloriesActive(startDate, userId, endDate, provider);
 
@@ -220,10 +220,10 @@ import { GetTimeseriesResourceDataV2TimeseriesUserIdCaloriesBasalGetRequest } fr
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "encoding";
-const userId: string = "ab80902f-0d8b-480a-ba6b-9f3470ca8035";
-const endDate: string = "Cruiser";
-const provider: string = "hm";
+const startDate: string = "string";
+const userId: string = "64ab8090-2f0d-48b8-8aba-6b9f3470ca80";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.timeseries.getCaloriesBasal(startDate, userId, endDate, provider);
 
@@ -264,10 +264,10 @@ import { GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolGetRequest } from
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "scale";
-const userId: string = "6c3b209b-90b5-4907-8d42-be3036af6959";
-const endDate: string = "nulla";
-const provider: string = "deposit";
+const startDate: string = "string";
+const userId: string = "4b6c3b20-9b90-4b59-87cd-42be3036af69";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.timeseries.getCholesterolAll(startDate, userId, endDate, provider);
 
@@ -308,10 +308,10 @@ import { GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolHdlGetRequest } f
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "offer";
-const userId: string = "7d0d0e3b-2a52-49fb-9c2d-8b672820431e";
-const endDate: string = "sticky";
-const provider: string = "Rap";
+const startDate: string = "string";
+const userId: string = "f97d0d0e-3b2a-4529-bb1c-2d8b67282043";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.timeseries.getCholesterolHdl(startDate, userId, endDate, provider);
 
@@ -352,10 +352,10 @@ import { GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolLdlGetRequest } f
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "Shirt";
-const userId: string = "6985e48f-6e4c-4a12-bede-b29d7329161d";
-const endDate: string = "Fish";
-const provider: string = "Customer";
+const startDate: string = "string";
+const userId: string = "4f26c698-5e48-4f6e-8ca1-27edeb29d732";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.timeseries.getCholesterolLdl(startDate, userId, endDate, provider);
 
@@ -396,10 +396,10 @@ import { GetTimeseriesResourceDataV2TimeseriesUserIdDistanceGetRequest } from "V
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "Borders";
-const userId: string = "ab33e7f6-399b-48f7-bc69-a8c4ea5f811a";
-const endDate: string = "secured";
-const provider: string = "capacitor";
+const startDate: string = "string";
+const userId: string = "19ab33e7-f639-49b8-b73c-69a8c4ea5f81";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.timeseries.getDistance(startDate, userId, endDate, provider);
 
@@ -440,10 +440,10 @@ import { GetTimeseriesResourceDataV2TimeseriesUserIdFloorsClimbedGetRequest } fr
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "Framingham";
-const userId: string = "b58dc04a-1477-49d7-b878-666ff90d3c15";
-const endDate: string = "Mazda";
-const provider: string = "aspernatur";
+const startDate: string = "string";
+const userId: string = "05b58dc0-4a14-4779-97b8-78666ff90d3c";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.timeseries.getFloorsClimbed(startDate, userId, endDate, provider);
 
@@ -484,10 +484,10 @@ import { GetTimeseriesResourceDataV2TimeseriesUserIdGlucoseGetRequest } from "Vi
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "withdrawal";
-const userId: string = "c755f4e3-6361-4b98-88a3-3b1731a7aeff";
-const endDate: string = "tinker";
-const provider: string = "New";
+const startDate: string = "string";
+const userId: string = "76c755f4-e363-461b-9888-a33b1731a7ae";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.timeseries.getGlucose(startDate, userId, endDate, provider);
 
@@ -528,10 +528,10 @@ import { GetTimeseriesResourceDataV2TimeseriesUserIdHeartrateGetRequest } from "
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "Tuna";
-const userId: string = "24193a7e-0c48-4f71-9f29-3d439db94517";
-const endDate: string = "Bedfordshire";
-const provider: string = "Burundi";
+const startDate: string = "string";
+const userId: string = "3a24193a-7e0c-448f-b11f-293d439db945";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.timeseries.getHeartrate(startDate, userId, endDate, provider);
 
@@ -572,10 +572,10 @@ import { GetTimeseriesResourceDataV2TimeseriesUserIdHrvGetRequest } from "Vital/
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "onto";
-const userId: string = "8c7b86cf-8ac7-4c96-9134-2c13c4a095df";
-const endDate: string = "invoice";
-const provider: string = "Music";
+const startDate: string = "string";
+const userId: string = "fa8c7b86-cf8a-4c7c-9611-342c13c4a095";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.timeseries.getHrv(startDate, userId, endDate, provider);
 
@@ -616,10 +616,10 @@ import { GetTimeseriesResourceDataV2TimeseriesUserIdHypnogramGetRequest } from "
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "Agender";
-const userId: string = "16363f90-ddad-4e35-80c1-806b114554f6";
-const endDate: string = "South";
-const provider: string = "parsing";
+const startDate: string = "string";
+const userId: string = "9016363f-90dd-4ade-b540-c1806b114554";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.timeseries.getHypnogram(startDate, userId, endDate, provider);
 
@@ -660,10 +660,10 @@ import { GetTimeseriesResourceDataV2TimeseriesUserIdIgeGetRequest } from "Vital/
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "gosh";
-const userId: string = "97cbc298-b6fe-4d30-8681-3b66be805e5c";
-const endDate: string = "maroon";
-const provider: string = "Rupee";
+const startDate: string = "string";
+const userId: string = "ed97cbc2-98b6-4fed-b0c6-813b66be805e";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.timeseries.getIge(startDate, userId, endDate, provider);
 
@@ -704,10 +704,10 @@ import { GetTimeseriesResourceDataV2TimeseriesUserIdIggGetRequest } from "Vital/
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "orchestrate";
-const userId: string = "54a70b28-d95e-4f79-8c9c-f8e7ce7fd8db";
-const endDate: string = "Recumbent";
-const provider: string = "Classical";
+const startDate: string = "string";
+const userId: string = "584254a7-0b28-4d95-af79-8c9cf8e7ce7f";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.timeseries.getIgg(startDate, userId, endDate, provider);
 
@@ -748,10 +748,10 @@ import { GetTimeseriesResourceDataV2TimeseriesUserIdMindfulnessMinutesGetRequest
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "win";
-const userId: string = "42bcd30f-79dd-4664-acae-0a26ee2b9de9";
-const endDate: string = "equally";
-const provider: string = "humming";
+const startDate: string = "string";
+const userId: string = "ff42bcd3-0f79-4dd6-a4ec-ae0a26ee2b9d";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.timeseries.getMindfulnessMinutes(startDate, userId, endDate, provider);
 
@@ -792,10 +792,10 @@ import { GetTimeseriesResourceDataV2TimeseriesUserIdRespiratoryRateGetRequest } 
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "circa";
-const userId: string = "daa7f697-3a55-4ea3-8cb2-e2169f40d62d";
-const endDate: string = "upon";
-const provider: string = "Fluorine";
+const startDate: string = "string";
+const userId: string = "f5daa7f6-973a-455e-a3cc-b2e2169f40d6";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.timeseries.getRespiratoryRate(startDate, userId, endDate, provider);
 
@@ -836,10 +836,10 @@ import { GetTimeseriesResourceDataV2TimeseriesUserIdStepsGetRequest } from "Vita
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "copying";
-const userId: string = "f7b728ea-d1ba-4037-920b-80b82a067baf";
-const endDate: string = "optical";
-const provider: string = "platforms";
+const startDate: string = "string";
+const userId: string = "f3f7b728-ead1-4ba0-b792-0b80b82a067b";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.timeseries.getSteps(startDate, userId, endDate, provider);
 
@@ -880,10 +880,10 @@ import { GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolTotalGetRequest }
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "Director";
-const userId: string = "6cf900a0-1395-4d12-a9ee-be971547d810";
-const endDate: string = "farad";
-const provider: string = "partially";
+const startDate: string = "string";
+const userId: string = "b56cf900-a013-495d-92e9-eebe971547d8";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.timeseries.getTotalCholesterol(startDate, userId, endDate, provider);
 
@@ -924,10 +924,10 @@ import { GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolTriglyceridesGetR
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "Optional";
-const userId: string = "c97f143e-c935-45c9-a6cd-c7190c8f2e16";
-const endDate: string = "state";
-const provider: string = "female";
+const startDate: string = "string";
+const userId: string = "58c97f14-3ec9-4355-8966-cdc7190c8f2e";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.timeseries.getTriglycerides(startDate, userId, endDate, provider);
 
@@ -968,7 +968,7 @@ import { GetUserSleepStreamV2TimeseriesSleepSleepIdStreamGetRequest } from "Vita
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const sleepId: string = "quantify";
+const sleepId: string = "string";
 
   const res = await sdk.timeseries.getUserSleepStream(sleepId);
 
@@ -1044,10 +1044,10 @@ import { GetTimeseriesResourceDataV2TimeseriesUserIdWaterGetRequest } from "Vita
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "Garden";
-const userId: string = "80182b86-b75b-4a3c-a7d6-4c9e6a0a1275";
-const endDate: string = "construction";
-const provider: string = "withdrawal";
+const startDate: string = "string";
+const userId: string = "2580182b-86b7-45ba-bc67-d64c9e6a0a12";
+const endDate: string = "string";
+const provider: string = "string";
 
   const res = await sdk.timeseries.getWater(startDate, userId, endDate, provider);
 
@@ -1089,8 +1089,8 @@ import { PostUserBloodPressureV2TimeseriesUserIdBloodPressurePostRequest } from 
     apiKey: "<YOUR-API-KEY>",
   });
 const userId: string = "5d55820e-8c39-4307-91e1-9cdd23720f04";
-const xVitalAndroidSDKVersion: string = "Indium";
-const xVitalIosSDKVersion: string = "Cab";
+const xVitalAndroidSDKVersion: string = "string";
+const xVitalIosSDKVersion: string = "string";
 
   const res = await sdk.timeseries.postBloodPressure(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 
@@ -1133,8 +1133,8 @@ import { IngestibleTimeseriesResource } from "Vital/dist/sdk/models/shared";
   });
 const resource: IngestibleTimeseriesResource = IngestibleTimeseriesResource.BloodOxygen;
 const userId: string = "7a0eca13-40ec-46ac-9433-f77edd2bbc91";
-const xVitalAndroidSDKVersion: string = "Arkansas";
-const xVitalIosSDKVersion: string = "perferendis";
+const xVitalAndroidSDKVersion: string = "string";
+const xVitalIosSDKVersion: string = "string";
 
   const res = await sdk.timeseries.postVitals(resource, userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 

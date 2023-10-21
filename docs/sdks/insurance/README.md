@@ -20,7 +20,7 @@ import { SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest } from "Vital/dist/
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const diagnosisQuery: string = "JBOD";
+const diagnosisQuery: string = "string";
 
   const res = await sdk.insurance.searchDiagnosis(diagnosisQuery);
 
@@ -59,7 +59,7 @@ import { Vital } from "Vital";
   });
 
   const res = await sdk.insurance.searchInsurancePayorInfo({
-    insuranceName: "yuck",
+    insuranceName: "string",
   });
 
   if (res.statusCode == 200) {

@@ -36,13 +36,13 @@ import { TeamCreatePhysicianNetworkT } from "Vital/dist/sdk/models/shared";
 
   const res = await sdk.team.create({
     brandInformation: {
-      brandColor: "online",
-      companyAddress: "Configuration",
-      companyName: "Green - Collier",
-      companyWebsite: "blue",
-      supportEmail: "Peyton_Hodkiewicz0@hotmail.com",
+      brandColor: "string",
+      companyAddress: "string",
+      companyName: "Kuhn - Nienow",
+      companyWebsite: "string",
+      supportEmail: "Haylie78@hotmail.com",
     },
-    name: "deposit",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -81,9 +81,9 @@ import { CreateApiKeyBody } from "Vital/dist/sdk/models/shared";
     apiKey: "<YOUR-API-KEY>",
   });
 const createApiKeyBody: CreateApiKeyBody = {
-  label: "West",
+  label: "string",
 };
-const teamId: string = "North";
+const teamId: string = "string";
 
   const res = await sdk.team.createApiKey(createApiKeyBody, teamId);
 
@@ -128,7 +128,7 @@ const priorityCreate: PriorityCreate = {
   sourceId: 168326,
   teamId: "0d4e3a38-5a06-40f0-b144-d921de79168b",
 };
-const teamId: string = "compressing";
+const teamId: string = "string";
 
   const res = await sdk.team.createPriority(priorityCreate, teamId);
 
@@ -167,8 +167,8 @@ import { DeleteApiKeyV2TeamTeamIdApikeyApiKeyIdDeleteRequest } from "Vital/dist/
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const apiKeyId: string = "Weston";
-const teamId: string = "Bicycle";
+const apiKeyId: string = "string";
+const teamId: string = "string";
 
   const res = await sdk.team.deleteApiKey(apiKeyId, teamId);
 
@@ -245,7 +245,7 @@ import { GetApiKeysForTeamV2TeamTeamIdApikeysGetRequest } from "Vital/dist/sdk/m
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const teamId: string = "Computer";
+const teamId: string = "string";
 
   const res = await sdk.team.getApiKeys(teamId);
 
@@ -318,7 +318,7 @@ import { GetSourcePrioritiesV2TeamSourcePrioritiesGetRequest } from "Vital/dist/
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const dataType: string = "deposit";
+const dataType: string = "string";
 
   const res = await sdk.team.getSourcePriorities(dataType);
 
@@ -429,8 +429,8 @@ import { RotateApiKeyV2TeamTeamIdApikeyApiKeyIdRotatePatchRequest } from "Vital/
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const apiKeyId: string = "lux";
-const teamId: string = "optimize";
+const apiKeyId: string = "string";
+const teamId: string = "string";
 
   const res = await sdk.team.rotateApiKeyV2TeamTeamIdApikeyApiKeyIdRotatePatch(apiKeyId, teamId);
 
@@ -469,7 +469,7 @@ import { SearchTeamUsersByUuidOrClientUserIdV2TeamUsersSearchGetRequest } from "
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const queryId: string = "North";
+const queryId: string = "string";
 
   const res = await sdk.team.searchUsersByUuid(queryId);
 
@@ -509,10 +509,10 @@ import { UpdateApiKeyBody } from "Vital/dist/sdk/models/shared";
     apiKey: "<YOUR-API-KEY>",
   });
 const updateApiKeyBody: UpdateApiKeyBody = {
-  label: "HEX",
+  label: "string",
 };
-const apiKeyId: string = "alarm";
-const teamId: string = "deposit";
+const apiKeyId: string = "string";
+const teamId: string = "string";
 
   const res = await sdk.team.updateApiKeyLabelV2TeamTeamIdApikeyApiKeyIdPatch(updateApiKeyBody, apiKeyId, teamId);
 
@@ -552,7 +552,7 @@ import { UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchRequest } from "Vital/
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const teamId: string = "phew";
+const teamId: string = "string";
 
   const res = await sdk.team.updateSourcePrioritiesV2TeamSourcePrioritiesPatch(teamId);
 
@@ -592,7 +592,7 @@ import { TeamUpdate } from "Vital/dist/sdk/models/shared";
     apiKey: "<YOUR-API-KEY>",
   });
 const teamUpdate: TeamUpdate = {};
-const teamId: string = "Supervisor";
+const teamId: string = "string";
 
   const res = await sdk.team.updateTeamV2TeamTeamIdPatch(teamUpdate, teamId);
 
