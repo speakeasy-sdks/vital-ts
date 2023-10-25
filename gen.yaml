@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: bb5e24e31da8cd0edd3f729393024103
   docVersion: 0.0.0-dev.f0ab7c6
-  speakeasyVersion: 1.104.0
-  generationVersion: 2.169.0
+  speakeasyVersion: 1.107.0
+  generationVersion: 2.171.0
 generation:
   comments:
     disableComments: false
@@ -15,7 +15,7 @@ generation:
   tagNamespacingDisabled: false
 features:
   typescript:
-    core: 2.93.0
+    core: 2.94.0
     deprecations: 2.81.1
     examples: 2.81.3
     flattening: 2.81.1
@@ -24,7 +24,7 @@ features:
     nameOverrides: 2.81.1
     retries: 2.82.1
 typescript:
-  version: 0.4.0
+  version: 0.5.0
   author: vital
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
