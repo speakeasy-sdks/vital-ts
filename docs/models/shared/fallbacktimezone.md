@@ -1,4 +1,4 @@
-# ClientFacingUserFallbackTimeZone
+# FallbackTimeZone
 
 
     Fallback time zone of the user, in the form of a valid IANA tzdatabase identifier (e.g., `Europe/London` or `America/Los_Angeles`).

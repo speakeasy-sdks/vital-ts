@@ -1,5 +1,5 @@
 # Timeseries
-(*timeseries*)
+(*.timeseries*)
 
 ### Available Operations
 
@@ -51,6 +51,7 @@ const provider: string = "string";
 
   const res = await sdk.timeseries.getBloodOxygen(startDate, userId, endDate, provider);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -94,6 +95,7 @@ const endDate: string = "string";
 const provider: string = "string";
 
   const res = await sdk.timeseries.getBloodPressure(startDate, userId, endDate, provider);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -139,6 +141,7 @@ const provider: string = "string";
 
   const res = await sdk.timeseries.getCaffeine(startDate, userId, endDate, provider);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -182,6 +185,7 @@ const endDate: string = "string";
 const provider: string = "string";
 
   const res = await sdk.timeseries.getCaloriesActive(startDate, userId, endDate, provider);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -227,6 +231,7 @@ const provider: string = "string";
 
   const res = await sdk.timeseries.getCaloriesBasal(startDate, userId, endDate, provider);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -270,6 +275,7 @@ const endDate: string = "string";
 const provider: string = "string";
 
   const res = await sdk.timeseries.getCholesterolAll(startDate, userId, endDate, provider);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -315,6 +321,7 @@ const provider: string = "string";
 
   const res = await sdk.timeseries.getCholesterolHdl(startDate, userId, endDate, provider);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -358,6 +365,7 @@ const endDate: string = "string";
 const provider: string = "string";
 
   const res = await sdk.timeseries.getCholesterolLdl(startDate, userId, endDate, provider);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -403,6 +411,7 @@ const provider: string = "string";
 
   const res = await sdk.timeseries.getDistance(startDate, userId, endDate, provider);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -446,6 +455,7 @@ const endDate: string = "string";
 const provider: string = "string";
 
   const res = await sdk.timeseries.getFloorsClimbed(startDate, userId, endDate, provider);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -491,6 +501,7 @@ const provider: string = "string";
 
   const res = await sdk.timeseries.getGlucose(startDate, userId, endDate, provider);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -534,6 +545,7 @@ const endDate: string = "string";
 const provider: string = "string";
 
   const res = await sdk.timeseries.getHeartrate(startDate, userId, endDate, provider);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -579,6 +591,7 @@ const provider: string = "string";
 
   const res = await sdk.timeseries.getHrv(startDate, userId, endDate, provider);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -622,6 +635,7 @@ const endDate: string = "string";
 const provider: string = "string";
 
   const res = await sdk.timeseries.getHypnogram(startDate, userId, endDate, provider);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -667,6 +681,7 @@ const provider: string = "string";
 
   const res = await sdk.timeseries.getIge(startDate, userId, endDate, provider);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -710,6 +725,7 @@ const endDate: string = "string";
 const provider: string = "string";
 
   const res = await sdk.timeseries.getIgg(startDate, userId, endDate, provider);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -755,6 +771,7 @@ const provider: string = "string";
 
   const res = await sdk.timeseries.getMindfulnessMinutes(startDate, userId, endDate, provider);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -798,6 +815,7 @@ const endDate: string = "string";
 const provider: string = "string";
 
   const res = await sdk.timeseries.getRespiratoryRate(startDate, userId, endDate, provider);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -843,6 +861,7 @@ const provider: string = "string";
 
   const res = await sdk.timeseries.getSteps(startDate, userId, endDate, provider);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -886,6 +905,7 @@ const endDate: string = "string";
 const provider: string = "string";
 
   const res = await sdk.timeseries.getTotalCholesterol(startDate, userId, endDate, provider);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -931,6 +951,7 @@ const provider: string = "string";
 
   const res = await sdk.timeseries.getTriglycerides(startDate, userId, endDate, provider);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -972,6 +993,7 @@ const sleepId: string = "string";
 
   const res = await sdk.timeseries.getUserSleepStream(sleepId);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1009,6 +1031,7 @@ import { GetUserWorkoutsV2TimeseriesWorkoutsWorkoutIdStreamGetRequest } from "Vi
 const workoutId: string = "bc0edaf0-6098-41f4-a6eb-525d09cc6d26";
 
   const res = await sdk.timeseries.getUserWorkouts(workoutId);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1050,6 +1073,7 @@ const endDate: string = "string";
 const provider: string = "string";
 
   const res = await sdk.timeseries.getWater(startDate, userId, endDate, provider);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1094,6 +1118,7 @@ const xVitalIosSDKVersion: string = "string";
 
   const res = await sdk.timeseries.postBloodPressure(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1137,6 +1162,7 @@ const xVitalAndroidSDKVersion: string = "string";
 const xVitalIosSDKVersion: string = "string";
 
   const res = await sdk.timeseries.postVitals(resource, userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
+
 
   if (res.statusCode == 200) {
     // handle response

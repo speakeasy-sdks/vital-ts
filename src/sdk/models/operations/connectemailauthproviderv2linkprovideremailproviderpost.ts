@@ -3,13 +3,13 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 /**
  * An enumeration.
  */
-export enum ConnectEmailAuthProviderV2LinkProviderEmailProviderPostProviderEmailProviders {
+export enum EmailProviders {
     FreestyleLibre = "freestyle_libre",
 }
 
@@ -21,7 +21,7 @@ export class ConnectEmailAuthProviderV2LinkProviderEmailProviderPostRequest exte
      * An enumeration.
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=provider" })
-    provider: ConnectEmailAuthProviderV2LinkProviderEmailProviderPostProviderEmailProviders;
+    provider: EmailProviders;
 }
 
 export class ConnectEmailAuthProviderV2LinkProviderEmailProviderPostResponse extends SpeakeasyBase {

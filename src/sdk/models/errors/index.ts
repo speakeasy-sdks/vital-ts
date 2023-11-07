@@ -3,7 +3,6 @@
  */
 
 export * from "./httpvalidationerror";
+export * from "./sdkerror";
 export * from "./userrefresherrorresponse";
 export * from "./validationerror";
-
-export * from "./sdkerror";

@@ -1,4 +1,4 @@
-# TeamInDBConfiguration
+# ResponseBody
 
 
 ## Fields

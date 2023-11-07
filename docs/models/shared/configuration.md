@@ -1,4 +1,4 @@
-# LinkTokenBaseOauthInfo
+# Configuration
 
 
 ## Fields

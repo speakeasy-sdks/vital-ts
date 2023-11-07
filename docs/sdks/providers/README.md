@@ -1,5 +1,5 @@
 # Providers
-(*providers*)
+(*.providers*)
 
 ### Available Operations
 
@@ -20,6 +20,7 @@ import { Vital } from "Vital";
   });
 
   const res = await sdk.providers.list();
+
 
   if (res.statusCode == 200) {
     // handle response

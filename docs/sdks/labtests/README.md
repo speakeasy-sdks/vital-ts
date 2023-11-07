@@ -1,5 +1,5 @@
 # LabTests
-(*labTests*)
+(*.labTests*)
 
 ### Available Operations
 
@@ -34,6 +34,7 @@ import { LabTestCollectionMethod, LabTestSampleType } from "Vital/dist/sdk/model
     name: "string",
     sampleType: LabTestSampleType.DriedBloodSpot,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -70,6 +71,7 @@ import { Vital } from "Vital";
   });
 
   const res = await sdk.labTests.getLabs();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -108,6 +110,7 @@ const labId: number = 263548;
 const providerId: string = "string";
 
   const res = await sdk.labTests.getMarkerByProvider(labId, providerId);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -151,6 +154,7 @@ const size: number = 962743;
 
   const res = await sdk.labTests.getMarkers(labId, name, page, size);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -189,6 +193,7 @@ import { Vital } from "Vital";
   });
 
   const res = await sdk.labTests.list();
+
 
   if (res.statusCode == 200) {
     // handle response

@@ -1,4 +1,4 @@
-# GetSourcePrioritiesV2TeamSourcePrioritiesGet200ApplicationJSON
+# UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchResponseBody
 
 
 ## Fields

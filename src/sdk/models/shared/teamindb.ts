@@ -8,7 +8,7 @@ import { BrandInformation } from "./brandinformation";
 import { PriorityInDB } from "./priorityindb";
 import { Expose, Type } from "class-transformer";
 
-export class TeamInDBConfiguration extends SpeakeasyBase {}
+export class Configuration extends SpeakeasyBase {}
 
 /**
  * An enumeration.
@@ -51,8 +51,8 @@ export class TeamInDB extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "configuration" })
-    @Type(() => TeamInDBConfiguration)
-    configuration: TeamInDBConfiguration;
+    @Type(() => Configuration)
+    configuration: Configuration;
 
     @SpeakeasyMetadata()
     @Expose({ name: "ff_apple_mobile_app_enabled" })

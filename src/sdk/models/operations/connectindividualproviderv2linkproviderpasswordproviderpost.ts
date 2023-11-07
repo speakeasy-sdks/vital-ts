@@ -3,13 +3,13 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 /**
  * An enumeration.
  */
-export enum ConnectIndividualProviderV2LinkProviderPasswordProviderPostProviderPasswordProviders {
+export enum PasswordProviders {
     Whoop = "whoop",
     Renpho = "renpho",
     Peloton = "peloton",
@@ -29,7 +29,7 @@ export class ConnectIndividualProviderV2LinkProviderPasswordProviderPostRequest 
      * An enumeration.
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=provider" })
-    provider: ConnectIndividualProviderV2LinkProviderPasswordProviderPostProviderPasswordProviders;
+    provider: PasswordProviders;
 
     @SpeakeasyMetadata({
         data: "header, style=simple;explode=false;name=x-vital-link-client-region",

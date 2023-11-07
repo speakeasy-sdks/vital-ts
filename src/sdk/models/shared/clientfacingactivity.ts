@@ -3,13 +3,13 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { RFCDate } from "../../types";
+import { RFCDate } from "../../../sdk/types";
 import { Expose, Transform, Type } from "class-transformer";
 
 /**
  * Heart rate daily summary.
  */
-export class ClientFacingActivityHeartRate extends SpeakeasyBase {
+export class HeartRate extends SpeakeasyBase {
     /**
      * Average heart rate::bpm
      */
@@ -157,8 +157,8 @@ export class ClientFacingActivity extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "heart_rate" })
-    @Type(() => ClientFacingActivityHeartRate)
-    heartRate?: ClientFacingActivityHeartRate;
+    @Type(() => HeartRate)
+    heartRate?: HeartRate;
 
     /**
      * Number of minutes during the day with high intensity activity (e.g. running)::minutes

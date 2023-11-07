@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export class LinkTokenBaseOauthInfo extends SpeakeasyBase {}
+export class OauthInfo extends SpeakeasyBase {}
 
 export class LinkTokenBase extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -14,8 +14,8 @@ export class LinkTokenBase extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "oauth_info" })
-    @Type(() => LinkTokenBaseOauthInfo)
-    oauthInfo?: LinkTokenBaseOauthInfo;
+    @Type(() => OauthInfo)
+    oauthInfo?: OauthInfo;
 
     @SpeakeasyMetadata()
     @Expose({ name: "token" })

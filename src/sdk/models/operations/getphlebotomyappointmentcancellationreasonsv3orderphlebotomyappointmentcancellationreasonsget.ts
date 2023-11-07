@@ -3,21 +3,21 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetPhlebotomyAppointmentCancellationReasonsV3OrderPhlebotomyAppointmentCancellationReasonsGetResponse extends SpeakeasyBase {
-    /**
-     * Successful Response
-     */
-    @SpeakeasyMetadata({ elemType: shared.ClientFacingAppointmentCancellationReason })
-    clientFacingAppointmentCancellationReasons?: shared.ClientFacingAppointmentCancellationReason[];
-
     /**
      * HTTP response content type for this operation
      */
     @SpeakeasyMetadata()
     contentType: string;
+
+    /**
+     * Successful Response
+     */
+    @SpeakeasyMetadata({ elemType: shared.ClientFacingAppointmentCancellationReason })
+    responseGetPhlebotomyAppointmentCancellationReasonsV3OrderPhlebotomyAppointmentCancellationReasonsGet?: shared.ClientFacingAppointmentCancellationReason[];
 
     /**
      * HTTP response status code for this operation

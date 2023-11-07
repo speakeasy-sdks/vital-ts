@@ -18,7 +18,7 @@ export enum SourceLinkSourceAuthType {
     Unknown = "",
 }
 
-export class SourceLinkFormComponents extends SpeakeasyBase {}
+export class FormComponents extends SpeakeasyBase {}
 
 export class SourceLink extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -31,8 +31,8 @@ export class SourceLink extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "form_components" })
-    @Type(() => SourceLinkFormComponents)
-    formComponents?: SourceLinkFormComponents;
+    @Type(() => FormComponents)
+    formComponents?: FormComponents;
 
     @SpeakeasyMetadata()
     @Expose({ name: "id" })

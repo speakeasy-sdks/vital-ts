@@ -1,5 +1,5 @@
 # User
-(*user*)
+(*.user*)
 
 ### Available Operations
 
@@ -32,6 +32,7 @@ import { Vital } from "Vital";
   const res = await sdk.user.createUser({
     clientUserId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -70,6 +71,7 @@ import { DeleteUserV2UserUserIdDeleteRequest } from "Vital/dist/sdk/models/opera
 const userId: string = "8db863f6-ef9b-413a-8a70-cb816b33de6b";
 
   const res = await sdk.user.delete(userId);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -111,6 +113,7 @@ const userId: string = "6d48b1ec-267e-4530-bcf8-b4f041e375ee";
 
   const res = await sdk.user.deregisterProviderV2UserUserIdProviderDelete(provider, userId);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -149,6 +152,7 @@ import { GetUserV2UserUserIdGetRequest } from "Vital/dist/sdk/models/operations"
 const userId: string = "b18d8d81-fd7b-4764-a31e-475cb1f36591";
 
   const res = await sdk.user.get(userId);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -189,6 +193,7 @@ const offset: number = 64345;
 
   const res = await sdk.user.getAll(limit, offset);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -228,6 +233,7 @@ const userId: string = "30ef9033-9974-45c7-af5c-ddc9369dd7a0";
 
   const res = await sdk.user.getConnectedProviders(userId);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -263,6 +269,7 @@ import { Vital } from "Vital";
   });
 
   const res = await sdk.user.getMetrics();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -300,6 +307,7 @@ import { GetUserSignInTokenV2UserUserIdSignInTokenPostRequest } from "Vital/dist
 const userId: string = "d738147a-606f-41ac-a296-81a3993405ee";
 
   const res = await sdk.user.getSignInToken(userId);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -341,6 +349,7 @@ const userId: string = "02c6960d-b280-4a76-8c76-467d647deb43";
 
   const res = await sdk.user.patchUserV2UserUserIdPatch(userPatchBody, userId);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -380,6 +389,7 @@ const userId: string = "1d35a855-b124-4dda-9838-fdeec970978f";
 
   const res = await sdk.user.refreshUserIdV2UserRefreshUserIdPost(userId);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -417,6 +427,7 @@ import { GetUserByClientUserIdV2UserResolveClientUserIdGetRequest } from "Vital/
 const clientUserId: string = "string";
 
   const res = await sdk.user.resolveByUserId(clientUserId);
+
 
   if (res.statusCode == 200) {
     // handle response

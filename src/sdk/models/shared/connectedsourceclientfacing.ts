@@ -8,6 +8,34 @@ import { Expose, Transform, Type } from "class-transformer";
 /**
  * A vendor, a service, or a platform which Vital can connect with.
  */
+export class Provider extends SpeakeasyBase {
+    /**
+     * URL for source logo
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "logo" })
+    logo: string;
+
+    /**
+     * Name of source of information
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    /**
+     * Slug for designated source
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "slug" })
+    slug: string;
+}
+
+/**
+ * A vendor, a service, or a platform which Vital can connect with.
+ *
+ * @deprecated class: This will be removed in a future release, please migrate away from it as soon as possible.
+ */
 export class ConnectedSourceClientFacingProvider extends SpeakeasyBase {
     /**
      * URL for source logo
@@ -45,8 +73,8 @@ export class ConnectedSourceClientFacing extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "provider" })
-    @Type(() => ConnectedSourceClientFacingProvider)
-    provider: ConnectedSourceClientFacingProvider;
+    @Type(() => Provider)
+    provider: Provider;
 
     /**
      * @deprecated field: This will be removed in a future release, please migrate away from it as soon as possible.

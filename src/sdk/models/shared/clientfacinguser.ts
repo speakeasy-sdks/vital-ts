@@ -13,7 +13,7 @@ import { Expose, Transform, Type } from "class-transformer";
  *     Used when pulling data from sources that are completely time zone agnostic (e.g., all time is relative to UTC clock, without any time zone attributions on data points).
  *
  */
-export class ClientFacingUserFallbackTimeZone extends SpeakeasyBase {
+export class FallbackTimeZone extends SpeakeasyBase {
     /**
      *
      * @remarks
@@ -71,8 +71,8 @@ export class ClientFacingUser extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "fallback_time_zone" })
-    @Type(() => ClientFacingUserFallbackTimeZone)
-    fallbackTimeZone?: ClientFacingUserFallbackTimeZone;
+    @Type(() => FallbackTimeZone)
+    fallbackTimeZone?: FallbackTimeZone;
 
     /**
      * Your team id.

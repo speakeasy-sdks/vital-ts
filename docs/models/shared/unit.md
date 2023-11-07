@@ -1,4 +1,4 @@
-# ClientFacingCaloriesActiveTimeseriesUnit
+# Unit
 
 Measured in kilocalories (kcal)
 

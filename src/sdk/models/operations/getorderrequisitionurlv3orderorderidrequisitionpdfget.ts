@@ -36,5 +36,5 @@ export class GetOrderRequisitionUrlV3OrderOrderIdRequisitionPdfGetResponse exten
      * Successful Response
      */
     @SpeakeasyMetadata()
-    getOrderRequisitionUrlV3OrderOrderIdRequisitionPdfGet200ApplicationJSONAny?: any;
+    any?: any;
 }

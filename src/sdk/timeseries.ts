@@ -3,9 +3,9 @@
  */
 
 import * as utils from "../internal/utils";
-import * as errors from "./models/errors";
-import * as operations from "./models/operations";
-import * as shared from "./models/shared";
+import * as errors from "../sdk/models/errors";
+import * as operations from "../sdk/models/operations";
+import * as shared from "../sdk/models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
@@ -102,13 +102,14 @@ export class Timeseries {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.clientFacingBloodOxygenTimeseries = [];
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdBloodOxygenGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.clientFacingBloodOxygenTimeseries = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ClientFacingBloodOxygenTimeseries,
-                        resFieldDepth
-                    );
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdBloodOxygenGet =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            shared.ClientFacingBloodOxygenTimeseries,
+                            resFieldDepth
+                        );
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -233,13 +234,14 @@ export class Timeseries {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.clientFacingBloodPressureTimeseries = [];
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdBloodPressureGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.clientFacingBloodPressureTimeseries = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ClientFacingBloodPressureTimeseries,
-                        resFieldDepth
-                    );
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdBloodPressureGet =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            shared.ClientFacingBloodPressureTimeseries,
+                            resFieldDepth
+                        );
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -359,13 +361,14 @@ export class Timeseries {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.clientFacingCaffeineTimeseries = [];
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCaffeineGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.clientFacingCaffeineTimeseries = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ClientFacingCaffeineTimeseries,
-                        resFieldDepth
-                    );
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCaffeineGet =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            shared.ClientFacingCaffeineTimeseries,
+                            resFieldDepth
+                        );
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -490,13 +493,14 @@ export class Timeseries {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.clientFacingCaloriesActiveTimeseries = [];
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCaloriesActiveGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.clientFacingCaloriesActiveTimeseries = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ClientFacingCaloriesActiveTimeseries,
-                        resFieldDepth
-                    );
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCaloriesActiveGet =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            shared.ClientFacingCaloriesActiveTimeseries,
+                            resFieldDepth
+                        );
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -621,13 +625,14 @@ export class Timeseries {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.clientFacingCaloriesBasalTimeseries = [];
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCaloriesBasalGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.clientFacingCaloriesBasalTimeseries = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ClientFacingCaloriesBasalTimeseries,
-                        resFieldDepth
-                    );
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCaloriesBasalGet =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            shared.ClientFacingCaloriesBasalTimeseries,
+                            resFieldDepth
+                        );
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -749,13 +754,14 @@ export class Timeseries {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.clientFacingCholesterolTimeseries = [];
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCholesterolGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.clientFacingCholesterolTimeseries = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ClientFacingCholesterolTimeseries,
-                        resFieldDepth
-                    );
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCholesterolGet =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            shared.ClientFacingCholesterolTimeseries,
+                            resFieldDepth
+                        );
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -880,13 +886,14 @@ export class Timeseries {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.clientFacingCholesterolTimeseries = [];
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCholesterolHdlGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.clientFacingCholesterolTimeseries = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ClientFacingCholesterolTimeseries,
-                        resFieldDepth
-                    );
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCholesterolHdlGet =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            shared.ClientFacingCholesterolTimeseries,
+                            resFieldDepth
+                        );
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1011,13 +1018,14 @@ export class Timeseries {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.clientFacingCholesterolTimeseries = [];
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCholesterolLdlGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.clientFacingCholesterolTimeseries = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ClientFacingCholesterolTimeseries,
-                        resFieldDepth
-                    );
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCholesterolLdlGet =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            shared.ClientFacingCholesterolTimeseries,
+                            resFieldDepth
+                        );
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1137,13 +1145,14 @@ export class Timeseries {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.clientFacingDistanceTimeseries = [];
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdDistanceGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.clientFacingDistanceTimeseries = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ClientFacingDistanceTimeseries,
-                        resFieldDepth
-                    );
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdDistanceGet =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            shared.ClientFacingDistanceTimeseries,
+                            resFieldDepth
+                        );
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1268,13 +1277,14 @@ export class Timeseries {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.clientFacingFloorsClimbedTimeseries = [];
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdFloorsClimbedGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.clientFacingFloorsClimbedTimeseries = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ClientFacingFloorsClimbedTimeseries,
-                        resFieldDepth
-                    );
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdFloorsClimbedGet =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            shared.ClientFacingFloorsClimbedTimeseries,
+                            resFieldDepth
+                        );
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1394,13 +1404,14 @@ export class Timeseries {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.clientFacingGlucoseTimeseries = [];
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdGlucoseGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.clientFacingGlucoseTimeseries = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ClientFacingGlucoseTimeseries,
-                        resFieldDepth
-                    );
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdGlucoseGet =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            shared.ClientFacingGlucoseTimeseries,
+                            resFieldDepth
+                        );
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1520,13 +1531,14 @@ export class Timeseries {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.clientFacingHeartRateTimeseries = [];
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdHeartrateGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.clientFacingHeartRateTimeseries = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ClientFacingHeartRateTimeseries,
-                        resFieldDepth
-                    );
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdHeartrateGet =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            shared.ClientFacingHeartRateTimeseries,
+                            resFieldDepth
+                        );
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1646,13 +1658,14 @@ export class Timeseries {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.clientFacingHRVTimeseries = [];
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdHrvGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.clientFacingHRVTimeseries = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ClientFacingHRVTimeseries,
-                        resFieldDepth
-                    );
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdHrvGet =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            shared.ClientFacingHRVTimeseries,
+                            resFieldDepth
+                        );
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1772,13 +1785,14 @@ export class Timeseries {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.clientFacingHypnogramTimeseries = [];
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdHypnogramGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.clientFacingHypnogramTimeseries = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ClientFacingHypnogramTimeseries,
-                        resFieldDepth
-                    );
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdHypnogramGet =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            shared.ClientFacingHypnogramTimeseries,
+                            resFieldDepth
+                        );
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1898,13 +1912,14 @@ export class Timeseries {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.clientFacingIgeTimeseries = [];
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdIgeGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.clientFacingIgeTimeseries = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ClientFacingIgeTimeseries,
-                        resFieldDepth
-                    );
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdIgeGet =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            shared.ClientFacingIgeTimeseries,
+                            resFieldDepth
+                        );
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -2024,13 +2039,14 @@ export class Timeseries {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.clientFacingIggTimeseries = [];
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdIggGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.clientFacingIggTimeseries = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ClientFacingIggTimeseries,
-                        resFieldDepth
-                    );
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdIggGet =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            shared.ClientFacingIggTimeseries,
+                            resFieldDepth
+                        );
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -2157,13 +2173,15 @@ export class Timeseries {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.clientFacingMindfulnessMinutesTimeseries = [];
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdMindfulnessMinutesGet =
+                        [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.clientFacingMindfulnessMinutesTimeseries = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ClientFacingMindfulnessMinutesTimeseries,
-                        resFieldDepth
-                    );
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdMindfulnessMinutesGet =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            shared.ClientFacingMindfulnessMinutesTimeseries,
+                            resFieldDepth
+                        );
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -2288,13 +2306,14 @@ export class Timeseries {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.clientFacingRespiratoryRateTimeseries = [];
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdRespiratoryRateGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.clientFacingRespiratoryRateTimeseries = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ClientFacingRespiratoryRateTimeseries,
-                        resFieldDepth
-                    );
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdRespiratoryRateGet =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            shared.ClientFacingRespiratoryRateTimeseries,
+                            resFieldDepth
+                        );
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -2414,13 +2433,14 @@ export class Timeseries {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.clientFacingStepsTimeseries = [];
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdStepsGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.clientFacingStepsTimeseries = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ClientFacingStepsTimeseries,
-                        resFieldDepth
-                    );
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdStepsGet =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            shared.ClientFacingStepsTimeseries,
+                            resFieldDepth
+                        );
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -2545,13 +2565,14 @@ export class Timeseries {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.clientFacingCholesterolTimeseries = [];
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCholesterolTotalGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.clientFacingCholesterolTimeseries = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ClientFacingCholesterolTimeseries,
-                        resFieldDepth
-                    );
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCholesterolTotalGet =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            shared.ClientFacingCholesterolTimeseries,
+                            resFieldDepth
+                        );
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -2680,13 +2701,15 @@ export class Timeseries {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.clientFacingCholesterolTimeseries = [];
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCholesterolTriglyceridesGet =
+                        [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.clientFacingCholesterolTimeseries = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ClientFacingCholesterolTimeseries,
-                        resFieldDepth
-                    );
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCholesterolTriglyceridesGet =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            shared.ClientFacingCholesterolTimeseries,
+                            resFieldDepth
+                        );
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -3043,13 +3066,14 @@ export class Timeseries {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.clientFacingWaterTimeseries = [];
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdWaterGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.clientFacingWaterTimeseries = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ClientFacingWaterTimeseries,
-                        resFieldDepth
-                    );
+                    res.responseGetTimeseriesResourceDataV2TimeseriesUserIdWaterGet =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            shared.ClientFacingWaterTimeseries,
+                            resFieldDepth
+                        );
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,

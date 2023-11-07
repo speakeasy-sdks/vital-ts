@@ -115,7 +115,7 @@ export class ClientFacingOrderPatientAddressCompatible extends SpeakeasyBase {
 /**
  * Patient Details
  */
-export class ClientFacingOrderClientFacingPatientDetailsCompatible extends SpeakeasyBase {
+export class ClientFacingPatientDetailsCompatible extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "dob" })
     @Transform(({ value }) => new Date(value), { toClassOnly: true })
@@ -239,8 +239,8 @@ export class ClientFacingOrder extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "patient_details" })
-    @Type(() => ClientFacingOrderClientFacingPatientDetailsCompatible)
-    patientDetails?: ClientFacingOrderClientFacingPatientDetailsCompatible;
+    @Type(() => ClientFacingPatientDetailsCompatible)
+    patientDetails?: ClientFacingPatientDetailsCompatible;
 
     @SpeakeasyMetadata()
     @Expose({ name: "physician" })

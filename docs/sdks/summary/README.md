@@ -1,5 +1,5 @@
 # Summary
-(*summary*)
+(*.summary*)
 
 ### Available Operations
 
@@ -42,6 +42,7 @@ const endDate: string = "string";
 const provider: string = "string";
 
   const res = await sdk.summary.getMeals(startDate, userId, endDate, provider);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -87,6 +88,7 @@ const provider: string = "string";
 
   const res = await sdk.summary.getUserActivity(startDate, userId, endDate, provider);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -130,6 +132,7 @@ const endDate: string = "string";
 const provider: string = "string";
 
   const res = await sdk.summary.getUserActivityRaw(startDate, userId, endDate, provider);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -175,6 +178,7 @@ const provider: string = "string";
 
   const res = await sdk.summary.getUserBody(startDate, userId, endDate, provider);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -219,6 +223,7 @@ const provider: string = "string";
 
   const res = await sdk.summary.getUserBodyRaw(startDate, userId, endDate, provider);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -261,6 +266,7 @@ const provider: string = "string";
 
   const res = await sdk.summary.getUserDevicesRaw(userId, provider);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -301,6 +307,7 @@ const provider: string = "string";
 
   const res = await sdk.summary.getUserProfile(userId, provider);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -340,6 +347,7 @@ const userId: string = "ae101aa4-8797-4dc6-bac7-aa9d64e72a37";
 const provider: string = "string";
 
   const res = await sdk.summary.getUserProfileRaw(userId, provider);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -382,6 +390,7 @@ const endDate: string = "string";
 const provider: string = "string";
 
   const res = await sdk.summary.getUserSleep(startDate, userId, endDate, provider);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -427,6 +436,7 @@ const provider: string = "string";
 
   const res = await sdk.summary.getUserSleepRaw(startDate, userId, endDate, provider);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -470,6 +480,7 @@ const endDate: string = "string";
 const provider: string = "string";
 
   const res = await sdk.summary.getUserSleepStream(startDate, userId, endDate, provider);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -515,6 +526,7 @@ const provider: string = "string";
 
   const res = await sdk.summary.getUserWorkouts(startDate, userId, endDate, provider);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -559,6 +571,7 @@ const provider: string = "string";
 
   const res = await sdk.summary.getUserWorkoutsRaw(startDate, userId, endDate, provider);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -602,6 +615,7 @@ const xVitalIosSDKVersion: string = "string";
 
   const res = await sdk.summary.postUserActivity(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -643,6 +657,7 @@ const xVitalAndroidSDKVersion: string = "string";
 const xVitalIosSDKVersion: string = "string";
 
   const res = await sdk.summary.postUserBody(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -686,6 +701,7 @@ const xVitalIosSDKVersion: string = "string";
 
   const res = await sdk.summary.postUserProfile(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -728,6 +744,7 @@ const xVitalIosSDKVersion: string = "string";
 
   const res = await sdk.summary.postUserSleep(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -769,6 +786,7 @@ const xVitalAndroidSDKVersion: string = "string";
 const xVitalIosSDKVersion: string = "string";
 
   const res = await sdk.summary.postUserWorkout(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
+
 
   if (res.statusCode == 200) {
     // handle response

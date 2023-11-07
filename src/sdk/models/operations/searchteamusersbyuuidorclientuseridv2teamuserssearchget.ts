@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class SearchTeamUsersByUuidOrClientUserIdV2TeamUsersSearchGetRequest extends SpeakeasyBase {
@@ -13,16 +13,16 @@ export class SearchTeamUsersByUuidOrClientUserIdV2TeamUsersSearchGetRequest exte
 
 export class SearchTeamUsersByUuidOrClientUserIdV2TeamUsersSearchGetResponse extends SpeakeasyBase {
     /**
-     * Successful Response
-     */
-    @SpeakeasyMetadata({ elemType: shared.ClientFacingUser })
-    clientFacingUsers?: shared.ClientFacingUser[];
-
-    /**
      * HTTP response content type for this operation
      */
     @SpeakeasyMetadata()
     contentType: string;
+
+    /**
+     * Successful Response
+     */
+    @SpeakeasyMetadata({ elemType: shared.ClientFacingUser })
+    responseSearchTeamUsersByUuidOrClientUserIdV2TeamUsersSearchGet?: shared.ClientFacingUser[];
 
     /**
      * HTTP response status code for this operation

@@ -3,9 +3,9 @@
  */
 
 import * as utils from "../internal/utils";
-import * as errors from "./models/errors";
-import * as operations from "./models/operations";
-import * as shared from "./models/shared";
+import * as errors from "../sdk/models/errors";
+import * as operations from "../sdk/models/operations";
+import * as shared from "../sdk/models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
@@ -716,9 +716,9 @@ export class Team {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.apiKeyInDBS = [];
+                    res.responseGetApiKeysForTeamV2TeamTeamIdApikeysGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.apiKeyInDBS = utils.objectToClass(
+                    res.responseGetApiKeysForTeamV2TeamTeamIdApikeysGet = utils.objectToClass(
                         JSON.parse(decodedRes),
                         shared.ApiKeyInDB,
                         resFieldDepth
@@ -931,14 +931,13 @@ export class Team {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.getSourcePrioritiesV2TeamSourcePrioritiesGet200ApplicationJSONObjects = [];
+                    res.responseGetSourcePrioritiesV2TeamSourcePrioritiesGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.getSourcePrioritiesV2TeamSourcePrioritiesGet200ApplicationJSONObjects =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.GetSourcePrioritiesV2TeamSourcePrioritiesGet200ApplicationJSON,
-                            resFieldDepth
-                        );
+                    res.responseGetSourcePrioritiesV2TeamSourcePrioritiesGet = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        operations.ResponseBody,
+                        resFieldDepth
+                    );
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1379,13 +1378,14 @@ export class Team {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.clientFacingUsers = [];
+                    res.responseSearchTeamUsersByUuidOrClientUserIdV2TeamUsersSearchGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.clientFacingUsers = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ClientFacingUser,
-                        resFieldDepth
-                    );
+                    res.responseSearchTeamUsersByUuidOrClientUserIdV2TeamUsersSearchGet =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            shared.ClientFacingUser,
+                            resFieldDepth
+                        );
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1636,13 +1636,12 @@ export class Team {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.updateSourcePrioritiesV2TeamSourcePrioritiesPatch200ApplicationJSONObjects =
-                        [];
+                    res.responseUpdateSourcePrioritiesV2TeamSourcePrioritiesPatch = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.updateSourcePrioritiesV2TeamSourcePrioritiesPatch200ApplicationJSONObjects =
+                    res.responseUpdateSourcePrioritiesV2TeamSourcePrioritiesPatch =
                         utils.objectToClass(
                             JSON.parse(decodedRes),
-                            operations.UpdateSourcePrioritiesV2TeamSourcePrioritiesPatch200ApplicationJSON,
+                            operations.UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchResponseBody,
                             resFieldDepth
                         );
                 } else {

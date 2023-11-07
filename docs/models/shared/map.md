@@ -1,4 +1,6 @@
-# SourceLinkFormComponents
+# Map
+
+Map of workouts encoded as polyline
 
 
 ## Fields

@@ -8,7 +8,7 @@ import { Expose, Type } from "class-transformer";
 /**
  * Details of fat content
  */
-export class MacrosFats extends SpeakeasyBase {
+export class Fats extends SpeakeasyBase {
     /**
      * Amount of monounsaturated fats in grams (g)
      */
@@ -72,8 +72,8 @@ export class Macros extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "fats" })
-    @Type(() => MacrosFats)
-    fats?: MacrosFats;
+    @Type(() => Fats)
+    fats?: Fats;
 
     /**
      * Amount of dietary fiber in grams (g)

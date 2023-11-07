@@ -1,4 +1,4 @@
-# ConnectIndividualProviderV2LinkProviderPasswordProviderPostProviderPasswordProviders
+# PasswordProviders
 
 An enumeration.
 

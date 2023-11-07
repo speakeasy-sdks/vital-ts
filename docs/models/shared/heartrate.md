@@ -1,4 +1,4 @@
-# ClientFacingActivityHeartRate
+# HeartRate
 
 Heart rate daily summary.
 

@@ -3,13 +3,13 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { RFCDate } from "../../types";
+import { RFCDate } from "../../../sdk/types";
 import { Expose, Transform, Type } from "class-transformer";
 
 /**
  * Map of workouts encoded as polyline
  */
-export class ClientFacingWorkoutMap extends SpeakeasyBase {}
+export class Map extends SpeakeasyBase {}
 
 /**
  * Source summarizes where a sample or a summary is sourced from.
@@ -172,8 +172,8 @@ export class ClientFacingWorkout extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "map" })
-    @Type(() => ClientFacingWorkoutMap)
-    map?: ClientFacingWorkoutMap;
+    @Type(() => Map)
+    map?: Map;
 
     /**
      * Max heart rate during workout::bpm

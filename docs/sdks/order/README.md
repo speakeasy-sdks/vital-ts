@@ -1,5 +1,5 @@
 # Order
-(*order*)
+(*.order*)
 
 ### Available Operations
 
@@ -47,6 +47,7 @@ const orderId: string = "ce486d40-b1d8-4151-82e6-c0e7d72ca79b";
 
   const res = await sdk.order.bookPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentBookPost(appointmentBookingRequest, orderId);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -85,6 +86,7 @@ import { CancelOrderV3OrderOrderIdCancelPostRequest } from "Vital/dist/sdk/model
 const orderId: string = "b9d919c2-b9aa-4759-bba5-fb974a744f9a";
 
   const res = await sdk.order.cancelOrderV3OrderOrderIdCancelPost(orderId);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -127,6 +129,7 @@ const appointmentCancelRequest: AppointmentCancelRequest = {
 const orderId: string = "a0cd9528-ddb0-4d27-a7e9-01ccf3b9448c";
 
   const res = await sdk.order.cancelPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentCancelPatch(appointmentCancelRequest, orderId);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -218,6 +221,7 @@ import { ConsentType, Gender, ResponsibleRelationship } from "Vital/dist/sdk/mod
     userId: "9ea1320e-8504-4aa8-8e67-b7c49cf24bde",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -266,6 +270,7 @@ import { Vital } from "Vital";
     userId: "6c614a14-431d-4979-8fbf-e68efedf3713",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -301,6 +306,7 @@ import { Vital } from "Vital";
   });
 
   const res = await sdk.order.dispatchStatus();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -338,6 +344,7 @@ import { GetOrderV3OrderOrderIdGetRequest } from "Vital/dist/sdk/models/operatio
 const orderId: string = "b18d8d81-fd7b-4764-a31e-475cb1f36591";
 
   const res = await sdk.order.get(orderId);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -387,6 +394,7 @@ const requestBody: GetOrderAppointmentAvailabilityV3OrderOrderIdPhlebotomyAppoin
 
   const res = await sdk.order.getAppointmentAvailability(orderId, requestBody);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -429,6 +437,7 @@ const zipCode: string = "string";
 
   const res = await sdk.order.getAreaInfo(zipCode);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -466,6 +475,7 @@ import { GetLabTestResultV3OrderOrderIdResultPdfGetRequest } from "Vital/dist/sd
 const orderId: string = "c9229487-8f86-47ef-848e-7eb7243713ad";
 
   const res = await sdk.order.getLabTestResult(orderId);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -506,6 +516,7 @@ const orderId: string = "daf5fdc5-7c54-4772-826b-69600571af0f";
 
   const res = await sdk.order.getLabTestResultMetadata(orderId);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -543,6 +554,7 @@ import { GetLabTestResultRawV3OrderOrderIdResultGetRequest } from "Vital/dist/sd
 const orderId: string = "2cfa7265-4a8d-45d9-b8ea-42e844b02385";
 
   const res = await sdk.order.getLabTestResultRaw(orderId);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -582,6 +594,7 @@ const orderId: string = "3e95493c-2969-4eab-9aaf-61adbf59533c";
 
   const res = await sdk.order.getPhlebotomyAppointment(orderId);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -617,6 +630,7 @@ import { Vital } from "Vital";
   });
 
   const res = await sdk.order.getPhlebotomyCancellationReasons();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -654,6 +668,7 @@ import { GetOrderRequisitionUrlV3OrderOrderIdRequisitionPdfGetRequest } from "Vi
 const orderId: string = "bfbbc5db-bd5f-47b5-9a88-6ef4ccfaf335";
 
   const res = await sdk.order.getRequisitionUrl(orderId);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -696,6 +711,7 @@ const finalStatus: OrderStatus = OrderStatus.CollectingSampleAtHomePhlebotomyApp
 
   const res = await sdk.order.orderProcessSimulateV3OrderOrderIdTestPost(orderId, delay, finalStatus);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -737,6 +753,7 @@ const teamId: string = "26a256a9-b0f5-4854-8814-40907e852835";
 
   const res = await sdk.order.processTestkitOrderV3OrderTestkitProcessTeamIdOrderIdPost(orderId, teamId);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -766,7 +783,7 @@ Process Testkit Ship Hero Order Shipped
 
 ```typescript
 import { Vital } from "Vital";
-import { ShipmentWebhookUpdateWebhookType } from "Vital/dist/sdk/models/shared";
+import { WebhookType } from "Vital/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Vital({
@@ -778,8 +795,9 @@ import { ShipmentWebhookUpdateWebhookType } from "Vital/dist/sdk/models/shared";
       orderNumber: "string",
       orderUuid: "string",
     },
-    webhookType: ShipmentWebhookUpdateWebhookType.ShipmentUpdate,
+    webhookType: WebhookType.ShipmentUpdate,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -849,6 +867,7 @@ import { ConsentType, Gender } from "Vital/dist/sdk/models/shared";
     userId: "e51d8103-2436-4747-b05c-ba39bbafcb7e",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -893,6 +912,7 @@ const orderId: string = "337372e4-dddb-4832-b4a5-62cb3ddc204a";
 
   const res = await sdk.order.reschedulePhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentReschedulePatch(appointmentRescheduleRequest, orderId);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -933,6 +953,7 @@ import { Vital } from "Vital";
   });
 
   const res = await sdk.order.syncTestkitOrderStatusV3OrderTestkitStatusPost();
+
 
   if (res.statusCode == 200) {
     // handle response

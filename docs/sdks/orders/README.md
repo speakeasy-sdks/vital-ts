@@ -1,5 +1,5 @@
 # Orders
-(*orders*)
+(*.orders*)
 
 ### Available Operations
 
@@ -24,6 +24,7 @@ import { Vital } from "Vital";
       "c184a429-302e-4aca-80db-f1718b882a50",
     ],
   });
+
 
   if (res.statusCode == 200) {
     // handle response

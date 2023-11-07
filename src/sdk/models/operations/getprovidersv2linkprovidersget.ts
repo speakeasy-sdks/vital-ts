@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetProvidersV2LinkProvidersGetResponse extends SpeakeasyBase {
@@ -17,7 +17,7 @@ export class GetProvidersV2LinkProvidersGetResponse extends SpeakeasyBase {
      * Successful Response
      */
     @SpeakeasyMetadata({ elemType: shared.SourceLink })
-    sourceLinks?: shared.SourceLink[];
+    responseGetProvidersV2LinkProvidersGet?: shared.SourceLink[];
 
     /**
      * HTTP response status code for this operation

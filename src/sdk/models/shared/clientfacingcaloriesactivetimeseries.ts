@@ -8,7 +8,7 @@ import { Expose, Transform } from "class-transformer";
 /**
  * Measured in kilocalories (kcal)
  */
-export enum ClientFacingCaloriesActiveTimeseriesUnit {
+export enum Unit {
     Kcal = "kcal",
 }
 
@@ -63,7 +63,7 @@ export class ClientFacingCaloriesActiveTimeseries extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "unit" })
-    unit: ClientFacingCaloriesActiveTimeseriesUnit;
+    unit: Unit;
 
     /**
      * Energy consumption caused by the physical activity at the time or interval::kilocalories

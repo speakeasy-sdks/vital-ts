@@ -10,7 +10,7 @@ import { Expose, Type } from "class-transformer";
 /**
  * Responsible details when the value of responsible_relationship is not 'Self'.
  */
-export class HealthInsuranceCreateRequestPersonDetails extends SpeakeasyBase {
+export class PersonDetails extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "address" })
     @Type(() => Address)
@@ -88,8 +88,8 @@ export class HealthInsuranceCreateRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "responsible_details" })
-    @Type(() => HealthInsuranceCreateRequestPersonDetails)
-    responsibleDetails?: HealthInsuranceCreateRequestPersonDetails;
+    @Type(() => PersonDetails)
+    responsibleDetails?: PersonDetails;
 
     /**
      * Relationship between the patient and the insurance contractor. Values can be (Self, Spouse, Other Relationship).

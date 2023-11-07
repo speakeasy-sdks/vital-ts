@@ -3,21 +3,21 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetListOfProvidersV2ProvidersGetResponse extends SpeakeasyBase {
-    /**
-     * Successful Response
-     */
-    @SpeakeasyMetadata({ elemType: shared.ClientFacingProviderDetailed })
-    clientFacingProviderDetaileds?: shared.ClientFacingProviderDetailed[];
-
     /**
      * HTTP response content type for this operation
      */
     @SpeakeasyMetadata()
     contentType: string;
+
+    /**
+     * Successful Response
+     */
+    @SpeakeasyMetadata({ elemType: shared.ClientFacingProviderDetailed })
+    responseGetListOfProvidersV2ProvidersGet?: shared.ClientFacingProviderDetailed[];
 
     /**
      * HTTP response status code for this operation

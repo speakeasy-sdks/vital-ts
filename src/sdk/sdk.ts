@@ -3,12 +3,12 @@
  */
 
 import * as utils from "../internal/utils";
+import * as errors from "../sdk/models/errors";
+import * as operations from "../sdk/models/operations";
+import * as shared from "../sdk/models/shared";
 import { Insurance } from "./insurance";
 import { LabTests } from "./labtests";
 import { Link } from "./link";
-import * as errors from "./models/errors";
-import * as operations from "./models/operations";
-import * as shared from "./models/shared";
 import { Order } from "./order";
 import { Orders } from "./orders";
 import { Physician } from "./physician";
@@ -63,9 +63,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "0.0.0-dev.f0ab7c6";
-    sdkVersion = "0.5.0";
-    genVersion = "2.171.0";
-    userAgent = "speakeasy-sdk/typescript 0.5.0 2.171.0 0.0.0-dev.f0ab7c6 Vital";
+    sdkVersion = "0.6.0";
+    genVersion = "2.181.1";
+    userAgent = "speakeasy-sdk/typescript 0.6.0 2.181.1 0.0.0-dev.f0ab7c6 Vital";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -76,17 +76,17 @@ export class SDKConfiguration {
  * Vital API: API for at-home health Wearables and Lab test API for digital health companies.
  */
 export class Vital {
-    public insurance: Insurance;
-    public labTests: LabTests;
     public link: Link;
-    public order: Order;
-    public orders: Orders;
     public physician: Physician;
     public providers: Providers;
     public summary: Summary;
     public team: Team;
     public timeseries: Timeseries;
     public user: User;
+    public insurance: Insurance;
+    public labTests: LabTests;
+    public order: Order;
+    public orders: Orders;
 
     private sdkConfiguration: SDKConfiguration;
 
@@ -107,17 +107,17 @@ export class Vital {
             retryConfig: props?.retryConfig,
         });
 
-        this.insurance = new Insurance(this.sdkConfiguration);
-        this.labTests = new LabTests(this.sdkConfiguration);
         this.link = new Link(this.sdkConfiguration);
-        this.order = new Order(this.sdkConfiguration);
-        this.orders = new Orders(this.sdkConfiguration);
         this.physician = new Physician(this.sdkConfiguration);
         this.providers = new Providers(this.sdkConfiguration);
         this.summary = new Summary(this.sdkConfiguration);
         this.team = new Team(this.sdkConfiguration);
         this.timeseries = new Timeseries(this.sdkConfiguration);
         this.user = new User(this.sdkConfiguration);
+        this.insurance = new Insurance(this.sdkConfiguration);
+        this.labTests = new LabTests(this.sdkConfiguration);
+        this.order = new Order(this.sdkConfiguration);
+        this.orders = new Orders(this.sdkConfiguration);
     }
 
     /**
@@ -186,7 +186,7 @@ export class Vital {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `text/plain`)) {
-                    res.robotsRobotsTxtGet200TextPlainString = decodedRes;
+                    res.res = decodedRes;
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,

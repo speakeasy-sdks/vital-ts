@@ -1,4 +1,4 @@
-# ClientFacingOrderClientFacingPatientDetailsCompatible
+# ClientFacingPatientDetailsCompatible
 
 Patient Details
 

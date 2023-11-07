@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetTimeseriesResourceDataV2TimeseriesUserIdGlucoseGetRequest extends SpeakeasyBase {
@@ -31,16 +31,16 @@ export class GetTimeseriesResourceDataV2TimeseriesUserIdGlucoseGetRequest extend
 
 export class GetTimeseriesResourceDataV2TimeseriesUserIdGlucoseGetResponse extends SpeakeasyBase {
     /**
-     * Successful Response
-     */
-    @SpeakeasyMetadata({ elemType: shared.ClientFacingGlucoseTimeseries })
-    clientFacingGlucoseTimeseries?: shared.ClientFacingGlucoseTimeseries[];
-
-    /**
      * HTTP response content type for this operation
      */
     @SpeakeasyMetadata()
     contentType: string;
+
+    /**
+     * Successful Response
+     */
+    @SpeakeasyMetadata({ elemType: shared.ClientFacingGlucoseTimeseries })
+    responseGetTimeseriesResourceDataV2TimeseriesUserIdGlucoseGet?: shared.ClientFacingGlucoseTimeseries[];
 
     /**
      * HTTP response status code for this operation

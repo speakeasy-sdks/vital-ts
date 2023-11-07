@@ -1,5 +1,5 @@
 # Physician
-(*physician*)
+(*.physician*)
 
 ### Available Operations
 
@@ -25,6 +25,7 @@ import { OpenLoopResourceIdType, OpenLoopWebhookType } from "Vital/dist/sdk/mode
     resourceId: "string",
     resourceIdType: OpenLoopResourceIdType.Appointment,
   });
+
 
   if (res.statusCode == 200) {
     // handle response

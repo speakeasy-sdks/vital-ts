@@ -51,20 +51,7 @@ import { SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest } from "Vital/dist/
 
 * [robotsRobotsTxtGet](docs/sdks/vital/README.md#robotsrobotstxtget) - Robots
 
-### [insurance](docs/sdks/insurance/README.md)
-
-* [searchDiagnosis](docs/sdks/insurance/README.md#searchdiagnosis) - Search Diagnosis
-* [searchInsurancePayorInfo](docs/sdks/insurance/README.md#searchinsurancepayorinfo) - Search Insurance Payor Information
-
-### [labTests](docs/sdks/labtests/README.md)
-
-* [create](docs/sdks/labtests/README.md#create) - Create Lab Test For Team
-* [getLabs](docs/sdks/labtests/README.md#getlabs) - Get Labs
-* [getMarkerByProvider](docs/sdks/labtests/README.md#getmarkerbyprovider) - Get Markers By Provider Id
-* [getMarkers](docs/sdks/labtests/README.md#getmarkers) - Get Markers
-* [list](docs/sdks/labtests/README.md#list) - Get Lab Tests For Team
-
-### [link](docs/sdks/link/README.md)
+### [.link](docs/sdks/link/README.md)
 
 * [checkTokenState](docs/sdks/link/README.md#checktokenstate) - Check Link Token State
 * [checkTokenValidity](docs/sdks/link/README.md#checktokenvalidity) - Check Token Valid
@@ -82,43 +69,15 @@ import { SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest } from "Vital/dist/
 * [getProviders](docs/sdks/link/README.md#getproviders) - Get Providers
 * [startConnectProcess](docs/sdks/link/README.md#startconnectprocess) - Start Connect Process
 
-### [order](docs/sdks/order/README.md)
-
-* [bookPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentBookPost](docs/sdks/order/README.md#bookphlebotomyappointmentv3orderorderidphlebotomyappointmentbookpost) - Book Phlebotomy Appointment
-* [cancelOrderV3OrderOrderIdCancelPost](docs/sdks/order/README.md#cancelorderv3orderorderidcancelpost) - Cancel Order
-* [cancelPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentCancelPatch](docs/sdks/order/README.md#cancelphlebotomyappointmentv3orderorderidphlebotomyappointmentcancelpatch) - Cancel Phlebotomy Appointment
-* [create](docs/sdks/order/README.md#create) - Create Order
-* [createTestkit](docs/sdks/order/README.md#createtestkit) - Create Testkit Order
-* [dispatchStatus](docs/sdks/order/README.md#dispatchstatus) - Dispatch Order Status
-* [get](docs/sdks/order/README.md#get) - Get Order
-* [getAppointmentAvailability](docs/sdks/order/README.md#getappointmentavailability) - Get Order Appointment Availability
-* [getAreaInfo](docs/sdks/order/README.md#getareainfo) - Get Area Info
-* [getLabTestResult](docs/sdks/order/README.md#getlabtestresult) - Get Lab Test Result
-* [getLabTestResultMetadata](docs/sdks/order/README.md#getlabtestresultmetadata) - Get Lab Test Result Metadata
-* [getLabTestResultRaw](docs/sdks/order/README.md#getlabtestresultraw) - Get Lab Test Result Raw
-* [getPhlebotomyAppointment](docs/sdks/order/README.md#getphlebotomyappointment) - Get Phlebotomy Appointment
-* [getPhlebotomyCancellationReasons](docs/sdks/order/README.md#getphlebotomycancellationreasons) - Get Phlebotomy Appointment Cancellation Reasons
-* [getRequisitionUrl](docs/sdks/order/README.md#getrequisitionurl) - Get Order Requisition Url
-* [orderProcessSimulateV3OrderOrderIdTestPost](docs/sdks/order/README.md#orderprocesssimulatev3orderorderidtestpost) - Order Process Simulate
-* [processTestkitOrderV3OrderTestkitProcessTeamIdOrderIdPost](docs/sdks/order/README.md#processtestkitorderv3ordertestkitprocessteamidorderidpost) - Process Testkit Order
-* [processTestkitShipHeroOrderShippedV3OrderTestkitWebhookShipheroShipmentUpdatePost](docs/sdks/order/README.md#processtestkitshipheroordershippedv3ordertestkitwebhookshipheroshipmentupdatepost) - Process Testkit Ship Hero Order Shipped
-* [registerTestkitV3OrderTestkitRegisterPost](docs/sdks/order/README.md#registertestkitv3ordertestkitregisterpost) - Register Testkit
-* [reschedulePhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentReschedulePatch](docs/sdks/order/README.md#reschedulephlebotomyappointmentv3orderorderidphlebotomyappointmentreschedulepatch) - Reschedule Phlebotomy Appointment
-* [syncTestkitOrderStatusV3OrderTestkitStatusPost](docs/sdks/order/README.md#synctestkitorderstatusv3ordertestkitstatuspost) - Sync Testkit Order Status
-
-### [orders](docs/sdks/orders/README.md)
-
-* [list](docs/sdks/orders/README.md#list) - Get Orders
-
-### [physician](docs/sdks/physician/README.md)
+### [.physician](docs/sdks/physician/README.md)
 
 * [reviewOpenloopV2PhysicianReviewOpenloopPost](docs/sdks/physician/README.md#reviewopenloopv2physicianreviewopenlooppost) - Review Openloop
 
-### [providers](docs/sdks/providers/README.md)
+### [.providers](docs/sdks/providers/README.md)
 
 * [list](docs/sdks/providers/README.md#list) - Get List Of Providers
 
-### [summary](docs/sdks/summary/README.md)
+### [.summary](docs/sdks/summary/README.md)
 
 * [getMeals](docs/sdks/summary/README.md#getmeals) - Get Meals
 * [getUserActivity](docs/sdks/summary/README.md#getuseractivity) - Get User Activity
@@ -139,7 +98,7 @@ import { SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest } from "Vital/dist/
 * [postUserSleep](docs/sdks/summary/README.md#postusersleep) - Post User Sleep
 * [postUserWorkout](docs/sdks/summary/README.md#postuserworkout) - Post User Workout
 
-### [team](docs/sdks/team/README.md)
+### [.team](docs/sdks/team/README.md)
 
 * [create](docs/sdks/team/README.md#create) - Create Team
 * [createApiKey](docs/sdks/team/README.md#createapikey) - Create Api Key
@@ -157,7 +116,7 @@ import { SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest } from "Vital/dist/
 * [updateSourcePrioritiesV2TeamSourcePrioritiesPatch](docs/sdks/team/README.md#updatesourceprioritiesv2teamsourceprioritiespatch) - Update Source Priorities
 * [updateTeamV2TeamTeamIdPatch](docs/sdks/team/README.md#updateteamv2teamteamidpatch) - Update Team
 
-### [timeseries](docs/sdks/timeseries/README.md)
+### [.timeseries](docs/sdks/timeseries/README.md)
 
 * [getBloodOxygen](docs/sdks/timeseries/README.md#getbloodoxygen) - Get Timeseries Resource Data
 * [getBloodPressure](docs/sdks/timeseries/README.md#getbloodpressure) - Get Timeseries Resource Data
@@ -186,7 +145,7 @@ import { SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest } from "Vital/dist/
 * [postBloodPressure](docs/sdks/timeseries/README.md#postbloodpressure) - Post User Blood Pressure
 * [postVitals](docs/sdks/timeseries/README.md#postvitals) - Post User Vitals
 
-### [user](docs/sdks/user/README.md)
+### [.user](docs/sdks/user/README.md)
 
 * [createUser](docs/sdks/user/README.md#createuser) - Create User
 * [delete](docs/sdks/user/README.md#delete) - Delete User
@@ -199,11 +158,280 @@ import { SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest } from "Vital/dist/
 * [patchUserV2UserUserIdPatch](docs/sdks/user/README.md#patchuserv2useruseridpatch) - Patch User
 * [refreshUserIdV2UserRefreshUserIdPost](docs/sdks/user/README.md#refreshuseridv2userrefreshuseridpost) - Refresh User Id
 * [resolveByUserId](docs/sdks/user/README.md#resolvebyuserid) - Get User By Client User Id
+
+### [.insurance](docs/sdks/insurance/README.md)
+
+* [searchDiagnosis](docs/sdks/insurance/README.md#searchdiagnosis) - Search Diagnosis
+* [searchInsurancePayorInfo](docs/sdks/insurance/README.md#searchinsurancepayorinfo) - Search Insurance Payor Information
+
+### [.labTests](docs/sdks/labtests/README.md)
+
+* [create](docs/sdks/labtests/README.md#create) - Create Lab Test For Team
+* [getLabs](docs/sdks/labtests/README.md#getlabs) - Get Labs
+* [getMarkerByProvider](docs/sdks/labtests/README.md#getmarkerbyprovider) - Get Markers By Provider Id
+* [getMarkers](docs/sdks/labtests/README.md#getmarkers) - Get Markers
+* [list](docs/sdks/labtests/README.md#list) - Get Lab Tests For Team
+
+### [.order](docs/sdks/order/README.md)
+
+* [bookPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentBookPost](docs/sdks/order/README.md#bookphlebotomyappointmentv3orderorderidphlebotomyappointmentbookpost) - Book Phlebotomy Appointment
+* [cancelOrderV3OrderOrderIdCancelPost](docs/sdks/order/README.md#cancelorderv3orderorderidcancelpost) - Cancel Order
+* [cancelPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentCancelPatch](docs/sdks/order/README.md#cancelphlebotomyappointmentv3orderorderidphlebotomyappointmentcancelpatch) - Cancel Phlebotomy Appointment
+* [create](docs/sdks/order/README.md#create) - Create Order
+* [createTestkit](docs/sdks/order/README.md#createtestkit) - Create Testkit Order
+* [dispatchStatus](docs/sdks/order/README.md#dispatchstatus) - Dispatch Order Status
+* [get](docs/sdks/order/README.md#get) - Get Order
+* [getAppointmentAvailability](docs/sdks/order/README.md#getappointmentavailability) - Get Order Appointment Availability
+* [getAreaInfo](docs/sdks/order/README.md#getareainfo) - Get Area Info
+* [getLabTestResult](docs/sdks/order/README.md#getlabtestresult) - Get Lab Test Result
+* [getLabTestResultMetadata](docs/sdks/order/README.md#getlabtestresultmetadata) - Get Lab Test Result Metadata
+* [getLabTestResultRaw](docs/sdks/order/README.md#getlabtestresultraw) - Get Lab Test Result Raw
+* [getPhlebotomyAppointment](docs/sdks/order/README.md#getphlebotomyappointment) - Get Phlebotomy Appointment
+* [getPhlebotomyCancellationReasons](docs/sdks/order/README.md#getphlebotomycancellationreasons) - Get Phlebotomy Appointment Cancellation Reasons
+* [getRequisitionUrl](docs/sdks/order/README.md#getrequisitionurl) - Get Order Requisition Url
+* [orderProcessSimulateV3OrderOrderIdTestPost](docs/sdks/order/README.md#orderprocesssimulatev3orderorderidtestpost) - Order Process Simulate
+* [processTestkitOrderV3OrderTestkitProcessTeamIdOrderIdPost](docs/sdks/order/README.md#processtestkitorderv3ordertestkitprocessteamidorderidpost) - Process Testkit Order
+* [processTestkitShipHeroOrderShippedV3OrderTestkitWebhookShipheroShipmentUpdatePost](docs/sdks/order/README.md#processtestkitshipheroordershippedv3ordertestkitwebhookshipheroshipmentupdatepost) - Process Testkit Ship Hero Order Shipped
+* [registerTestkitV3OrderTestkitRegisterPost](docs/sdks/order/README.md#registertestkitv3ordertestkitregisterpost) - Register Testkit
+* [reschedulePhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentReschedulePatch](docs/sdks/order/README.md#reschedulephlebotomyappointmentv3orderorderidphlebotomyappointmentreschedulepatch) - Reschedule Phlebotomy Appointment
+* [syncTestkitOrderStatusV3OrderTestkitStatusPost](docs/sdks/order/README.md#synctestkitorderstatusv3ordertestkitstatuspost) - Sync Testkit Order Status
+
+### [.orders](docs/sdks/orders/README.md)
+
+* [list](docs/sdks/orders/README.md#list) - Get Orders
 <!-- End SDK Available Operations -->
 
 <!-- Start Dev Containers -->
 
 <!-- End Dev Containers -->
+
+
+
+<!-- Start Retries -->
+# Retries
+
+Some of the endpoints in this SDK support retries.  If you use the SDK without any configuration, it will fall back to the default retry strategy provided by the API.  However, the default retry strategy can be overridden on a per-operation basis, or across the entire SDK.
+
+To change the default retry strategy for a single API call, simply provide a retryConfig object to the call:
+
+
+## Example
+
+```typescript
+import { Vital } from "Vital";
+
+(async() => {
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
+
+  const res = await sdk.robotsRobotsTxtGet(, {
+    strategy: "backoff",
+    backoff: {
+      initialInterval: 1,
+      maxInterval: 50,
+      exponent: 1.1,
+      maxElapsedTime: 100,
+    },
+    retryConnectionErrors: false,
+  });
+
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```
+
+If you'd like to override the default retry strategy for all operations that support retries, you can provide a retryConfig at SDK initialization:
+
+
+## Example
+
+```typescript
+import { Vital } from "Vital";
+
+(async() => {
+  const sdk = new Vital({
+    retry_config: {
+        strategy: "backoff",
+        backoff: {
+          initialInterval: 1,
+          maxInterval: 50,
+          exponent: 1.1,
+          maxElapsedTime: 100,
+        },
+        retryConnectionErrors: false,
+      }
+    apiKey: "<YOUR-API-KEY>",
+  });
+
+  const res = await sdk.robotsRobotsTxtGet();
+
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```
+
+
+<!-- End Retries -->
+
+
+
+<!-- Start Error Handling -->
+# Error Handling
+
+Handling errors in your SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+
+
+## Example
+
+```typescript
+import { Vital } from "Vital";
+
+(async() => {
+  const sdk = new Vital({
+    apiKey: "<YOUR-API-KEY>",
+  });
+
+  
+  let res;
+  try {
+    res = await sdk.link.checkTokenValidity({
+    oauthInfo: {},
+    token: "string",
+  });
+  } catch (e) { 
+    if (e instanceof HTTPValidationError) {
+      console.error(e) // handle exception 
+    
+  }
+
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```
+<!-- End Error Handling -->
+
+
+
+<!-- Start Server Selection -->
+# Server Selection
+
+## Select Server by Index
+
+You can override the default server globally by passing a server index to the `serverIdx: number` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+
+| # | Server | Variables |
+| - | ------ | --------- |
+| 0 | `https://api.tryvital.io` | None |
+
+For example:
+
+```typescript
+import { Vital } from "Vital";
+
+(async () => {
+    const sdk = new Vital({
+        serverIdx: 0,
+        apiKey: "<YOUR-API-KEY>",
+    });
+
+    const res = await sdk.robotsRobotsTxtGet();
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+})();
+
+```
+
+
+## Override Server URL Per-Client
+
+The default server can also be overridden globally by passing a URL to the `serverURL: str` optional parameter when initializing the SDK client instance. For example:
+
+```typescript
+import { Vital } from "Vital";
+
+(async () => {
+    const sdk = new Vital({
+        serverURL: "https://api.tryvital.io",
+        apiKey: "<YOUR-API-KEY>",
+    });
+
+    const res = await sdk.robotsRobotsTxtGet();
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+})();
+
+```
+<!-- End Server Selection -->
+
+
+
+<!-- Start Custom HTTP Client -->
+# Custom HTTP Client
+
+The Typescript SDK makes API calls using the (axios)[https://axios-http.com/docs/intro] HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `AxiosInstance` object.
+
+
+For example, you could specify a header for every request that your sdk makes as follows:
+
+```typescript
+from Vital import Vital;
+import axios;
+
+const httpClient = axios.create({
+    headers: {'x-custom-header': 'someValue'}
+})
+
+
+const sdk = new Vital({defaultClient: httpClient});
+```
+
+
+<!-- End Custom HTTP Client -->
+
+
+
+<!-- Start Authentication -->
+
+# Authentication
+
+## Per-Client Security Schemes
+
+Your SDK supports the following security scheme globally:
+
+| Name     | Type     | Scheme   |
+| -------- | -------- | -------- |
+| `apiKey` | apiKey   | API key  |
+
+To authenticate with the API the `apiKey` parameter must be set when initializing the SDK client instance. For example:
+
+```typescript
+import { Vital } from "Vital";
+
+(async () => {
+    const sdk = new Vital({
+        apiKey: "<YOUR-API-KEY>",
+    });
+
+    const res = await sdk.robotsRobotsTxtGet();
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+})();
+
+```
+<!-- End Authentication -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

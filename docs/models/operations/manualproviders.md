@@ -1,4 +1,4 @@
-# ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders
+# ManualProviders
 
 An enumeration.
 

@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { RFCDate } from "../../types";
+import { RFCDate } from "../../../sdk/types";
 import { ClientFacingSleepStream } from "./clientfacingsleepstream";
 import { Expose, Transform, Type } from "class-transformer";
 

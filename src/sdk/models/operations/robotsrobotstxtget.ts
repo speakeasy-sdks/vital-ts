@@ -28,5 +28,5 @@ export class RobotsRobotsTxtGetResponse extends SpeakeasyBase {
      * Successful Response
      */
     @SpeakeasyMetadata()
-    robotsRobotsTxtGet200TextPlainString?: string;
+    res?: string;
 }

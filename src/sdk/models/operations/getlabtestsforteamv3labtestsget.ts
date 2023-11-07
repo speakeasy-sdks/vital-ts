@@ -3,21 +3,21 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetLabTestsForTeamV3LabTestsGetResponse extends SpeakeasyBase {
-    /**
-     * Successful Response
-     */
-    @SpeakeasyMetadata({ elemType: shared.ClientFacingLabTest })
-    clientFacingLabTests?: shared.ClientFacingLabTest[];
-
     /**
      * HTTP response content type for this operation
      */
     @SpeakeasyMetadata()
     contentType: string;
+
+    /**
+     * Successful Response
+     */
+    @SpeakeasyMetadata({ elemType: shared.ClientFacingLabTest })
+    responseGetLabTestsForTeamV3LabTestsGet?: shared.ClientFacingLabTest[];
 
     /**
      * HTTP response status code for this operation

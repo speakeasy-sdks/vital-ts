@@ -10,7 +10,7 @@ export class GetSourcePrioritiesV2TeamSourcePrioritiesGetRequest extends Speakea
     dataType?: string;
 }
 
-export class GetSourcePrioritiesV2TeamSourcePrioritiesGet200ApplicationJSON extends SpeakeasyBase {}
+export class ResponseBody extends SpeakeasyBase {}
 
 export class GetSourcePrioritiesV2TeamSourcePrioritiesGetResponse extends SpeakeasyBase {
     /**
@@ -18,6 +18,12 @@ export class GetSourcePrioritiesV2TeamSourcePrioritiesGetResponse extends Speake
      */
     @SpeakeasyMetadata()
     contentType: string;
+
+    /**
+     * Successful Response
+     */
+    @SpeakeasyMetadata({ elemType: ResponseBody })
+    responseGetSourcePrioritiesV2TeamSourcePrioritiesGet?: ResponseBody[];
 
     /**
      * HTTP response status code for this operation
@@ -30,10 +36,4 @@ export class GetSourcePrioritiesV2TeamSourcePrioritiesGetResponse extends Speake
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
-
-    /**
-     * Successful Response
-     */
-    @SpeakeasyMetadata({ elemType: GetSourcePrioritiesV2TeamSourcePrioritiesGet200ApplicationJSON })
-    getSourcePrioritiesV2TeamSourcePrioritiesGet200ApplicationJSONObjects?: GetSourcePrioritiesV2TeamSourcePrioritiesGet200ApplicationJSON[];
 }

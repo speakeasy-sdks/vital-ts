@@ -1,5 +1,5 @@
 # Link
-(*link*)
+(*.link*)
 
 ### Available Operations
 
@@ -35,6 +35,7 @@ import { Vital } from "Vital";
   });
 
   const res = await sdk.link.checkTokenState();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -74,6 +75,7 @@ import { Vital } from "Vital";
     token: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -104,10 +106,7 @@ This connects auth providers that are password based.
 
 ```typescript
 import { Vital } from "Vital";
-import {
-  ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders,
-  ConnectBleProviderV2LinkProviderManualProviderPostRequest,
-} from "Vital/dist/sdk/models/operations";
+import { ConnectBleProviderV2LinkProviderManualProviderPostRequest, ManualProviders } from "Vital/dist/sdk/models/operations";
 import { ManualConnectionData } from "Vital/dist/sdk/models/shared";
 
 (async() => {
@@ -117,9 +116,10 @@ import { ManualConnectionData } from "Vital/dist/sdk/models/shared";
 const manualConnectionData: ManualConnectionData = {
   userId: "string",
 };
-const provider: ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders = ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders.BeurerBle;
+const provider: ManualProviders = ManualProviders.BeurerBle;
 
   const res = await sdk.link.connectBleProvider(manualConnectionData, provider);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -129,12 +129,12 @@ const provider: ConnectBleProviderV2LinkProviderManualProviderPostProviderManual
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                    | Type                                                                                                                                                                                         | Required                                                                                                                                                                                     | Description                                                                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `manualConnectionData`                                                                                                                                                                       | [shared.ManualConnectionData](../../models/shared/manualconnectiondata.md)                                                                                                                   | :heavy_check_mark:                                                                                                                                                                           | N/A                                                                                                                                                                                          |
-| `provider`                                                                                                                                                                                   | [operations.ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders](../../models/operations/connectbleproviderv2linkprovidermanualproviderpostprovidermanualproviders.md) | :heavy_check_mark:                                                                                                                                                                           | An enumeration.                                                                                                                                                                              |
-| `retries`                                                                                                                                                                                    | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                                       | :heavy_minus_sign:                                                                                                                                                                           | Configuration to override the default retry behavior of the client.                                                                                                                          |
-| `config`                                                                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                                           | Available config options for making requests.                                                                                                                                                |
+| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `manualConnectionData`                                                     | [shared.ManualConnectionData](../../models/shared/manualconnectiondata.md) | :heavy_check_mark:                                                         | N/A                                                                        |
+| `provider`                                                                 | [operations.ManualProviders](../../models/operations/manualproviders.md)   | :heavy_check_mark:                                                         | An enumeration.                                                            |
+| `retries`                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                         | Configuration to override the default retry behavior of the client.        |
+| `config`                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)               | :heavy_minus_sign:                                                         | Available config options for making requests.                              |
 
 
 ### Response
@@ -165,6 +165,7 @@ import { AuthType, Providers, Region } from "Vital/dist/sdk/models/shared";
     provider: Providers.BeurerBle,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -193,10 +194,7 @@ This connects auth providers that are email based.
 
 ```typescript
 import { Vital } from "Vital";
-import {
-  ConnectEmailAuthProviderV2LinkProviderEmailProviderPostProviderEmailProviders,
-  ConnectEmailAuthProviderV2LinkProviderEmailProviderPostRequest,
-} from "Vital/dist/sdk/models/operations";
+import { ConnectEmailAuthProviderV2LinkProviderEmailProviderPostRequest, EmailProviders } from "Vital/dist/sdk/models/operations";
 import { EmailProviderAuthLink, Providers, Region } from "Vital/dist/sdk/models/shared";
 
 (async() => {
@@ -206,9 +204,10 @@ import { EmailProviderAuthLink, Providers, Region } from "Vital/dist/sdk/models/
 const emailProviderAuthLink: EmailProviderAuthLink = {
   email: "Mabelle_Medhurst23@gmail.com",
 };
-const provider: ConnectEmailAuthProviderV2LinkProviderEmailProviderPostProviderEmailProviders = ConnectEmailAuthProviderV2LinkProviderEmailProviderPostProviderEmailProviders.FreestyleLibre;
+const provider: EmailProviders = EmailProviders.FreestyleLibre;
 
   const res = await sdk.link.connectEmailProvider(emailProviderAuthLink, provider);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -218,12 +217,12 @@ const provider: ConnectEmailAuthProviderV2LinkProviderEmailProviderPostProviderE
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                            | Type                                                                                                                                                                                                 | Required                                                                                                                                                                                             | Description                                                                                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `emailProviderAuthLink`                                                                                                                                                                              | [shared.EmailProviderAuthLink](../../models/shared/emailproviderauthlink.md)                                                                                                                         | :heavy_check_mark:                                                                                                                                                                                   | N/A                                                                                                                                                                                                  |
-| `provider`                                                                                                                                                                                           | [operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostProviderEmailProviders](../../models/operations/connectemailauthproviderv2linkprovideremailproviderpostprovideremailproviders.md) | :heavy_check_mark:                                                                                                                                                                                   | An enumeration.                                                                                                                                                                                      |
-| `retries`                                                                                                                                                                                            | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                                               | :heavy_minus_sign:                                                                                                                                                                                   | Configuration to override the default retry behavior of the client.                                                                                                                                  |
-| `config`                                                                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                                         | :heavy_minus_sign:                                                                                                                                                                                   | Available config options for making requests.                                                                                                                                                        |
+| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `emailProviderAuthLink`                                                      | [shared.EmailProviderAuthLink](../../models/shared/emailproviderauthlink.md) | :heavy_check_mark:                                                           | N/A                                                                          |
+| `provider`                                                                   | [operations.EmailProviders](../../models/operations/emailproviders.md)       | :heavy_check_mark:                                                           | An enumeration.                                                              |
+| `retries`                                                                    | [utils.RetryConfig](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                           | Configuration to override the default retry behavior of the client.          |
+| `config`                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                 | :heavy_minus_sign:                                                           | Available config options for making requests.                                |
 
 
 ### Response
@@ -240,8 +239,8 @@ This connects auth providers that are password based.
 ```typescript
 import { Vital } from "Vital";
 import {
-  ConnectIndividualProviderV2LinkProviderPasswordProviderPostProviderPasswordProviders,
   ConnectIndividualProviderV2LinkProviderPasswordProviderPostRequest,
+  PasswordProviders,
 } from "Vital/dist/sdk/models/operations";
 import { IndividualProviderData } from "Vital/dist/sdk/models/shared";
 
@@ -253,10 +252,11 @@ const individualProviderData: IndividualProviderData = {
   password: "U7xJdvB5pT6rvW2",
   username: "Chanel73",
 };
-const provider: ConnectIndividualProviderV2LinkProviderPasswordProviderPostProviderPasswordProviders = ConnectIndividualProviderV2LinkProviderPasswordProviderPostProviderPasswordProviders.Renpho;
+const provider: PasswordProviders = PasswordProviders.Renpho;
 const xVitalLinkClientRegion: string = "string";
 
   const res = await sdk.link.connectIndividualProvider(individualProviderData, provider, xVitalLinkClientRegion);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -266,13 +266,13 @@ const xVitalLinkClientRegion: string = "string";
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                                          | Type                                                                                                                                                                                                               | Required                                                                                                                                                                                                           | Description                                                                                                                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `individualProviderData`                                                                                                                                                                                           | [shared.IndividualProviderData](../../models/shared/individualproviderdata.md)                                                                                                                                     | :heavy_check_mark:                                                                                                                                                                                                 | N/A                                                                                                                                                                                                                |
-| `provider`                                                                                                                                                                                                         | [operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostProviderPasswordProviders](../../models/operations/connectindividualproviderv2linkproviderpasswordproviderpostproviderpasswordproviders.md) | :heavy_check_mark:                                                                                                                                                                                                 | An enumeration.                                                                                                                                                                                                    |
-| `xVitalLinkClientRegion`                                                                                                                                                                                           | *string*                                                                                                                                                                                                           | :heavy_minus_sign:                                                                                                                                                                                                 | N/A                                                                                                                                                                                                                |
-| `retries`                                                                                                                                                                                                          | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                                                                                                             | :heavy_minus_sign:                                                                                                                                                                                                 | Configuration to override the default retry behavior of the client.                                                                                                                                                |
-| `config`                                                                                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                                                       | :heavy_minus_sign:                                                                                                                                                                                                 | Available config options for making requests.                                                                                                                                                                      |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `individualProviderData`                                                       | [shared.IndividualProviderData](../../models/shared/individualproviderdata.md) | :heavy_check_mark:                                                             | N/A                                                                            |
+| `provider`                                                                     | [operations.PasswordProviders](../../models/operations/passwordproviders.md)   | :heavy_check_mark:                                                             | An enumeration.                                                                |
+| `xVitalLinkClientRegion`                                                       | *string*                                                                       | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `retries`                                                                      | [utils.RetryConfig](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                             | Configuration to override the default retry behavior of the client.            |
+| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
 
 
 ### Response
@@ -306,6 +306,7 @@ const passwordAuthLink: PasswordAuthLink = {
 const xVitalLinkClientRegion: string = "string";
 
   const res = await sdk.link.connectPasswordAuth(passwordAuthLink, xVitalLinkClientRegion);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -349,6 +350,7 @@ const xVitalSDKNoRedirect: string = "string";
 
   const res = await sdk.link.connectProvider(provider, xVitalSDKNoRedirect);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -390,6 +392,7 @@ import { DemoProviders } from "Vital/dist/sdk/models/shared";
     userId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -429,6 +432,7 @@ const expiresAt: Date = new Date("2021-12-10T10:53:22.771Z");
 
   const res = await sdk.link.createToken(userId, expiresAt);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -467,6 +471,7 @@ import { ExchangeTokenV2LinkCodeExchangePostRequest } from "Vital/dist/sdk/model
 const code: string = "string";
 
   const res = await sdk.link.exchangeToken(code);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -515,6 +520,7 @@ import { Providers } from "Vital/dist/sdk/models/shared";
     userKey: "8785044a-13a2-491c-af01-0449531f483f",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -554,6 +560,7 @@ const oauthProvider: OAuthProviders = OAuthProviders.Polar;
 
   const res = await sdk.link.getOauthProvider(oauthProvider);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -589,6 +596,7 @@ import { Vital } from "Vital";
   });
 
   const res = await sdk.link.getProviders();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -629,6 +637,7 @@ import { Providers } from "Vital/dist/sdk/models/shared";
     linkToken: "string",
     provider: Providers.Peloton,
   });
+
 
   if (res.statusCode == 200) {
     // handle response

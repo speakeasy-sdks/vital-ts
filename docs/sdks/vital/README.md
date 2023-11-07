@@ -23,7 +23,8 @@ import { Vital } from "Vital";
     apiKey: "<YOUR-API-KEY>",
   });
 
-  const res = await sdk.vital.robotsRobotsTxtGet();
+  const res = await sdk.robotsRobotsTxtGet();
+
 
   if (res.statusCode == 200) {
     // handle response

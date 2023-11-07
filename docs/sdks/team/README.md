@@ -1,5 +1,5 @@
 # Team
-(*team*)
+(*.team*)
 
 ### Available Operations
 
@@ -27,7 +27,7 @@ Create Team.
 
 ```typescript
 import { Vital } from "Vital";
-import { TeamCreatePhysicianNetworkT } from "Vital/dist/sdk/models/shared";
+import { PhysicianNetworkT } from "Vital/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Vital({
@@ -44,6 +44,7 @@ import { TeamCreatePhysicianNetworkT } from "Vital/dist/sdk/models/shared";
     },
     name: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -86,6 +87,7 @@ const createApiKeyBody: CreateApiKeyBody = {
 const teamId: string = "string";
 
   const res = await sdk.team.createApiKey(createApiKeyBody, teamId);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -132,6 +134,7 @@ const teamId: string = "string";
 
   const res = await sdk.team.createPriority(priorityCreate, teamId);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -172,6 +175,7 @@ const teamId: string = "string";
 
   const res = await sdk.team.deleteApiKey(apiKeyId, teamId);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -211,6 +215,7 @@ const teamId: string = "b18d8d81-fd7b-4764-a31e-475cb1f36591";
 
   const res = await sdk.team.get(teamId);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -249,6 +254,7 @@ const teamId: string = "string";
 
   const res = await sdk.team.getApiKeys(teamId);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -284,6 +290,7 @@ import { Vital } from "Vital";
   });
 
   const res = await sdk.team.getConfig();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -321,6 +328,7 @@ import { GetSourcePrioritiesV2TeamSourcePrioritiesGetRequest } from "Vital/dist/
 const dataType: string = "string";
 
   const res = await sdk.team.getSourcePriorities(dataType);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -360,6 +368,7 @@ const teamId: string = "3021769b-866d-4c37-8307-789796d71ace";
 
   const res = await sdk.team.getUserCount(teamId);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -395,6 +404,7 @@ import { Vital } from "Vital";
   });
 
   const res = await sdk.team.getWebhookUrl();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -434,6 +444,7 @@ const teamId: string = "string";
 
   const res = await sdk.team.rotateApiKeyV2TeamTeamIdApikeyApiKeyIdRotatePatch(apiKeyId, teamId);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -472,6 +483,7 @@ import { SearchTeamUsersByUuidOrClientUserIdV2TeamUsersSearchGetRequest } from "
 const queryId: string = "string";
 
   const res = await sdk.team.searchUsersByUuid(queryId);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -516,6 +528,7 @@ const teamId: string = "string";
 
   const res = await sdk.team.updateApiKeyLabelV2TeamTeamIdApikeyApiKeyIdPatch(updateApiKeyBody, apiKeyId, teamId);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -556,6 +569,7 @@ const teamId: string = "string";
 
   const res = await sdk.team.updateSourcePrioritiesV2TeamSourcePrioritiesPatch(teamId);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -595,6 +609,7 @@ const teamUpdate: TeamUpdate = {};
 const teamId: string = "string";
 
   const res = await sdk.team.updateTeamV2TeamTeamIdPatch(teamUpdate, teamId);
+
 
   if (res.statusCode == 200) {
     // handle response

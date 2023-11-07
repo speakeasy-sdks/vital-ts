@@ -1,5 +1,5 @@
 # Insurance
-(*insurance*)
+(*.insurance*)
 
 ### Available Operations
 
@@ -23,6 +23,7 @@ import { SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest } from "Vital/dist/
 const diagnosisQuery: string = "string";
 
   const res = await sdk.insurance.searchDiagnosis(diagnosisQuery);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -61,6 +62,7 @@ import { Vital } from "Vital";
   const res = await sdk.insurance.searchInsurancePayorInfo({
     insuranceName: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest extends SpeakeasyBase {
@@ -13,16 +13,16 @@ export class SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest extends Speakea
 
 export class SearchDiagnosisV3InsuranceSearchDiagnosisGetResponse extends SpeakeasyBase {
     /**
-     * Successful Response
-     */
-    @SpeakeasyMetadata({ elemType: shared.ClientFacingDiagnosisInformation })
-    clientFacingDiagnosisInformations?: shared.ClientFacingDiagnosisInformation[];
-
-    /**
      * HTTP response content type for this operation
      */
     @SpeakeasyMetadata()
     contentType: string;
+
+    /**
+     * Successful Response
+     */
+    @SpeakeasyMetadata({ elemType: shared.ClientFacingDiagnosisInformation })
+    responseSearchDiagnosisV3InsuranceSearchDiagnosisGet?: shared.ClientFacingDiagnosisInformation[];
 
     /**
      * HTTP response status code for this operation

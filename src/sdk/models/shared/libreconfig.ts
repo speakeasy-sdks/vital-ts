@@ -5,11 +5,11 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export class LibreConfigPracticeId extends SpeakeasyBase {}
+export class PracticeId extends SpeakeasyBase {}
 
 export class LibreConfig extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "practice_id" })
-    @Type(() => LibreConfigPracticeId)
-    practiceId: LibreConfigPracticeId;
+    @Type(() => PracticeId)
+    practiceId: PracticeId;
 }

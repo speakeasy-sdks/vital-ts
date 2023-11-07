@@ -1,8 +1,10 @@
-# ShipmentWebhookUpdateWebhookType
+# EmailProviders
+
+An enumeration.
 
 
 ## Values
 
 | Name             | Value            |
 | ---------------- | ---------------- |
-| `ShipmentUpdate` | Shipment Update  |
+| `FreestyleLibre` | freestyle_libre  |

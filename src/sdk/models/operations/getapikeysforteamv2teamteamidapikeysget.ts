@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetApiKeysForTeamV2TeamTeamIdApikeysGetRequest extends SpeakeasyBase {
@@ -13,16 +13,16 @@ export class GetApiKeysForTeamV2TeamTeamIdApikeysGetRequest extends SpeakeasyBas
 
 export class GetApiKeysForTeamV2TeamTeamIdApikeysGetResponse extends SpeakeasyBase {
     /**
-     * Successful Response
-     */
-    @SpeakeasyMetadata({ elemType: shared.ApiKeyInDB })
-    apiKeyInDBS?: shared.ApiKeyInDB[];
-
-    /**
      * HTTP response content type for this operation
      */
     @SpeakeasyMetadata()
     contentType: string;
+
+    /**
+     * Successful Response
+     */
+    @SpeakeasyMetadata({ elemType: shared.ApiKeyInDB })
+    responseGetApiKeysForTeamV2TeamTeamIdApikeysGet?: shared.ApiKeyInDB[];
 
     /**
      * HTTP response status code for this operation

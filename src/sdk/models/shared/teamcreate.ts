@@ -9,7 +9,7 @@ import { Expose, Type } from "class-transformer";
 /**
  * An enumeration.
  */
-export enum TeamCreatePhysicianNetworkT {
+export enum PhysicianNetworkT {
     Wheel = "WHEEL",
     Openloop = "OPENLOOP",
 }
@@ -78,7 +78,7 @@ export class TeamCreate extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "physician_network" })
-    physicianNetwork?: TeamCreatePhysicianNetworkT;
+    physicianNetwork?: PhysicianNetworkT;
 
     @SpeakeasyMetadata()
     @Expose({ name: "subscription_status" })

@@ -3,13 +3,13 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 /**
  * An enumeration.
  */
-export enum ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders {
+export enum ManualProviders {
     BeurerBle = "beurer_ble",
     OmronBle = "omron_ble",
     AccuchekBle = "accuchek_ble",
@@ -29,7 +29,7 @@ export class ConnectBleProviderV2LinkProviderManualProviderPostRequest extends S
      * An enumeration.
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=provider" })
-    provider: ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders;
+    provider: ManualProviders;
 }
 
 export class ConnectBleProviderV2LinkProviderManualProviderPostResponse extends SpeakeasyBase {

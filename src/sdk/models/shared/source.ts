@@ -21,7 +21,7 @@ export enum SourceSourceAuthType {
 /**
  * An enumeration.
  */
-export enum SourceSourceType {
+export enum SourceType {
     App = "app",
     Ble = "ble",
     Device = "device",
@@ -72,5 +72,5 @@ export class Source extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "source_type" })
-    sourceType?: SourceSourceType;
+    sourceType?: SourceType;
 }

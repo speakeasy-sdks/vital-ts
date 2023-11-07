@@ -10,7 +10,7 @@ export class UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchRequest extends Sp
     teamId: string;
 }
 
-export class UpdateSourcePrioritiesV2TeamSourcePrioritiesPatch200ApplicationJSON extends SpeakeasyBase {}
+export class UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchResponseBody extends SpeakeasyBase {}
 
 export class UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchResponse extends SpeakeasyBase {
     /**
@@ -18,6 +18,12 @@ export class UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchResponse extends S
      */
     @SpeakeasyMetadata()
     contentType: string;
+
+    /**
+     * Successful Response
+     */
+    @SpeakeasyMetadata({ elemType: UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchResponseBody })
+    responseUpdateSourcePrioritiesV2TeamSourcePrioritiesPatch?: UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchResponseBody[];
 
     /**
      * HTTP response status code for this operation
@@ -30,12 +36,4 @@ export class UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchResponse extends S
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
-
-    /**
-     * Successful Response
-     */
-    @SpeakeasyMetadata({
-        elemType: UpdateSourcePrioritiesV2TeamSourcePrioritiesPatch200ApplicationJSON,
-    })
-    updateSourcePrioritiesV2TeamSourcePrioritiesPatch200ApplicationJSONObjects?: UpdateSourcePrioritiesV2TeamSourcePrioritiesPatch200ApplicationJSON[];
 }

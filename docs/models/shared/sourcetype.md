@@ -1,4 +1,4 @@
-# SourceSourceType
+# SourceType
 
 An enumeration.
 

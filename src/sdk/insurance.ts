@@ -3,9 +3,9 @@
  */
 
 import * as utils from "../internal/utils";
-import * as errors from "./models/errors";
-import * as operations from "./models/operations";
-import * as shared from "./models/shared";
+import * as errors from "../sdk/models/errors";
+import * as operations from "../sdk/models/operations";
+import * as shared from "../sdk/models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
@@ -87,9 +87,9 @@ export class Insurance {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.clientFacingDiagnosisInformations = [];
+                    res.responseSearchDiagnosisV3InsuranceSearchDiagnosisGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.clientFacingDiagnosisInformations = utils.objectToClass(
+                    res.responseSearchDiagnosisV3InsuranceSearchDiagnosisGet = utils.objectToClass(
                         JSON.parse(decodedRes),
                         shared.ClientFacingDiagnosisInformation,
                         resFieldDepth
@@ -220,13 +220,14 @@ export class Insurance {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.clientFacingPayorSearchResponses = [];
+                    res.responseSearchInsurancePayorInformationV3InsuranceSearchPayorPost = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.clientFacingPayorSearchResponses = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ClientFacingPayorSearchResponse,
-                        resFieldDepth
-                    );
+                    res.responseSearchInsurancePayorInformationV3InsuranceSearchPayorPost =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            shared.ClientFacingPayorSearchResponse,
+                            resFieldDepth
+                        );
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
