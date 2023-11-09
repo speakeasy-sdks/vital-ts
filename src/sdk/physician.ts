@@ -32,7 +32,7 @@ export class Physician {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/v2/physician/review/openloop";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/v2/physician/review/openloop";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -78,7 +78,7 @@ export class Physician {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "post",
                 headers: headers,
                 responseType: "arraybuffer",

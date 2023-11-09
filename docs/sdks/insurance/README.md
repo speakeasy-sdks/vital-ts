@@ -1,5 +1,5 @@
 # Insurance
-(*.insurance*)
+(*insurance*)
 
 ### Available Operations
 
@@ -24,7 +24,6 @@ const diagnosisQuery: string = "string";
 
   const res = await sdk.insurance.searchDiagnosis(diagnosisQuery);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -36,14 +35,19 @@ const diagnosisQuery: string = "string";
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | `diagnosisQuery`                                                    | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.SearchDiagnosisV3InsuranceSearchDiagnosisGetResponse](../../models/operations/searchdiagnosisv3insurancesearchdiagnosisgetresponse.md)>**
+**Promise<[operations.SearchDiagnosisV3InsuranceSearchDiagnosisGetResponse](../../sdk/models/operations/searchdiagnosisv3insurancesearchdiagnosisgetresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## searchInsurancePayorInfo
 
@@ -63,7 +67,6 @@ import { Vital } from "Vital";
     insuranceName: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -72,14 +75,19 @@ import { Vital } from "Vital";
 
 ### Parameters
 
-| Parameter                                                              | Type                                                                   | Required                                                               | Description                                                            |
-| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| `request`                                                              | [shared.PayorSearchRequest](../../models/shared/payorsearchrequest.md) | :heavy_check_mark:                                                     | The request object to use for the request.                             |
-| `retries`                                                              | [utils.RetryConfig](../../models/utils/retryconfig.md)                 | :heavy_minus_sign:                                                     | Configuration to override the default retry behavior of the client.    |
-| `config`                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)           | :heavy_minus_sign:                                                     | Available config options for making requests.                          |
+| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `request`                                                                  | [shared.PayorSearchRequest](../../sdk/models/shared/payorsearchrequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
+| `retries`                                                                  | [utils.RetryConfig](../../internal/utils/retryconfig.md)                   | :heavy_minus_sign:                                                         | Configuration to override the default retry behavior of the client.        |
+| `config`                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)               | :heavy_minus_sign:                                                         | Available config options for making requests.                              |
 
 
 ### Response
 
-**Promise<[operations.SearchInsurancePayorInformationV3InsuranceSearchPayorPostResponse](../../models/operations/searchinsurancepayorinformationv3insurancesearchpayorpostresponse.md)>**
+**Promise<[operations.SearchInsurancePayorInformationV3InsuranceSearchPayorPostResponse](../../sdk/models/operations/searchinsurancepayorinformationv3insurancesearchpayorpostresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |

@@ -25,7 +25,6 @@ import { Vital } from "Vital";
 
   const res = await sdk.robotsRobotsTxtGet();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -36,11 +35,15 @@ import { Vital } from "Vital";
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.RobotsRobotsTxtGetResponse](../../models/operations/robotsrobotstxtgetresponse.md)>**
+**Promise<[operations.RobotsRobotsTxtGetResponse](../../sdk/models/operations/robotsrobotstxtgetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

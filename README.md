@@ -51,7 +51,7 @@ import { SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest } from "Vital/dist/
 
 * [robotsRobotsTxtGet](docs/sdks/vital/README.md#robotsrobotstxtget) - Robots
 
-### [.link](docs/sdks/link/README.md)
+### [link](docs/sdks/link/README.md)
 
 * [checkTokenState](docs/sdks/link/README.md#checktokenstate) - Check Link Token State
 * [checkTokenValidity](docs/sdks/link/README.md#checktokenvalidity) - Check Token Valid
@@ -69,15 +69,15 @@ import { SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest } from "Vital/dist/
 * [getProviders](docs/sdks/link/README.md#getproviders) - Get Providers
 * [startConnectProcess](docs/sdks/link/README.md#startconnectprocess) - Start Connect Process
 
-### [.physician](docs/sdks/physician/README.md)
+### [physician](docs/sdks/physician/README.md)
 
 * [reviewOpenloopV2PhysicianReviewOpenloopPost](docs/sdks/physician/README.md#reviewopenloopv2physicianreviewopenlooppost) - Review Openloop
 
-### [.providers](docs/sdks/providers/README.md)
+### [providers](docs/sdks/providers/README.md)
 
 * [list](docs/sdks/providers/README.md#list) - Get List Of Providers
 
-### [.summary](docs/sdks/summary/README.md)
+### [summary](docs/sdks/summary/README.md)
 
 * [getMeals](docs/sdks/summary/README.md#getmeals) - Get Meals
 * [getUserActivity](docs/sdks/summary/README.md#getuseractivity) - Get User Activity
@@ -98,7 +98,7 @@ import { SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest } from "Vital/dist/
 * [postUserSleep](docs/sdks/summary/README.md#postusersleep) - Post User Sleep
 * [postUserWorkout](docs/sdks/summary/README.md#postuserworkout) - Post User Workout
 
-### [.team](docs/sdks/team/README.md)
+### [team](docs/sdks/team/README.md)
 
 * [create](docs/sdks/team/README.md#create) - Create Team
 * [createApiKey](docs/sdks/team/README.md#createapikey) - Create Api Key
@@ -116,7 +116,7 @@ import { SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest } from "Vital/dist/
 * [updateSourcePrioritiesV2TeamSourcePrioritiesPatch](docs/sdks/team/README.md#updatesourceprioritiesv2teamsourceprioritiespatch) - Update Source Priorities
 * [updateTeamV2TeamTeamIdPatch](docs/sdks/team/README.md#updateteamv2teamteamidpatch) - Update Team
 
-### [.timeseries](docs/sdks/timeseries/README.md)
+### [timeseries](docs/sdks/timeseries/README.md)
 
 * [getBloodOxygen](docs/sdks/timeseries/README.md#getbloodoxygen) - Get Timeseries Resource Data
 * [getBloodPressure](docs/sdks/timeseries/README.md#getbloodpressure) - Get Timeseries Resource Data
@@ -145,7 +145,7 @@ import { SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest } from "Vital/dist/
 * [postBloodPressure](docs/sdks/timeseries/README.md#postbloodpressure) - Post User Blood Pressure
 * [postVitals](docs/sdks/timeseries/README.md#postvitals) - Post User Vitals
 
-### [.user](docs/sdks/user/README.md)
+### [user](docs/sdks/user/README.md)
 
 * [createUser](docs/sdks/user/README.md#createuser) - Create User
 * [delete](docs/sdks/user/README.md#delete) - Delete User
@@ -159,12 +159,12 @@ import { SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest } from "Vital/dist/
 * [refreshUserIdV2UserRefreshUserIdPost](docs/sdks/user/README.md#refreshuseridv2userrefreshuseridpost) - Refresh User Id
 * [resolveByUserId](docs/sdks/user/README.md#resolvebyuserid) - Get User By Client User Id
 
-### [.insurance](docs/sdks/insurance/README.md)
+### [insurance](docs/sdks/insurance/README.md)
 
 * [searchDiagnosis](docs/sdks/insurance/README.md#searchdiagnosis) - Search Diagnosis
 * [searchInsurancePayorInfo](docs/sdks/insurance/README.md#searchinsurancepayorinfo) - Search Insurance Payor Information
 
-### [.labTests](docs/sdks/labtests/README.md)
+### [labTests](docs/sdks/labtests/README.md)
 
 * [create](docs/sdks/labtests/README.md#create) - Create Lab Test For Team
 * [getLabs](docs/sdks/labtests/README.md#getlabs) - Get Labs
@@ -172,7 +172,7 @@ import { SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest } from "Vital/dist/
 * [getMarkers](docs/sdks/labtests/README.md#getmarkers) - Get Markers
 * [list](docs/sdks/labtests/README.md#list) - Get Lab Tests For Team
 
-### [.order](docs/sdks/order/README.md)
+### [order](docs/sdks/order/README.md)
 
 * [bookPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentBookPost](docs/sdks/order/README.md#bookphlebotomyappointmentv3orderorderidphlebotomyappointmentbookpost) - Book Phlebotomy Appointment
 * [cancelOrderV3OrderOrderIdCancelPost](docs/sdks/order/README.md#cancelorderv3orderorderidcancelpost) - Cancel Order
@@ -196,7 +196,7 @@ import { SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest } from "Vital/dist/
 * [reschedulePhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentReschedulePatch](docs/sdks/order/README.md#reschedulephlebotomyappointmentv3orderorderidphlebotomyappointmentreschedulepatch) - Reschedule Phlebotomy Appointment
 * [syncTestkitOrderStatusV3OrderTestkitStatusPost](docs/sdks/order/README.md#synctestkitorderstatusv3ordertestkitstatuspost) - Sync Testkit Order Status
 
-### [.orders](docs/sdks/orders/README.md)
+### [orders](docs/sdks/orders/README.md)
 
 * [list](docs/sdks/orders/README.md#list) - Get Orders
 <!-- End SDK Available Operations -->
@@ -226,16 +226,15 @@ import { Vital } from "Vital";
   });
 
   const res = await sdk.robotsRobotsTxtGet(, {
-    strategy: "backoff",
-    backoff: {
-      initialInterval: 1,
-      maxInterval: 50,
-      exponent: 1.1,
-      maxElapsedTime: 100,
-    },
-    retryConnectionErrors: false,
-  });
-
+  strategy: "backoff",
+  backoff: {
+    initialInterval: 1,
+    maxInterval: 50,
+    exponent: 1.1,
+    maxElapsedTime: 100,
+  },
+  retryConnectionErrors: false,
+});
 
   if (res.statusCode == 200) {
     // handle response
@@ -251,31 +250,29 @@ If you'd like to override the default retry strategy for all operations that sup
 ```typescript
 import { Vital } from "Vital";
 
-(async() => {
-  const sdk = new Vital({
-    retry_config: {
-        strategy: "backoff",
-        backoff: {
-          initialInterval: 1,
-          maxInterval: 50,
-          exponent: 1.1,
-          maxElapsedTime: 100,
+(async () => {
+    const sdk = new Vital({
+        retry_config: {
+            strategy: "backoff",
+            backoff: {
+                initialInterval: 1,
+                maxInterval: 50,
+                exponent: 1.1,
+                maxElapsedTime: 100,
+            },
+            retryConnectionErrors: false,
         },
-        retryConnectionErrors: false,
-      }
-    apiKey: "<YOUR-API-KEY>",
-  });
+        apiKey: "<YOUR-API-KEY>",
+    });
 
-  const res = await sdk.robotsRobotsTxtGet();
+    const res = await sdk.robotsRobotsTxtGet();
 
-
-  if (res.statusCode == 200) {
-    // handle response
-  }
+    if (res.statusCode == 200) {
+        // handle response
+    }
 })();
+
 ```
-
-
 <!-- End Retries -->
 
 
@@ -283,7 +280,12 @@ import { Vital } from "Vital";
 <!-- Start Error Handling -->
 # Error Handling
 
-Handling errors in your SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+Handling errors in this SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 
 ## Example
@@ -304,11 +306,10 @@ import { Vital } from "Vital";
     token: "string",
   });
   } catch (e) { 
-    if (e instanceof HTTPValidationError) {
+    if (e instanceof errors.HTTPValidationError) {
       console.error(e) // handle exception 
     
   }
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -395,19 +396,16 @@ const httpClient = axios.create({
 
 const sdk = new Vital({defaultClient: httpClient});
 ```
-
-
 <!-- End Custom HTTP Client -->
 
 
 
 <!-- Start Authentication -->
-
 # Authentication
 
 ## Per-Client Security Schemes
 
-Your SDK supports the following security scheme globally:
+This SDK supports the following security scheme globally:
 
 | Name     | Type     | Scheme   |
 | -------- | -------- | -------- |

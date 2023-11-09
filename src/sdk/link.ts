@@ -31,7 +31,7 @@ export class Link {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/v2/link/state";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/v2/link/state";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -62,7 +62,7 @@ export class Link {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "get",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -128,7 +128,7 @@ export class Link {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/v2/link/token/isValid";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/v2/link/token/isValid";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -174,7 +174,7 @@ export class Link {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "post",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -264,7 +264,11 @@ export class Link {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/v2/link/provider/manual/{provider}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/v2/link/provider/manual/{provider}",
+            req
+        );
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -314,7 +318,7 @@ export class Link {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "post",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -401,7 +405,7 @@ export class Link {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/v2/link/auth/email";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/v2/link/auth/email";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -447,7 +451,7 @@ export class Link {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "post",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -535,7 +539,11 @@ export class Link {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/v2/link/provider/email/{provider}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/v2/link/provider/email/{provider}",
+            req
+        );
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -585,7 +593,7 @@ export class Link {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "post",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -676,7 +684,7 @@ export class Link {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/v2/link/provider/password/{provider}",
             req
@@ -731,7 +739,7 @@ export class Link {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "post",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -821,7 +829,7 @@ export class Link {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/v2/link/auth";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/v2/link/auth";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -868,7 +876,7 @@ export class Link {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "post",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -958,7 +966,7 @@ export class Link {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/v2/link/connect/{provider}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/v2/link/connect/{provider}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -993,7 +1001,7 @@ export class Link {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "get",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -1079,7 +1087,7 @@ export class Link {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/v2/link/connect/demo";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/v2/link/connect/demo";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -1125,7 +1133,7 @@ export class Link {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "post",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -1213,7 +1221,7 @@ export class Link {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/v2/link/code/create";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/v2/link/code/create";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -1245,7 +1253,7 @@ export class Link {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url + queryParams,
+                url: operationUrl + queryParams,
                 method: "post",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -1330,7 +1338,7 @@ export class Link {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/v2/link/code/exchange";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/v2/link/code/exchange";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -1362,7 +1370,7 @@ export class Link {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url + queryParams,
+                url: operationUrl + queryParams,
                 method: "post",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -1453,7 +1461,7 @@ export class Link {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/v2/link/token";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/v2/link/token";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -1499,7 +1507,7 @@ export class Link {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "post",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -1585,7 +1593,7 @@ export class Link {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/v2/link/provider/oauth/{oauth_provider}",
             req
@@ -1620,7 +1628,7 @@ export class Link {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "get",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -1698,7 +1706,7 @@ export class Link {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/v2/link/providers";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/v2/link/providers";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -1729,7 +1737,7 @@ export class Link {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "get",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -1802,7 +1810,7 @@ export class Link {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/v2/link/start";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/v2/link/start";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -1848,7 +1856,7 @@ export class Link {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "post",
                 headers: headers,
                 responseType: "arraybuffer",

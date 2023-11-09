@@ -63,9 +63,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "0.0.0-dev.f0ab7c6";
-    sdkVersion = "0.6.0";
-    genVersion = "2.181.1";
-    userAgent = "speakeasy-sdk/typescript 0.6.0 2.181.1 0.0.0-dev.f0ab7c6 Vital";
+    sdkVersion = "0.6.1";
+    genVersion = "2.185.0";
+    userAgent = "speakeasy-sdk/typescript 0.6.1 2.185.0 0.0.0-dev.f0ab7c6 Vital";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -98,7 +98,7 @@ export class Vital {
             serverURL = ServerList[serverIdx];
         }
 
-        const defaultClient = props?.defaultClient ?? axios.create({ baseURL: serverURL });
+        const defaultClient = props?.defaultClient ?? axios.create();
         this.sdkConfiguration = new SDKConfiguration({
             defaultClient: defaultClient,
             security: new shared.Security({ apiKey: props?.apiKey }),
@@ -131,7 +131,7 @@ export class Vital {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/robots.txt";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/robots.txt";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -162,7 +162,7 @@ export class Vital {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "get",
                 headers: headers,
                 responseType: "arraybuffer",

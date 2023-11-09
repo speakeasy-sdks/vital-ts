@@ -1,5 +1,5 @@
 # Team
-(*.team*)
+(*team*)
 
 ### Available Operations
 
@@ -45,7 +45,6 @@ import { PhysicianNetworkT } from "Vital/dist/sdk/models/shared";
     name: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -56,15 +55,20 @@ import { PhysicianNetworkT } from "Vital/dist/sdk/models/shared";
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `request`                                                           | [shared.TeamCreate](../../models/shared/teamcreate.md)              | :heavy_check_mark:                                                  | The request object to use for the request.                          |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `request`                                                           | [shared.TeamCreate](../../sdk/models/shared/teamcreate.md)          | :heavy_check_mark:                                                  | The request object to use for the request.                          |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.CreateTeamV2TeamPostResponse](../../models/operations/createteamv2teampostresponse.md)>**
+**Promise<[operations.CreateTeamV2TeamPostResponse](../../sdk/models/operations/createteamv2teampostresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## createApiKey
 
@@ -88,7 +92,6 @@ const teamId: string = "string";
 
   const res = await sdk.team.createApiKey(createApiKeyBody, teamId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -97,18 +100,23 @@ const teamId: string = "string";
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `createApiKeyBody`                                                  | [shared.CreateApiKeyBody](../../models/shared/createapikeybody.md)  | :heavy_check_mark:                                                  | N/A                                                                 |
-| `teamId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
-| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `createApiKeyBody`                                                        | [shared.CreateApiKeyBody](../../../sdk/models/shared/createapikeybody.md) | :heavy_check_mark:                                                        | N/A                                                                       |
+| `teamId`                                                                  | *string*                                                                  | :heavy_check_mark:                                                        | N/A                                                                       |
+| `retries`                                                                 | [utils.RetryConfig](../../internal/utils/retryconfig.md)                  | :heavy_minus_sign:                                                        | Configuration to override the default retry behavior of the client.       |
+| `config`                                                                  | [AxiosRequestConfig](https://axios-http.com/docs/req_config)              | :heavy_minus_sign:                                                        | Available config options for making requests.                             |
 
 
 ### Response
 
-**Promise<[operations.CreateApiKeyV2TeamTeamIdApikeyPostResponse](../../models/operations/createapikeyv2teamteamidapikeypostresponse.md)>**
+**Promise<[operations.CreateApiKeyV2TeamTeamIdApikeyPostResponse](../../sdk/models/operations/createapikeyv2teamteamidapikeypostresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## createPriority
 
@@ -134,7 +142,6 @@ const teamId: string = "string";
 
   const res = await sdk.team.createPriority(priorityCreate, teamId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -143,18 +150,23 @@ const teamId: string = "string";
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `priorityCreate`                                                    | [shared.PriorityCreate](../../models/shared/prioritycreate.md)      | :heavy_check_mark:                                                  | N/A                                                                 |
-| `teamId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
-| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `priorityCreate`                                                      | [shared.PriorityCreate](../../../sdk/models/shared/prioritycreate.md) | :heavy_check_mark:                                                    | N/A                                                                   |
+| `teamId`                                                              | *string*                                                              | :heavy_check_mark:                                                    | N/A                                                                   |
+| `retries`                                                             | [utils.RetryConfig](../../internal/utils/retryconfig.md)              | :heavy_minus_sign:                                                    | Configuration to override the default retry behavior of the client.   |
+| `config`                                                              | [AxiosRequestConfig](https://axios-http.com/docs/req_config)          | :heavy_minus_sign:                                                    | Available config options for making requests.                         |
 
 
 ### Response
 
-**Promise<[operations.CreatePriorityV2TeamTeamIdPriorityPostResponse](../../models/operations/createpriorityv2teamteamidprioritypostresponse.md)>**
+**Promise<[operations.CreatePriorityV2TeamTeamIdPriorityPostResponse](../../sdk/models/operations/createpriorityv2teamteamidprioritypostresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## deleteApiKey
 
@@ -175,7 +187,6 @@ const teamId: string = "string";
 
   const res = await sdk.team.deleteApiKey(apiKeyId, teamId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -188,14 +199,19 @@ const teamId: string = "string";
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | `apiKeyId`                                                          | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
 | `teamId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.DeleteApiKeyV2TeamTeamIdApikeyApiKeyIdDeleteResponse](../../models/operations/deleteapikeyv2teamteamidapikeyapikeyiddeleteresponse.md)>**
+**Promise<[operations.DeleteApiKeyV2TeamTeamIdApikeyApiKeyIdDeleteResponse](../../sdk/models/operations/deleteapikeyv2teamteamidapikeyapikeyiddeleteresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get
 
@@ -215,7 +231,6 @@ const teamId: string = "b18d8d81-fd7b-4764-a31e-475cb1f36591";
 
   const res = await sdk.team.get(teamId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -227,14 +242,19 @@ const teamId: string = "b18d8d81-fd7b-4764-a31e-475cb1f36591";
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | `teamId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.GetTeamV2TeamTeamIdGetResponse](../../models/operations/getteamv2teamteamidgetresponse.md)>**
+**Promise<[operations.GetTeamV2TeamTeamIdGetResponse](../../sdk/models/operations/getteamv2teamteamidgetresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## getApiKeys
 
@@ -254,7 +274,6 @@ const teamId: string = "string";
 
   const res = await sdk.team.getApiKeys(teamId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -266,14 +285,19 @@ const teamId: string = "string";
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | `teamId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.GetApiKeysForTeamV2TeamTeamIdApikeysGetResponse](../../models/operations/getapikeysforteamv2teamteamidapikeysgetresponse.md)>**
+**Promise<[operations.GetApiKeysForTeamV2TeamTeamIdApikeysGetResponse](../../sdk/models/operations/getapikeysforteamv2teamteamidapikeysgetresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## getConfig
 
@@ -291,7 +315,6 @@ import { Vital } from "Vital";
 
   const res = await sdk.team.getConfig();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -302,14 +325,18 @@ import { Vital } from "Vital";
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.GetTeamConfigV2TeamLinkConfigGetResponse](../../models/operations/getteamconfigv2teamlinkconfiggetresponse.md)>**
+**Promise<[operations.GetTeamConfigV2TeamLinkConfigGetResponse](../../sdk/models/operations/getteamconfigv2teamlinkconfiggetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getSourcePriorities
 
@@ -329,7 +356,6 @@ const dataType: string = "string";
 
   const res = await sdk.team.getSourcePriorities(dataType);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -341,14 +367,19 @@ const dataType: string = "string";
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | `dataType`                                                          | *string*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.GetSourcePrioritiesV2TeamSourcePrioritiesGetResponse](../../models/operations/getsourceprioritiesv2teamsourceprioritiesgetresponse.md)>**
+**Promise<[operations.GetSourcePrioritiesV2TeamSourcePrioritiesGetResponse](../../sdk/models/operations/getsourceprioritiesv2teamsourceprioritiesgetresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## getUserCount
 
@@ -368,7 +399,6 @@ const teamId: string = "3021769b-866d-4c37-8307-789796d71ace";
 
   const res = await sdk.team.getUserCount(teamId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -380,14 +410,19 @@ const teamId: string = "3021769b-866d-4c37-8307-789796d71ace";
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | `teamId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.GetTeamUserCountV2TeamTeamIdUsersCountGetResponse](../../models/operations/getteamusercountv2teamteamiduserscountgetresponse.md)>**
+**Promise<[operations.GetTeamUserCountV2TeamTeamIdUsersCountGetResponse](../../sdk/models/operations/getteamusercountv2teamteamiduserscountgetresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## getWebhookUrl
 
@@ -405,7 +440,6 @@ import { Vital } from "Vital";
 
   const res = await sdk.team.getWebhookUrl();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -416,14 +450,18 @@ import { Vital } from "Vital";
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.GetSvixWebhookUrlV2TeamSvixUrlGetResponse](../../models/operations/getsvixwebhookurlv2teamsvixurlgetresponse.md)>**
+**Promise<[operations.GetSvixWebhookUrlV2TeamSvixUrlGetResponse](../../sdk/models/operations/getsvixwebhookurlv2teamsvixurlgetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## rotateApiKeyV2TeamTeamIdApikeyApiKeyIdRotatePatch
 
@@ -444,7 +482,6 @@ const teamId: string = "string";
 
   const res = await sdk.team.rotateApiKeyV2TeamTeamIdApikeyApiKeyIdRotatePatch(apiKeyId, teamId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -457,14 +494,19 @@ const teamId: string = "string";
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | `apiKeyId`                                                          | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
 | `teamId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.RotateApiKeyV2TeamTeamIdApikeyApiKeyIdRotatePatchResponse](../../models/operations/rotateapikeyv2teamteamidapikeyapikeyidrotatepatchresponse.md)>**
+**Promise<[operations.RotateApiKeyV2TeamTeamIdApikeyApiKeyIdRotatePatchResponse](../../sdk/models/operations/rotateapikeyv2teamteamidapikeyapikeyidrotatepatchresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## searchUsersByUuid
 
@@ -484,7 +526,6 @@ const queryId: string = "string";
 
   const res = await sdk.team.searchUsersByUuid(queryId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -496,14 +537,19 @@ const queryId: string = "string";
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | `queryId`                                                           | *string*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.SearchTeamUsersByUuidOrClientUserIdV2TeamUsersSearchGetResponse](../../models/operations/searchteamusersbyuuidorclientuseridv2teamuserssearchgetresponse.md)>**
+**Promise<[operations.SearchTeamUsersByUuidOrClientUserIdV2TeamUsersSearchGetResponse](../../sdk/models/operations/searchteamusersbyuuidorclientuseridv2teamuserssearchgetresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## updateApiKeyLabelV2TeamTeamIdApikeyApiKeyIdPatch
 
@@ -528,7 +574,6 @@ const teamId: string = "string";
 
   const res = await sdk.team.updateApiKeyLabelV2TeamTeamIdApikeyApiKeyIdPatch(updateApiKeyBody, apiKeyId, teamId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -537,19 +582,24 @@ const teamId: string = "string";
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `updateApiKeyBody`                                                  | [shared.UpdateApiKeyBody](../../models/shared/updateapikeybody.md)  | :heavy_check_mark:                                                  | N/A                                                                 |
-| `apiKeyId`                                                          | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
-| `teamId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
-| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `updateApiKeyBody`                                                        | [shared.UpdateApiKeyBody](../../../sdk/models/shared/updateapikeybody.md) | :heavy_check_mark:                                                        | N/A                                                                       |
+| `apiKeyId`                                                                | *string*                                                                  | :heavy_check_mark:                                                        | N/A                                                                       |
+| `teamId`                                                                  | *string*                                                                  | :heavy_check_mark:                                                        | N/A                                                                       |
+| `retries`                                                                 | [utils.RetryConfig](../../internal/utils/retryconfig.md)                  | :heavy_minus_sign:                                                        | Configuration to override the default retry behavior of the client.       |
+| `config`                                                                  | [AxiosRequestConfig](https://axios-http.com/docs/req_config)              | :heavy_minus_sign:                                                        | Available config options for making requests.                             |
 
 
 ### Response
 
-**Promise<[operations.UpdateApiKeyLabelV2TeamTeamIdApikeyApiKeyIdPatchResponse](../../models/operations/updateapikeylabelv2teamteamidapikeyapikeyidpatchresponse.md)>**
+**Promise<[operations.UpdateApiKeyLabelV2TeamTeamIdApikeyApiKeyIdPatchResponse](../../sdk/models/operations/updateapikeylabelv2teamteamidapikeyapikeyidpatchresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## updateSourcePrioritiesV2TeamSourcePrioritiesPatch
 
@@ -569,7 +619,6 @@ const teamId: string = "string";
 
   const res = await sdk.team.updateSourcePrioritiesV2TeamSourcePrioritiesPatch(teamId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -581,14 +630,19 @@ const teamId: string = "string";
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | `teamId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchResponse](../../models/operations/updatesourceprioritiesv2teamsourceprioritiespatchresponse.md)>**
+**Promise<[operations.UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchResponse](../../sdk/models/operations/updatesourceprioritiesv2teamsourceprioritiespatchresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## updateTeamV2TeamTeamIdPatch
 
@@ -610,7 +664,6 @@ const teamId: string = "string";
 
   const res = await sdk.team.updateTeamV2TeamTeamIdPatch(teamUpdate, teamId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -621,13 +674,18 @@ const teamId: string = "string";
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `teamUpdate`                                                        | [shared.TeamUpdate](../../models/shared/teamupdate.md)              | :heavy_check_mark:                                                  | N/A                                                                 |
+| `teamUpdate`                                                        | [shared.TeamUpdate](../../../sdk/models/shared/teamupdate.md)       | :heavy_check_mark:                                                  | N/A                                                                 |
 | `teamId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.UpdateTeamV2TeamTeamIdPatchResponse](../../models/operations/updateteamv2teamteamidpatchresponse.md)>**
+**Promise<[operations.UpdateTeamV2TeamTeamIdPatchResponse](../../sdk/models/operations/updateteamv2teamteamidpatchresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |

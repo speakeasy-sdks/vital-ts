@@ -1,5 +1,5 @@
 # Summary
-(*.summary*)
+(*summary*)
 
 ### Available Operations
 
@@ -43,7 +43,6 @@ const provider: string = "string";
 
   const res = await sdk.summary.getMeals(startDate, userId, endDate, provider);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -58,14 +57,19 @@ const provider: string = "string";
 | `userId`                                                                                                                   | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
 | `endDate`                                                                                                                  | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
 | `provider`                                                                                                                 | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
-| `retries`                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                     | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
+| `retries`                                                                                                                  | [utils.RetryConfig](../../internal/utils/retryconfig.md)                                                                   | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
 | `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
 
-**Promise<[operations.GetMealsV2SummaryMealUserIdGetResponse](../../models/operations/getmealsv2summarymealuseridgetresponse.md)>**
+**Promise<[operations.GetMealsV2SummaryMealUserIdGetResponse](../../sdk/models/operations/getmealsv2summarymealuseridgetresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## getUserActivity
 
@@ -88,7 +92,6 @@ const provider: string = "string";
 
   const res = await sdk.summary.getUserActivity(startDate, userId, endDate, provider);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -103,14 +106,19 @@ const provider: string = "string";
 | `userId`                                                                                                                   | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
 | `endDate`                                                                                                                  | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
 | `provider`                                                                                                                 | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
-| `retries`                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                     | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
+| `retries`                                                                                                                  | [utils.RetryConfig](../../internal/utils/retryconfig.md)                                                                   | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
 | `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
 
-**Promise<[operations.GetUserActivityV2SummaryActivityUserIdGetResponse](../../models/operations/getuseractivityv2summaryactivityuseridgetresponse.md)>**
+**Promise<[operations.GetUserActivityV2SummaryActivityUserIdGetResponse](../../sdk/models/operations/getuseractivityv2summaryactivityuseridgetresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## getUserActivityRaw
 
@@ -133,7 +141,6 @@ const provider: string = "string";
 
   const res = await sdk.summary.getUserActivityRaw(startDate, userId, endDate, provider);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -148,14 +155,19 @@ const provider: string = "string";
 | `userId`                                                                                                                   | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
 | `endDate`                                                                                                                  | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
 | `provider`                                                                                                                 | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
-| `retries`                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                     | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
+| `retries`                                                                                                                  | [utils.RetryConfig](../../internal/utils/retryconfig.md)                                                                   | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
 | `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
 
-**Promise<[operations.GetUserActivityRawV2SummaryActivityUserIdRawGetResponse](../../models/operations/getuseractivityrawv2summaryactivityuseridrawgetresponse.md)>**
+**Promise<[operations.GetUserActivityRawV2SummaryActivityUserIdRawGetResponse](../../sdk/models/operations/getuseractivityrawv2summaryactivityuseridrawgetresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## getUserBody
 
@@ -178,7 +190,6 @@ const provider: string = "string";
 
   const res = await sdk.summary.getUserBody(startDate, userId, endDate, provider);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -193,14 +204,19 @@ const provider: string = "string";
 | `userId`                                                                                                                   | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
 | `endDate`                                                                                                                  | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
 | `provider`                                                                                                                 | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
-| `retries`                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                     | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
+| `retries`                                                                                                                  | [utils.RetryConfig](../../internal/utils/retryconfig.md)                                                                   | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
 | `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
 
-**Promise<[operations.GetUserBodyV2SummaryBodyUserIdGetResponse](../../models/operations/getuserbodyv2summarybodyuseridgetresponse.md)>**
+**Promise<[operations.GetUserBodyV2SummaryBodyUserIdGetResponse](../../sdk/models/operations/getuserbodyv2summarybodyuseridgetresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## getUserBodyRaw
 
@@ -223,7 +239,6 @@ const provider: string = "string";
 
   const res = await sdk.summary.getUserBodyRaw(startDate, userId, endDate, provider);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -238,14 +253,19 @@ const provider: string = "string";
 | `userId`                                                                                                                   | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
 | `endDate`                                                                                                                  | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
 | `provider`                                                                                                                 | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
-| `retries`                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                     | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
+| `retries`                                                                                                                  | [utils.RetryConfig](../../internal/utils/retryconfig.md)                                                                   | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
 | `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
 
-**Promise<[operations.GetUserBodyRawV2SummaryBodyUserIdRawGetResponse](../../models/operations/getuserbodyrawv2summarybodyuseridrawgetresponse.md)>**
+**Promise<[operations.GetUserBodyRawV2SummaryBodyUserIdRawGetResponse](../../sdk/models/operations/getuserbodyrawv2summarybodyuseridrawgetresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## getUserDevicesRaw
 
@@ -266,7 +286,6 @@ const provider: string = "string";
 
   const res = await sdk.summary.getUserDevicesRaw(userId, provider);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -279,14 +298,19 @@ const provider: string = "string";
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | `userId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
 | `provider`                                                          | *string*                                                            | :heavy_minus_sign:                                                  | Provider oura/strava etc                                            |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.GetUserDevicesRawV2SummaryDevicesUserIdRawGetResponse](../../models/operations/getuserdevicesrawv2summarydevicesuseridrawgetresponse.md)>**
+**Promise<[operations.GetUserDevicesRawV2SummaryDevicesUserIdRawGetResponse](../../sdk/models/operations/getuserdevicesrawv2summarydevicesuseridrawgetresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## getUserProfile
 
@@ -307,7 +331,6 @@ const provider: string = "string";
 
   const res = await sdk.summary.getUserProfile(userId, provider);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -320,14 +343,19 @@ const provider: string = "string";
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | `userId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
 | `provider`                                                          | *string*                                                            | :heavy_minus_sign:                                                  | Provider oura/strava etc                                            |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.GetUserProfileV2SummaryProfileUserIdGetResponse](../../models/operations/getuserprofilev2summaryprofileuseridgetresponse.md)>**
+**Promise<[operations.GetUserProfileV2SummaryProfileUserIdGetResponse](../../sdk/models/operations/getuserprofilev2summaryprofileuseridgetresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## getUserProfileRaw
 
@@ -348,7 +376,6 @@ const provider: string = "string";
 
   const res = await sdk.summary.getUserProfileRaw(userId, provider);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -361,14 +388,19 @@ const provider: string = "string";
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | `userId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
 | `provider`                                                          | *string*                                                            | :heavy_minus_sign:                                                  | Provider oura/strava etc                                            |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.GetUserProfileRawV2SummaryProfileUserIdRawGetResponse](../../models/operations/getuserprofilerawv2summaryprofileuseridrawgetresponse.md)>**
+**Promise<[operations.GetUserProfileRawV2SummaryProfileUserIdRawGetResponse](../../sdk/models/operations/getuserprofilerawv2summaryprofileuseridrawgetresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## getUserSleep
 
@@ -391,7 +423,6 @@ const provider: string = "string";
 
   const res = await sdk.summary.getUserSleep(startDate, userId, endDate, provider);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -406,14 +437,19 @@ const provider: string = "string";
 | `userId`                                                                                                                   | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
 | `endDate`                                                                                                                  | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
 | `provider`                                                                                                                 | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
-| `retries`                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                     | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
+| `retries`                                                                                                                  | [utils.RetryConfig](../../internal/utils/retryconfig.md)                                                                   | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
 | `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
 
-**Promise<[operations.GetUserSleepV2SummarySleepUserIdGetResponse](../../models/operations/getusersleepv2summarysleepuseridgetresponse.md)>**
+**Promise<[operations.GetUserSleepV2SummarySleepUserIdGetResponse](../../sdk/models/operations/getusersleepv2summarysleepuseridgetresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## getUserSleepRaw
 
@@ -436,7 +472,6 @@ const provider: string = "string";
 
   const res = await sdk.summary.getUserSleepRaw(startDate, userId, endDate, provider);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -451,14 +486,19 @@ const provider: string = "string";
 | `userId`                                                                                                                   | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
 | `endDate`                                                                                                                  | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
 | `provider`                                                                                                                 | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
-| `retries`                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                     | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
+| `retries`                                                                                                                  | [utils.RetryConfig](../../internal/utils/retryconfig.md)                                                                   | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
 | `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
 
-**Promise<[operations.GetUserSleepRawV2SummarySleepUserIdRawGetResponse](../../models/operations/getusersleeprawv2summarysleepuseridrawgetresponse.md)>**
+**Promise<[operations.GetUserSleepRawV2SummarySleepUserIdRawGetResponse](../../sdk/models/operations/getusersleeprawv2summarysleepuseridrawgetresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## getUserSleepStream
 
@@ -481,7 +521,6 @@ const provider: string = "string";
 
   const res = await sdk.summary.getUserSleepStream(startDate, userId, endDate, provider);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -496,14 +535,19 @@ const provider: string = "string";
 | `userId`                                                                                                                   | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
 | `endDate`                                                                                                                  | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
 | `provider`                                                                                                                 | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
-| `retries`                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                     | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
+| `retries`                                                                                                                  | [utils.RetryConfig](../../internal/utils/retryconfig.md)                                                                   | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
 | `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
 
-**Promise<[operations.GetUserSleepStreamV2SummarySleepUserIdStreamGetResponse](../../models/operations/getusersleepstreamv2summarysleepuseridstreamgetresponse.md)>**
+**Promise<[operations.GetUserSleepStreamV2SummarySleepUserIdStreamGetResponse](../../sdk/models/operations/getusersleepstreamv2summarysleepuseridstreamgetresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## getUserWorkouts
 
@@ -526,7 +570,6 @@ const provider: string = "string";
 
   const res = await sdk.summary.getUserWorkouts(startDate, userId, endDate, provider);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -541,14 +584,19 @@ const provider: string = "string";
 | `userId`                                                                                                                   | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
 | `endDate`                                                                                                                  | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
 | `provider`                                                                                                                 | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
-| `retries`                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                     | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
+| `retries`                                                                                                                  | [utils.RetryConfig](../../internal/utils/retryconfig.md)                                                                   | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
 | `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
 
-**Promise<[operations.GetUserWorkoutsV2SummaryWorkoutsUserIdGetResponse](../../models/operations/getuserworkoutsv2summaryworkoutsuseridgetresponse.md)>**
+**Promise<[operations.GetUserWorkoutsV2SummaryWorkoutsUserIdGetResponse](../../sdk/models/operations/getuserworkoutsv2summaryworkoutsuseridgetresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## getUserWorkoutsRaw
 
@@ -571,7 +619,6 @@ const provider: string = "string";
 
   const res = await sdk.summary.getUserWorkoutsRaw(startDate, userId, endDate, provider);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -586,14 +633,19 @@ const provider: string = "string";
 | `userId`                                                                                                                   | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
 | `endDate`                                                                                                                  | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
 | `provider`                                                                                                                 | *string*                                                                                                                   | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
-| `retries`                                                                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                                                                     | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
+| `retries`                                                                                                                  | [utils.RetryConfig](../../internal/utils/retryconfig.md)                                                                   | :heavy_minus_sign:                                                                                                         | Configuration to override the default retry behavior of the client.                                                        |
 | `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
 
-**Promise<[operations.GetUserWorkoutsRawV2SummaryWorkoutsUserIdRawGetResponse](../../models/operations/getuserworkoutsrawv2summaryworkoutsuseridrawgetresponse.md)>**
+**Promise<[operations.GetUserWorkoutsRawV2SummaryWorkoutsUserIdRawGetResponse](../../sdk/models/operations/getuserworkoutsrawv2summaryworkoutsuseridrawgetresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## postUserActivity
 
@@ -615,7 +667,6 @@ const xVitalIosSDKVersion: string = "string";
 
   const res = await sdk.summary.postUserActivity(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -629,14 +680,19 @@ const xVitalIosSDKVersion: string = "string";
 | `userId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
 | `xVitalAndroidSDKVersion`                                           | *string*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
 | `xVitalIosSDKVersion`                                               | *string*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.PostUserActivityV2SummaryActivityUserIdPostResponse](../../models/operations/postuseractivityv2summaryactivityuseridpostresponse.md)>**
+**Promise<[operations.PostUserActivityV2SummaryActivityUserIdPostResponse](../../sdk/models/operations/postuseractivityv2summaryactivityuseridpostresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## postUserBody
 
@@ -658,7 +714,6 @@ const xVitalIosSDKVersion: string = "string";
 
   const res = await sdk.summary.postUserBody(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -672,14 +727,19 @@ const xVitalIosSDKVersion: string = "string";
 | `userId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
 | `xVitalAndroidSDKVersion`                                           | *string*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
 | `xVitalIosSDKVersion`                                               | *string*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.PostUserBodyV2SummaryBodyUserIdPostResponse](../../models/operations/postuserbodyv2summarybodyuseridpostresponse.md)>**
+**Promise<[operations.PostUserBodyV2SummaryBodyUserIdPostResponse](../../sdk/models/operations/postuserbodyv2summarybodyuseridpostresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## postUserProfile
 
@@ -701,7 +761,6 @@ const xVitalIosSDKVersion: string = "string";
 
   const res = await sdk.summary.postUserProfile(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -715,14 +774,19 @@ const xVitalIosSDKVersion: string = "string";
 | `userId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
 | `xVitalAndroidSDKVersion`                                           | *string*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
 | `xVitalIosSDKVersion`                                               | *string*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.PostUserProfileV2SummaryProfileUserIdPostResponse](../../models/operations/postuserprofilev2summaryprofileuseridpostresponse.md)>**
+**Promise<[operations.PostUserProfileV2SummaryProfileUserIdPostResponse](../../sdk/models/operations/postuserprofilev2summaryprofileuseridpostresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## postUserSleep
 
@@ -744,7 +808,6 @@ const xVitalIosSDKVersion: string = "string";
 
   const res = await sdk.summary.postUserSleep(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -758,14 +821,19 @@ const xVitalIosSDKVersion: string = "string";
 | `userId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
 | `xVitalAndroidSDKVersion`                                           | *string*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
 | `xVitalIosSDKVersion`                                               | *string*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.PostUserSleepV2SummarySleepUserIdPostResponse](../../models/operations/postusersleepv2summarysleepuseridpostresponse.md)>**
+**Promise<[operations.PostUserSleepV2SummarySleepUserIdPostResponse](../../sdk/models/operations/postusersleepv2summarysleepuseridpostresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## postUserWorkout
 
@@ -787,7 +855,6 @@ const xVitalIosSDKVersion: string = "string";
 
   const res = await sdk.summary.postUserWorkout(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -801,11 +868,16 @@ const xVitalIosSDKVersion: string = "string";
 | `userId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
 | `xVitalAndroidSDKVersion`                                           | *string*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
 | `xVitalIosSDKVersion`                                               | *string*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.PostUserWorkoutV2SummaryWorkoutsUserIdPostResponse](../../models/operations/postuserworkoutv2summaryworkoutsuseridpostresponse.md)>**
+**Promise<[operations.PostUserWorkoutV2SummaryWorkoutsUserIdPostResponse](../../sdk/models/operations/postuserworkoutv2summaryworkoutsuseridpostresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |

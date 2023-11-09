@@ -1,0 +1,10 @@
+# ConnectIndividualProviderV2LinkProviderPasswordProviderPostRequest
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `individualProviderData`                                                              | [shared.IndividualProviderData](../../../sdk/models/shared/individualproviderdata.md) | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `provider`                                                                            | [operations.PasswordProviders](../../../sdk/models/operations/passwordproviders.md)   | :heavy_check_mark:                                                                    | An enumeration.                                                                       |
+| `xVitalLinkClientRegion`                                                              | *string*                                                                              | :heavy_minus_sign:                                                                    | N/A                                                                                   |

@@ -35,7 +35,7 @@ export class Team {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/v2/team";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/v2/team";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -81,7 +81,7 @@ export class Team {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "post",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -166,7 +166,7 @@ export class Team {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/v2/team/{team_id}/apikey", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/v2/team/{team_id}/apikey", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -212,7 +212,7 @@ export class Team {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "post",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -297,7 +297,7 @@ export class Team {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/v2/team/{team_id}/priority", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/v2/team/{team_id}/priority", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -343,7 +343,7 @@ export class Team {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "post",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -428,7 +428,7 @@ export class Team {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/v2/team/{team_id}/apikey/{api_key_id}",
             req
@@ -463,7 +463,7 @@ export class Team {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "delete",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -545,7 +545,7 @@ export class Team {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/v2/team/{team_id}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/v2/team/{team_id}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -576,7 +576,7 @@ export class Team {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "get",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -661,7 +661,7 @@ export class Team {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/v2/team/{team_id}/apikeys", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/v2/team/{team_id}/apikeys", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -692,7 +692,7 @@ export class Team {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "get",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -776,7 +776,7 @@ export class Team {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/v2/team/link/config";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/v2/team/link/config";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -807,7 +807,7 @@ export class Team {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "get",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -875,7 +875,7 @@ export class Team {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/v2/team/source/priorities";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/v2/team/source/priorities";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -907,7 +907,7 @@ export class Team {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url + queryParams,
+                url: operationUrl + queryParams,
                 method: "get",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -995,7 +995,11 @@ export class Team {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/v2/team/{team_id}/users/count", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/v2/team/{team_id}/users/count",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -1026,7 +1030,7 @@ export class Team {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "get",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -1104,7 +1108,7 @@ export class Team {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/v2/team/svix/url";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/v2/team/svix/url";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -1135,7 +1139,7 @@ export class Team {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "get",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -1205,7 +1209,7 @@ export class Team {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/v2/team/{team_id}/apikey/{api_key_id}/rotate",
             req
@@ -1240,7 +1244,7 @@ export class Team {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "patch",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -1322,7 +1326,7 @@ export class Team {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/v2/team/users/search";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/v2/team/users/search";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -1354,7 +1358,7 @@ export class Team {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url + queryParams,
+                url: operationUrl + queryParams,
                 method: "get",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -1447,7 +1451,7 @@ export class Team {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/v2/team/{team_id}/apikey/{api_key_id}",
             req
@@ -1497,7 +1501,7 @@ export class Team {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "patch",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -1580,7 +1584,7 @@ export class Team {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/v2/team/source/priorities";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/v2/team/source/priorities";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -1612,7 +1616,7 @@ export class Team {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url + queryParams,
+                url: operationUrl + queryParams,
                 method: "patch",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -1703,7 +1707,7 @@ export class Team {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/v2/team/{team_id}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/v2/team/{team_id}", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -1749,7 +1753,7 @@ export class Team {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "patch",
                 headers: headers,
                 responseType: "arraybuffer",

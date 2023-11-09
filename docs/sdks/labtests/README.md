@@ -1,5 +1,5 @@
 # LabTests
-(*.labTests*)
+(*labTests*)
 
 ### Available Operations
 
@@ -35,7 +35,6 @@ import { LabTestCollectionMethod, LabTestSampleType } from "Vital/dist/sdk/model
     sampleType: LabTestSampleType.DriedBloodSpot,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -44,17 +43,22 @@ import { LabTestCollectionMethod, LabTestSampleType } from "Vital/dist/sdk/model
 
 ### Parameters
 
-| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `request`                                                                  | [shared.CreateLabTestRequest](../../models/shared/createlabtestrequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
-| `retries`                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                         | Configuration to override the default retry behavior of the client.        |
-| `config`                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)               | :heavy_minus_sign:                                                         | Available config options for making requests.                              |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [shared.CreateLabTestRequest](../../sdk/models/shared/createlabtestrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| `retries`                                                                      | [utils.RetryConfig](../../internal/utils/retryconfig.md)                       | :heavy_minus_sign:                                                             | Configuration to override the default retry behavior of the client.            |
+| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
 
 
 ### Response
 
-**Promise<[operations.CreateLabTestForTeamV3LabTestsPostResponse](../../models/operations/createlabtestforteamv3labtestspostresponse.md)>**
+**Promise<[operations.CreateLabTestForTeamV3LabTestsPostResponse](../../sdk/models/operations/createlabtestforteamv3labtestspostresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## getLabs
 
@@ -72,7 +76,6 @@ import { Vital } from "Vital";
 
   const res = await sdk.labTests.getLabs();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -83,14 +86,18 @@ import { Vital } from "Vital";
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.GetLabsV3LabTestsLabsGetResponse](../../models/operations/getlabsv3labtestslabsgetresponse.md)>**
+**Promise<[operations.GetLabsV3LabTestsLabsGetResponse](../../sdk/models/operations/getlabsv3labtestslabsgetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getMarkerByProvider
 
@@ -111,7 +118,6 @@ const providerId: string = "string";
 
   const res = await sdk.labTests.getMarkerByProvider(labId, providerId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -124,14 +130,19 @@ const providerId: string = "string";
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | `labId`                                                             | *number*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
 | `providerId`                                                        | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.GetMarkersByProviderIdV3LabTestsLabIdMarkersProviderIdGetResponse](../../models/operations/getmarkersbyprovideridv3labtestslabidmarkersprovideridgetresponse.md)>**
+**Promise<[operations.GetMarkersByProviderIdV3LabTestsLabIdMarkersProviderIdGetResponse](../../sdk/models/operations/getmarkersbyprovideridv3labtestslabidmarkersprovideridgetresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## getMarkers
 
@@ -154,7 +165,6 @@ const size: number = 962743;
 
   const res = await sdk.labTests.getMarkers(labId, name, page, size);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -169,14 +179,19 @@ const size: number = 962743;
 | `name`                                                                                         | *string*                                                                                       | :heavy_minus_sign:                                                                             | The name of an individual biomarker or a panel. Used as a fuzzy filter when searching markers. |
 | `page`                                                                                         | *number*                                                                                       | :heavy_minus_sign:                                                                             | N/A                                                                                            |
 | `size`                                                                                         | *number*                                                                                       | :heavy_minus_sign:                                                                             | N/A                                                                                            |
-| `retries`                                                                                      | [utils.RetryConfig](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+| `retries`                                                                                      | [utils.RetryConfig](../../internal/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 | `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
 
 
 ### Response
 
-**Promise<[operations.GetMarkersV3LabTestsMarkersGetResponse](../../models/operations/getmarkersv3labtestsmarkersgetresponse.md)>**
+**Promise<[operations.GetMarkersV3LabTestsMarkersGetResponse](../../sdk/models/operations/getmarkersv3labtestsmarkersgetresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## list
 
@@ -194,7 +209,6 @@ import { Vital } from "Vital";
 
   const res = await sdk.labTests.list();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -205,11 +219,15 @@ import { Vital } from "Vital";
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.GetLabTestsForTeamV3LabTestsGetResponse](../../models/operations/getlabtestsforteamv3labtestsgetresponse.md)>**
+**Promise<[operations.GetLabTestsForTeamV3LabTestsGetResponse](../../sdk/models/operations/getlabtestsforteamv3labtestsgetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

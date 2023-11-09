@@ -1,5 +1,5 @@
 # Link
-(*.link*)
+(*link*)
 
 ### Available Operations
 
@@ -36,7 +36,6 @@ import { Vital } from "Vital";
 
   const res = await sdk.link.checkTokenState();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -47,14 +46,18 @@ import { Vital } from "Vital";
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.CheckLinkTokenStateV2LinkStateGetResponse](../../models/operations/checklinktokenstatev2linkstategetresponse.md)>**
+**Promise<[operations.CheckLinkTokenStateV2LinkStateGetResponse](../../sdk/models/operations/checklinktokenstatev2linkstategetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## checkTokenValidity
 
@@ -75,7 +78,6 @@ import { Vital } from "Vital";
     token: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -86,15 +88,20 @@ import { Vital } from "Vital";
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `request`                                                           | [shared.LinkTokenBase](../../models/shared/linktokenbase.md)        | :heavy_check_mark:                                                  | The request object to use for the request.                          |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `request`                                                           | [shared.LinkTokenBase](../../sdk/models/shared/linktokenbase.md)    | :heavy_check_mark:                                                  | The request object to use for the request.                          |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.CheckTokenValidV2LinkTokenIsValidPostResponse](../../models/operations/checktokenvalidv2linktokenisvalidpostresponse.md)>**
+**Promise<[operations.CheckTokenValidV2LinkTokenIsValidPostResponse](../../sdk/models/operations/checktokenvalidv2linktokenisvalidpostresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## connectBleProvider
 
@@ -120,7 +127,6 @@ const provider: ManualProviders = ManualProviders.BeurerBle;
 
   const res = await sdk.link.connectBleProvider(manualConnectionData, provider);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -129,18 +135,23 @@ const provider: ManualProviders = ManualProviders.BeurerBle;
 
 ### Parameters
 
-| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `manualConnectionData`                                                     | [shared.ManualConnectionData](../../models/shared/manualconnectiondata.md) | :heavy_check_mark:                                                         | N/A                                                                        |
-| `provider`                                                                 | [operations.ManualProviders](../../models/operations/manualproviders.md)   | :heavy_check_mark:                                                         | An enumeration.                                                            |
-| `retries`                                                                  | [utils.RetryConfig](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                         | Configuration to override the default retry behavior of the client.        |
-| `config`                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)               | :heavy_minus_sign:                                                         | Available config options for making requests.                              |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `manualConnectionData`                                                            | [shared.ManualConnectionData](../../../sdk/models/shared/manualconnectiondata.md) | :heavy_check_mark:                                                                | N/A                                                                               |
+| `provider`                                                                        | [operations.ManualProviders](../../../sdk/models/operations/manualproviders.md)   | :heavy_check_mark:                                                                | An enumeration.                                                                   |
+| `retries`                                                                         | [utils.RetryConfig](../../internal/utils/retryconfig.md)                          | :heavy_minus_sign:                                                                | Configuration to override the default retry behavior of the client.               |
+| `config`                                                                          | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                      | :heavy_minus_sign:                                                                | Available config options for making requests.                                     |
 
 
 ### Response
 
-**Promise<[operations.ConnectBleProviderV2LinkProviderManualProviderPostResponse](../../models/operations/connectbleproviderv2linkprovidermanualproviderpostresponse.md)>**
+**Promise<[operations.ConnectBleProviderV2LinkProviderManualProviderPostResponse](../../sdk/models/operations/connectbleproviderv2linkprovidermanualproviderpostresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## connectEmailAuth
 
@@ -165,7 +176,6 @@ import { AuthType, Providers, Region } from "Vital/dist/sdk/models/shared";
     provider: Providers.BeurerBle,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -176,15 +186,20 @@ import { AuthType, Providers, Region } from "Vital/dist/sdk/models/shared";
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `request`                                                           | [shared.EmailAuthLink](../../models/shared/emailauthlink.md)        | :heavy_check_mark:                                                  | The request object to use for the request.                          |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `request`                                                           | [shared.EmailAuthLink](../../sdk/models/shared/emailauthlink.md)    | :heavy_check_mark:                                                  | The request object to use for the request.                          |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.ConnectEmailAuthV2LinkAuthEmailPostResponse](../../models/operations/connectemailauthv2linkauthemailpostresponse.md)>**
+**Promise<[operations.ConnectEmailAuthV2LinkAuthEmailPostResponse](../../sdk/models/operations/connectemailauthv2linkauthemailpostresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## connectEmailProvider
 
@@ -208,7 +223,6 @@ const provider: EmailProviders = EmailProviders.FreestyleLibre;
 
   const res = await sdk.link.connectEmailProvider(emailProviderAuthLink, provider);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -217,18 +231,23 @@ const provider: EmailProviders = EmailProviders.FreestyleLibre;
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `emailProviderAuthLink`                                                      | [shared.EmailProviderAuthLink](../../models/shared/emailproviderauthlink.md) | :heavy_check_mark:                                                           | N/A                                                                          |
-| `provider`                                                                   | [operations.EmailProviders](../../models/operations/emailproviders.md)       | :heavy_check_mark:                                                           | An enumeration.                                                              |
-| `retries`                                                                    | [utils.RetryConfig](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                           | Configuration to override the default retry behavior of the client.          |
-| `config`                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                 | :heavy_minus_sign:                                                           | Available config options for making requests.                                |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `emailProviderAuthLink`                                                             | [shared.EmailProviderAuthLink](../../../sdk/models/shared/emailproviderauthlink.md) | :heavy_check_mark:                                                                  | N/A                                                                                 |
+| `provider`                                                                          | [operations.EmailProviders](../../../sdk/models/operations/emailproviders.md)       | :heavy_check_mark:                                                                  | An enumeration.                                                                     |
+| `retries`                                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)                            | :heavy_minus_sign:                                                                  | Configuration to override the default retry behavior of the client.                 |
+| `config`                                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                        | :heavy_minus_sign:                                                                  | Available config options for making requests.                                       |
 
 
 ### Response
 
-**Promise<[operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostResponse](../../models/operations/connectemailauthproviderv2linkprovideremailproviderpostresponse.md)>**
+**Promise<[operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostResponse](../../sdk/models/operations/connectemailauthproviderv2linkprovideremailproviderpostresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## connectIndividualProvider
 
@@ -257,7 +276,6 @@ const xVitalLinkClientRegion: string = "string";
 
   const res = await sdk.link.connectIndividualProvider(individualProviderData, provider, xVitalLinkClientRegion);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -266,19 +284,24 @@ const xVitalLinkClientRegion: string = "string";
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `individualProviderData`                                                       | [shared.IndividualProviderData](../../models/shared/individualproviderdata.md) | :heavy_check_mark:                                                             | N/A                                                                            |
-| `provider`                                                                     | [operations.PasswordProviders](../../models/operations/passwordproviders.md)   | :heavy_check_mark:                                                             | An enumeration.                                                                |
-| `xVitalLinkClientRegion`                                                       | *string*                                                                       | :heavy_minus_sign:                                                             | N/A                                                                            |
-| `retries`                                                                      | [utils.RetryConfig](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                             | Configuration to override the default retry behavior of the client.            |
-| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `individualProviderData`                                                              | [shared.IndividualProviderData](../../../sdk/models/shared/individualproviderdata.md) | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `provider`                                                                            | [operations.PasswordProviders](../../../sdk/models/operations/passwordproviders.md)   | :heavy_check_mark:                                                                    | An enumeration.                                                                       |
+| `xVitalLinkClientRegion`                                                              | *string*                                                                              | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `retries`                                                                             | [utils.RetryConfig](../../internal/utils/retryconfig.md)                              | :heavy_minus_sign:                                                                    | Configuration to override the default retry behavior of the client.                   |
+| `config`                                                                              | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                          | :heavy_minus_sign:                                                                    | Available config options for making requests.                                         |
 
 
 ### Response
 
-**Promise<[operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostResponse](../../models/operations/connectindividualproviderv2linkproviderpasswordproviderpostresponse.md)>**
+**Promise<[operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostResponse](../../sdk/models/operations/connectindividualproviderv2linkproviderpasswordproviderpostresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## connectPasswordAuth
 
@@ -307,7 +330,6 @@ const xVitalLinkClientRegion: string = "string";
 
   const res = await sdk.link.connectPasswordAuth(passwordAuthLink, xVitalLinkClientRegion);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -316,18 +338,23 @@ const xVitalLinkClientRegion: string = "string";
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `passwordAuthLink`                                                  | [shared.PasswordAuthLink](../../models/shared/passwordauthlink.md)  | :heavy_check_mark:                                                  | N/A                                                                 |
-| `xVitalLinkClientRegion`                                            | *string*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
-| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `passwordAuthLink`                                                        | [shared.PasswordAuthLink](../../../sdk/models/shared/passwordauthlink.md) | :heavy_check_mark:                                                        | N/A                                                                       |
+| `xVitalLinkClientRegion`                                                  | *string*                                                                  | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `retries`                                                                 | [utils.RetryConfig](../../internal/utils/retryconfig.md)                  | :heavy_minus_sign:                                                        | Configuration to override the default retry behavior of the client.       |
+| `config`                                                                  | [AxiosRequestConfig](https://axios-http.com/docs/req_config)              | :heavy_minus_sign:                                                        | Available config options for making requests.                             |
 
 
 ### Response
 
-**Promise<[operations.ConnectPasswordAuthV2LinkAuthPostResponse](../../models/operations/connectpasswordauthv2linkauthpostresponse.md)>**
+**Promise<[operations.ConnectPasswordAuthV2LinkAuthPostResponse](../../sdk/models/operations/connectpasswordauthv2linkauthpostresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## connectProvider
 
@@ -350,7 +377,6 @@ const xVitalSDKNoRedirect: string = "string";
 
   const res = await sdk.link.connectProvider(provider, xVitalSDKNoRedirect);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -363,14 +389,19 @@ const xVitalSDKNoRedirect: string = "string";
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | `provider`                                                          | *string*                                                            | :heavy_check_mark:                                                  | Provider slug. e.g., `oura`, `fitbit`, `garmin`.                    |
 | `xVitalSDKNoRedirect`                                               | *string*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.ConnectProviderV2LinkConnectProviderGetResponse](../../models/operations/connectproviderv2linkconnectprovidergetresponse.md)>**
+**Promise<[operations.ConnectProviderV2LinkConnectProviderGetResponse](../../sdk/models/operations/connectproviderv2linkconnectprovidergetresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## createDemoConnection
 
@@ -392,7 +423,6 @@ import { DemoProviders } from "Vital/dist/sdk/models/shared";
     userId: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -401,17 +431,22 @@ import { DemoProviders } from "Vital/dist/sdk/models/shared";
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [shared.DemoConnectionCreationPayload](../../models/shared/democonnectioncreationpayload.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `retries`                                                                                    | [utils.RetryConfig](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
-| `config`                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                 | :heavy_minus_sign:                                                                           | Available config options for making requests.                                                |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [shared.DemoConnectionCreationPayload](../../sdk/models/shared/democonnectioncreationpayload.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [utils.RetryConfig](../../internal/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
 
 
 ### Response
 
-**Promise<[operations.CreateDemoConnectionV2LinkConnectDemoPostResponse](../../models/operations/createdemoconnectionv2linkconnectdemopostresponse.md)>**
+**Promise<[operations.CreateDemoConnectionV2LinkConnectDemoPostResponse](../../sdk/models/operations/createdemoconnectionv2linkconnectdemopostresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## createToken
 
@@ -432,7 +467,6 @@ const expiresAt: Date = new Date("2021-12-10T10:53:22.771Z");
 
   const res = await sdk.link.createToken(userId, expiresAt);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -445,14 +479,19 @@ const expiresAt: Date = new Date("2021-12-10T10:53:22.771Z");
 | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
 | `userId`                                                                                      | *string*                                                                                      | :heavy_check_mark:                                                                            | N/A                                                                                           |
 | `expiresAt`                                                                                   | [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) | :heavy_minus_sign:                                                                            | N/A                                                                                           |
-| `retries`                                                                                     | [utils.RetryConfig](../../models/utils/retryconfig.md)                                        | :heavy_minus_sign:                                                                            | Configuration to override the default retry behavior of the client.                           |
+| `retries`                                                                                     | [utils.RetryConfig](../../internal/utils/retryconfig.md)                                      | :heavy_minus_sign:                                                                            | Configuration to override the default retry behavior of the client.                           |
 | `config`                                                                                      | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                  | :heavy_minus_sign:                                                                            | Available config options for making requests.                                                 |
 
 
 ### Response
 
-**Promise<[operations.CreateTokenV2LinkCodeCreatePostResponse](../../models/operations/createtokenv2linkcodecreatepostresponse.md)>**
+**Promise<[operations.CreateTokenV2LinkCodeCreatePostResponse](../../sdk/models/operations/createtokenv2linkcodecreatepostresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## exchangeToken
 
@@ -472,7 +511,6 @@ const code: string = "string";
 
   const res = await sdk.link.exchangeToken(code);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -484,14 +522,19 @@ const code: string = "string";
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | `code`                                                              | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.ExchangeTokenV2LinkCodeExchangePostResponse](../../models/operations/exchangetokenv2linkcodeexchangepostresponse.md)>**
+**Promise<[operations.ExchangeTokenV2LinkCodeExchangePostResponse](../../sdk/models/operations/exchangetokenv2linkcodeexchangepostresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## generate
 
@@ -520,7 +563,6 @@ import { Providers } from "Vital/dist/sdk/models/shared";
     userKey: "8785044a-13a2-491c-af01-0449531f483f",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -529,17 +571,22 @@ import { Providers } from "Vital/dist/sdk/models/shared";
 
 ### Parameters
 
-| Parameter                                                            | Type                                                                 | Required                                                             | Description                                                          |
-| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| `request`                                                            | [shared.LinkTokenExchange](../../models/shared/linktokenexchange.md) | :heavy_check_mark:                                                   | The request object to use for the request.                           |
-| `retries`                                                            | [utils.RetryConfig](../../models/utils/retryconfig.md)               | :heavy_minus_sign:                                                   | Configuration to override the default retry behavior of the client.  |
-| `config`                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)         | :heavy_minus_sign:                                                   | Available config options for making requests.                        |
+| Parameter                                                                | Type                                                                     | Required                                                                 | Description                                                              |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `request`                                                                | [shared.LinkTokenExchange](../../sdk/models/shared/linktokenexchange.md) | :heavy_check_mark:                                                       | The request object to use for the request.                               |
+| `retries`                                                                | [utils.RetryConfig](../../internal/utils/retryconfig.md)                 | :heavy_minus_sign:                                                       | Configuration to override the default retry behavior of the client.      |
+| `config`                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)             | :heavy_minus_sign:                                                       | Available config options for making requests.                            |
 
 
 ### Response
 
-**Promise<[operations.GenerateVitalLinkTokenV2LinkTokenPostResponse](../../models/operations/generatevitallinktokenv2linktokenpostresponse.md)>**
+**Promise<[operations.GenerateVitalLinkTokenV2LinkTokenPostResponse](../../sdk/models/operations/generatevitallinktokenv2linktokenpostresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## getOauthProvider
 
@@ -560,7 +607,6 @@ const oauthProvider: OAuthProviders = OAuthProviders.Polar;
 
   const res = await sdk.link.getOauthProvider(oauthProvider);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -569,17 +615,22 @@ const oauthProvider: OAuthProviders = OAuthProviders.Polar;
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `oauthProvider`                                                     | [shared.OAuthProviders](../../models/shared/oauthproviders.md)      | :heavy_check_mark:                                                  | An enumeration.                                                     |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
-| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `oauthProvider`                                                       | [shared.OAuthProviders](../../../sdk/models/shared/oauthproviders.md) | :heavy_check_mark:                                                    | An enumeration.                                                       |
+| `retries`                                                             | [utils.RetryConfig](../../internal/utils/retryconfig.md)              | :heavy_minus_sign:                                                    | Configuration to override the default retry behavior of the client.   |
+| `config`                                                              | [AxiosRequestConfig](https://axios-http.com/docs/req_config)          | :heavy_minus_sign:                                                    | Available config options for making requests.                         |
 
 
 ### Response
 
-**Promise<[operations.GetOauthProviderV2LinkProviderOauthOauthProviderGetResponse](../../models/operations/getoauthproviderv2linkprovideroauthoauthprovidergetresponse.md)>**
+**Promise<[operations.GetOauthProviderV2LinkProviderOauthOauthProviderGetResponse](../../sdk/models/operations/getoauthproviderv2linkprovideroauthoauthprovidergetresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## getProviders
 
@@ -597,7 +648,6 @@ import { Vital } from "Vital";
 
   const res = await sdk.link.getProviders();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -608,14 +658,18 @@ import { Vital } from "Vital";
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.GetProvidersV2LinkProvidersGetResponse](../../models/operations/getprovidersv2linkprovidersgetresponse.md)>**
+**Promise<[operations.GetProvidersV2LinkProvidersGetResponse](../../sdk/models/operations/getprovidersv2linkprovidersgetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## startConnectProcess
 
@@ -638,7 +692,6 @@ import { Providers } from "Vital/dist/sdk/models/shared";
     provider: Providers.Peloton,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -647,14 +700,19 @@ import { Providers } from "Vital/dist/sdk/models/shared";
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `request`                                                                    | [shared.BeginLinkTokenRequest](../../models/shared/beginlinktokenrequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
-| `retries`                                                                    | [utils.RetryConfig](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                           | Configuration to override the default retry behavior of the client.          |
-| `config`                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                 | :heavy_minus_sign:                                                           | Available config options for making requests.                                |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [shared.BeginLinkTokenRequest](../../sdk/models/shared/beginlinktokenrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `retries`                                                                        | [utils.RetryConfig](../../internal/utils/retryconfig.md)                         | :heavy_minus_sign:                                                               | Configuration to override the default retry behavior of the client.              |
+| `config`                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                     | :heavy_minus_sign:                                                               | Available config options for making requests.                                    |
 
 
 ### Response
 
-**Promise<[operations.StartConnectProcessV2LinkStartPostResponse](../../models/operations/startconnectprocessv2linkstartpostresponse.md)>**
+**Promise<[operations.StartConnectProcessV2LinkStartPostResponse](../../sdk/models/operations/startconnectprocessv2linkstartpostresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |

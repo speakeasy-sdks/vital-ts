@@ -2,15 +2,15 @@ configVersion: 1.0.0
 management:
   docChecksum: bb5e24e31da8cd0edd3f729393024103
   docVersion: 0.0.0-dev.f0ab7c6
-  speakeasyVersion: 1.114.1
-  generationVersion: 2.181.1
+  speakeasyVersion: 1.116.0
+  generationVersion: 2.185.0
 generation:
   comments: {}
   sdkClassName: vital
   repoURL: https://github.com/speakeasy-sdks/vital-ts.git
 features:
   typescript:
-    core: 3.1.0
+    core: 3.1.2
     deprecations: 2.81.1
     examples: 2.81.3
     flattening: 2.81.1
@@ -19,7 +19,7 @@ features:
     nameOverrides: 2.81.1
     retries: 2.82.1
 typescript:
-  version: 0.6.0
+  version: 0.6.1
   author: vital
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
@@ -31,7 +31,9 @@ typescript:
       operations: sdk/models/operations
       shared: sdk/models/shared
       webhooks: sdk/models/webhooks
+  inputModelSuffix: input
   installationURL: https://github.com/speakeasy-sdks/vital-ts
   maxMethodParams: 4
+  outputModelSuffix: output
   packageName: Vital
   repoSubDirectory: .
