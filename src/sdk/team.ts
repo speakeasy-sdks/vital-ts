@@ -90,7 +90,7 @@ export class Team {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -99,17 +99,17 @@ export class Team {
         const res: operations.CreateTeamV2TeamPostResponse =
             new operations.CreateTeamV2TeamPostResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.teamInDB = utils.objectToClass(JSON.parse(decodedRes), shared.TeamInDB);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -117,7 +117,7 @@ export class Team {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -126,7 +126,7 @@ export class Team {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -221,7 +221,7 @@ export class Team {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -230,17 +230,17 @@ export class Team {
         const res: operations.CreateApiKeyV2TeamTeamIdApikeyPostResponse =
             new operations.CreateApiKeyV2TeamTeamIdApikeyPostResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.apiKeyInDB = utils.objectToClass(JSON.parse(decodedRes), shared.ApiKeyInDB);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -248,7 +248,7 @@ export class Team {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -257,7 +257,7 @@ export class Team {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -352,7 +352,7 @@ export class Team {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -361,17 +361,17 @@ export class Team {
         const res: operations.CreatePriorityV2TeamTeamIdPriorityPostResponse =
             new operations.CreatePriorityV2TeamTeamIdPriorityPostResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.priority = utils.objectToClass(JSON.parse(decodedRes), shared.Priority);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -379,7 +379,7 @@ export class Team {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -388,7 +388,7 @@ export class Team {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -471,7 +471,7 @@ export class Team {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -480,17 +480,17 @@ export class Team {
         const res: operations.DeleteApiKeyV2TeamTeamIdApikeyApiKeyIdDeleteResponse =
             new operations.DeleteApiKeyV2TeamTeamIdApikeyApiKeyIdDeleteResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.apiKeyInDB = utils.objectToClass(JSON.parse(decodedRes), shared.ApiKeyInDB);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -498,7 +498,7 @@ export class Team {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -507,7 +507,7 @@ export class Team {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -584,7 +584,7 @@ export class Team {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -593,20 +593,20 @@ export class Team {
         const res: operations.GetTeamV2TeamTeamIdGetResponse =
             new operations.GetTeamV2TeamTeamIdGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.clientFacingTeam = utils.objectToClass(
                         JSON.parse(decodedRes),
                         shared.ClientFacingTeam
                     );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -614,7 +614,7 @@ export class Team {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -623,7 +623,7 @@ export class Team {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -700,7 +700,7 @@ export class Team {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -709,13 +709,13 @@ export class Team {
         const res: operations.GetApiKeysForTeamV2TeamTeamIdApikeysGetResponse =
             new operations.GetApiKeysForTeamV2TeamTeamIdApikeysGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetApiKeysForTeamV2TeamTeamIdApikeysGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseGetApiKeysForTeamV2TeamTeamIdApikeysGet = utils.objectToClass(
@@ -725,7 +725,7 @@ export class Team {
                     );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -733,7 +733,7 @@ export class Team {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -742,7 +742,7 @@ export class Team {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -815,7 +815,7 @@ export class Team {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -824,20 +824,20 @@ export class Team {
         const res: operations.GetTeamConfigV2TeamLinkConfigGetResponse =
             new operations.GetTeamConfigV2TeamLinkConfigGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetTeamConfigV2TeamLinkConfigGet = utils.objectToClass(
                         JSON.parse(decodedRes),
                         operations.GetTeamConfigV2TeamLinkConfigGetResponseGetTeamConfigV2TeamLinkConfigGet
                     );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -915,7 +915,7 @@ export class Team {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -924,13 +924,13 @@ export class Team {
         const res: operations.GetSourcePrioritiesV2TeamSourcePrioritiesGetResponse =
             new operations.GetSourcePrioritiesV2TeamSourcePrioritiesGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetSourcePrioritiesV2TeamSourcePrioritiesGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseGetSourcePrioritiesV2TeamSourcePrioritiesGet = utils.objectToClass(
@@ -940,7 +940,7 @@ export class Team {
                     );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -948,7 +948,7 @@ export class Team {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -957,7 +957,7 @@ export class Team {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1038,7 +1038,7 @@ export class Team {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -1047,20 +1047,20 @@ export class Team {
         const res: operations.GetTeamUserCountV2TeamTeamIdUsersCountGetResponse =
             new operations.GetTeamUserCountV2TeamTeamIdUsersCountGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetTeamUserCountV2TeamTeamIdUsersCountGet = utils.objectToClass(
                         JSON.parse(decodedRes),
                         operations.GetTeamUserCountV2TeamTeamIdUsersCountGetResponseGetTeamUserCountV2TeamTeamIdUsersCountGet
                     );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1068,7 +1068,7 @@ export class Team {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -1077,7 +1077,7 @@ export class Team {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1147,7 +1147,7 @@ export class Team {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -1156,20 +1156,20 @@ export class Team {
         const res: operations.GetSvixWebhookUrlV2TeamSvixUrlGetResponse =
             new operations.GetSvixWebhookUrlV2TeamSvixUrlGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetSvixWebhookUrlV2TeamSvixUrlGet = utils.objectToClass(
                         JSON.parse(decodedRes),
                         operations.GetSvixWebhookUrlV2TeamSvixUrlGetResponseGetSvixWebhookUrlV2TeamSvixUrlGet
                     );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1252,7 +1252,7 @@ export class Team {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -1261,17 +1261,17 @@ export class Team {
         const res: operations.RotateApiKeyV2TeamTeamIdApikeyApiKeyIdRotatePatchResponse =
             new operations.RotateApiKeyV2TeamTeamIdApikeyApiKeyIdRotatePatchResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.apiKeyInDB = utils.objectToClass(JSON.parse(decodedRes), shared.ApiKeyInDB);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1279,7 +1279,7 @@ export class Team {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -1288,7 +1288,7 @@ export class Team {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1366,7 +1366,7 @@ export class Team {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -1375,13 +1375,13 @@ export class Team {
         const res: operations.SearchTeamUsersByUuidOrClientUserIdV2TeamUsersSearchGetResponse =
             new operations.SearchTeamUsersByUuidOrClientUserIdV2TeamUsersSearchGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseSearchTeamUsersByUuidOrClientUserIdV2TeamUsersSearchGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseSearchTeamUsersByUuidOrClientUserIdV2TeamUsersSearchGet =
@@ -1392,7 +1392,7 @@ export class Team {
                         );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1400,7 +1400,7 @@ export class Team {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -1409,7 +1409,7 @@ export class Team {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1510,7 +1510,7 @@ export class Team {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -1519,17 +1519,17 @@ export class Team {
         const res: operations.UpdateApiKeyLabelV2TeamTeamIdApikeyApiKeyIdPatchResponse =
             new operations.UpdateApiKeyLabelV2TeamTeamIdApikeyApiKeyIdPatchResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.apiKeyInDB = utils.objectToClass(JSON.parse(decodedRes), shared.ApiKeyInDB);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1537,7 +1537,7 @@ export class Team {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -1546,7 +1546,7 @@ export class Team {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1624,7 +1624,7 @@ export class Team {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -1633,13 +1633,13 @@ export class Team {
         const res: operations.UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchResponse =
             new operations.UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseUpdateSourcePrioritiesV2TeamSourcePrioritiesPatch = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseUpdateSourcePrioritiesV2TeamSourcePrioritiesPatch =
@@ -1650,7 +1650,7 @@ export class Team {
                         );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1658,7 +1658,7 @@ export class Team {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -1667,7 +1667,7 @@ export class Team {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1762,7 +1762,7 @@ export class Team {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -1771,17 +1771,17 @@ export class Team {
         const res: operations.UpdateTeamV2TeamTeamIdPatchResponse =
             new operations.UpdateTeamV2TeamTeamIdPatchResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.teamInDB = utils.objectToClass(JSON.parse(decodedRes), shared.TeamInDB);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1789,7 +1789,7 @@ export class Team {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -1798,7 +1798,7 @@ export class Team {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes

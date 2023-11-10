@@ -71,7 +71,7 @@ export class Insurance {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -80,13 +80,13 @@ export class Insurance {
         const res: operations.SearchDiagnosisV3InsuranceSearchDiagnosisGetResponse =
             new operations.SearchDiagnosisV3InsuranceSearchDiagnosisGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseSearchDiagnosisV3InsuranceSearchDiagnosisGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseSearchDiagnosisV3InsuranceSearchDiagnosisGet = utils.objectToClass(
@@ -96,7 +96,7 @@ export class Insurance {
                     );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -104,7 +104,7 @@ export class Insurance {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -113,7 +113,7 @@ export class Insurance {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -204,7 +204,7 @@ export class Insurance {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -213,13 +213,13 @@ export class Insurance {
         const res: operations.SearchInsurancePayorInformationV3InsuranceSearchPayorPostResponse =
             new operations.SearchInsurancePayorInformationV3InsuranceSearchPayorPostResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseSearchInsurancePayorInformationV3InsuranceSearchPayorPost = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseSearchInsurancePayorInformationV3InsuranceSearchPayorPost =
@@ -230,7 +230,7 @@ export class Insurance {
                         );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -238,7 +238,7 @@ export class Insurance {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -247,7 +247,7 @@ export class Insurance {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes

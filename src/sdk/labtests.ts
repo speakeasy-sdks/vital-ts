@@ -87,7 +87,7 @@ export class LabTests {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -96,20 +96,20 @@ export class LabTests {
         const res: operations.CreateLabTestForTeamV3LabTestsPostResponse =
             new operations.CreateLabTestForTeamV3LabTestsPostResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.clientFacingLabTest = utils.objectToClass(
                         JSON.parse(decodedRes),
                         shared.ClientFacingLabTest
                     );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -117,7 +117,7 @@ export class LabTests {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -126,7 +126,7 @@ export class LabTests {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -199,7 +199,7 @@ export class LabTests {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -208,13 +208,13 @@ export class LabTests {
         const res: operations.GetLabsV3LabTestsLabsGetResponse =
             new operations.GetLabsV3LabTestsLabsGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetLabsV3LabTestsLabsGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseGetLabsV3LabTestsLabsGet = utils.objectToClass(
@@ -224,7 +224,7 @@ export class LabTests {
                     );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -309,7 +309,7 @@ export class LabTests {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -318,20 +318,20 @@ export class LabTests {
         const res: operations.GetMarkersByProviderIdV3LabTestsLabIdMarkersProviderIdGetResponse =
             new operations.GetMarkersByProviderIdV3LabTestsLabIdMarkersProviderIdGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.clientFacingMarker = utils.objectToClass(
                         JSON.parse(decodedRes),
                         shared.ClientFacingMarker
                     );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -339,7 +339,7 @@ export class LabTests {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -348,7 +348,7 @@ export class LabTests {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -432,7 +432,7 @@ export class LabTests {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -441,20 +441,20 @@ export class LabTests {
         const res: operations.GetMarkersV3LabTestsMarkersGetResponse =
             new operations.GetMarkersV3LabTestsMarkersGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.getMarkersResponse = utils.objectToClass(
                         JSON.parse(decodedRes),
                         shared.GetMarkersResponse
                     );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -462,7 +462,7 @@ export class LabTests {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -471,7 +471,7 @@ export class LabTests {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -544,7 +544,7 @@ export class LabTests {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -553,13 +553,13 @@ export class LabTests {
         const res: operations.GetLabTestsForTeamV3LabTestsGetResponse =
             new operations.GetLabTestsForTeamV3LabTestsGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetLabTestsForTeamV3LabTestsGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseGetLabTestsForTeamV3LabTestsGet = utils.objectToClass(
@@ -569,7 +569,7 @@ export class LabTests {
                     );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes

@@ -86,7 +86,7 @@ export class Timeseries {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -95,13 +95,13 @@ export class Timeseries {
         const res: operations.GetTimeseriesResourceDataV2TimeseriesUserIdBloodOxygenGetResponse =
             new operations.GetTimeseriesResourceDataV2TimeseriesUserIdBloodOxygenGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdBloodOxygenGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdBloodOxygenGet =
@@ -112,7 +112,7 @@ export class Timeseries {
                         );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -120,7 +120,7 @@ export class Timeseries {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -129,7 +129,7 @@ export class Timeseries {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -218,7 +218,7 @@ export class Timeseries {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -227,13 +227,13 @@ export class Timeseries {
         const res: operations.GetTimeseriesResourceDataV2TimeseriesUserIdBloodPressureGetResponse =
             new operations.GetTimeseriesResourceDataV2TimeseriesUserIdBloodPressureGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdBloodPressureGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdBloodPressureGet =
@@ -244,7 +244,7 @@ export class Timeseries {
                         );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -252,7 +252,7 @@ export class Timeseries {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -261,7 +261,7 @@ export class Timeseries {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -349,7 +349,7 @@ export class Timeseries {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -358,13 +358,13 @@ export class Timeseries {
         const res: operations.GetTimeseriesResourceDataV2TimeseriesUserIdCaffeineGetResponse =
             new operations.GetTimeseriesResourceDataV2TimeseriesUserIdCaffeineGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCaffeineGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCaffeineGet =
@@ -375,7 +375,7 @@ export class Timeseries {
                         );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -383,7 +383,7 @@ export class Timeseries {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -392,7 +392,7 @@ export class Timeseries {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -481,7 +481,7 @@ export class Timeseries {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -490,13 +490,13 @@ export class Timeseries {
         const res: operations.GetTimeseriesResourceDataV2TimeseriesUserIdCaloriesActiveGetResponse =
             new operations.GetTimeseriesResourceDataV2TimeseriesUserIdCaloriesActiveGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCaloriesActiveGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCaloriesActiveGet =
@@ -507,7 +507,7 @@ export class Timeseries {
                         );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -515,7 +515,7 @@ export class Timeseries {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -524,7 +524,7 @@ export class Timeseries {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -613,7 +613,7 @@ export class Timeseries {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -622,13 +622,13 @@ export class Timeseries {
         const res: operations.GetTimeseriesResourceDataV2TimeseriesUserIdCaloriesBasalGetResponse =
             new operations.GetTimeseriesResourceDataV2TimeseriesUserIdCaloriesBasalGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCaloriesBasalGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCaloriesBasalGet =
@@ -639,7 +639,7 @@ export class Timeseries {
                         );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -647,7 +647,7 @@ export class Timeseries {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -656,7 +656,7 @@ export class Timeseries {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -746,7 +746,7 @@ export class Timeseries {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -755,13 +755,13 @@ export class Timeseries {
         const res: operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolGetResponse =
             new operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCholesterolGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCholesterolGet =
@@ -772,7 +772,7 @@ export class Timeseries {
                         );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -780,7 +780,7 @@ export class Timeseries {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -789,7 +789,7 @@ export class Timeseries {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -878,7 +878,7 @@ export class Timeseries {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -887,13 +887,13 @@ export class Timeseries {
         const res: operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolHdlGetResponse =
             new operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolHdlGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCholesterolHdlGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCholesterolHdlGet =
@@ -904,7 +904,7 @@ export class Timeseries {
                         );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -912,7 +912,7 @@ export class Timeseries {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -921,7 +921,7 @@ export class Timeseries {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1010,7 +1010,7 @@ export class Timeseries {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -1019,13 +1019,13 @@ export class Timeseries {
         const res: operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolLdlGetResponse =
             new operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolLdlGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCholesterolLdlGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCholesterolLdlGet =
@@ -1036,7 +1036,7 @@ export class Timeseries {
                         );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1044,7 +1044,7 @@ export class Timeseries {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -1053,7 +1053,7 @@ export class Timeseries {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1141,7 +1141,7 @@ export class Timeseries {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -1150,13 +1150,13 @@ export class Timeseries {
         const res: operations.GetTimeseriesResourceDataV2TimeseriesUserIdDistanceGetResponse =
             new operations.GetTimeseriesResourceDataV2TimeseriesUserIdDistanceGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdDistanceGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdDistanceGet =
@@ -1167,7 +1167,7 @@ export class Timeseries {
                         );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1175,7 +1175,7 @@ export class Timeseries {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -1184,7 +1184,7 @@ export class Timeseries {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1273,7 +1273,7 @@ export class Timeseries {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -1282,13 +1282,13 @@ export class Timeseries {
         const res: operations.GetTimeseriesResourceDataV2TimeseriesUserIdFloorsClimbedGetResponse =
             new operations.GetTimeseriesResourceDataV2TimeseriesUserIdFloorsClimbedGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdFloorsClimbedGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdFloorsClimbedGet =
@@ -1299,7 +1299,7 @@ export class Timeseries {
                         );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1307,7 +1307,7 @@ export class Timeseries {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -1316,7 +1316,7 @@ export class Timeseries {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1404,7 +1404,7 @@ export class Timeseries {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -1413,13 +1413,13 @@ export class Timeseries {
         const res: operations.GetTimeseriesResourceDataV2TimeseriesUserIdGlucoseGetResponse =
             new operations.GetTimeseriesResourceDataV2TimeseriesUserIdGlucoseGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdGlucoseGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdGlucoseGet =
@@ -1430,7 +1430,7 @@ export class Timeseries {
                         );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1438,7 +1438,7 @@ export class Timeseries {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -1447,7 +1447,7 @@ export class Timeseries {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1535,7 +1535,7 @@ export class Timeseries {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -1544,13 +1544,13 @@ export class Timeseries {
         const res: operations.GetTimeseriesResourceDataV2TimeseriesUserIdHeartrateGetResponse =
             new operations.GetTimeseriesResourceDataV2TimeseriesUserIdHeartrateGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdHeartrateGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdHeartrateGet =
@@ -1561,7 +1561,7 @@ export class Timeseries {
                         );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1569,7 +1569,7 @@ export class Timeseries {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -1578,7 +1578,7 @@ export class Timeseries {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1666,7 +1666,7 @@ export class Timeseries {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -1675,13 +1675,13 @@ export class Timeseries {
         const res: operations.GetTimeseriesResourceDataV2TimeseriesUserIdHrvGetResponse =
             new operations.GetTimeseriesResourceDataV2TimeseriesUserIdHrvGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdHrvGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdHrvGet =
@@ -1692,7 +1692,7 @@ export class Timeseries {
                         );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1700,7 +1700,7 @@ export class Timeseries {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -1709,7 +1709,7 @@ export class Timeseries {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1797,7 +1797,7 @@ export class Timeseries {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -1806,13 +1806,13 @@ export class Timeseries {
         const res: operations.GetTimeseriesResourceDataV2TimeseriesUserIdHypnogramGetResponse =
             new operations.GetTimeseriesResourceDataV2TimeseriesUserIdHypnogramGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdHypnogramGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdHypnogramGet =
@@ -1823,7 +1823,7 @@ export class Timeseries {
                         );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1831,7 +1831,7 @@ export class Timeseries {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -1840,7 +1840,7 @@ export class Timeseries {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1928,7 +1928,7 @@ export class Timeseries {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -1937,13 +1937,13 @@ export class Timeseries {
         const res: operations.GetTimeseriesResourceDataV2TimeseriesUserIdIgeGetResponse =
             new operations.GetTimeseriesResourceDataV2TimeseriesUserIdIgeGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdIgeGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdIgeGet =
@@ -1954,7 +1954,7 @@ export class Timeseries {
                         );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -1962,7 +1962,7 @@ export class Timeseries {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -1971,7 +1971,7 @@ export class Timeseries {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -2059,7 +2059,7 @@ export class Timeseries {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -2068,13 +2068,13 @@ export class Timeseries {
         const res: operations.GetTimeseriesResourceDataV2TimeseriesUserIdIggGetResponse =
             new operations.GetTimeseriesResourceDataV2TimeseriesUserIdIggGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdIggGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdIggGet =
@@ -2085,7 +2085,7 @@ export class Timeseries {
                         );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -2093,7 +2093,7 @@ export class Timeseries {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -2102,7 +2102,7 @@ export class Timeseries {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -2191,7 +2191,7 @@ export class Timeseries {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -2201,14 +2201,14 @@ export class Timeseries {
             new operations.GetTimeseriesResourceDataV2TimeseriesUserIdMindfulnessMinutesGetResponse(
                 {
                     statusCode: httpRes.status,
-                    contentType: contentType,
+                    contentType: responseContentType,
                     rawResponse: httpRes,
                 }
             );
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdMindfulnessMinutesGet =
                         [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
@@ -2220,7 +2220,7 @@ export class Timeseries {
                         );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -2228,7 +2228,7 @@ export class Timeseries {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -2237,7 +2237,7 @@ export class Timeseries {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -2326,7 +2326,7 @@ export class Timeseries {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -2335,13 +2335,13 @@ export class Timeseries {
         const res: operations.GetTimeseriesResourceDataV2TimeseriesUserIdRespiratoryRateGetResponse =
             new operations.GetTimeseriesResourceDataV2TimeseriesUserIdRespiratoryRateGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdRespiratoryRateGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdRespiratoryRateGet =
@@ -2352,7 +2352,7 @@ export class Timeseries {
                         );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -2360,7 +2360,7 @@ export class Timeseries {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -2369,7 +2369,7 @@ export class Timeseries {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -2457,7 +2457,7 @@ export class Timeseries {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -2466,13 +2466,13 @@ export class Timeseries {
         const res: operations.GetTimeseriesResourceDataV2TimeseriesUserIdStepsGetResponse =
             new operations.GetTimeseriesResourceDataV2TimeseriesUserIdStepsGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdStepsGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdStepsGet =
@@ -2483,7 +2483,7 @@ export class Timeseries {
                         );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -2491,7 +2491,7 @@ export class Timeseries {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -2500,7 +2500,7 @@ export class Timeseries {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -2589,7 +2589,7 @@ export class Timeseries {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -2598,13 +2598,13 @@ export class Timeseries {
         const res: operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolTotalGetResponse =
             new operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolTotalGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCholesterolTotalGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCholesterolTotalGet =
@@ -2615,7 +2615,7 @@ export class Timeseries {
                         );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -2623,7 +2623,7 @@ export class Timeseries {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -2632,7 +2632,7 @@ export class Timeseries {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -2723,7 +2723,7 @@ export class Timeseries {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -2733,14 +2733,14 @@ export class Timeseries {
             new operations.GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolTriglyceridesGetResponse(
                 {
                     statusCode: httpRes.status,
-                    contentType: contentType,
+                    contentType: responseContentType,
                     rawResponse: httpRes,
                 }
             );
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdCholesterolTriglyceridesGet =
                         [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
@@ -2752,7 +2752,7 @@ export class Timeseries {
                         );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -2760,7 +2760,7 @@ export class Timeseries {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -2769,7 +2769,7 @@ export class Timeseries {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -2850,7 +2850,7 @@ export class Timeseries {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -2859,20 +2859,20 @@ export class Timeseries {
         const res: operations.GetUserSleepStreamV2TimeseriesSleepSleepIdStreamGetResponse =
             new operations.GetUserSleepStreamV2TimeseriesSleepSleepIdStreamGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.clientFacingSleepStream = utils.objectToClass(
                         JSON.parse(decodedRes),
                         shared.ClientFacingSleepStream
                     );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -2880,7 +2880,7 @@ export class Timeseries {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -2889,7 +2889,7 @@ export class Timeseries {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -2967,7 +2967,7 @@ export class Timeseries {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -2976,20 +2976,20 @@ export class Timeseries {
         const res: operations.GetUserWorkoutsV2TimeseriesWorkoutsWorkoutIdStreamGetResponse =
             new operations.GetUserWorkoutsV2TimeseriesWorkoutsWorkoutIdStreamGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.clientFacingStream = utils.objectToClass(
                         JSON.parse(decodedRes),
                         shared.ClientFacingStream
                     );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -2997,7 +2997,7 @@ export class Timeseries {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -3006,7 +3006,7 @@ export class Timeseries {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -3094,7 +3094,7 @@ export class Timeseries {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -3103,13 +3103,13 @@ export class Timeseries {
         const res: operations.GetTimeseriesResourceDataV2TimeseriesUserIdWaterGetResponse =
             new operations.GetTimeseriesResourceDataV2TimeseriesUserIdWaterGetResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdWaterGet = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.responseGetTimeseriesResourceDataV2TimeseriesUserIdWaterGet =
@@ -3120,7 +3120,7 @@ export class Timeseries {
                         );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -3128,7 +3128,7 @@ export class Timeseries {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -3137,7 +3137,7 @@ export class Timeseries {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -3223,7 +3223,7 @@ export class Timeseries {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -3232,18 +3232,18 @@ export class Timeseries {
         const res: operations.PostUserBloodPressureV2TimeseriesUserIdBloodPressurePostResponse =
             new operations.PostUserBloodPressureV2TimeseriesUserIdBloodPressurePostResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responsePostUserBloodPressureV2TimeseriesUserIdBloodPressurePost =
                         decodedRes;
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -3251,7 +3251,7 @@ export class Timeseries {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -3260,7 +3260,7 @@ export class Timeseries {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -3348,7 +3348,7 @@ export class Timeseries {
             });
         }, new utils.Retries(retryConfig, ["5XX"]));
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -3357,17 +3357,17 @@ export class Timeseries {
         const res: operations.PostUserVitalsV2TimeseriesUserIdResourcePostResponse =
             new operations.PostUserVitalsV2TimeseriesUserIdResourcePostResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responsePostUserVitalsV2TimeseriesUserIdResourcePost = decodedRes;
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -3375,7 +3375,7 @@ export class Timeseries {
                 }
                 break;
             case httpRes?.status == 422:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
                         errors.HTTPValidationError
@@ -3384,7 +3384,7 @@ export class Timeseries {
                     throw new errors.HTTPValidationError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
