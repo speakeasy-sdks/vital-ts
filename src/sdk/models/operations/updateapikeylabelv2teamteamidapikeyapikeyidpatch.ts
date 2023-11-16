@@ -40,5 +40,5 @@ export class UpdateApiKeyLabelV2TeamTeamIdApikeyApiKeyIdPatchResponse extends Sp
      * Raw HTTP response; suitable for custom response parsing
      */
     @SpeakeasyMetadata()
-    rawResponse?: AxiosResponse;
+    rawResponse: AxiosResponse;
 }

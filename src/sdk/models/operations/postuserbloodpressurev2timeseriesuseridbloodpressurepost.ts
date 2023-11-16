@@ -41,5 +41,5 @@ export class PostUserBloodPressureV2TimeseriesUserIdBloodPressurePostResponse ex
      * Raw HTTP response; suitable for custom response parsing
      */
     @SpeakeasyMetadata()
-    rawResponse?: AxiosResponse;
+    rawResponse: AxiosResponse;
 }

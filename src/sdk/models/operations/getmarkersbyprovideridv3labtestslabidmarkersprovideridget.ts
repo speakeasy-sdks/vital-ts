@@ -37,5 +37,5 @@ export class GetMarkersByProviderIdV3LabTestsLabIdMarkersProviderIdGetResponse e
      * Raw HTTP response; suitable for custom response parsing
      */
     @SpeakeasyMetadata()
-    rawResponse?: AxiosResponse;
+    rawResponse: AxiosResponse;
 }
