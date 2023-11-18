@@ -158,6 +158,7 @@ export * from "./userpatchbody";
 export * from "./userrefreshsuccessresponse";
 export * from "./usersignintokenresponse";
 export * from "./usersuccessresponse";
+export * from "./validationerror";
 export * from "./vitaltokencreatedresponse";
 export * from "./vitaltokenexchangeresponse";
 export * from "./vitaltokenexchangeteamresponse";

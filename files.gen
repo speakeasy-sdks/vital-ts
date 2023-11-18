@@ -147,8 +147,8 @@ src/sdk/models/operations/reschedulephlebotomyappointmentv3orderorderidphlebotom
 src/sdk/models/operations/synctestkitorderstatusv3ordertestkitstatuspost.ts
 src/sdk/models/operations/getordersv3ordersget.ts
 src/sdk/models/errors/httpvalidationerror.ts
-src/sdk/models/errors/validationerror.ts
 src/sdk/models/errors/userrefresherrorresponse.ts
+src/sdk/models/shared/validationerror.ts
 src/sdk/models/shared/linktokenbase.ts
 src/sdk/models/shared/manualconnectiondata.ts
 src/sdk/models/shared/connectionstatus.ts
@@ -535,8 +535,8 @@ docs/sdk/models/operations/synctestkitorderstatusv3ordertestkitstatuspostrespons
 docs/sdk/models/operations/getordersv3ordersgetrequest.md
 docs/sdk/models/operations/getordersv3ordersgetresponse.md
 docs/sdk/models/errors/httpvalidationerror.md
-docs/sdk/models/errors/validationerror.md
 docs/sdk/models/errors/userrefresherrorresponse.md
+docs/sdk/models/shared/validationerror.md
 docs/sdk/models/shared/oauthinfo.md
 docs/sdk/models/shared/linktokenbase.md
 docs/sdk/models/shared/manualconnectiondata.md
