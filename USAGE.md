@@ -1,9 +1,9 @@
-<!-- Start SDK Example Usage -->
+<!-- Start SDK Example Usage [usage] -->
 ```typescript
 import { Vital } from "Vital";
 import { SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async () => {
+async function run() {
     const sdk = new Vital({
         apiKey: "<YOUR-API-KEY>",
     });
@@ -14,7 +14,9 @@ import { SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest } from "Vital/dist/
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->

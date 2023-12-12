@@ -29,7 +29,7 @@ Create Team.
 import { Vital } from "Vital";
 import { PhysicianNetworkT } from "Vital/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -48,7 +48,9 @@ import { PhysicianNetworkT } from "Vital/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -81,7 +83,7 @@ import { Vital } from "Vital";
 import { CreateApiKeyV2TeamTeamIdApikeyPostRequest } from "Vital/dist/sdk/models/operations";
 import { CreateApiKeyBody } from "Vital/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -95,17 +97,19 @@ const teamId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `createApiKeyBody`                                                        | [shared.CreateApiKeyBody](../../../sdk/models/shared/createapikeybody.md) | :heavy_check_mark:                                                        | N/A                                                                       |
-| `teamId`                                                                  | *string*                                                                  | :heavy_check_mark:                                                        | N/A                                                                       |
-| `retries`                                                                 | [utils.RetryConfig](../../internal/utils/retryconfig.md)                  | :heavy_minus_sign:                                                        | Configuration to override the default retry behavior of the client.       |
-| `config`                                                                  | [AxiosRequestConfig](https://axios-http.com/docs/req_config)              | :heavy_minus_sign:                                                        | Available config options for making requests.                             |
+| Parameter                                                              | Type                                                                   | Required                                                               | Description                                                            |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `createApiKeyBody`                                                     | [shared.CreateApiKeyBody](../../sdk/models/shared/createapikeybody.md) | :heavy_check_mark:                                                     | N/A                                                                    |
+| `teamId`                                                               | *string*                                                               | :heavy_check_mark:                                                     | N/A                                                                    |
+| `retries`                                                              | [utils.RetryConfig](../../internal/utils/retryconfig.md)               | :heavy_minus_sign:                                                     | Configuration to override the default retry behavior of the client.    |
+| `config`                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)           | :heavy_minus_sign:                                                     | Available config options for making requests.                          |
 
 
 ### Response
@@ -129,7 +133,7 @@ import { Vital } from "Vital";
 import { CreatePriorityV2TeamTeamIdPriorityPostRequest } from "Vital/dist/sdk/models/operations";
 import { PriorityCreate } from "Vital/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -145,17 +149,19 @@ const teamId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `priorityCreate`                                                      | [shared.PriorityCreate](../../../sdk/models/shared/prioritycreate.md) | :heavy_check_mark:                                                    | N/A                                                                   |
-| `teamId`                                                              | *string*                                                              | :heavy_check_mark:                                                    | N/A                                                                   |
-| `retries`                                                             | [utils.RetryConfig](../../internal/utils/retryconfig.md)              | :heavy_minus_sign:                                                    | Configuration to override the default retry behavior of the client.   |
-| `config`                                                              | [AxiosRequestConfig](https://axios-http.com/docs/req_config)          | :heavy_minus_sign:                                                    | Available config options for making requests.                         |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `priorityCreate`                                                    | [shared.PriorityCreate](../../sdk/models/shared/prioritycreate.md)  | :heavy_check_mark:                                                  | N/A                                                                 |
+| `teamId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
@@ -178,7 +184,7 @@ Invalidate api key by key value.
 import { Vital } from "Vital";
 import { DeleteApiKeyV2TeamTeamIdApikeyApiKeyIdDeleteRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -190,7 +196,9 @@ const teamId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -223,7 +231,7 @@ Get team.
 import { Vital } from "Vital";
 import { GetTeamV2TeamTeamIdGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -234,7 +242,9 @@ const teamId: string = "b18d8d81-fd7b-4764-a31e-475cb1f36591";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -266,7 +276,7 @@ Invalidate api key by key value.
 import { Vital } from "Vital";
 import { GetApiKeysForTeamV2TeamTeamIdApikeysGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -277,7 +287,9 @@ const teamId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -308,7 +320,7 @@ Post teams.
 ```typescript
 import { Vital } from "Vital";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -318,7 +330,9 @@ import { Vital } from "Vital";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -348,7 +362,7 @@ GET source priorities.
 import { Vital } from "Vital";
 import { GetSourcePrioritiesV2TeamSourcePrioritiesGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -359,7 +373,9 @@ const dataType: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -391,7 +407,7 @@ Get the current user count for a team.
 import { Vital } from "Vital";
 import { GetTeamUserCountV2TeamTeamIdUsersCountGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -402,7 +418,9 @@ const teamId: string = "3021769b-866d-4c37-8307-789796d71ace";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -433,7 +451,7 @@ Get Svix Webhook Url
 ```typescript
 import { Vital } from "Vital";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -443,7 +461,9 @@ import { Vital } from "Vital";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -473,7 +493,7 @@ Deprecated. Rotate api key.
 import { Vital } from "Vital";
 import { RotateApiKeyV2TeamTeamIdApikeyApiKeyIdRotatePatchRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -485,7 +505,9 @@ const teamId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -518,7 +540,7 @@ Search team users by user_id
 import { Vital } from "Vital";
 import { SearchTeamUsersByUuidOrClientUserIdV2TeamUsersSearchGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -529,7 +551,9 @@ const queryId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -562,7 +586,7 @@ import { Vital } from "Vital";
 import { UpdateApiKeyLabelV2TeamTeamIdApikeyApiKeyIdPatchRequest } from "Vital/dist/sdk/models/operations";
 import { UpdateApiKeyBody } from "Vital/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -577,18 +601,20 @@ const teamId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `updateApiKeyBody`                                                        | [shared.UpdateApiKeyBody](../../../sdk/models/shared/updateapikeybody.md) | :heavy_check_mark:                                                        | N/A                                                                       |
-| `apiKeyId`                                                                | *string*                                                                  | :heavy_check_mark:                                                        | N/A                                                                       |
-| `teamId`                                                                  | *string*                                                                  | :heavy_check_mark:                                                        | N/A                                                                       |
-| `retries`                                                                 | [utils.RetryConfig](../../internal/utils/retryconfig.md)                  | :heavy_minus_sign:                                                        | Configuration to override the default retry behavior of the client.       |
-| `config`                                                                  | [AxiosRequestConfig](https://axios-http.com/docs/req_config)              | :heavy_minus_sign:                                                        | Available config options for making requests.                             |
+| Parameter                                                              | Type                                                                   | Required                                                               | Description                                                            |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `updateApiKeyBody`                                                     | [shared.UpdateApiKeyBody](../../sdk/models/shared/updateapikeybody.md) | :heavy_check_mark:                                                     | N/A                                                                    |
+| `apiKeyId`                                                             | *string*                                                               | :heavy_check_mark:                                                     | N/A                                                                    |
+| `teamId`                                                               | *string*                                                               | :heavy_check_mark:                                                     | N/A                                                                    |
+| `retries`                                                              | [utils.RetryConfig](../../internal/utils/retryconfig.md)               | :heavy_minus_sign:                                                     | Configuration to override the default retry behavior of the client.    |
+| `config`                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)           | :heavy_minus_sign:                                                     | Available config options for making requests.                          |
 
 
 ### Response
@@ -611,7 +637,7 @@ Patch source priorities.
 import { Vital } from "Vital";
 import { UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -622,7 +648,9 @@ const teamId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -655,7 +683,7 @@ import { Vital } from "Vital";
 import { UpdateTeamV2TeamTeamIdPatchRequest } from "Vital/dist/sdk/models/operations";
 import { TeamUpdate } from "Vital/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -667,14 +695,16 @@ const teamId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `teamUpdate`                                                        | [shared.TeamUpdate](../../../sdk/models/shared/teamupdate.md)       | :heavy_check_mark:                                                  | N/A                                                                 |
+| `teamUpdate`                                                        | [shared.TeamUpdate](../../sdk/models/shared/teamupdate.md)          | :heavy_check_mark:                                                  | N/A                                                                 |
 | `teamId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
 | `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |

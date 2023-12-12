@@ -312,7 +312,6 @@ src/sdk/models/shared/security.ts
 src/sdk/models/errors/index.ts
 src/sdk/models/operations/index.ts
 src/sdk/models/shared/index.ts
-USAGE.md
 docs/sdk/models/operations/robotsrobotstxtgetresponse.md
 docs/sdk/models/operations/checklinktokenstatev2linkstategetresponsechecklinktokenstatev2linkstateget.md
 docs/sdk/models/operations/checklinktokenstatev2linkstategetresponse.md
@@ -743,4 +742,5 @@ docs/sdks/insurance/README.md
 docs/sdks/labtests/README.md
 docs/sdks/order/README.md
 docs/sdks/orders/README.md
+USAGE.md
 .gitattributes

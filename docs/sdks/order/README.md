@@ -36,7 +36,7 @@ import { Vital } from "Vital";
 import { BookPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentBookPostRequest } from "Vital/dist/sdk/models/operations";
 import { AppointmentBookingRequest } from "Vital/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -50,17 +50,19 @@ const orderId: string = "ce486d40-b1d8-4151-82e6-c0e7d72ca79b";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `appointmentBookingRequest`                                                                 | [shared.AppointmentBookingRequest](../../../sdk/models/shared/appointmentbookingrequest.md) | :heavy_check_mark:                                                                          | N/A                                                                                         |
-| `orderId`                                                                                   | *string*                                                                                    | :heavy_check_mark:                                                                          | Your Order ID.                                                                              |
-| `retries`                                                                                   | [utils.RetryConfig](../../internal/utils/retryconfig.md)                                    | :heavy_minus_sign:                                                                          | Configuration to override the default retry behavior of the client.                         |
-| `config`                                                                                    | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                | :heavy_minus_sign:                                                                          | Available config options for making requests.                                               |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `appointmentBookingRequest`                                                              | [shared.AppointmentBookingRequest](../../sdk/models/shared/appointmentbookingrequest.md) | :heavy_check_mark:                                                                       | N/A                                                                                      |
+| `orderId`                                                                                | *string*                                                                                 | :heavy_check_mark:                                                                       | Your Order ID.                                                                           |
+| `retries`                                                                                | [utils.RetryConfig](../../internal/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| `config`                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                             | :heavy_minus_sign:                                                                       | Available config options for making requests.                                            |
 
 
 ### Response
@@ -83,7 +85,7 @@ POST cancel order
 import { Vital } from "Vital";
 import { CancelOrderV3OrderOrderIdCancelPostRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -94,7 +96,9 @@ const orderId: string = "b9d919c2-b9aa-4759-bba5-fb974a744f9a";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -127,7 +131,7 @@ import { Vital } from "Vital";
 import { CancelPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentCancelPatchRequest } from "Vital/dist/sdk/models/operations";
 import { AppointmentCancelRequest } from "Vital/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -141,17 +145,19 @@ const orderId: string = "a0cd9528-ddb0-4d27-a7e9-01ccf3b9448c";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `appointmentCancelRequest`                                                                | [shared.AppointmentCancelRequest](../../../sdk/models/shared/appointmentcancelrequest.md) | :heavy_check_mark:                                                                        | N/A                                                                                       |
-| `orderId`                                                                                 | *string*                                                                                  | :heavy_check_mark:                                                                        | Your Order ID.                                                                            |
-| `retries`                                                                                 | [utils.RetryConfig](../../internal/utils/retryconfig.md)                                  | :heavy_minus_sign:                                                                        | Configuration to override the default retry behavior of the client.                       |
-| `config`                                                                                  | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                              | :heavy_minus_sign:                                                                        | Available config options for making requests.                                             |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `appointmentCancelRequest`                                                             | [shared.AppointmentCancelRequest](../../sdk/models/shared/appointmentcancelrequest.md) | :heavy_check_mark:                                                                     | N/A                                                                                    |
+| `orderId`                                                                              | *string*                                                                               | :heavy_check_mark:                                                                     | Your Order ID.                                                                         |
+| `retries`                                                                              | [utils.RetryConfig](../../internal/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+| `config`                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                           | :heavy_minus_sign:                                                                     | Available config options for making requests.                                          |
 
 
 ### Response
@@ -174,7 +180,7 @@ POST create new order
 import { Vital } from "Vital";
 import { ConsentType, Gender, ResponsibleRelationship } from "Vital/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -236,7 +242,9 @@ import { ConsentType, Gender, ResponsibleRelationship } from "Vital/dist/sdk/mod
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -267,7 +275,7 @@ Creates an order for an unregistered testkit
 ```typescript
 import { Vital } from "Vital";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -289,7 +297,9 @@ import { Vital } from "Vital";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -320,7 +330,7 @@ Dispatch Order Status
 ```typescript
 import { Vital } from "Vital";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -330,7 +340,9 @@ import { Vital } from "Vital";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -360,7 +372,7 @@ GET individual order by ID.
 import { Vital } from "Vital";
 import { GetOrderV3OrderOrderIdGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -371,7 +383,9 @@ const orderId: string = "b18d8d81-fd7b-4764-a31e-475cb1f36591";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -407,7 +421,7 @@ import {
   GetOrderAppointmentAvailabilityV3OrderOrderIdPhlebotomyAppointmentAvailabilityPostUSAddress,
 } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -424,17 +438,19 @@ const requestBody: GetOrderAppointmentAvailabilityV3OrderOrderIdPhlebotomyAppoin
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                                                               | Type                                                                                                                                                                                                                                    | Required                                                                                                                                                                                                                                | Description                                                                                                                                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `orderId`                                                                                                                                                                                                                               | *string*                                                                                                                                                                                                                                | :heavy_check_mark:                                                                                                                                                                                                                      | Your Order ID.                                                                                                                                                                                                                          |
-| `requestBody`                                                                                                                                                                                                                           | [operations.GetOrderAppointmentAvailabilityV3OrderOrderIdPhlebotomyAppointmentAvailabilityPostUSAddress](../../../sdk/models/operations/getorderappointmentavailabilityv3orderorderidphlebotomyappointmentavailabilitypostusaddress.md) | :heavy_minus_sign:                                                                                                                                                                                                                      | N/A                                                                                                                                                                                                                                     |
-| `retries`                                                                                                                                                                                                                               | [utils.RetryConfig](../../internal/utils/retryconfig.md)                                                                                                                                                                                | :heavy_minus_sign:                                                                                                                                                                                                                      | Configuration to override the default retry behavior of the client.                                                                                                                                                                     |
-| `config`                                                                                                                                                                                                                                | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                                                                            | :heavy_minus_sign:                                                                                                                                                                                                                      | Available config options for making requests.                                                                                                                                                                                           |
+| Parameter                                                                                                                                                                                                                            | Type                                                                                                                                                                                                                                 | Required                                                                                                                                                                                                                             | Description                                                                                                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `orderId`                                                                                                                                                                                                                            | *string*                                                                                                                                                                                                                             | :heavy_check_mark:                                                                                                                                                                                                                   | Your Order ID.                                                                                                                                                                                                                       |
+| `requestBody`                                                                                                                                                                                                                        | [operations.GetOrderAppointmentAvailabilityV3OrderOrderIdPhlebotomyAppointmentAvailabilityPostUSAddress](../../sdk/models/operations/getorderappointmentavailabilityv3orderorderidphlebotomyappointmentavailabilitypostusaddress.md) | :heavy_minus_sign:                                                                                                                                                                                                                   | N/A                                                                                                                                                                                                                                  |
+| `retries`                                                                                                                                                                                                                            | [utils.RetryConfig](../../internal/utils/retryconfig.md)                                                                                                                                                                             | :heavy_minus_sign:                                                                                                                                                                                                                   | Configuration to override the default retry behavior of the client.                                                                                                                                                                  |
+| `config`                                                                                                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                                                                         | :heavy_minus_sign:                                                                                                                                                                                                                   | Available config options for making requests.                                                                                                                                                                                        |
 
 
 ### Response
@@ -460,7 +476,7 @@ Information returned:
 import { Vital } from "Vital";
 import { GetAreaInfoV3OrderAreaInfoGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -471,7 +487,9 @@ const zipCode: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -503,7 +521,7 @@ This endpoint returns the lab results for the order.
 import { Vital } from "Vital";
 import { GetLabTestResultV3OrderOrderIdResultPdfGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -514,7 +532,9 @@ const orderId: string = "c9229487-8f86-47ef-848e-7eb7243713ad";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -547,7 +567,7 @@ provider and sample dates.
 import { Vital } from "Vital";
 import { GetLabTestResultMetadataV3OrderOrderIdResultMetadataGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -558,7 +578,9 @@ const orderId: string = "daf5fdc5-7c54-4772-826b-69600571af0f";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -590,7 +612,7 @@ Return both metadata and raw json test data
 import { Vital } from "Vital";
 import { GetLabTestResultRawV3OrderOrderIdResultGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -601,7 +623,9 @@ const orderId: string = "2cfa7265-4a8d-45d9-b8ea-42e844b02385";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -633,7 +657,7 @@ Get the appointment associated with an order.
 import { Vital } from "Vital";
 import { GetPhlebotomyAppointmentV3OrderOrderIdPhlebotomyAppointmentGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -644,7 +668,9 @@ const orderId: string = "3e95493c-2969-4eab-9aaf-61adbf59533c";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -675,7 +701,7 @@ Get the list of reasons for cancelling an at-home phlebotomy appointment.
 ```typescript
 import { Vital } from "Vital";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -685,7 +711,9 @@ import { Vital } from "Vital";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -715,7 +743,7 @@ GET requisition pdf for an order
 import { Vital } from "Vital";
 import { GetOrderRequisitionUrlV3OrderOrderIdRequisitionPdfGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -726,7 +754,9 @@ const orderId: string = "bfbbc5db-bd5f-47b5-9a88-6ef4ccfaf335";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -759,7 +789,7 @@ import { Vital } from "Vital";
 import { OrderProcessSimulateV3OrderOrderIdTestPostRequest } from "Vital/dist/sdk/models/operations";
 import { OrderStatus } from "Vital/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -772,7 +802,9 @@ const finalStatus: OrderStatus = OrderStatus.CollectingSampleAtHomePhlebotomyApp
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -781,7 +813,7 @@ const finalStatus: OrderStatus = OrderStatus.CollectingSampleAtHomePhlebotomyApp
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | `orderId`                                                           | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
 | `delay`                                                             | *number*                                                            | :heavy_minus_sign:                                                  | N/A                                                                 |
-| `finalStatus`                                                       | [shared.OrderStatus](../../../sdk/models/shared/orderstatus.md)     | :heavy_minus_sign:                                                  | An enumeration.                                                     |
+| `finalStatus`                                                       | [shared.OrderStatus](../../sdk/models/shared/orderstatus.md)        | :heavy_minus_sign:                                                  | An enumeration.                                                     |
 | `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
@@ -806,7 +838,7 @@ POST Create shipment for order
 import { Vital } from "Vital";
 import { ProcessTestkitOrderV3OrderTestkitProcessTeamIdOrderIdPostRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -818,7 +850,9 @@ const teamId: string = "26a256a9-b0f5-4854-8814-40907e852835";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -851,7 +885,7 @@ Process Testkit Ship Hero Order Shipped
 import { Vital } from "Vital";
 import { WebhookType } from "Vital/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -867,7 +901,9 @@ import { WebhookType } from "Vital/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -899,7 +935,7 @@ Register Testkit
 import { Vital } from "Vital";
 import { ConsentType, Gender } from "Vital/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -940,7 +976,9 @@ import { ConsentType, Gender } from "Vital/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -975,7 +1013,7 @@ import {
 } from "Vital/dist/sdk/models/operations";
 import { AppointmentRescheduleRequest } from "Vital/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -989,17 +1027,19 @@ const orderId: string = "337372e4-dddb-4832-b4a5-62cb3ddc204a";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `appointmentRescheduleRequest`                                                                    | [shared.AppointmentRescheduleRequest](../../../sdk/models/shared/appointmentreschedulerequest.md) | :heavy_check_mark:                                                                                | N/A                                                                                               |
-| `orderId`                                                                                         | *string*                                                                                          | :heavy_check_mark:                                                                                | Your Order ID.                                                                                    |
-| `retries`                                                                                         | [utils.RetryConfig](../../internal/utils/retryconfig.md)                                          | :heavy_minus_sign:                                                                                | Configuration to override the default retry behavior of the client.                               |
-| `config`                                                                                          | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                      | :heavy_minus_sign:                                                                                | Available config options for making requests.                                                     |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `appointmentRescheduleRequest`                                                                 | [shared.AppointmentRescheduleRequest](../../sdk/models/shared/appointmentreschedulerequest.md) | :heavy_check_mark:                                                                             | N/A                                                                                            |
+| `orderId`                                                                                      | *string*                                                                                       | :heavy_check_mark:                                                                             | Your Order ID.                                                                                 |
+| `retries`                                                                                      | [utils.RetryConfig](../../internal/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+| `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
 
 
 ### Response
@@ -1025,7 +1065,7 @@ is sent to the respective team.
 ```typescript
 import { Vital } from "Vital";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -1035,7 +1075,9 @@ import { Vital } from "Vital";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

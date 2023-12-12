@@ -15,7 +15,7 @@ Review Openloop
 import { Vital } from "Vital";
 import { OpenLoopResourceIdType, OpenLoopWebhookType } from "Vital/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -29,7 +29,9 @@ import { OpenLoopResourceIdType, OpenLoopWebhookType } from "Vital/dist/sdk/mode
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

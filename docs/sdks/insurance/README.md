@@ -16,7 +16,7 @@ Search Diagnosis
 import { Vital } from "Vital";
 import { SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -27,7 +27,9 @@ const diagnosisQuery: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -58,7 +60,7 @@ Search Insurance Payor Information
 ```typescript
 import { Vital } from "Vital";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -70,7 +72,9 @@ import { Vital } from "Vital";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

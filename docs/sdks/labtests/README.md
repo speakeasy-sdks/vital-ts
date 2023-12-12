@@ -19,7 +19,7 @@ Create Lab Test For Team
 import { Vital } from "Vital";
 import { LabTestCollectionMethod, LabTestSampleType } from "Vital/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -38,7 +38,9 @@ import { LabTestCollectionMethod, LabTestSampleType } from "Vital/dist/sdk/model
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -69,7 +71,7 @@ GET all the labs.
 ```typescript
 import { Vital } from "Vital";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -79,7 +81,9 @@ import { Vital } from "Vital";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -109,7 +113,7 @@ GET a specific marker for the given lab and provider_id
 import { Vital } from "Vital";
 import { GetMarkersByProviderIdV3LabTestsLabIdMarkersProviderIdGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -121,7 +125,9 @@ const providerId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -154,7 +160,7 @@ GET all the markers for the given lab.
 import { Vital } from "Vital";
 import { GetMarkersV3LabTestsMarkersGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -168,7 +174,9 @@ const size: number = 962743;
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -202,7 +210,7 @@ GET all the lab tests the team has access to.
 ```typescript
 import { Vital } from "Vital";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -212,7 +220,9 @@ import { Vital } from "Vital";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

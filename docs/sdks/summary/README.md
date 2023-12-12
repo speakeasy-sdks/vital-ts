@@ -32,7 +32,7 @@ Get user's meals
 import { Vital } from "Vital";
 import { GetMealsV2SummaryMealUserIdGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -46,7 +46,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -81,7 +83,7 @@ Get Daily Activity for user_id
 import { Vital } from "Vital";
 import { GetUserActivityV2SummaryActivityUserIdGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -95,7 +97,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -130,7 +134,7 @@ Get Daily Activity for user_id
 import { Vital } from "Vital";
 import { GetUserActivityRawV2SummaryActivityUserIdRawGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -144,7 +148,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -179,7 +185,7 @@ Get Daily Body data for user_id
 import { Vital } from "Vital";
 import { GetUserBodyV2SummaryBodyUserIdGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -193,7 +199,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -228,7 +236,7 @@ Get Daily Body data for user_id
 import { Vital } from "Vital";
 import { GetUserBodyRawV2SummaryBodyUserIdRawGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -242,7 +250,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -277,7 +287,7 @@ Get Devices for user_id
 import { Vital } from "Vital";
 import { GetUserDevicesRawV2SummaryDevicesUserIdRawGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -289,7 +299,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -322,7 +334,7 @@ Get Daily profile for user_id
 import { Vital } from "Vital";
 import { GetUserProfileV2SummaryProfileUserIdGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -334,7 +346,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -367,7 +381,7 @@ Get Daily profile for user_id
 import { Vital } from "Vital";
 import { GetUserProfileRawV2SummaryProfileUserIdRawGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -379,7 +393,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -412,7 +428,7 @@ Get Daily sleep for user_id
 import { Vital } from "Vital";
 import { GetUserSleepV2SummarySleepUserIdGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -426,7 +442,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -461,7 +479,7 @@ Get Daily sleep for user_id
 import { Vital } from "Vital";
 import { GetUserSleepRawV2SummarySleepUserIdRawGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -475,7 +493,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -510,7 +530,7 @@ Get Daily sleep stream for user_id
 import { Vital } from "Vital";
 import { GetUserSleepStreamV2SummarySleepUserIdStreamGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -524,7 +544,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -559,7 +581,7 @@ Get Daily workout for user_id
 import { Vital } from "Vital";
 import { GetUserWorkoutsV2SummaryWorkoutsUserIdGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -573,7 +595,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -608,7 +632,7 @@ Get Daily workout for user_id
 import { Vital } from "Vital";
 import { GetUserWorkoutsRawV2SummaryWorkoutsUserIdRawGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -622,7 +646,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -657,7 +683,7 @@ Post User Activity
 import { Vital } from "Vital";
 import { PostUserActivityV2SummaryActivityUserIdPostRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -670,7 +696,9 @@ const xVitalIosSDKVersion: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -704,7 +732,7 @@ Post User Body
 import { Vital } from "Vital";
 import { PostUserBodyV2SummaryBodyUserIdPostRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -717,7 +745,9 @@ const xVitalIosSDKVersion: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -751,7 +781,7 @@ Post User Profile
 import { Vital } from "Vital";
 import { PostUserProfileV2SummaryProfileUserIdPostRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -764,7 +794,9 @@ const xVitalIosSDKVersion: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -798,7 +830,7 @@ Post User Sleep
 import { Vital } from "Vital";
 import { PostUserSleepV2SummarySleepUserIdPostRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -811,7 +843,9 @@ const xVitalIosSDKVersion: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -845,7 +879,7 @@ Post User Workout
 import { Vital } from "Vital";
 import { PostUserWorkoutV2SummaryWorkoutsUserIdPostRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -858,7 +892,9 @@ const xVitalIosSDKVersion: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

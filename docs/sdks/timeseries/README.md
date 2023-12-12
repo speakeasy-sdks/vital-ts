@@ -40,7 +40,7 @@ Get timeseries data for user
 import { Vital } from "Vital";
 import { GetTimeseriesResourceDataV2TimeseriesUserIdBloodOxygenGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -54,7 +54,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -89,7 +91,7 @@ Get timeseries data for user
 import { Vital } from "Vital";
 import { GetTimeseriesResourceDataV2TimeseriesUserIdBloodPressureGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -103,7 +105,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -138,7 +142,7 @@ Get timeseries data for user
 import { Vital } from "Vital";
 import { GetTimeseriesResourceDataV2TimeseriesUserIdCaffeineGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -152,7 +156,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -187,7 +193,7 @@ Get timeseries data for user
 import { Vital } from "Vital";
 import { GetTimeseriesResourceDataV2TimeseriesUserIdCaloriesActiveGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -201,7 +207,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -236,7 +244,7 @@ Get timeseries data for user
 import { Vital } from "Vital";
 import { GetTimeseriesResourceDataV2TimeseriesUserIdCaloriesBasalGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -250,7 +258,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -285,7 +295,7 @@ Get timeseries data for user
 import { Vital } from "Vital";
 import { GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -299,7 +309,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -334,7 +346,7 @@ Get timeseries data for user
 import { Vital } from "Vital";
 import { GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolHdlGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -348,7 +360,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -383,7 +397,7 @@ Get timeseries data for user
 import { Vital } from "Vital";
 import { GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolLdlGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -397,7 +411,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -432,7 +448,7 @@ Get timeseries data for user
 import { Vital } from "Vital";
 import { GetTimeseriesResourceDataV2TimeseriesUserIdDistanceGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -446,7 +462,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -481,7 +499,7 @@ Get timeseries data for user
 import { Vital } from "Vital";
 import { GetTimeseriesResourceDataV2TimeseriesUserIdFloorsClimbedGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -495,7 +513,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -530,7 +550,7 @@ Get timeseries data for user
 import { Vital } from "Vital";
 import { GetTimeseriesResourceDataV2TimeseriesUserIdGlucoseGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -544,7 +564,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -579,7 +601,7 @@ Get timeseries data for user
 import { Vital } from "Vital";
 import { GetTimeseriesResourceDataV2TimeseriesUserIdHeartrateGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -593,7 +615,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -628,7 +652,7 @@ Get timeseries data for user
 import { Vital } from "Vital";
 import { GetTimeseriesResourceDataV2TimeseriesUserIdHrvGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -642,7 +666,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -677,7 +703,7 @@ Get timeseries data for user
 import { Vital } from "Vital";
 import { GetTimeseriesResourceDataV2TimeseriesUserIdHypnogramGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -691,7 +717,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -726,7 +754,7 @@ Get timeseries data for user
 import { Vital } from "Vital";
 import { GetTimeseriesResourceDataV2TimeseriesUserIdIgeGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -740,7 +768,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -775,7 +805,7 @@ Get timeseries data for user
 import { Vital } from "Vital";
 import { GetTimeseriesResourceDataV2TimeseriesUserIdIggGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -789,7 +819,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -824,7 +856,7 @@ Get timeseries data for user
 import { Vital } from "Vital";
 import { GetTimeseriesResourceDataV2TimeseriesUserIdMindfulnessMinutesGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -838,7 +870,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -873,7 +907,7 @@ Get timeseries data for user
 import { Vital } from "Vital";
 import { GetTimeseriesResourceDataV2TimeseriesUserIdRespiratoryRateGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -887,7 +921,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -922,7 +958,7 @@ Get timeseries data for user
 import { Vital } from "Vital";
 import { GetTimeseriesResourceDataV2TimeseriesUserIdStepsGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -936,7 +972,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -971,7 +1009,7 @@ Get timeseries data for user
 import { Vital } from "Vital";
 import { GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolTotalGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -985,7 +1023,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1020,7 +1060,7 @@ Get timeseries data for user
 import { Vital } from "Vital";
 import { GetTimeseriesResourceDataV2TimeseriesUserIdCholesterolTriglyceridesGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -1034,7 +1074,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1069,7 +1111,7 @@ Get Sleep stream for a user_id
 import { Vital } from "Vital";
 import { GetUserSleepStreamV2TimeseriesSleepSleepIdStreamGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -1080,7 +1122,9 @@ const sleepId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1112,7 +1156,7 @@ Get User Workouts
 import { Vital } from "Vital";
 import { GetUserWorkoutsV2TimeseriesWorkoutsWorkoutIdStreamGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -1123,7 +1167,9 @@ const workoutId: string = "bc0edaf0-6098-41f4-a6eb-525d09cc6d26";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1155,7 +1201,7 @@ Get timeseries data for user
 import { Vital } from "Vital";
 import { GetTimeseriesResourceDataV2TimeseriesUserIdWaterGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -1169,7 +1215,9 @@ const provider: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1204,7 +1252,7 @@ Post User Blood Pressure
 import { Vital } from "Vital";
 import { PostUserBloodPressureV2TimeseriesUserIdBloodPressurePostRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -1217,7 +1265,9 @@ const xVitalIosSDKVersion: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1252,7 +1302,7 @@ import { Vital } from "Vital";
 import { PostUserVitalsV2TimeseriesUserIdResourcePostRequest } from "Vital/dist/sdk/models/operations";
 import { IngestibleTimeseriesResource } from "Vital/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -1266,19 +1316,21 @@ const xVitalIosSDKVersion: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `resource`                                                                                        | [shared.IngestibleTimeseriesResource](../../../sdk/models/shared/ingestibletimeseriesresource.md) | :heavy_check_mark:                                                                                | An enumeration.                                                                                   |
-| `userId`                                                                                          | *string*                                                                                          | :heavy_check_mark:                                                                                | N/A                                                                                               |
-| `xVitalAndroidSDKVersion`                                                                         | *string*                                                                                          | :heavy_minus_sign:                                                                                | N/A                                                                                               |
-| `xVitalIosSDKVersion`                                                                             | *string*                                                                                          | :heavy_minus_sign:                                                                                | N/A                                                                                               |
-| `retries`                                                                                         | [utils.RetryConfig](../../internal/utils/retryconfig.md)                                          | :heavy_minus_sign:                                                                                | Configuration to override the default retry behavior of the client.                               |
-| `config`                                                                                          | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                      | :heavy_minus_sign:                                                                                | Available config options for making requests.                                                     |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `resource`                                                                                     | [shared.IngestibleTimeseriesResource](../../sdk/models/shared/ingestibletimeseriesresource.md) | :heavy_check_mark:                                                                             | An enumeration.                                                                                |
+| `userId`                                                                                       | *string*                                                                                       | :heavy_check_mark:                                                                             | N/A                                                                                            |
+| `xVitalAndroidSDKVersion`                                                                      | *string*                                                                                       | :heavy_minus_sign:                                                                             | N/A                                                                                            |
+| `xVitalIosSDKVersion`                                                                          | *string*                                                                                       | :heavy_minus_sign:                                                                             | N/A                                                                                            |
+| `retries`                                                                                      | [utils.RetryConfig](../../internal/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+| `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
 
 
 ### Response

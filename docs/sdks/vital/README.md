@@ -18,7 +18,7 @@ Robots
 ```typescript
 import { Vital } from "Vital";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -28,7 +28,9 @@ import { Vital } from "Vital";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

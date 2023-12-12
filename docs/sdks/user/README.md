@@ -24,7 +24,7 @@ POST Create a Vital user given a client_user_id and returns the user_id.
 ```typescript
 import { Vital } from "Vital";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -36,7 +36,9 @@ import { Vital } from "Vital";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -68,7 +70,7 @@ Delete User
 import { Vital } from "Vital";
 import { DeleteUserV2UserUserIdDeleteRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -79,7 +81,9 @@ const userId: string = "8db863f6-ef9b-413a-8a70-cb816b33de6b";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -112,7 +116,7 @@ import { Vital } from "Vital";
 import { DeregisterProviderV2UserUserIdProviderDeleteRequest } from "Vital/dist/sdk/models/operations";
 import { Providers } from "Vital/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -124,14 +128,16 @@ const userId: string = "6d48b1ec-267e-4530-bcf8-b4f041e375ee";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `provider`                                                          | [shared.Providers](../../../sdk/models/shared/providers.md)         | :heavy_check_mark:                                                  | Provider slug. e.g., `oura`, `fitbit`, `garmin`.                    |
+| `provider`                                                          | [shared.Providers](../../sdk/models/shared/providers.md)            | :heavy_check_mark:                                                  | Provider slug. e.g., `oura`, `fitbit`, `garmin`.                    |
 | `userId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
 | `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
@@ -157,7 +163,7 @@ GET User details given the user_id.
 import { Vital } from "Vital";
 import { GetUserV2UserUserIdGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -168,7 +174,9 @@ const userId: string = "b18d8d81-fd7b-4764-a31e-475cb1f36591";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -200,7 +208,7 @@ GET All users for team.
 import { Vital } from "Vital";
 import { GetTeamsUsersV2UserGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -212,7 +220,9 @@ const offset: number = 64345;
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -245,7 +255,7 @@ GET Users connected providers
 import { Vital } from "Vital";
 import { GetConnectedProvidersV2UserProvidersUserIdGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -256,7 +266,9 @@ const userId: string = "30ef9033-9974-45c7-af5c-ddc9369dd7a0";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -287,7 +299,7 @@ GET metrics for team.
 ```typescript
 import { Vital } from "Vital";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -297,7 +309,9 @@ import { Vital } from "Vital";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -327,7 +341,7 @@ Get User Sign In Token
 import { Vital } from "Vital";
 import { GetUserSignInTokenV2UserUserIdSignInTokenPostRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -338,7 +352,9 @@ const userId: string = "d738147a-606f-41ac-a296-81a3993405ee";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -371,7 +387,7 @@ import { Vital } from "Vital";
 import { PatchUserV2UserUserIdPatchRequest } from "Vital/dist/sdk/models/operations";
 import { UserPatchBody } from "Vital/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -383,14 +399,16 @@ const userId: string = "02c6960d-b280-4a76-8c76-467d647deb43";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `userPatchBody`                                                     | [shared.UserPatchBody](../../../sdk/models/shared/userpatchbody.md) | :heavy_check_mark:                                                  | N/A                                                                 |
+| `userPatchBody`                                                     | [shared.UserPatchBody](../../sdk/models/shared/userpatchbody.md)    | :heavy_check_mark:                                                  | N/A                                                                 |
 | `userId`                                                            | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
 | `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 | `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
@@ -416,7 +434,7 @@ Trigger a manual refresh for a specific user
 import { Vital } from "Vital";
 import { RefreshUserIdV2UserRefreshUserIdPostRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -427,7 +445,9 @@ const userId: string = "1d35a855-b124-4dda-9838-fdeec970978f";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -460,7 +480,7 @@ GET user_id from client_user_id.
 import { Vital } from "Vital";
 import { GetUserByClientUserIdV2UserResolveClientUserIdGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -471,7 +491,9 @@ const clientUserId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

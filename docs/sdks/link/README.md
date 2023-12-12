@@ -29,7 +29,7 @@ Check link token state - can be hit continuously used as heartbeat
 ```typescript
 import { Vital } from "Vital";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -39,7 +39,9 @@ import { Vital } from "Vital";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -68,7 +70,7 @@ Check Token Valid
 ```typescript
 import { Vital } from "Vital";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -81,7 +83,9 @@ import { Vital } from "Vital";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -116,7 +120,7 @@ import { Vital } from "Vital";
 import { ConnectBleProviderV2LinkProviderManualProviderPostRequest, ManualProviders } from "Vital/dist/sdk/models/operations";
 import { ManualConnectionData } from "Vital/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -130,17 +134,19 @@ const provider: ManualProviders = ManualProviders.BeurerBle;
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `manualConnectionData`                                                            | [shared.ManualConnectionData](../../../sdk/models/shared/manualconnectiondata.md) | :heavy_check_mark:                                                                | N/A                                                                               |
-| `provider`                                                                        | [operations.ManualProviders](../../../sdk/models/operations/manualproviders.md)   | :heavy_check_mark:                                                                | An enumeration.                                                                   |
-| `retries`                                                                         | [utils.RetryConfig](../../internal/utils/retryconfig.md)                          | :heavy_minus_sign:                                                                | Configuration to override the default retry behavior of the client.               |
-| `config`                                                                          | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                      | :heavy_minus_sign:                                                                | Available config options for making requests.                                     |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `manualConnectionData`                                                         | [shared.ManualConnectionData](../../sdk/models/shared/manualconnectiondata.md) | :heavy_check_mark:                                                             | N/A                                                                            |
+| `provider`                                                                     | [operations.ManualProviders](../../sdk/models/operations/manualproviders.md)   | :heavy_check_mark:                                                             | An enumeration.                                                                |
+| `retries`                                                                      | [utils.RetryConfig](../../internal/utils/retryconfig.md)                       | :heavy_minus_sign:                                                             | Configuration to override the default retry behavior of the client.            |
+| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
 
 
 ### Response
@@ -165,7 +171,7 @@ This function is hit by vital-link to authenticate a email provider.
 import { Vital } from "Vital";
 import { AuthType, Providers, Region } from "Vital/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -179,7 +185,9 @@ import { AuthType, Providers, Region } from "Vital/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -212,7 +220,7 @@ import { Vital } from "Vital";
 import { ConnectEmailAuthProviderV2LinkProviderEmailProviderPostRequest, EmailProviders } from "Vital/dist/sdk/models/operations";
 import { EmailProviderAuthLink, Providers, Region } from "Vital/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -226,17 +234,19 @@ const provider: EmailProviders = EmailProviders.FreestyleLibre;
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `emailProviderAuthLink`                                                             | [shared.EmailProviderAuthLink](../../../sdk/models/shared/emailproviderauthlink.md) | :heavy_check_mark:                                                                  | N/A                                                                                 |
-| `provider`                                                                          | [operations.EmailProviders](../../../sdk/models/operations/emailproviders.md)       | :heavy_check_mark:                                                                  | An enumeration.                                                                     |
-| `retries`                                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)                            | :heavy_minus_sign:                                                                  | Configuration to override the default retry behavior of the client.                 |
-| `config`                                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                        | :heavy_minus_sign:                                                                  | Available config options for making requests.                                       |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `emailProviderAuthLink`                                                          | [shared.EmailProviderAuthLink](../../sdk/models/shared/emailproviderauthlink.md) | :heavy_check_mark:                                                               | N/A                                                                              |
+| `provider`                                                                       | [operations.EmailProviders](../../sdk/models/operations/emailproviders.md)       | :heavy_check_mark:                                                               | An enumeration.                                                                  |
+| `retries`                                                                        | [utils.RetryConfig](../../internal/utils/retryconfig.md)                         | :heavy_minus_sign:                                                               | Configuration to override the default retry behavior of the client.              |
+| `config`                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                     | :heavy_minus_sign:                                                               | Available config options for making requests.                                    |
 
 
 ### Response
@@ -263,7 +273,7 @@ import {
 } from "Vital/dist/sdk/models/operations";
 import { IndividualProviderData } from "Vital/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -279,18 +289,20 @@ const xVitalLinkClientRegion: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `individualProviderData`                                                              | [shared.IndividualProviderData](../../../sdk/models/shared/individualproviderdata.md) | :heavy_check_mark:                                                                    | N/A                                                                                   |
-| `provider`                                                                            | [operations.PasswordProviders](../../../sdk/models/operations/passwordproviders.md)   | :heavy_check_mark:                                                                    | An enumeration.                                                                       |
-| `xVitalLinkClientRegion`                                                              | *string*                                                                              | :heavy_minus_sign:                                                                    | N/A                                                                                   |
-| `retries`                                                                             | [utils.RetryConfig](../../internal/utils/retryconfig.md)                              | :heavy_minus_sign:                                                                    | Configuration to override the default retry behavior of the client.                   |
-| `config`                                                                              | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                          | :heavy_minus_sign:                                                                    | Available config options for making requests.                                         |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `individualProviderData`                                                           | [shared.IndividualProviderData](../../sdk/models/shared/individualproviderdata.md) | :heavy_check_mark:                                                                 | N/A                                                                                |
+| `provider`                                                                         | [operations.PasswordProviders](../../sdk/models/operations/passwordproviders.md)   | :heavy_check_mark:                                                                 | An enumeration.                                                                    |
+| `xVitalLinkClientRegion`                                                           | *string*                                                                           | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `retries`                                                                          | [utils.RetryConfig](../../internal/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
 
 
 ### Response
@@ -316,7 +328,7 @@ import { Vital } from "Vital";
 import { ConnectPasswordAuthV2LinkAuthPostRequest } from "Vital/dist/sdk/models/operations";
 import { AuthType, PasswordAuthLink, Providers } from "Vital/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -333,17 +345,19 @@ const xVitalLinkClientRegion: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `passwordAuthLink`                                                        | [shared.PasswordAuthLink](../../../sdk/models/shared/passwordauthlink.md) | :heavy_check_mark:                                                        | N/A                                                                       |
-| `xVitalLinkClientRegion`                                                  | *string*                                                                  | :heavy_minus_sign:                                                        | N/A                                                                       |
-| `retries`                                                                 | [utils.RetryConfig](../../internal/utils/retryconfig.md)                  | :heavy_minus_sign:                                                        | Configuration to override the default retry behavior of the client.       |
-| `config`                                                                  | [AxiosRequestConfig](https://axios-http.com/docs/req_config)              | :heavy_minus_sign:                                                        | Available config options for making requests.                             |
+| Parameter                                                              | Type                                                                   | Required                                                               | Description                                                            |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `passwordAuthLink`                                                     | [shared.PasswordAuthLink](../../sdk/models/shared/passwordauthlink.md) | :heavy_check_mark:                                                     | N/A                                                                    |
+| `xVitalLinkClientRegion`                                               | *string*                                                               | :heavy_minus_sign:                                                     | N/A                                                                    |
+| `retries`                                                              | [utils.RetryConfig](../../internal/utils/retryconfig.md)               | :heavy_minus_sign:                                                     | Configuration to override the default retry behavior of the client.    |
+| `config`                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)           | :heavy_minus_sign:                                                     | Available config options for making requests.                          |
 
 
 ### Response
@@ -368,7 +382,7 @@ Connect oauth providers
 import { Vital } from "Vital";
 import { ConnectProviderV2LinkConnectProviderGetRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -380,7 +394,9 @@ const xVitalSDKNoRedirect: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -413,7 +429,7 @@ POST Connect the given Vital user to a demo provider.
 import { Vital } from "Vital";
 import { DemoProviders } from "Vital/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -426,7 +442,9 @@ import { DemoProviders } from "Vital/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -458,7 +476,7 @@ Generate a token to invite a user of Vital mobile app to your team
 import { Vital } from "Vital";
 import { CreateTokenV2LinkCodeCreatePostRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -470,7 +488,9 @@ const expiresAt: Date = new Date("2021-12-10T10:53:22.771Z");
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -503,7 +523,7 @@ Redeem an invite token for an api key
 import { Vital } from "Vital";
 import { ExchangeTokenV2LinkCodeExchangePostRequest } from "Vital/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -514,7 +534,9 @@ const code: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -551,7 +573,7 @@ pass in your own custom redirect_url parameter.
 import { Vital } from "Vital";
 import { Providers } from "Vital/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -566,7 +588,9 @@ import { Providers } from "Vital/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -599,7 +623,7 @@ import { Vital } from "Vital";
 import { GetOauthProviderV2LinkProviderOauthOauthProviderGetRequest } from "Vital/dist/sdk/models/operations";
 import { OAuthProviders } from "Vital/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -610,16 +634,18 @@ const oauthProvider: OAuthProviders = OAuthProviders.Polar;
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `oauthProvider`                                                       | [shared.OAuthProviders](../../../sdk/models/shared/oauthproviders.md) | :heavy_check_mark:                                                    | An enumeration.                                                       |
-| `retries`                                                             | [utils.RetryConfig](../../internal/utils/retryconfig.md)              | :heavy_minus_sign:                                                    | Configuration to override the default retry behavior of the client.   |
-| `config`                                                              | [AxiosRequestConfig](https://axios-http.com/docs/req_config)          | :heavy_minus_sign:                                                    | Available config options for making requests.                         |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `oauthProvider`                                                     | [shared.OAuthProviders](../../sdk/models/shared/oauthproviders.md)  | :heavy_check_mark:                                                  | An enumeration.                                                     |
+| `retries`                                                           | [utils.RetryConfig](../../internal/utils/retryconfig.md)            | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
@@ -641,7 +667,7 @@ GET List of all available providers given the generated link token.
 ```typescript
 import { Vital } from "Vital";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -651,7 +677,9 @@ import { Vital } from "Vital";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -682,7 +710,7 @@ Start link token process
 import { Vital } from "Vital";
 import { Providers } from "Vital/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
@@ -695,7 +723,9 @@ import { Providers } from "Vital/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
