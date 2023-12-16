@@ -8,7 +8,7 @@ import { Expose, Type } from "class-transformer";
 /**
  * Insurance business address returned for the insurance information required by Labcorp.
  */
-export class ClientFacingPayorSearchResponseAddress extends SpeakeasyBase {
+export class OrgAddress extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "city" })
     city: string;
@@ -54,6 +54,6 @@ export class ClientFacingPayorSearchResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "org_address" })
-    @Type(() => ClientFacingPayorSearchResponseAddress)
-    orgAddress: ClientFacingPayorSearchResponseAddress;
+    @Type(() => OrgAddress)
+    orgAddress: OrgAddress;
 }

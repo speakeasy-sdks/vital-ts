@@ -2,26 +2,28 @@ configVersion: 1.0.0
 management:
   docChecksum: bb5e24e31da8cd0edd3f729393024103
   docVersion: 0.0.0-dev.f0ab7c6
-  speakeasyVersion: 1.126.0
-  generationVersion: 2.213.3
+  speakeasyVersion: 1.126.4
+  generationVersion: 2.214.10
 generation:
   comments: {}
   sdkClassName: vital
   repoURL: https://github.com/speakeasy-sdks/vital-ts.git
   usageSnippets:
     optionalPropertyRendering: withExample
+  fixes:
+    nameResolutionDec2023: false
 features:
   typescript:
-    core: 3.3.0
+    core: 3.3.8
     deprecations: 2.81.1
     examples: 2.81.3
     flattening: 2.81.1
-    globalSecurity: 2.82.1
+    globalSecurity: 2.82.2
     globalServerURLs: 2.82.1
     nameOverrides: 2.81.1
     retries: 2.82.1
 typescript:
-  version: 0.7.0
+  version: 0.7.1
   author: vital
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true

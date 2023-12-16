@@ -12,10 +12,7 @@ import { Expose, Transform, Type } from "class-transformer";
 export class Map extends SpeakeasyBase {}
 
 /**
- * Source summarizes where a sample or a summary is sourced from.
- *
- * @remarks
- * At minimum, the source provider is always included.
+ * Source the data has come from.
  */
 export class ClientFacingWorkoutSource extends SpeakeasyBase {
     /**
@@ -70,7 +67,7 @@ export class ClientFacingWorkoutSource extends SpeakeasyBase {
 /**
  * Sport's name
  */
-export class ClientFacingWorkoutClientFacingSport extends SpeakeasyBase {
+export class Sport extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id: number;
@@ -223,8 +220,8 @@ export class ClientFacingWorkout extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "sport" })
-    @Type(() => ClientFacingWorkoutClientFacingSport)
-    sport?: ClientFacingWorkoutClientFacingSport;
+    @Type(() => Sport)
+    sport?: Sport;
 
     /**
      * End time of the workout::time

@@ -317,14 +317,14 @@ docs/sdk/models/operations/checklinktokenstatev2linkstategetresponsechecklinktok
 docs/sdk/models/operations/checklinktokenstatev2linkstategetresponse.md
 docs/sdk/models/operations/checktokenvalidv2linktokenisvalidpostresponsechecktokenvalidv2linktokenisvalidpost.md
 docs/sdk/models/operations/checktokenvalidv2linktokenisvalidpostresponse.md
-docs/sdk/models/operations/manualproviders.md
+docs/sdk/models/operations/providersthataremanuallyaddeddevicessuchasbledevicesandgenerateddata.md
 docs/sdk/models/operations/connectbleproviderv2linkprovidermanualproviderpostrequest.md
 docs/sdk/models/operations/connectbleproviderv2linkprovidermanualproviderpostresponse.md
 docs/sdk/models/operations/connectemailauthv2linkauthemailpostresponse.md
-docs/sdk/models/operations/emailproviders.md
+docs/sdk/models/operations/emailprovidersthatrequireemailsfreestyleauth.md
 docs/sdk/models/operations/connectemailauthproviderv2linkprovideremailproviderpostrequest.md
 docs/sdk/models/operations/connectemailauthproviderv2linkprovideremailproviderpostresponse.md
-docs/sdk/models/operations/passwordproviders.md
+docs/sdk/models/operations/providersthatrequirepasswordauthwhooprenphopelotonzwift.md
 docs/sdk/models/operations/connectindividualproviderv2linkproviderpasswordproviderpostrequest.md
 docs/sdk/models/operations/connectindividualproviderv2linkproviderpasswordproviderpostresponse.md
 docs/sdk/models/operations/connectpasswordauthv2linkauthpostrequest.md
@@ -506,7 +506,7 @@ docs/sdk/models/operations/createtestkitorderv3ordertestkitpostresponse.md
 docs/sdk/models/operations/dispatchorderstatusv3orderdispatchstatuscheckspostresponse.md
 docs/sdk/models/operations/getorderv3orderorderidgetrequest.md
 docs/sdk/models/operations/getorderv3orderorderidgetresponse.md
-docs/sdk/models/operations/getorderappointmentavailabilityv3orderorderidphlebotomyappointmentavailabilitypostusaddress.md
+docs/sdk/models/operations/getorderappointmentavailabilityv3orderorderidphlebotomyappointmentavailabilitypostaddress.md
 docs/sdk/models/operations/getorderappointmentavailabilityv3orderorderidphlebotomyappointmentavailabilitypostrequest.md
 docs/sdk/models/operations/getorderappointmentavailabilityv3orderorderidphlebotomyappointmentavailabilitypostresponse.md
 docs/sdk/models/operations/getareainfov3orderareainfogetrequest.md
@@ -610,7 +610,7 @@ docs/sdk/models/shared/sleepv2indb.md
 docs/sdk/models/shared/clientworkoutresponse.md
 docs/sdk/models/shared/map.md
 docs/sdk/models/shared/clientfacingworkoutsource.md
-docs/sdk/models/shared/clientfacingworkoutclientfacingsport.md
+docs/sdk/models/shared/sport.md
 docs/sdk/models/shared/clientfacingworkout.md
 docs/sdk/models/shared/rawworkout.md
 docs/sdk/models/shared/workoutv2indb.md
@@ -635,7 +635,7 @@ docs/sdk/models/shared/clientfacingapikey.md
 docs/sdk/models/shared/fallbacktimezone.md
 docs/sdk/models/shared/clientfacinguser.md
 docs/sdk/models/shared/provider.md
-docs/sdk/models/shared/connectedsourceclientfacingprovider.md
+docs/sdk/models/shared/connectedsourceclientfacingsource.md
 docs/sdk/models/shared/connectedsourceclientfacing.md
 docs/sdk/models/shared/updateapikeybody.md
 docs/sdk/models/shared/teamupdate.md
@@ -671,7 +671,7 @@ docs/sdk/models/shared/usersignintokenresponse.md
 docs/sdk/models/shared/userpatchbody.md
 docs/sdk/models/shared/userrefreshsuccessresponse.md
 docs/sdk/models/shared/clientfacingdiagnosisinformation.md
-docs/sdk/models/shared/clientfacingpayorsearchresponseaddress.md
+docs/sdk/models/shared/orgaddress.md
 docs/sdk/models/shared/clientfacingpayorsearchresponse.md
 docs/sdk/models/shared/payorsearchrequest.md
 docs/sdk/models/shared/clientfacinglabtest.md
@@ -690,10 +690,10 @@ docs/sdk/models/shared/lnglat.md
 docs/sdk/models/shared/usaddress.md
 docs/sdk/models/shared/appointmentbookingrequest.md
 docs/sdk/models/shared/postorderresponse.md
-docs/sdk/models/shared/clientfacingorderclientfacinglabtest.md
-docs/sdk/models/shared/clientfacingorderpatientaddresscompatible.md
-docs/sdk/models/shared/clientfacingpatientdetailscompatible.md
-docs/sdk/models/shared/clientfacingordershippingaddress.md
+docs/sdk/models/shared/labtest.md
+docs/sdk/models/shared/patientaddress.md
+docs/sdk/models/shared/clientfacingorderpatientdetails.md
+docs/sdk/models/shared/shippingdetails.md
 docs/sdk/models/shared/clientfacingorder.md
 docs/sdk/models/shared/ordertoplevelstatus.md
 docs/sdk/models/shared/physicianclientfacing.md
@@ -705,7 +705,7 @@ docs/sdk/models/shared/physiciancreaterequest.md
 docs/sdk/models/shared/patientdetails.md
 docs/sdk/models/shared/gender.md
 docs/sdk/models/shared/patientaddresscompatible.md
-docs/sdk/models/shared/persondetails.md
+docs/sdk/models/shared/responsibledetails.md
 docs/sdk/models/shared/healthinsurancecreaterequest.md
 docs/sdk/models/shared/responsiblerelationship.md
 docs/sdk/models/shared/address.md

@@ -1,4 +1,4 @@
-# GetOrderAppointmentAvailabilityV3OrderOrderIdPhlebotomyAppointmentAvailabilityPostUSAddress
+# GetOrderAppointmentAvailabilityV3OrderOrderIdPhlebotomyAppointmentAvailabilityPostAddress
 
 At-home phlebotomy appointment address. If None, the address given at the time of placing the order is used.
 

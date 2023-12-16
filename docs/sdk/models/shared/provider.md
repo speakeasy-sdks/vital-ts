@@ -1,6 +1,6 @@
 # Provider
 
-A vendor, a service, or a platform which Vital can connect with.
+The provider of this connected source.
 
 
 ## Fields

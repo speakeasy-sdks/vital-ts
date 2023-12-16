@@ -1,4 +1,4 @@
-# PasswordProviders
+# ProvidersThatRequirePasswordAuthWhoopRenphoPelotonZwift
 
 An enumeration.
 

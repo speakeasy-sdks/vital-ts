@@ -8,10 +8,7 @@ import { ClientFacingSleepStream } from "./clientfacingsleepstream";
 import { Expose, Transform, Type } from "class-transformer";
 
 /**
- * Source summarizes where a sample or a summary is sourced from.
- *
- * @remarks
- * At minimum, the source provider is always included.
+ * Source the data has come from.
  */
 export class ClientFacingSleepSource extends SpeakeasyBase {
     /**

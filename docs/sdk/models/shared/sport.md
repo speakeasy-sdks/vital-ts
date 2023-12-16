@@ -1,4 +1,4 @@
-# ClientFacingWorkoutClientFacingSport
+# Sport
 
 Sport's name
 

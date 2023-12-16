@@ -9,7 +9,7 @@ import { AxiosResponse } from "axios";
 /**
  * An enumeration.
  */
-export enum ManualProviders {
+export enum ProvidersThatAreManuallyAddedDevicesSuchAsBleDevicesAndGeneratedData {
     BeurerBle = "beurer_ble",
     OmronBle = "omron_ble",
     AccuchekBle = "accuchek_ble",
@@ -29,7 +29,7 @@ export class ConnectBleProviderV2LinkProviderManualProviderPostRequest extends S
      * An enumeration.
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=provider" })
-    provider: ManualProviders;
+    provider: ProvidersThatAreManuallyAddedDevicesSuchAsBleDevicesAndGeneratedData;
 }
 
 export class ConnectBleProviderV2LinkProviderManualProviderPostResponse extends SpeakeasyBase {

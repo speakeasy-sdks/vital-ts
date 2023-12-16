@@ -1,4 +1,4 @@
-# ~~ConnectedSourceClientFacingProvider~~
+# ~~ConnectedSourceClientFacingSource~~
 
 A vendor, a service, or a platform which Vital can connect with.
 

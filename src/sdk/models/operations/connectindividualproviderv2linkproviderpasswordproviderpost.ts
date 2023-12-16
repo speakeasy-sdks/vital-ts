@@ -9,7 +9,7 @@ import { AxiosResponse } from "axios";
 /**
  * An enumeration.
  */
-export enum PasswordProviders {
+export enum ProvidersThatRequirePasswordAuthWhoopRenphoPelotonZwift {
     Whoop = "whoop",
     Renpho = "renpho",
     Peloton = "peloton",
@@ -29,7 +29,7 @@ export class ConnectIndividualProviderV2LinkProviderPasswordProviderPostRequest 
      * An enumeration.
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=provider" })
-    provider: PasswordProviders;
+    provider: ProvidersThatRequirePasswordAuthWhoopRenphoPelotonZwift;
 
     @SpeakeasyMetadata({
         data: "header, style=simple;explode=false;name=x-vital-link-client-region",

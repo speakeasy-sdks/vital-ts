@@ -117,7 +117,10 @@ This connects auth providers that are password based.
 
 ```typescript
 import { Vital } from "Vital";
-import { ConnectBleProviderV2LinkProviderManualProviderPostRequest, ManualProviders } from "Vital/dist/sdk/models/operations";
+import {
+  ConnectBleProviderV2LinkProviderManualProviderPostRequest,
+  ProvidersThatAreManuallyAddedDevicesSuchAsBleDevicesAndGeneratedData,
+} from "Vital/dist/sdk/models/operations";
 import { ManualConnectionData } from "Vital/dist/sdk/models/shared";
 
 async function run() {
@@ -127,7 +130,7 @@ async function run() {
 const manualConnectionData: ManualConnectionData = {
   userId: "string",
 };
-const provider: ManualProviders = ManualProviders.BeurerBle;
+const provider: ProvidersThatAreManuallyAddedDevicesSuchAsBleDevicesAndGeneratedData = ProvidersThatAreManuallyAddedDevicesSuchAsBleDevicesAndGeneratedData.BeurerBle;
 
   const res = await sdk.link.connectBleProvider(manualConnectionData, provider);
 
@@ -141,12 +144,12 @@ run();
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `manualConnectionData`                                                         | [shared.ManualConnectionData](../../sdk/models/shared/manualconnectiondata.md) | :heavy_check_mark:                                                             | N/A                                                                            |
-| `provider`                                                                     | [operations.ManualProviders](../../sdk/models/operations/manualproviders.md)   | :heavy_check_mark:                                                             | An enumeration.                                                                |
-| `retries`                                                                      | [utils.RetryConfig](../../internal/utils/retryconfig.md)                       | :heavy_minus_sign:                                                             | Configuration to override the default retry behavior of the client.            |
-| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
+| Parameter                                                                                                                                                                              | Type                                                                                                                                                                                   | Required                                                                                                                                                                               | Description                                                                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `manualConnectionData`                                                                                                                                                                 | [shared.ManualConnectionData](../../sdk/models/shared/manualconnectiondata.md)                                                                                                         | :heavy_check_mark:                                                                                                                                                                     | N/A                                                                                                                                                                                    |
+| `provider`                                                                                                                                                                             | [operations.ProvidersThatAreManuallyAddedDevicesSuchAsBleDevicesAndGeneratedData](../../sdk/models/operations/providersthataremanuallyaddeddevicessuchasbledevicesandgenerateddata.md) | :heavy_check_mark:                                                                                                                                                                     | An enumeration.                                                                                                                                                                        |
+| `retries`                                                                                                                                                                              | [utils.RetryConfig](../../internal/utils/retryconfig.md)                                                                                                                               | :heavy_minus_sign:                                                                                                                                                                     | Configuration to override the default retry behavior of the client.                                                                                                                    |
+| `config`                                                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                           | :heavy_minus_sign:                                                                                                                                                                     | Available config options for making requests.                                                                                                                                          |
 
 
 ### Response
@@ -217,7 +220,10 @@ This connects auth providers that are email based.
 
 ```typescript
 import { Vital } from "Vital";
-import { ConnectEmailAuthProviderV2LinkProviderEmailProviderPostRequest, EmailProviders } from "Vital/dist/sdk/models/operations";
+import {
+  ConnectEmailAuthProviderV2LinkProviderEmailProviderPostRequest,
+  EmailProvidersThatRequireEmailsFreestyleAuth,
+} from "Vital/dist/sdk/models/operations";
 import { EmailProviderAuthLink, Providers, Region } from "Vital/dist/sdk/models/shared";
 
 async function run() {
@@ -227,7 +233,7 @@ async function run() {
 const emailProviderAuthLink: EmailProviderAuthLink = {
   email: "Mabelle_Medhurst23@gmail.com",
 };
-const provider: EmailProviders = EmailProviders.FreestyleLibre;
+const provider: EmailProvidersThatRequireEmailsFreestyleAuth = EmailProvidersThatRequireEmailsFreestyleAuth.FreestyleLibre;
 
   const res = await sdk.link.connectEmailProvider(emailProviderAuthLink, provider);
 
@@ -241,12 +247,12 @@ run();
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `emailProviderAuthLink`                                                          | [shared.EmailProviderAuthLink](../../sdk/models/shared/emailproviderauthlink.md) | :heavy_check_mark:                                                               | N/A                                                                              |
-| `provider`                                                                       | [operations.EmailProviders](../../sdk/models/operations/emailproviders.md)       | :heavy_check_mark:                                                               | An enumeration.                                                                  |
-| `retries`                                                                        | [utils.RetryConfig](../../internal/utils/retryconfig.md)                         | :heavy_minus_sign:                                                               | Configuration to override the default retry behavior of the client.              |
-| `config`                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                     | :heavy_minus_sign:                                                               | Available config options for making requests.                                    |
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `emailProviderAuthLink`                                                                                                                | [shared.EmailProviderAuthLink](../../sdk/models/shared/emailproviderauthlink.md)                                                       | :heavy_check_mark:                                                                                                                     | N/A                                                                                                                                    |
+| `provider`                                                                                                                             | [operations.EmailProvidersThatRequireEmailsFreestyleAuth](../../sdk/models/operations/emailprovidersthatrequireemailsfreestyleauth.md) | :heavy_check_mark:                                                                                                                     | An enumeration.                                                                                                                        |
+| `retries`                                                                                                                              | [utils.RetryConfig](../../internal/utils/retryconfig.md)                                                                               | :heavy_minus_sign:                                                                                                                     | Configuration to override the default retry behavior of the client.                                                                    |
+| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
 
 
 ### Response
@@ -269,7 +275,7 @@ This connects auth providers that are password based.
 import { Vital } from "Vital";
 import {
   ConnectIndividualProviderV2LinkProviderPasswordProviderPostRequest,
-  PasswordProviders,
+  ProvidersThatRequirePasswordAuthWhoopRenphoPelotonZwift,
 } from "Vital/dist/sdk/models/operations";
 import { IndividualProviderData } from "Vital/dist/sdk/models/shared";
 
@@ -281,7 +287,7 @@ const individualProviderData: IndividualProviderData = {
   password: "U7xJdvB5pT6rvW2",
   username: "Chanel73",
 };
-const provider: PasswordProviders = PasswordProviders.Renpho;
+const provider: ProvidersThatRequirePasswordAuthWhoopRenphoPelotonZwift = ProvidersThatRequirePasswordAuthWhoopRenphoPelotonZwift.Renpho;
 const xVitalLinkClientRegion: string = "string";
 
   const res = await sdk.link.connectIndividualProvider(individualProviderData, provider, xVitalLinkClientRegion);
@@ -296,13 +302,13 @@ run();
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `individualProviderData`                                                           | [shared.IndividualProviderData](../../sdk/models/shared/individualproviderdata.md) | :heavy_check_mark:                                                                 | N/A                                                                                |
-| `provider`                                                                         | [operations.PasswordProviders](../../sdk/models/operations/passwordproviders.md)   | :heavy_check_mark:                                                                 | An enumeration.                                                                    |
-| `xVitalLinkClientRegion`                                                           | *string*                                                                           | :heavy_minus_sign:                                                                 | N/A                                                                                |
-| `retries`                                                                          | [utils.RetryConfig](../../internal/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
-| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
+| Parameter                                                                                                                                                    | Type                                                                                                                                                         | Required                                                                                                                                                     | Description                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `individualProviderData`                                                                                                                                     | [shared.IndividualProviderData](../../sdk/models/shared/individualproviderdata.md)                                                                           | :heavy_check_mark:                                                                                                                                           | N/A                                                                                                                                                          |
+| `provider`                                                                                                                                                   | [operations.ProvidersThatRequirePasswordAuthWhoopRenphoPelotonZwift](../../sdk/models/operations/providersthatrequirepasswordauthwhooprenphopelotonzwift.md) | :heavy_check_mark:                                                                                                                                           | An enumeration.                                                                                                                                              |
+| `xVitalLinkClientRegion`                                                                                                                                     | *string*                                                                                                                                                     | :heavy_minus_sign:                                                                                                                                           | N/A                                                                                                                                                          |
+| `retries`                                                                                                                                                    | [utils.RetryConfig](../../internal/utils/retryconfig.md)                                                                                                     | :heavy_minus_sign:                                                                                                                                           | Configuration to override the default retry behavior of the client.                                                                                          |
+| `config`                                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                 | :heavy_minus_sign:                                                                                                                                           | Available config options for making requests.                                                                                                                |
 
 
 ### Response

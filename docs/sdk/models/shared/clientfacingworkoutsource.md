@@ -1,7 +1,6 @@
 # ClientFacingWorkoutSource
 
-Source summarizes where a sample or a summary is sourced from.
-At minimum, the source provider is always included.
+Source the data has come from.
 
 
 ## Fields

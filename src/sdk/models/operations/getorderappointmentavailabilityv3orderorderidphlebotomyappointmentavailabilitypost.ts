@@ -10,7 +10,7 @@ import { Expose } from "class-transformer";
 /**
  * At-home phlebotomy appointment address. If None, the address given at the time of placing the order is used.
  */
-export class GetOrderAppointmentAvailabilityV3OrderOrderIdPhlebotomyAppointmentAvailabilityPostUSAddress extends SpeakeasyBase {
+export class GetOrderAppointmentAvailabilityV3OrderOrderIdPhlebotomyAppointmentAvailabilityPostAddress extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "city" })
     city: string;
@@ -44,7 +44,7 @@ export class GetOrderAppointmentAvailabilityV3OrderOrderIdPhlebotomyAppointmentA
     orderId: string;
 
     @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-    requestBody?: GetOrderAppointmentAvailabilityV3OrderOrderIdPhlebotomyAppointmentAvailabilityPostUSAddress;
+    requestBody?: GetOrderAppointmentAvailabilityV3OrderOrderIdPhlebotomyAppointmentAvailabilityPostAddress;
 }
 
 export class GetOrderAppointmentAvailabilityV3OrderOrderIdPhlebotomyAppointmentAvailabilityPostResponse extends SpeakeasyBase {

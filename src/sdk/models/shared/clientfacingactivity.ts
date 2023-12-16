@@ -40,10 +40,7 @@ export class HeartRate extends SpeakeasyBase {
 }
 
 /**
- * Source summarizes where a sample or a summary is sourced from.
- *
- * @remarks
- * At minimum, the source provider is always included.
+ * Source the data has come from.
  */
 export class ClientFacingActivitySource extends SpeakeasyBase {
     /**

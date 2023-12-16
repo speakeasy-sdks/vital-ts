@@ -6,7 +6,7 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Transform, Type } from "class-transformer";
 
 /**
- * A vendor, a service, or a platform which Vital can connect with.
+ * The provider of this connected source.
  */
 export class Provider extends SpeakeasyBase {
     /**
@@ -36,7 +36,7 @@ export class Provider extends SpeakeasyBase {
  *
  * @deprecated class: This will be removed in a future release, please migrate away from it as soon as possible.
  */
-export class ConnectedSourceClientFacingProvider extends SpeakeasyBase {
+export class ConnectedSourceClientFacingSource extends SpeakeasyBase {
     /**
      * URL for source logo
      */
@@ -81,6 +81,6 @@ export class ConnectedSourceClientFacing extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "source" })
-    @Type(() => ConnectedSourceClientFacingProvider)
-    source: ConnectedSourceClientFacingProvider;
+    @Type(() => ConnectedSourceClientFacingSource)
+    source: ConnectedSourceClientFacingSource;
 }

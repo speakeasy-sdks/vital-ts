@@ -1,4 +1,4 @@
-# ManualProviders
+# ProvidersThatAreManuallyAddedDevicesSuchAsBleDevicesAndGeneratedData
 
 An enumeration.
 

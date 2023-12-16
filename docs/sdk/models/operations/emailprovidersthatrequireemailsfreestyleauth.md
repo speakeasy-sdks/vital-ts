@@ -1,4 +1,4 @@
-# EmailProviders
+# EmailProvidersThatRequireEmailsFreestyleAuth
 
 An enumeration.
 

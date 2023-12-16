@@ -252,7 +252,7 @@ export class Link {
      */
     async connectBleProvider(
         manualConnectionData: shared.ManualConnectionData,
-        provider: operations.ManualProviders,
+        provider: operations.ProvidersThatAreManuallyAddedDevicesSuchAsBleDevicesAndGeneratedData,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.ConnectBleProviderV2LinkProviderManualProviderPostResponse> {
@@ -527,7 +527,7 @@ export class Link {
      */
     async connectEmailProvider(
         emailProviderAuthLink: shared.EmailProviderAuthLink,
-        provider: operations.EmailProviders,
+        provider: operations.EmailProvidersThatRequireEmailsFreestyleAuth,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig
     ): Promise<operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostResponse> {
@@ -669,7 +669,7 @@ export class Link {
      */
     async connectIndividualProvider(
         individualProviderData: shared.IndividualProviderData,
-        provider: operations.PasswordProviders,
+        provider: operations.ProvidersThatRequirePasswordAuthWhoopRenphoPelotonZwift,
         xVitalLinkClientRegion?: string,
         retries?: utils.RetryConfig,
         config?: AxiosRequestConfig

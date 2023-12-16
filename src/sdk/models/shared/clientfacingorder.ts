@@ -15,7 +15,7 @@ import { Expose, Transform, Type } from "class-transformer";
 /**
  * The Vital Test associated with the order
  */
-export class ClientFacingOrderClientFacingLabTest extends SpeakeasyBase {
+export class LabTest extends SpeakeasyBase {
     /**
      * Defines whether a lab test requires fasting. Only available for Labcorp.
      */
@@ -78,7 +78,7 @@ export class ClientFacingOrderClientFacingLabTest extends SpeakeasyBase {
 /**
  * Patient Address
  */
-export class ClientFacingOrderPatientAddressCompatible extends SpeakeasyBase {
+export class PatientAddress extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "city" })
     city: string;
@@ -115,7 +115,7 @@ export class ClientFacingOrderPatientAddressCompatible extends SpeakeasyBase {
 /**
  * Patient Details
  */
-export class ClientFacingPatientDetailsCompatible extends SpeakeasyBase {
+export class ClientFacingOrderPatientDetails extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "dob" })
     @Transform(({ value }) => new Date(value), { toClassOnly: true })
@@ -145,7 +145,7 @@ export class ClientFacingPatientDetailsCompatible extends SpeakeasyBase {
 /**
  * Shipping Details. For unregistered testkit orders.
  */
-export class ClientFacingOrderShippingAddress extends SpeakeasyBase {
+export class ShippingDetails extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "city" })
     city: string;
@@ -216,8 +216,8 @@ export class ClientFacingOrder extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "lab_test" })
-    @Type(() => ClientFacingOrderClientFacingLabTest)
-    labTest: ClientFacingOrderClientFacingLabTest;
+    @Type(() => LabTest)
+    labTest: LabTest;
 
     /**
      * Notes associated with the order
@@ -231,16 +231,16 @@ export class ClientFacingOrder extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "patient_address" })
-    @Type(() => ClientFacingOrderPatientAddressCompatible)
-    patientAddress?: ClientFacingOrderPatientAddressCompatible;
+    @Type(() => PatientAddress)
+    patientAddress?: PatientAddress;
 
     /**
      * Patient Details
      */
     @SpeakeasyMetadata()
     @Expose({ name: "patient_details" })
-    @Type(() => ClientFacingPatientDetailsCompatible)
-    patientDetails?: ClientFacingPatientDetailsCompatible;
+    @Type(() => ClientFacingOrderPatientDetails)
+    patientDetails?: ClientFacingOrderPatientDetails;
 
     @SpeakeasyMetadata()
     @Expose({ name: "physician" })
@@ -273,8 +273,8 @@ export class ClientFacingOrder extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "shipping_details" })
-    @Type(() => ClientFacingOrderShippingAddress)
-    shippingDetails?: ClientFacingOrderShippingAddress;
+    @Type(() => ShippingDetails)
+    shippingDetails?: ShippingDetails;
 
     /**
      * An enumeration.

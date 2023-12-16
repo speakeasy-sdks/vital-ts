@@ -1,4 +1,4 @@
-# PersonDetails
+# ResponsibleDetails
 
 Responsible details when the value of responsible_relationship is not 'Self'.
 

@@ -1,4 +1,4 @@
-# ClientFacingPayorSearchResponseAddress
+# OrgAddress
 
 Insurance business address returned for the insurance information required by Labcorp.
 
