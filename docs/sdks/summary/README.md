@@ -71,7 +71,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getUserActivity
 
@@ -122,7 +122,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getUserActivityRaw
 
@@ -173,7 +173,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getUserBody
 
@@ -224,7 +224,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getUserBodyRaw
 
@@ -275,7 +275,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getUserDevicesRaw
 
@@ -322,7 +322,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getUserProfile
 
@@ -369,7 +369,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getUserProfileRaw
 
@@ -416,7 +416,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getUserSleep
 
@@ -467,7 +467,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getUserSleepRaw
 
@@ -518,7 +518,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getUserSleepStream
 
@@ -569,7 +569,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getUserWorkouts
 
@@ -620,7 +620,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getUserWorkoutsRaw
 
@@ -671,7 +671,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## postUserActivity
 
@@ -720,7 +720,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## postUserBody
 
@@ -769,7 +769,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## postUserProfile
 
@@ -818,7 +818,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## postUserSleep
 
@@ -867,7 +867,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## postUserWorkout
 
@@ -916,4 +916,4 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |

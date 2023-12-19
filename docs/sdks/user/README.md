@@ -58,7 +58,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## delete
 
@@ -103,7 +103,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## deregisterProviderV2UserUserIdProviderDelete
 
@@ -151,7 +151,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## get
 
@@ -196,7 +196,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getAll
 
@@ -243,7 +243,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getConnectedProviders
 
@@ -288,7 +288,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getMetrics
 
@@ -329,7 +329,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getSignInToken
 
@@ -374,7 +374,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## patchUserV2UserUserIdPatch
 
@@ -422,7 +422,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## refreshUserIdV2UserRefreshUserIdPost
 
@@ -468,7 +468,7 @@ run();
 | ------------------------------- | ------------------------------- | ------------------------------- |
 | errors.UserRefreshErrorResponse | 400                             | application/json                |
 | errors.HTTPValidationError      | 422                             | application/json                |
-| errors.SDKError                 | 400-600                         | */*                             |
+| errors.SDKError                 | 4xx-5xx                         | */*                             |
 
 ## resolveByUserId
 
@@ -513,4 +513,4 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |

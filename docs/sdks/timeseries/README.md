@@ -79,7 +79,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getBloodPressure
 
@@ -130,7 +130,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getCaffeine
 
@@ -181,7 +181,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getCaloriesActive
 
@@ -232,7 +232,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getCaloriesBasal
 
@@ -283,7 +283,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getCholesterolAll
 
@@ -334,7 +334,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getCholesterolHdl
 
@@ -385,7 +385,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getCholesterolLdl
 
@@ -436,7 +436,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getDistance
 
@@ -487,7 +487,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getFloorsClimbed
 
@@ -538,7 +538,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getGlucose
 
@@ -589,7 +589,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getHeartrate
 
@@ -640,7 +640,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getHrv
 
@@ -691,7 +691,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getHypnogram
 
@@ -742,7 +742,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getIge
 
@@ -793,7 +793,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getIgg
 
@@ -844,7 +844,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getMindfulnessMinutes
 
@@ -895,7 +895,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getRespiratoryRate
 
@@ -946,7 +946,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getSteps
 
@@ -997,7 +997,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getTotalCholesterol
 
@@ -1048,7 +1048,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getTriglycerides
 
@@ -1099,7 +1099,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getUserSleepStream
 
@@ -1144,7 +1144,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getUserWorkouts
 
@@ -1189,7 +1189,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## getWater
 
@@ -1240,7 +1240,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## postBloodPressure
 
@@ -1289,7 +1289,7 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ## postVitals
 
@@ -1341,4 +1341,4 @@ run();
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
