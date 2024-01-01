@@ -487,7 +487,7 @@ async function run() {
     apiKey: "<YOUR-API-KEY>",
   });
 const userId: string = "2795b4e3-bfe4-4e25-a003-d249bbaf85eb";
-const expiresAt: Date = new Date("2021-12-10T10:53:22.771Z");
+const expiresAt: Date = new Date("2022-12-10T18:25:02.682Z");
 
   const res = await sdk.link.createToken(userId, expiresAt);
 
