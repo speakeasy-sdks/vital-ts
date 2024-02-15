@@ -36,10 +36,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "641fb67c-c4de-44d2-8b5e-3e073000b0a5";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.summary.getMeals(startDate, userId, endDate, provider);
 
@@ -87,10 +87,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "29994eda-1c81-42f3-a33b-dcb5592eeffb";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.summary.getUserActivity(startDate, userId, endDate, provider);
 
@@ -138,10 +138,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "c752487b-77c7-4c61-ad1e-e885ef0bdc3c";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.summary.getUserActivityRaw(startDate, userId, endDate, provider);
 
@@ -189,10 +189,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "8170daa1-c702-4d4a-9653-9a8a9e6e4eae";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.summary.getUserBody(startDate, userId, endDate, provider);
 
@@ -240,10 +240,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "318730e0-1d99-4c94-97d6-8e72c1985489";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.summary.getUserBodyRaw(startDate, userId, endDate, provider);
 
@@ -292,7 +292,7 @@ async function run() {
     apiKey: "<YOUR-API-KEY>",
   });
 const userId: string = "d3afcead-cf24-4987-97fa-74fe26009852";
-const provider: string = "string";
+const provider: string = "<value>";
 
   const res = await sdk.summary.getUserDevicesRaw(userId, provider);
 
@@ -339,7 +339,7 @@ async function run() {
     apiKey: "<YOUR-API-KEY>",
   });
 const userId: string = "1e03319e-ca0e-4660-8784-a0581ebdd19f";
-const provider: string = "string";
+const provider: string = "<value>";
 
   const res = await sdk.summary.getUserProfile(userId, provider);
 
@@ -386,7 +386,7 @@ async function run() {
     apiKey: "<YOUR-API-KEY>",
   });
 const userId: string = "ae101aa4-8797-4dc6-bac7-aa9d64e72a37";
-const provider: string = "string";
+const provider: string = "<value>";
 
   const res = await sdk.summary.getUserProfileRaw(userId, provider);
 
@@ -432,10 +432,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "6a2ea429-e1c8-48ab-a43b-c6a94c896bba";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.summary.getUserSleep(startDate, userId, endDate, provider);
 
@@ -483,10 +483,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "b2ba77ed-68ff-441f-bfc0-77eae7285ab9";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.summary.getUserSleepRaw(startDate, userId, endDate, provider);
 
@@ -534,10 +534,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "8905f1c3-5295-4037-bc4a-b0890f30d313";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.summary.getUserSleepStream(startDate, userId, endDate, provider);
 
@@ -585,10 +585,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "bc0edaf0-6098-41f4-a6eb-525d09cc6d26";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.summary.getUserWorkouts(startDate, userId, endDate, provider);
 
@@ -636,10 +636,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "4853d653-58ad-48c0-b4b1-c219bac589e4";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.summary.getUserWorkoutsRaw(startDate, userId, endDate, provider);
 
@@ -688,8 +688,8 @@ async function run() {
     apiKey: "<YOUR-API-KEY>",
   });
 const userId: string = "0e4724f5-d113-41c1-bf58-cd7168d06d0c";
-const xVitalAndroidSDKVersion: string = "string";
-const xVitalIosSDKVersion: string = "string";
+const xVitalAndroidSDKVersion: string = "<value>";
+const xVitalIosSDKVersion: string = "<value>";
 
   const res = await sdk.summary.postUserActivity(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 
@@ -737,8 +737,8 @@ async function run() {
     apiKey: "<YOUR-API-KEY>",
   });
 const userId: string = "2aac64a8-1a4b-47b9-b083-c6d33a9beb02";
-const xVitalAndroidSDKVersion: string = "string";
-const xVitalIosSDKVersion: string = "string";
+const xVitalAndroidSDKVersion: string = "<value>";
+const xVitalIosSDKVersion: string = "<value>";
 
   const res = await sdk.summary.postUserBody(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 
@@ -786,8 +786,8 @@ async function run() {
     apiKey: "<YOUR-API-KEY>",
   });
 const userId: string = "343ee935-de73-408c-a15e-4782d3b864c4";
-const xVitalAndroidSDKVersion: string = "string";
-const xVitalIosSDKVersion: string = "string";
+const xVitalAndroidSDKVersion: string = "<value>";
+const xVitalIosSDKVersion: string = "<value>";
 
   const res = await sdk.summary.postUserProfile(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 
@@ -835,8 +835,8 @@ async function run() {
     apiKey: "<YOUR-API-KEY>",
   });
 const userId: string = "4332e922-db99-44ec-bd9d-77a063c520e5";
-const xVitalAndroidSDKVersion: string = "string";
-const xVitalIosSDKVersion: string = "string";
+const xVitalAndroidSDKVersion: string = "<value>";
+const xVitalIosSDKVersion: string = "<value>";
 
   const res = await sdk.summary.postUserSleep(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 
@@ -884,8 +884,8 @@ async function run() {
     apiKey: "<YOUR-API-KEY>",
   });
 const userId: string = "63a9d635-f084-45f5-a781-131420d3a83b";
-const xVitalAndroidSDKVersion: string = "string";
-const xVitalIosSDKVersion: string = "string";
+const xVitalAndroidSDKVersion: string = "<value>";
+const xVitalIosSDKVersion: string = "<value>";
 
   const res = await sdk.summary.postUserWorkout(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 

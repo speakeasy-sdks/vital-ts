@@ -36,13 +36,13 @@ async function run() {
 
   const res = await sdk.team.create({
     brandInformation: {
-      brandColor: "string",
-      companyAddress: "string",
+      brandColor: "<value>",
+      companyAddress: "<value>",
       companyName: "Kuhn - Nienow",
-      companyWebsite: "string",
+      companyWebsite: "<value>",
       supportEmail: "Haylie78@hotmail.com",
     },
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -88,9 +88,9 @@ async function run() {
     apiKey: "<YOUR-API-KEY>",
   });
 const createApiKeyBody: CreateApiKeyBody = {
-  label: "string",
+  label: "<value>",
 };
-const teamId: string = "string";
+const teamId: string = "<value>";
 
   const res = await sdk.team.createApiKey(createApiKeyBody, teamId);
 
@@ -142,7 +142,7 @@ const priorityCreate: PriorityCreate = {
   sourceId: 168326,
   teamId: "0d4e3a38-5a06-40f0-b144-d921de79168b",
 };
-const teamId: string = "string";
+const teamId: string = "<value>";
 
   const res = await sdk.team.createPriority(priorityCreate, teamId);
 
@@ -188,8 +188,8 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const apiKeyId: string = "string";
-const teamId: string = "string";
+const apiKeyId: string = "<value>";
+const teamId: string = "<value>";
 
   const res = await sdk.team.deleteApiKey(apiKeyId, teamId);
 
@@ -280,7 +280,7 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const teamId: string = "string";
+const teamId: string = "<value>";
 
   const res = await sdk.team.getApiKeys(teamId);
 
@@ -366,7 +366,7 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const dataType: string = "string";
+const dataType: string = "<value>";
 
   const res = await sdk.team.getSourcePriorities(dataType);
 
@@ -497,8 +497,8 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const apiKeyId: string = "string";
-const teamId: string = "string";
+const apiKeyId: string = "<value>";
+const teamId: string = "<value>";
 
   const res = await sdk.team.rotateApiKeyV2TeamTeamIdApikeyApiKeyIdRotatePatch(apiKeyId, teamId);
 
@@ -544,7 +544,7 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const queryId: string = "string";
+const queryId: string = "<value>";
 
   const res = await sdk.team.searchUsersByUuid(queryId);
 
@@ -591,10 +591,10 @@ async function run() {
     apiKey: "<YOUR-API-KEY>",
   });
 const updateApiKeyBody: UpdateApiKeyBody = {
-  label: "string",
+  label: "<value>",
 };
-const apiKeyId: string = "string";
-const teamId: string = "string";
+const apiKeyId: string = "<value>";
+const teamId: string = "<value>";
 
   const res = await sdk.team.updateApiKeyLabelV2TeamTeamIdApikeyApiKeyIdPatch(updateApiKeyBody, apiKeyId, teamId);
 
@@ -641,7 +641,7 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const teamId: string = "string";
+const teamId: string = "<value>";
 
   const res = await sdk.team.updateSourcePrioritiesV2TeamSourcePrioritiesPatch(teamId);
 
@@ -688,7 +688,7 @@ async function run() {
     apiKey: "<YOUR-API-KEY>",
   });
 const teamUpdate: TeamUpdate = {};
-const teamId: string = "string";
+const teamId: string = "<value>";
 
   const res = await sdk.team.updateTeamV2TeamTeamIdPatch(teamUpdate, teamId);
 

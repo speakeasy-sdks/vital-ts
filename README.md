@@ -35,7 +35,7 @@ async function run() {
     const sdk = new Vital({
         apiKey: "<YOUR-API-KEY>",
     });
-    const diagnosisQuery: string = "string";
+    const diagnosisQuery: string = "<value>";
 
     const res = await sdk.insurance.searchDiagnosis(diagnosisQuery);
 
@@ -298,7 +298,7 @@ async function run() {
     try {
         res = await sdk.link.checkTokenValidity({
             oauthInfo: {},
-            token: "string",
+            token: "<value>",
         });
     } catch (err) {
         if (err instanceof errors.HTTPValidationError) {

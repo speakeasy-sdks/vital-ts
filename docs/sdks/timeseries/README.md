@@ -44,10 +44,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "4c167a20-d001-40c6-9f96-363b96cbd8ac";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.timeseries.getBloodOxygen(startDate, userId, endDate, provider);
 
@@ -95,10 +95,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "e91b0b64-4f7b-43ea-a2b5-9387de819d04";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.timeseries.getBloodPressure(startDate, userId, endDate, provider);
 
@@ -146,10 +146,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "4313a0eb-8609-48dc-86f6-c357cf521cb8";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.timeseries.getCaffeine(startDate, userId, endDate, provider);
 
@@ -197,10 +197,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "0bc1117e-3cf3-4f90-b776-bb89ae3afbb8";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.timeseries.getCaloriesActive(startDate, userId, endDate, provider);
 
@@ -248,10 +248,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "64ab8090-2f0d-48b8-8aba-6b9f3470ca80";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.timeseries.getCaloriesBasal(startDate, userId, endDate, provider);
 
@@ -299,10 +299,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "4b6c3b20-9b90-4b59-87cd-42be3036af69";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.timeseries.getCholesterolAll(startDate, userId, endDate, provider);
 
@@ -350,10 +350,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "f97d0d0e-3b2a-4529-bb1c-2d8b67282043";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.timeseries.getCholesterolHdl(startDate, userId, endDate, provider);
 
@@ -401,10 +401,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "4f26c698-5e48-4f6e-8ca1-27edeb29d732";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.timeseries.getCholesterolLdl(startDate, userId, endDate, provider);
 
@@ -452,10 +452,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "19ab33e7-f639-49b8-b73c-69a8c4ea5f81";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.timeseries.getDistance(startDate, userId, endDate, provider);
 
@@ -503,10 +503,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "05b58dc0-4a14-4779-97b8-78666ff90d3c";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.timeseries.getFloorsClimbed(startDate, userId, endDate, provider);
 
@@ -554,10 +554,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "76c755f4-e363-461b-9888-a33b1731a7ae";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.timeseries.getGlucose(startDate, userId, endDate, provider);
 
@@ -605,10 +605,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "3a24193a-7e0c-448f-b11f-293d439db945";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.timeseries.getHeartrate(startDate, userId, endDate, provider);
 
@@ -656,10 +656,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "fa8c7b86-cf8a-4c7c-9611-342c13c4a095";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.timeseries.getHrv(startDate, userId, endDate, provider);
 
@@ -707,10 +707,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "9016363f-90dd-4ade-b540-c1806b114554";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.timeseries.getHypnogram(startDate, userId, endDate, provider);
 
@@ -758,10 +758,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "ed97cbc2-98b6-4fed-b0c6-813b66be805e";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.timeseries.getIge(startDate, userId, endDate, provider);
 
@@ -809,10 +809,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "584254a7-0b28-4d95-af79-8c9cf8e7ce7f";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.timeseries.getIgg(startDate, userId, endDate, provider);
 
@@ -860,10 +860,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "ff42bcd3-0f79-4dd6-a4ec-ae0a26ee2b9d";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.timeseries.getMindfulnessMinutes(startDate, userId, endDate, provider);
 
@@ -911,10 +911,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "f5daa7f6-973a-455e-a3cc-b2e2169f40d6";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.timeseries.getRespiratoryRate(startDate, userId, endDate, provider);
 
@@ -962,10 +962,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "f3f7b728-ead1-4ba0-b792-0b80b82a067b";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.timeseries.getSteps(startDate, userId, endDate, provider);
 
@@ -1013,10 +1013,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "b56cf900-a013-495d-92e9-eebe971547d8";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.timeseries.getTotalCholesterol(startDate, userId, endDate, provider);
 
@@ -1064,10 +1064,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "58c97f14-3ec9-4355-8966-cdc7190c8f2e";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.timeseries.getTriglycerides(startDate, userId, endDate, provider);
 
@@ -1115,7 +1115,7 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const sleepId: string = "string";
+const sleepId: string = "<value>";
 
   const res = await sdk.timeseries.getUserSleepStream(sleepId);
 
@@ -1205,10 +1205,10 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const startDate: string = "string";
+const startDate: string = "<value>";
 const userId: string = "2580182b-86b7-45ba-bc67-d64c9e6a0a12";
-const endDate: string = "string";
-const provider: string = "string";
+const endDate: string = "<value>";
+const provider: string = "<value>";
 
   const res = await sdk.timeseries.getWater(startDate, userId, endDate, provider);
 
@@ -1257,8 +1257,8 @@ async function run() {
     apiKey: "<YOUR-API-KEY>",
   });
 const userId: string = "5d55820e-8c39-4307-91e1-9cdd23720f04";
-const xVitalAndroidSDKVersion: string = "string";
-const xVitalIosSDKVersion: string = "string";
+const xVitalAndroidSDKVersion: string = "<value>";
+const xVitalIosSDKVersion: string = "<value>";
 
   const res = await sdk.timeseries.postBloodPressure(userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 
@@ -1308,8 +1308,8 @@ async function run() {
   });
 const resource: IngestibleTimeseriesResource = IngestibleTimeseriesResource.BloodOxygen;
 const userId: string = "7a0eca13-40ec-46ac-9433-f77edd2bbc91";
-const xVitalAndroidSDKVersion: string = "string";
-const xVitalIosSDKVersion: string = "string";
+const xVitalAndroidSDKVersion: string = "<value>";
+const xVitalIosSDKVersion: string = "<value>";
 
   const res = await sdk.timeseries.postVitals(resource, userId, xVitalAndroidSDKVersion, xVitalIosSDKVersion);
 

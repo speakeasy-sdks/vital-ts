@@ -22,7 +22,7 @@ async function run() {
 
   const res = await sdk.physician.reviewOpenloopV2PhysicianReviewOpenloopPost({
     eventType: OpenLoopWebhookType.PaymentDeleted,
-    resourceId: "string",
+    resourceId: "<value>",
     resourceIdType: OpenLoopResourceIdType.Appointment,
   });
 

@@ -20,7 +20,7 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const diagnosisQuery: string = "string";
+const diagnosisQuery: string = "<value>";
 
   const res = await sdk.insurance.searchDiagnosis(diagnosisQuery);
 
@@ -66,7 +66,7 @@ async function run() {
   });
 
   const res = await sdk.insurance.searchInsurancePayorInfo({
-    insuranceName: "string",
+    insuranceName: "<value>",
   });
 
   if (res.statusCode == 200) {

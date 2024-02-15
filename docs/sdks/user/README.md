@@ -30,7 +30,7 @@ async function run() {
   });
 
   const res = await sdk.user.createUser({
-    clientUserId: "string",
+    clientUserId: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -484,7 +484,7 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const clientUserId: string = "string";
+const clientUserId: string = "<value>";
 
   const res = await sdk.user.resolveByUserId(clientUserId);
 

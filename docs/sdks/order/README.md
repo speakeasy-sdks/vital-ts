@@ -41,7 +41,7 @@ async function run() {
     apiKey: "<YOUR-API-KEY>",
   });
 const appointmentBookingRequest: AppointmentBookingRequest = {
-  bookingKey: "string",
+  bookingKey: "<value>",
 };
 const orderId: string = "ce486d40-b1d8-4151-82e6-c0e7d72ca79b";
 
@@ -136,7 +136,7 @@ async function run() {
     apiKey: "<YOUR-API-KEY>",
   });
 const appointmentCancelRequest: AppointmentCancelRequest = {
-  cancellationReasonId: "string",
+  cancellationReasonId: "<value>",
 };
 const orderId: string = "a0cd9528-ddb0-4d27-a7e9-01ccf3b9448c";
 
@@ -192,51 +192,51 @@ async function run() {
       },
     ],
     healthInsurance: {
-      backImage: "string",
+      backImage: "<value>",
       diagnosisCodes: [
-        "string",
+        "<value>",
       ],
-      frontImage: "string",
-      patientSignatureImage: "string",
+      frontImage: "<value>",
+      patientSignatureImage: "<value>",
       responsibleDetails: {
         address: {
           city: "Loyalhaven",
           country: "Iraq",
-          firstLine: "string",
-          state: "string",
-          zip: "string",
+          firstLine: "<value>",
+          state: "Iowa",
+          zip: "70973",
         },
-        firstName: "Edwardo",
-        lastName: "Collier",
-        phoneNumber: "string",
+        firstName: "Valerie",
+        lastName: "Toy",
+        phoneNumber: "<value>",
       },
     },
-    labTestId: "c1fc6fe0-7241-4bcd-989d-c7fa504e0833",
+    labTestId: "07241bcd-d89d-4c7f-a504-e08333b1d5e2",
     patientAddress: {
-      city: "Lake Aniya",
-      country: "South Georgia and the South Sandwich Islands",
-      state: "string",
-      street: "Soledad Divide",
-      zip: "string",
+      city: "Aprilstead",
+      country: "Bhutan",
+      state: "Louisiana",
+      street: "Cole Greens",
+      zip: "08696-0210",
     },
     patientDetails: {
-      dob: new Date("2023-04-01T14:56:52.153Z"),
-      email: "Kyle_Bradtke@gmail.com",
-      firstName: "Brennan",
-      gender: Gender.Male,
-      lastName: "Stracke",
-      phoneNumber: "string",
+      dob: new Date("2024-09-22T06:48:17.041Z"),
+      email: "Eugene65@yahoo.com",
+      firstName: "Lucius",
+      gender: Gender.Other,
+      lastName: "Schaefer",
+      phoneNumber: "<value>",
     },
     physician: {
-      firstName: "Alfreda",
-      lastName: "Spinka",
+      firstName: "Sven",
+      lastName: "Kautzer",
       licensedStates: [
-        "string",
+        "<value>",
       ],
-      npi: "string",
-      signatureImage: "string",
+      npi: "<value>",
+      signatureImage: "<value>",
     },
-    userId: "9ea1320e-8504-4aa8-8e67-b7c49cf24bde",
+    userId: "7b7c49cf-24bd-4ebc-bc23-e7d6f9415747",
   });
 
   if (res.statusCode == 200) {
@@ -285,13 +285,13 @@ async function run() {
     shippingDetails: {
       city: "West Esmeraldaborough",
       country: "Antarctica (the territory South of 60 deg S)",
-      firstLine: "string",
-      phoneNumber: "string",
-      receiverName: "string",
-      state: "string",
-      zip: "string",
+      firstLine: "<value>",
+      phoneNumber: "<value>",
+      receiverName: "<value>",
+      state: "Maryland",
+      zip: "40261-2310",
     },
-    userId: "6c614a14-431d-4979-8fbf-e68efedf3713",
+    userId: "d9798fbf-e68e-4fed-b371-3330afbf06a4",
   });
 
   if (res.statusCode == 200) {
@@ -428,9 +428,9 @@ async function run() {
 const orderId: string = "c094c82e-a8e0-42d1-a065-be1f658ff11c";
 const requestBody: GetOrderAppointmentAvailabilityV3OrderOrderIdPhlebotomyAppointmentAvailabilityPostAddress = {
   city: "Shanahanboro",
-  firstLine: "string",
-  state: "string",
-  zipCode: "56156",
+  firstLine: "<value>",
+  state: "Hawaii",
+  zipCode: "61562-2121",
 };
 
   const res = await sdk.order.getAppointmentAvailability(orderId, requestBody);
@@ -480,7 +480,7 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const zipCode: string = "string";
+const zipCode: string = "<value>";
 
   const res = await sdk.order.getAreaInfo(zipCode);
 
@@ -892,8 +892,8 @@ async function run() {
 
   const res = await sdk.order.processTestkitShipHeroOrderShippedV3OrderTestkitWebhookShipheroShipmentUpdatePost({
     fulfillment: {
-      orderNumber: "string",
-      orderUuid: "string",
+      orderNumber: "<value>",
+      orderUuid: "<value>",
     },
     webhookType: WebhookType.ShipmentUpdate,
   });
@@ -949,28 +949,28 @@ async function run() {
     patientAddress: {
       city: "Phoenix",
       country: "Netherlands",
-      state: "string",
-      street: "Gloria Stream",
-      zip: "string",
+      state: "Hawaii",
+      street: "Roma Overpass",
+      zip: "58769",
     },
     patientDetails: {
-      dob: new Date("2023-10-13T19:44:26.282Z"),
-      email: "Keanu_Schoen95@gmail.com",
-      firstName: "Manley",
-      gender: Gender.Male,
-      lastName: "Pouros",
-      phoneNumber: "string",
+      dob: new Date("2024-01-01T04:15:29.649Z"),
+      email: "Mateo_Bode@gmail.com",
+      firstName: "Flossie",
+      gender: Gender.Female,
+      lastName: "Stroman",
+      phoneNumber: "<value>",
     },
     physician: {
-      firstName: "Arne",
-      lastName: "Keeling",
+      firstName: "Johnny",
+      lastName: "Blick",
       licensedStates: [
-        "string",
+        "<value>",
       ],
-      npi: "string",
+      npi: "<value>",
     },
-    sampleId: "string",
-    userId: "e51d8103-2436-4747-b05c-ba39bbafcb7e",
+    sampleId: "<value>",
+    userId: "03243674-7b05-4cba-b9bb-afcb7ed536a4",
   });
 
   if (res.statusCode == 200) {
@@ -1018,7 +1018,7 @@ async function run() {
     apiKey: "<YOUR-API-KEY>",
   });
 const appointmentRescheduleRequest: AppointmentRescheduleRequest = {
-  bookingKey: "string",
+  bookingKey: "<value>",
 };
 const orderId: string = "337372e4-dddb-4832-b4a5-62cb3ddc204a";
 

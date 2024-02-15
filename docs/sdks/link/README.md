@@ -77,7 +77,7 @@ async function run() {
 
   const res = await sdk.link.checkTokenValidity({
     oauthInfo: {},
-    token: "string",
+    token: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -128,7 +128,7 @@ async function run() {
     apiKey: "<YOUR-API-KEY>",
   });
 const manualConnectionData: ManualConnectionData = {
-  userId: "string",
+  userId: "<value>",
 };
 const provider: ProvidersThatAreManuallyAddedDevicesSuchAsBleDevicesAndGeneratedData = ProvidersThatAreManuallyAddedDevicesSuchAsBleDevicesAndGeneratedData.BeurerBle;
 
@@ -288,7 +288,7 @@ const individualProviderData: IndividualProviderData = {
   username: "Chanel73",
 };
 const provider: ProvidersThatRequirePasswordAuthWhoopRenphoPelotonZwift = ProvidersThatRequirePasswordAuthWhoopRenphoPelotonZwift.Renpho;
-const xVitalLinkClientRegion: string = "string";
+const xVitalLinkClientRegion: string = "<value>";
 
   const res = await sdk.link.connectIndividualProvider(individualProviderData, provider, xVitalLinkClientRegion);
 
@@ -344,7 +344,7 @@ const passwordAuthLink: PasswordAuthLink = {
   provider: Providers.Wahoo,
   username: "Brett32",
 };
-const xVitalLinkClientRegion: string = "string";
+const xVitalLinkClientRegion: string = "<value>";
 
   const res = await sdk.link.connectPasswordAuth(passwordAuthLink, xVitalLinkClientRegion);
 
@@ -392,8 +392,8 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const provider: string = "string";
-const xVitalSDKNoRedirect: string = "string";
+const provider: string = "<value>";
+const xVitalSDKNoRedirect: string = "<value>";
 
   const res = await sdk.link.connectProvider(provider, xVitalSDKNoRedirect);
 
@@ -442,7 +442,7 @@ async function run() {
 
   const res = await sdk.link.createDemoConnection({
     provider: DemoProviders.AppleHealthKit,
-    userId: "string",
+    userId: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -533,7 +533,7 @@ async function run() {
   const sdk = new Vital({
     apiKey: "<YOUR-API-KEY>",
   });
-const code: string = "string";
+const code: string = "<value>";
 
   const res = await sdk.link.exchangeToken(code);
 
@@ -722,7 +722,7 @@ async function run() {
   });
 
   const res = await sdk.link.startConnectProcess({
-    linkToken: "string",
+    linkToken: "<value>",
     provider: Providers.Peloton,
   });
 

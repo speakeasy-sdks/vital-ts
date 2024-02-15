@@ -31,7 +31,7 @@ async function run() {
       417458,
     ],
     method: LabTestCollectionMethod.Testkit,
-    name: "string",
+    name: "<value>",
     sampleType: LabTestSampleType.DriedBloodSpot,
   });
 
@@ -118,7 +118,7 @@ async function run() {
     apiKey: "<YOUR-API-KEY>",
   });
 const labId: number = 263548;
-const providerId: string = "string";
+const providerId: string = "<value>";
 
   const res = await sdk.labTests.getMarkerByProvider(labId, providerId);
 
@@ -165,7 +165,7 @@ async function run() {
     apiKey: "<YOUR-API-KEY>",
   });
 const labId: number = 614936;
-const name: string = "string";
+const name: string = "<value>";
 const page: number = 549571;
 const size: number = 962743;
 
