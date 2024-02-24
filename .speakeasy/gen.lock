@@ -4,19 +4,19 @@ management:
   docChecksum: bb5e24e31da8cd0edd3f729393024103
   docVersion: 0.0.0-dev.f0ab7c6
   speakeasyVersion: internal
-  generationVersion: 2.258.0
-  releaseVersion: 0.7.5
-  configChecksum: 341240cae8258bcce6c395a230d011f4
+  generationVersion: 2.272.4
+  releaseVersion: 0.7.6
+  configChecksum: ef39c204c6114085527113453545dd8e
   repoURL: https://github.com/speakeasy-sdks/vital-ts.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/vital-ts
 features:
   typescript:
-    core: 3.4.7
+    core: 3.4.8
     deprecations: 2.81.1
     examples: 2.81.3
     flattening: 2.81.1
-    globalSecurity: 2.82.2
+    globalSecurity: 2.82.3
     globalServerURLs: 2.82.1
     nameOverrides: 2.81.1
     retries: 2.82.1
