@@ -3240,7 +3240,7 @@ export class Timeseries {
             case httpRes?.status == 200:
                 if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responsePostUserBloodPressureV2TimeseriesUserIdBloodPressurePost =
-                        decodedRes;
+                        JSON.parse(decodedRes);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + responseContentType,
@@ -3364,7 +3364,8 @@ export class Timeseries {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(responseContentType, `application/json`)) {
-                    res.responsePostUserVitalsV2TimeseriesUserIdResourcePost = decodedRes;
+                    res.responsePostUserVitalsV2TimeseriesUserIdResourcePost =
+                        JSON.parse(decodedRes);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + responseContentType,

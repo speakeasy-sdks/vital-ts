@@ -1710,7 +1710,8 @@ export class Summary {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(responseContentType, `application/json`)) {
-                    res.responsePostUserActivityV2SummaryActivityUserIdPost = decodedRes;
+                    res.responsePostUserActivityV2SummaryActivityUserIdPost =
+                        JSON.parse(decodedRes);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + responseContentType,
@@ -1828,7 +1829,7 @@ export class Summary {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(responseContentType, `application/json`)) {
-                    res.responsePostUserBodyV2SummaryBodyUserIdPost = decodedRes;
+                    res.responsePostUserBodyV2SummaryBodyUserIdPost = JSON.parse(decodedRes);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + responseContentType,
@@ -1950,7 +1951,7 @@ export class Summary {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(responseContentType, `application/json`)) {
-                    res.responsePostUserProfileV2SummaryProfileUserIdPost = decodedRes;
+                    res.responsePostUserProfileV2SummaryProfileUserIdPost = JSON.parse(decodedRes);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + responseContentType,
@@ -2068,7 +2069,7 @@ export class Summary {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(responseContentType, `application/json`)) {
-                    res.responsePostUserSleepV2SummarySleepUserIdPost = decodedRes;
+                    res.responsePostUserSleepV2SummarySleepUserIdPost = JSON.parse(decodedRes);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + responseContentType,
@@ -2190,7 +2191,7 @@ export class Summary {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(responseContentType, `application/json`)) {
-                    res.responsePostUserWorkoutV2SummaryWorkoutsUserIdPost = decodedRes;
+                    res.responsePostUserWorkoutV2SummaryWorkoutsUserIdPost = JSON.parse(decodedRes);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + responseContentType,

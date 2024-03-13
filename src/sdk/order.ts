@@ -759,7 +759,8 @@ export class Order {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(responseContentType, `application/json`)) {
-                    res.responseDispatchOrderStatusV3OrderDispatchStatusChecksPost = decodedRes;
+                    res.responseDispatchOrderStatusV3OrderDispatchStatusChecksPost =
+                        JSON.parse(decodedRes);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + responseContentType,
@@ -2053,7 +2054,7 @@ export class Order {
             case httpRes?.status == 200:
                 if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseProcessTestkitOrderV3OrderTestkitProcessTeamIdOrderIdPost =
-                        decodedRes;
+                        JSON.parse(decodedRes);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + responseContentType,
@@ -2184,7 +2185,7 @@ export class Order {
             case httpRes?.status == 200:
                 if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.responseProcessTestkitShipHeroOrderShippedV3OrderTestkitWebhookShipheroShipmentUpdatePost =
-                        decodedRes;
+                        JSON.parse(decodedRes);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + responseContentType,
@@ -2574,7 +2575,8 @@ export class Order {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(responseContentType, `application/json`)) {
-                    res.responseSyncTestkitOrderStatusV3OrderTestkitStatusPost = decodedRes;
+                    res.responseSyncTestkitOrderStatusV3OrderTestkitStatusPost =
+                        JSON.parse(decodedRes);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + responseContentType,
